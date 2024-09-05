@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablero de indicadores</title>
+    <link rel="stylesheet" href="style_tablero_indicadores.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-search@2.3.7/dist/leaflet-search.src.css" />
+    <script src="https://unpkg.com/leaflet-search@2.3.7/dist/leaflet-search.src.js"></script>
+</head>
+<body>
+    <div class="container_tablero_indicadores">
+        <header>
+            <div class="header-top_tablero_indicadores">
+                <select id="tema_tablero_indicadores">
+                    <option value="default">---Seleccione un tema---</option>
+                    <option value="Medio Ambiente">Medio Ambiente</option>
+                    <option value="Económico">Económico</option>
+                    <option value="Gobierno" >Gobierno</option>
+                    <option value="Social" >Social</option>
+                    <option value="Seguridad" >Seguridad</option>
+                    <option value="Género" >Género</option>
+                </select>
+                <select id="indicador_tablero_indicadores">
+                    <option value="default">---Seleccione un indicador---</option>
+                </select>
+            </div>
+
+        </header>
+        
+        <section class="indicator-description_tablero_indicadores">
+            <h2 id="descripcion_indicador_title_tablero_indicadores">Descripción del Indicador</h2>
+            <p id="descripcion_indicador" ></p>
+        </section>
+
+        <section class="indicator-data_tablero_indicadores" id="section_tablero_indicadores">
+            <div class="tab_tablero_indicadores" style="position: relative;">
+                <button class="tablinks" onclick="openChart(event, 'historico_chart')" id="defaultOpen">Histórico: Hidalgo</button>
+                <button class="tablinks " onclick="openChart(event, 'nacional_chart')" id="tab_map">Contexto Nacional</button>
+                <div id="info_hoverable" class="tooltip_tablero_indicadores"><div class="bg">
+                    <a href="#"><span class="infoHover_tablero_indicadores">i</span></a>
+                  </div>
+                    <span class="tooltiptext_tablero_indicadores">El orden en que se muestran los estados y los colores no representan un nivel de desempeño, solamente representan el ranking respecto a otros estados</span>
+                  </div>
+              </div>
+              
+              <!-- Tab content -->
+              <div id="historico_chart" class="tabcontent_tablero_indicadores">
+                <div class="tabcontent_hist_tablero_indicadores bienvenida_tab_tablero_indicadores">
+                    <canvas class="chart_tablero_indicadores" id="historico">
+                    </canvas>
+                </div>
+              </div>
+              
+              <div id="nacional_chart" class="tabcontent_tablero_indicadores" >
+                    <canvas class="chart2_tablero_indicadores" id="nacional" >
+                    </canvas>
+                <div id="map_tablero_indicadores" style="float: right;">
+                    <script src="Datos/mexico.js"></script>
+                    <script src="mapa_mex.js"></script>
+                </div>
+              </div>
+
+
+            <div class="indicator-footer_tablero_indicadores">
+                <div class="mitad_tablero_indicadores" id="fuente">Fuente:</div>
+                
+                <div class="mitad_tablero_indicadores" id="temporalidad" style="float: right;"></div>
+            </div>
+        </section>
+    </div>
+    <script src="codigo.js"></script>
+    
+</body>
+</html>

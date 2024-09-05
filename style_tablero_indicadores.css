@@ -1,0 +1,270 @@
+body {
+    font-family: Montserrat, sans-serif;
+    background-color: #f4f4f4;
+  }
+  .bienvenida_tab_tablero_indicadores {
+    position: relative;
+  width: 120%;
+  height: 650px; /* Para que cubra toda la altura de la ventana */
+  background-image: url('Datos/instrucciones_Mesa de trabajo 1.png');
+  background-size:contain; /* Asegura que la imagen cubra toda la sección */
+  background-position: center; /* Centra la imagen */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  visibility: visible;
+  }
+  .container_tablero_indicadores {
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .header_tablero_indicadores {
+    background-color: #f4f4f4;
+    border-bottom: 2px solid #ccc;
+  }
+  
+  .header-top_tablero_indicadores {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+  }
+  
+  #indicador_tablero_indicadores {
+    padding: 10px;
+    font-size: 16px;
+  }
+  
+  .header-bottom_tablero_indicadores {
+    text-align: center;
+    background-color: #800000;
+    color: #fff;
+    padding: 10px;
+  }
+  
+  .header-bottom_tablero_indicadores h1 {
+    margin: 0;
+  }
+  
+  .indicator-name_tablero_indicadores {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .indicator-description_tablero_indicadores {
+    background-color: #800000;
+    color: #fff;
+    padding-top: 2px;
+    padding-left: 2px;
+    padding-bottom: 18px;
+  }
+  
+  .indicator-description_tablero_indicadores h2 {
+    margin-top: 1px;
+    margin-left: 2px;
+  }
+  
+  .indicator-data_tablero_indicadores {
+    margin-top: 5px;
+  }
+
+  
+  .chart_tablero_indicadores {
+    width: 100%;
+    height: 400px;
+    display: block; /* Asegura que el canvas se comporte como un bloque */
+    margin: auto; /* Esto centra el canvas horizontalmente */
+  }
+  
+  .chart2_tablero_indicadores {
+    width: 100%;
+    height: 400px;
+  }
+  
+  .indicator-footer_tablero_indicadores {
+    display: flex;
+    justify-content: space-between;
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-top: 2px solid #ccc;
+  }
+  
+  .mitad_tablero_indicadores {
+    max-width: 50%;
+  }
+  
+  .tab_tablero_indicadores {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+  }
+  
+  .tab_tablero_indicadores button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+  }
+  
+  .tab_tablero_indicadores button:hover {
+    background-color: #ddd;
+  }
+  
+  .tab_tablero_indicadores button.active {
+    background-color: #ccc;
+  }
+  
+  .tabcontent_tablero_indicadores {
+    width: 100%;
+    height: 500px;
+    display: block;
+    border-top: none;
+  }
+  
+  .tabcontent_hist_tablero_indicadores {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: none;
+  }
+  
+  .tabcontent_nac_tablero_indicadores {
+    width: 60%;
+    height: 500px;
+    display: block;
+    border: 1px solid #ccc;
+    border-top: none;
+    float: right;
+  }
+  
+  #map_tablero_indicadores {
+    height: 500px; 
+    width: 40%;
+    margin-right: 0px;
+    margin-left: 40px
+  }
+  
+  .float_tablero_indicadores {
+    float: left;
+  }
+  
+  .info_tablero_indicadores {
+    padding: 2px 3px;
+    font: 16px/18px Arial, Helvetica, sans-serif;
+    background: rgba(255,255,255,0.8);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    min-width: 18px;
+    min-height: 18px;
+  }
+  
+  .info_tablero_indicadores h4 {
+    margin: 0 0 5px;
+    color: #000;
+  }
+  
+  .info_tablero_indicadores p {
+    float: right;
+    font: 10px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+  }
+  
+  .legend_tablero_indicadores {
+    line-height: 18px;
+    color: #000;
+  }
+  
+  .legend_tablero_indicadores i {
+    width: 18px;
+    height: 18px;
+    float: left;
+    margin-right: 0;
+    opacity: 0.7;
+  }
+  
+  .pulse-button_tablero_indicadores {
+    display: inline-block;
+    background-color: #ccc;
+    border-radius: 1px;
+    cursor: pointer;
+    animation: pulse 2s infinite;
+  }
+  
+  @keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+  }
+  
+  #section_tablero_indicadores {
+    visibility: hidden;
+  }
+  
+  #descripcion_indicador_title_tablero_indicadores {
+    visibility: hidden;
+  }
+  
+  .tooltip_tablero_indicadores {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+    margin-top: 9px;
+    margin-left: 12px;
+    margin-bottom: 9px;
+  }
+  
+  .tooltiptext_tablero_indicadores {
+    visibility: hidden;
+    width: 620px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+    margin-left: 20px;
+    float: right;
+    opacity: 0;
+    transition: opacity 1s;
+    margin-top: -9px;
+  }
+  
+  .tooltip_tablero_indicadores:hover .tooltiptext_tablero_indicadores {
+    visibility: visible;
+    opacity: 1;
+  }
+  .bg_tablero_indicadores {
+    display: block;
+    background-color: #EDE6ED;
+    height: auto;
+    text-align: center;
+    padding-top: 0px;
+  }
+  
+  .infoHover_tablero_indicadores {
+    float: left;
+    padding: 0px 0px 0px 0px;
+    color: #225d41;
+    font-size: 20px;
+    border-radius: 50%;
+    border: solid 1px #225d41;
+    width: 20px;
+    height: 20px;
+    font-weight: bold;
+    text-align: center;
+  }
+  
