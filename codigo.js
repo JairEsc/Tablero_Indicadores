@@ -77,91 +77,82 @@ let Seguridad_Nac = [];
 let Genero_Nac = [];
 let base;
 let base_Nac;
-document.addEventListener("DOMContentLoaded", function () {
-  //Inicia el procesamiento una vez que está cargada la página.
-  fetch("Datos/Hidalgo_historico.csv")
-    .then((response) => response.text())
-    .then((data) => {
-      // Dividir las líneas del archivo CSV
-      var lines = data.split("\n");
-      lines.slice(1).forEach((line) => {
-        let values = line.split(",");
-        let tema = values[0].trim().replace(/^"|"$/g, "").replace(/^'|'$/g, "");
-        // Asignar la línea a su correspondiente objeto según el "Tema"
-        switch (tema) {
-          case "Medio Ambiente":
-            Medio_Ambiente.push(values);
-            break;
-          case "Gobierno":
-            Gobierno.push(values);
-            break;
-          case "Social":
-            Social.push(values);
-            break;
-          case "Económico":
-            Economico.push(values);
-            break;
-          case "Seguridad":
-            Seguridad.push(values);
-            break;
-          case "Género":
-            Genero.push(values);
-            break;
-        }
-      });
-    });
-  fetch("Datos/Nacional.csv")
-    .then((response) => response.text())
-    .then((data) => {
-      var lines = data.split("\n");
-      Medio_Ambiente_Nac.push(lines[0].split(","));
-      Gobierno_Nac.push(lines[0].split(","));
-      Economico_Nac.push(lines[0].split(","));
-      Social_Nac.push(lines[0].split(","));
-      Seguridad_Nac.push(lines[0].split(","));
-      Genero_Nac.push(lines[0].split(","));
-      // Recorrer cada línea (ignorando la primera que contiene los encabezados)
-      lines.slice(1).forEach((line) => {
-        let tema = line.split(",")[0];
-        let values = [];
-        let current = "";
-        let inQuotes = false;
+Promise.all([
+  fetch("Datos/Hidalgo_historico.csv").then((response) => response.text()),
+  fetch("Datos/Nacional.csv").then((response) => response.text())
+]).then(([historicoData, nacionalData]) => {
+  // Procesar Hidalgo_historico.csv
+  var lines = historicoData.split("\n");
+  lines.slice(1).forEach((line) => {
+    let values = line.split(",");
+    let tema = values[0].trim().replace(/^"|"$/g, "").replace(/^'|'$/g, "");
+    switch (tema) {
+      case "Medio Ambiente":
+        Medio_Ambiente.push(values);
+        break;
+      case "Gobierno":
+        Gobierno.push(values);
+        break;
+      case "Social":
+        Social.push(values);
+        break;
+      case "Económico":
+        Economico.push(values);
+        break;
+      case "Seguridad":
+        Seguridad.push(values);
+        break;
+      case "Género":
+        Genero.push(values);
+        break;
+    }
+  });
 
-        for (let char of line) {
-          if (char === '"') {
-            inQuotes = !inQuotes; // Cambia el estado si estás dentro de comillas
-          } else if (char === "," && !inQuotes) {
-            values.push(current.trim());
-            current = "";
-          } else {
-            current += char;
-          }
-        }
-        values.push(current.trim()); // Empuja el último valor
-        //console.log(values)
-        // Asignar la línea a su correspondiente objeto según el "Tema"
-        switch (tema.replace(/^"|"$/g, "")) {
-          case "Medio Ambiente":
-            Medio_Ambiente_Nac.push(values);
-            break;
-          case "Gobierno":
-            Gobierno_Nac.push(values);
-            break;
-          case "Social":
-            Social_Nac.push(values);
-            break;
-          case "Económico":
-            Economico_Nac.push(values);
-            break;
-          case "Seguridad":
-            Seguridad_Nac.push(values);
-            break;
-          case "Género":
-            Genero_Nac.push(values);
-            break;
-        }
-      });
-    });
+  // Procesar Nacional.csv
+  var linesNac = nacionalData.split("\n");
+  Medio_Ambiente_Nac.push(linesNac[0].split(","));
+  Gobierno_Nac.push(linesNac[0].split(","));
+  Economico_Nac.push(linesNac[0].split(","));
+  Social_Nac.push(linesNac[0].split(","));
+  Seguridad_Nac.push(linesNac[0].split(","));
+  Genero_Nac.push(linesNac[0].split(","));
+  linesNac.slice(1).forEach((line) => {
+    let tema = line.split(",")[0];
+    let values = [];
+    let current = "";
+    let inQuotes = false;
+    for (let char of line) {
+      if (char === '"') {
+        inQuotes = !inQuotes;
+      } else if (char === "," && !inQuotes) {
+        values.push(current.trim());
+        current = "";
+      } else {
+        current += char;
+      }
+    }
+    values.push(current.trim());
+    switch (tema.replace(/^"|"$/g, "")) {
+      case "Medio Ambiente":
+        Medio_Ambiente_Nac.push(values);
+        break;
+      case "Gobierno":
+        Gobierno_Nac.push(values);
+        break;
+      case "Social":
+        Social_Nac.push(values);
+        break;
+      case "Económico":
+        Economico_Nac.push(values);
+        break;
+      case "Seguridad":
+        Seguridad_Nac.push(values);
+        break;
+      case "Género":
+        Genero_Nac.push(values);
+        break;
+    }
+  });
 });
 
 $("#tema_tablero_indicadores").change(function () {
@@ -309,14 +300,28 @@ $("#indicador_tablero_indicadores").change(function () {
       ],
     },
     options: {
+      maintainAspectRatio: false,
+      responsive: true,
       onHover: function(event, elements) {
         if (elements.length) {
-          resaltarPoligonoPorCVE(32-elements[0].index); // Muestra el objeto de la barra en la consola
+          resaltarPoligonoPorCVE(32 - elements[0].index);
         }
-    },
+      },
       scales: {
+        x: {
+          ticks: {
+            font: {
+              size: 10 // small font size
+            }
+          }
+        },
         y: {
           beginAtZero: true,
+          ticks: {
+            font: {
+              size: 10 // small font size
+            }
+          }
         },
       },
     },
