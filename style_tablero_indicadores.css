@@ -34,7 +34,29 @@ body {
     justify-content: center;
     margin-bottom: 5px;
   }
-  
+  #indicador_tablero_indicadores{
+    max-width: 70vw;
+  }
+  @media (max-width:720px){
+    .header-top_tablero_indicadores{
+      display: block;
+    }
+    /* Only apply when #historico_chart has display: none */
+    #historico_chart[style*="display: none"] ~ .tabcontent_tablero_indicadores {
+      display: table-row !important;
+      width: 95vw;
+      }
+     #id-para-el-canvas{
+      width: 95vw !important;
+     }
+     #map_tablero_indicadores{
+      width: 95vw !important;
+     }
+    
+    
+
+    /*Mapa y chart nacional*/
+  }
   #indicador_tablero_indicadores {
     padding: 10px;
     font-size: 16px;
@@ -120,13 +142,13 @@ body {
   .tabcontent_tablero_indicadores {
     width: 95vw;
     height: auto;
-    display: block;
+    display: flex;
     border-top: none;
   }
   
   .tabcontent_hist_tablero_indicadores {
     width: 100%;
-    height: 400px;
+    height: 65vh;
     display: flex;
     justify-content: center;
     align-items: center;

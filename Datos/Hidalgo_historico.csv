@@ -1,709 +1,833 @@
-﻿Tema,Indicador,Año,Valor,Fuente
-Medio Ambiente,Áreas naturales protegidas de competencia todas las competencias,2015,135529,Fuente: Secretaría de Medio Ambiente y Recursos Naturales del Gobierno del Estado. Dirección de Recursos Naturales y Organización Institucional.
-Medio Ambiente,Áreas naturales protegidas de competencia todas las competencias,2016,135590,
-Medio Ambiente,Áreas naturales protegidas de competencia todas las competencias,2017,131305.9,
-Medio Ambiente,Áreas naturales protegidas de competencia todas las competencias,2022,131667,
-Medio Ambiente,Áreas naturales protegidas de competencia todas las competencias,2023,132770,
-Medio Ambiente,Áreas naturales protegidas de competencia todas las competencias,2024,131775,
-Económico,Aves Producción (toneladas),2022,120227.523,Fuente: Secretaría de Agricultura y Desarrollo Rural SADER. Servicio de Información Agroalimentaria y Pesquera  SIAP. Cierre de la Producción Pecuaria (1983-2023). Año 2022
-Económico,Aves Valor de la Producción (miles de pesos),2022,3240727.673,Fuente: Secretaría de Agricultura y Desarrollo Rural SADER. Servicio de Información Agroalimentaria y Pesquera  SIAP. Cierre de la Producción Pecuaria (1983-2023). Año 2022
-Gobierno,Barometro de Información Presupuestal Estatal BIPE,2023,97.41,Fuente: Instituto Mexicano para la Competitividad IMCO
-Género,Brecha de ingresos por género #Con Lupa de Género (Porcentaje),2024,NA,CONEVAL
-Medio Ambiente,Capacidad instalada en las PTARs  (Litros por segundo),2017,2040.2,INEGI. México en Cifras. Hidalgo. Tabulados de Integración. Medio Ambiente
-Medio Ambiente,Capacidad instalada en las PTARs  (Litros por segundo),2018,1989.4,
-Medio Ambiente,Capacidad instalada en las PTARs  (Litros por segundo),2019,37007.5,
-Medio Ambiente,Capacidad instalada en las PTARs  (Litros por segundo),2020,37314.8,
-Medio Ambiente,Capacidad instalada en las PTARs  (Litros por segundo),2021,37223,
-Medio Ambiente,Capacidad instalada en las PTARs  (Litros por segundo),2022,1985.6,
-Social,Carencia por acceso a la seguridad social,2013,71.3,Fuente: CONEVAL. Medición de la Pobreza
-Social,Carencia por acceso a la seguridad social,2014,68.9,
-Social,Carencia por acceso a la seguridad social,2015,68.7,
-Social,Carencia por acceso a la seguridad social,2016,72.0223503,
-Social,Carencia por acceso a la seguridad social,2018,69.7,
-Social,Carencia por acceso a la seguridad social,2020,66.6,
-Social,Carencia por acceso a la seguridad social,2022,65.4,
-Social,Carencia por acceso a los servicios de salud,2013,18.7,Fuente: CONEVAL. Medición de la Pobreza
-Social,Carencia por acceso a los servicios de salud,2014,17.3,
-Social,Carencia por acceso a los servicios de salud,2015,18.3,
-Social,Carencia por acceso a los servicios de salud,2016,14.4,
-Social,Carencia por acceso a los servicios de salud,2018,14.4,
-Social,Carencia por acceso a los servicios de salud,2020,26.9,
-Social,Carencia por acceso a los servicios de salud,2022,50.4,
-Social,Carencia por calidad y espacios de la vivienda,2013,12.8,Fuente: CONEVAL. Medición de la Pobreza
-Social,Carencia por calidad y espacios de la vivienda,2014,9.2,
-Social,Carencia por calidad y espacios de la vivienda,2015,9.6,
-Social,Carencia por calidad y espacios de la vivienda,2016,11.2254388,
-Social,Carencia por calidad y espacios de la vivienda,2018,9.8,
-Social,Carencia por calidad y espacios de la vivienda,2020,7.9,
-Social,Carencia por calidad y espacios de la vivienda,2022,6.4,
-Económico,Cera Producción (toneladas),2022,44.781,Fuente: Secretaría de Agricultura y Desarrollo Rural SADER. Servicio de Información Agroalimentaria y Pesquera  SIAP. Cierre de la Producción Pecuaria (1983-2023). Año 2022
-Económico,Cera Valor de la Producción (miles de pesos),2022,3604.333,Fuente: Secretaría de Agricultura y Desarrollo Rural SADER. Servicio de Información Agroalimentaria y Pesquera  SIAP. Cierre de la Producción Pecuaria (1983-2023). Año 2022
-Seguridad,Cifra negra,2014,87.1694183,https://www.inegi.org.mx/contenidos/programas/envipe/2024/doc/envipe2024_presentacion_nacional.pdf
-Seguridad,Cifra negra,2015,89.66315393,
-Seguridad,Cifra negra,2016,91.60399375,
-Seguridad,Cifra negra,2017,88.97222449,
-Seguridad,Cifra negra,2018,91.65558729,
-Seguridad,Cifra negra,2019,90.42677287,
-Seguridad,Cifra negra,2020,93.68689594,
-Seguridad,Cifra negra,2021,92.27393188,
-Seguridad,Cifra negra,2022,87.52195897,
-Seguridad,Cifra negra,2023,89,
-Género,Cobertura de educación en la primera infancia #Con Lupa de Género (Porcentaje),2024,NA,CONEVAL
-Social,Cobertura Media Superior,2023,79.6,https://www.planeacion.sep.gob.mx/Doc/estadistica_e_indicadores/principales_cifras/principales_cifras_2015_2016.pdf
-Social,Cobertura Preescolar,2013,73.7,https://www.planeacion.sep.gob.mx/Doc/estadistica_e_indicadores/principales_cifras/principales_cifras_2012_2013.pdf
-Social,Cobertura Preescolar,2014,73.6,
-Social,Cobertura Preescolar,2015,73.6,
-Social,Cobertura Preescolar,2016,73.1,
-Social,Cobertura Preescolar,2017,74.2,
-Social,Cobertura Preescolar,2018,74.2,
-Social,Cobertura Preescolar,2019,72.8,
-Social,Cobertura Preescolar,2020,69.7,
-Social,Cobertura Preescolar,2021,63.9,
-Social,Cobertura Preescolar,2022,60.9,
-Social,Cobertura Preescolar,2023,69.8,
-Social,Cobertura Primaria,2013,109.7,https://www.planeacion.sep.gob.mx/Doc/estadistica_e_indicadores/principales_cifras/principales_cifras_2012_2013.pdf
-Social,Cobertura Primaria,2014,109.1,
-Social,Cobertura Primaria,2015,108.6,
-Social,Cobertura Primaria,2016,107.4,
-Social,Cobertura Primaria,2017,106.9,
-Social,Cobertura Primaria,2018,106.5,
-Social,Cobertura Primaria,2019,106.4,
-Social,Cobertura Primaria,2020,105.4,
-Social,Cobertura Primaria,2021,103.7,
-Social,Cobertura Primaria,2022,102.1,
-Social,Cobertura Primaria,2023,100.4,
-Social,Cobertura Secundaria,2013,98.5,https://www.planeacion.sep.gob.mx/Doc/estadistica_e_indicadores/principales_cifras/principales_cifras_2012_2013.pdf
-Social,Cobertura Secundaria,2014,101.3,
-Social,Cobertura Secundaria,2015,103.9,
-Social,Cobertura Secundaria,2016,105.5,
-Social,Cobertura Secundaria,2017,105.4,
-Social,Cobertura Secundaria,2018,104.7,
-Social,Cobertura Secundaria,2019,103.7,
-Social,Cobertura Secundaria,2020,102.9,
-Social,Cobertura Secundaria,2021,102.8,
-Social,Cobertura Secundaria,2022,101.1,
-Social,Cobertura Secundaria,2023,99.9,
-Gobierno,Confianza en el Gobierno Estatal,2017,44.1,Fuente : INEGI. Encuesta Nacional de Calidad e Impacto Gubernamental (ENCIG)
-Gobierno,Confianza en el Gobierno Estatal,2019,41.2,
-Gobierno,Confianza en el Gobierno Estatal,2021,46.4,
-Gobierno,Confianza en el Gobierno Estatal,2023,48.5,
-Económico,Crecimiento económico (porcentaje),2024,4.4,Fuente: México cómo Vamos?
-Económico,Cuartos de establecimientos de Hospedaje,2021,15003,Fuente: INEGI. México en Cifras. Hidalgo. Tabulados de Integración. Turismo Edición 2022
-Económico,Cuartos de Hospedaje según categoría (sin categoría),-,-,Fuente: INEGI. México en Cifras. Hidalgo. Tabulados de Integración. Turismo Edición 2022
-Económico,Cuartos de Hospedaje según categoría 1 estrella,2021,914,Fuente: INEGI. México en Cifras. Hidalgo. Tabulados de Integración. Turismo Edición 2022
-Económico,Cuartos de Hospedaje según categoría 2 estrellas,2021,2364,Fuente: INEGI. México en Cifras. Hidalgo. Tabulados de Integración. Turismo Edición 2022
-Económico,Cuartos de Hospedaje según categoría 3 estrellas,2021,4052,Fuente: INEGI. México en Cifras. Hidalgo. Tabulados de Integración. Turismo Edición 2022
-Económico,Cuartos de Hospedaje según categoría 4 estrellas,2021,1931,Fuente: INEGI. México en Cifras. Hidalgo. Tabulados de Integración. Turismo Edición 2022
-Económico,Cuartos de Hospedaje según categoría 5 estrellas,2021,1057,Fuente: INEGI. México en Cifras. Hidalgo. Tabulados de Integración. Turismo Edición 2022
-Seguridad,Defunciones,2015,14595,https://www.inegi.org.mx/app/tabulados/interactivos/?pxq=mortalidad_Mortalidad_01_c7703400-bbe0-48b5-9987-d589569c6b53
-Seguridad,Defunciones,2016,15391,
-Seguridad,Defunciones,2017,15675,
-Seguridad,Defunciones,2018,15945,
-Seguridad,Defunciones,2019,16414,
-Seguridad,Defunciones,2020,22655,
-Seguridad,Defunciones,2021,25106,
-Seguridad,Defunciones,2022,18403,
-Seguridad,Defunciones,2023,17525,
-Género,Delitos sexuales #Con Lupa de Género,2024,NA,CONEVAL
-Género,Desigualdad en trabajo no remunerado (TNR) #Con Lupa de Género,2024,57.2,CONEVAL
-Económico,Desigualdad laboral (coeficiente de Gini),-,-,ENIGH
-Económico,Deuda Pública (Porcentaje del PIB),-,-,IMCO
-Social,Eficiencia Terminal Primaria,-,-,https://www.planeacion.sep.gob.mx/Doc/estadistica_e_indicadores/principales_cifras/principales_cifras_14_15.pdf
-Social,Eficiencia Terminal Secundaria,2015,92.5,https://www.planeacion.sep.gob.mx/Doc/estadistica_e_indicadores/principales_cifras/principales_cifras_14_15.pdf
-Social,Eficiencia Terminal Secundaria,2016,91.8,
-Social,Eficiencia Terminal Secundaria,2017,91.2,
-Social,Eficiencia Terminal Secundaria,2018,91,
-Social,Eficiencia Terminal Secundaria,2019,90.6,
-Social,Eficiencia Terminal Secundaria,2020,92.6,
-Social,Eficiencia Terminal Secundaria,2021,94.2,
-Social,Eficiencia Terminal Secundaria,2022,94.2,
-Social,Eficiencia Terminal Secundaria,2023,93.5,
-Gobierno,Egresos brutos de los Gobiernos de los Estados (pesos),2016,46098966677,Fuente: INEGI. Finanzas Públicas Estatales y Municipales (EFIPEM). Datos Abiertos
-Gobierno,Egresos brutos de los Gobiernos de los Estados (pesos),2017,47928797634,
-Gobierno,Egresos brutos de los Gobiernos de los Estados (pesos),2018,50432874625,
-Gobierno,Egresos brutos de los Gobiernos de los Estados (pesos),2019,54258090012,
-Gobierno,Egresos brutos de los Gobiernos de los Estados (pesos),2020,52783297268,
-Gobierno,Egresos brutos de los Gobiernos de los Estados (pesos),2021,51200175277,
-Gobierno,Egresos brutos de los Gobiernos de los Estados (pesos),2022,59814455057,
-Género,Embarazo Adolescente #Con Lupa de Género (Porcentaje),2024,NA,CONEVAL
-Medio Ambiente,Emisiones de Contaminantes,2005,1182007.77,Fuente: SEMARTNAT. Documentos del Inventario Nacional de Emisiones. https://www.gob.mx/semarnat/documentos/documentos-del-inventario-nacional-de-emisioneshttps://www.gob.mx/semarnat/documentos/documentos-del-inventario-nacional-de-emisiones  https://www.gob.mx/semarnat/documentos/documentos-del-inventario-nacional-de-emisiones
-Medio Ambiente,Emisiones de Contaminantes,2008,887217.1808,
-Medio Ambiente,Emisiones de Contaminantes,2013,806918.2569,
-Medio Ambiente,Emisiones de Contaminantes,2016,766396.8261,
-Económico,Empleos Formales Generados Acumulados,2024,8938,Fuente: México como Vamos
-Económico,Establecimiento de Hospedaje,2021,713,Fuente: INEGI. México en Cifras. Hidalgo. Tabulados de Integración. Turismo
-Económico,Establecimiento de Hospedaje según categoría 1 estrella,2021,48,Fuente: INEGI. México en Cifras. Hidalgo. Tabulados de Integración. Turismo
-Económico,Establecimiento de Hospedaje según categoría 2 estrellas,2021,95,Fuente: INEGI. México en Cifras. Hidalgo. Tabulados de Integración. Turismo
-Económico,Establecimiento de Hospedaje según categoría 3 estrellas,2021,129,Fuente: INEGI. México en Cifras. Hidalgo. Tabulados de Integración. Turismo
-Económico,Establecimiento de Hospedaje según categoría 4 estrellas,2021,50,Fuente: INEGI. México en Cifras. Hidalgo. Tabulados de Integración. Turismo
-Económico,Establecimiento de Hospedaje según categoría 5 estrellas,2021,25,Fuente: INEGI. México en Cifras. Hidalgo. Tabulados de Integración. Turismo
-Económico,Exportaciones,2023,904187,Fuente: INEGI. Exportaciones por Entidad Federativa. https://www.inegi.org.mx/temas/exportacionesef/
-Económico,Exportaciones,2024,796212,
-Seguridad,Extorsión,2015,42,https://www.gob.mx/sesnsp/acciones-y-programas/incidencia-delictiva-del-fuero-comun-nueva-metodologia?state=published
-Seguridad,Extorsión,2016,80,
-Seguridad,Extorsión,2017,132,
-Seguridad,Extorsión,2018,142,
-Seguridad,Extorsión,2019,210,
-Seguridad,Extorsión,2020,133,
-Seguridad,Extorsión,2021,108,
-Seguridad,Extorsión,2022,232,
-Seguridad,Extorsión,2023,365,
-Seguridad,Extorsión,2024,175,
-Seguridad,Extorsión,2015,42,
-Seguridad,Extorsión,2016,80,
-Seguridad,Extorsión,2017,132,
-Seguridad,Extorsión,2018,142,
-Seguridad,Extorsión,2019,210,
-Seguridad,Extorsión,2020,133,
-Seguridad,Extorsión,2021,108,
-Seguridad,Extorsión,2022,232,
-Seguridad,Extorsión,2023,365,
-Seguridad,Extorsión,2024,175,
-Seguridad,Feminicidio,2016,22,https://www.gob.mx/sesnsp/acciones-y-programas/incidencia-delictiva-del-fuero-comun-nueva-metodologia?state=published
-Seguridad,Feminicidio,2017,22,
-Seguridad,Feminicidio,2018,20,
-Seguridad,Feminicidio,2019,20,
-Seguridad,Feminicidio,2020,19,
-Seguridad,Feminicidio,2021,21,
-Seguridad,Feminicidio,2022,19,
-Seguridad,Feminicidio,2023,20,
-Seguridad,Feminicidio,2024,7,
-Seguridad,Feminicidio,2016,22,
-Seguridad,Feminicidio,2017,22,
-Seguridad,Feminicidio,2018,20,
-Seguridad,Feminicidio,2019,20,
-Seguridad,Feminicidio,2020,19,
-Seguridad,Feminicidio,2021,21,
-Seguridad,Feminicidio,2022,19,
-Seguridad,Feminicidio,2023,20,
-Seguridad,Feminicidio,2024,7,
-Económico,Ganado Bovino Producción (toneladas),2022,60644.866,Fuente: Secretaría de Agricultura y Desarrollo Rural SADER. Servicio de Información Agroalimentaria y Pesquera  SIAP. Cierre de la Producción Pecuaria (1983-2023). Año 2022
-Económico,Ganado Bovino Valor de la Producción (miles de pesos),2022,2245898.095,Fuente: Secretaría de Agricultura y Desarrollo Rural SADER. Servicio de Información Agroalimentaria y Pesquera  SIAP. Cierre de la Producción Pecuaria (1983-2023). Año 2022
-Económico,Ganado Caprino Producción (toneladas),2022,1546.847,Fuente: Secretaría de Agricultura y Desarrollo Rural SADER. Servicio de Información Agroalimentaria y Pesquera  SIAP. Cierre de la Producción Pecuaria (1983-2023). Año 2022
-Económico,Ganado Caprino Valor de la Producción (miles de pesos),2022,57666.874,Fuente: Secretaría de Agricultura y Desarrollo Rural SADER. Servicio de Información Agroalimentaria y Pesquera  SIAP. Cierre de la Producción Pecuaria (1983-2023). Año 2022
-Económico,Ganado Ovino Producción (toneladas),2022,13273.775,Fuente: Secretaría de Agricultura y Desarrollo Rural SADER. Servicio de Información Agroalimentaria y Pesquera  SIAP. Cierre de la Producción Pecuaria (1983-2023). Año 2022
-Económico,Ganado Ovino Valor de la Producción (miles de pesos),2022,620638.095,Fuente: Secretaría de Agricultura y Desarrollo Rural SADER. Servicio de Información Agroalimentaria y Pesquera  SIAP. Cierre de la Producción Pecuaria (1983-2023). Año 2022
-Económico,Ganado Porcino Producción (toneladas),2022,21421.659,Fuente: Secretaría de Agricultura y Desarrollo Rural SADER. Servicio de Información Agroalimentaria y Pesquera  SIAP. Cierre de la Producción Pecuaria (1983-2023). Año 2022
-Económico,Ganado Porcino Valor de la Producción (miles de pesos),2022,724862.187,Fuente: Secretaría de Agricultura y Desarrollo Rural SADER. Servicio de Información Agroalimentaria y Pesquera  SIAP. Cierre de la Producción Pecuaria (1983-2023). Año 2022
-Económico,Gasto corriente promedio trimestral por hogar (tabla 4.7),2022,34086,Fuente: INEGI. Encuesta Nacional de Ingresos y Gastos de los Hogares (ENIGH). 2022 Nueva serie
-Social,Grado Promedio de Escolaridad,2013,8.4,https://www.planeacion.sep.gob.mx/Doc/estadistica_e_indicadores/principales_cifras/principales_cifras_2012_2013.pdf
-Social,Grado Promedio de Escolaridad,2014,8.4,
-Social,Grado Promedio de Escolaridad,2015,8.6,
-Social,Grado Promedio de Escolaridad,2016,8.7,
-Social,Grado Promedio de Escolaridad,2017,8.9,
-Social,Grado Promedio de Escolaridad,2018,9,
-Social,Grado Promedio de Escolaridad,2019,9.1,
-Social,Grado Promedio de Escolaridad,2020,9.37,
-Social,Grado Promedio de Escolaridad,2022,9.37,
-Social,Grado Promedio de Escolaridad,2023,9.4,
-Económico,Guajolotes Producción (toneladas),2022,1463.343,Fuente: Secretaría de Agricultura y Desarrollo Rural SADER. Servicio de Información Agroalimentaria y Pesquera  SIAP. Cierre de la Producción Pecuaria (1983-2023). Año 2022
-Económico,Guajolotes Valor de la Producción (miles de pesos),2022,58946.359,Fuente: Secretaría de Agricultura y Desarrollo Rural SADER. Servicio de Información Agroalimentaria y Pesquera  SIAP. Cierre de la Producción Pecuaria (1983-2023). Año 2022
-Seguridad,Homicidios,2015,146,https://www.gob.mx/sesnsp/acciones-y-programas/incidencia-delictiva-del-fuero-comun-nueva-metodologia?state=published
-Seguridad,Homicidios,2016,653,
-Seguridad,Homicidios,2017,700,
-Seguridad,Homicidios,2018,733,
-Seguridad,Homicidios,2019,646,
-Seguridad,Homicidios,2020,540,
-Seguridad,Homicidios,2021,530,
-Seguridad,Homicidios,2022,545,
-Seguridad,Homicidios,2023,379,
-Seguridad,Homicidios,2024,228,
-Género,Homicidios dolosos de mujeres y feminicidios #Con Lupa de Género,2024,NA,CONEVAL
-Económico,Huevo para plato Producción (toneladas),2022,6730.361,Fuente: Secretaría de Agricultura y Desarrollo Rural SADER. Servicio de Información Agroalimentaria y Pesquera  SIAP. Cierre de la Producción Pecuaria (1983-2023). Año 2022
-Económico,Huevo para plato Valor de la Producción (miles de pesos),2022,214095.822,Fuente: Secretaría de Agricultura y Desarrollo Rural SADER. Servicio de Información Agroalimentaria y Pesquera  SIAP. Cierre de la Producción Pecuaria (1983-2023). Año 2022
-Género,Igualdad laboral y no discriminación #Con Lupa de Género (Porcentaje),2024,NA,CONEVAL
-Seguridad,Incidencia Delictiva del Fuero Común,2015,27504,https://www.gob.mx/sesnsp/acciones-y-programas/incidencia-delictiva-del-fuero-comun-nueva-metodologia?state=published
-Seguridad,Incidencia Delictiva del Fuero Común,2016,33753,
-Seguridad,Incidencia Delictiva del Fuero Común,2017,43963,
-Seguridad,Incidencia Delictiva del Fuero Común,2018,51222,
-Seguridad,Incidencia Delictiva del Fuero Común,2019,49750,
-Seguridad,Incidencia Delictiva del Fuero Común,2020,41260,
-Seguridad,Incidencia Delictiva del Fuero Común,2021,46464,
-Seguridad,Incidencia Delictiva del Fuero Común,2022,52588,
-Seguridad,Incidencia Delictiva del Fuero Común,2023,57225,
-Seguridad,Incidencia Delictiva del Fuero Común,2024,27925,
-Económico,Indicador Mensual de la Actividad Industrial por Entidad Federativa (IMAIEF),2023,121.2,Fuente: INEGI
-Económico,Índicador Trimestral de la Actividad Económica Estatal ITAEE,2024,108.1,Fuente: INEGI. Indicador Trimestral de la Actividad Económica Estatal
-Económico,Índice de Competitividad Estatal ICE,2024,33.3,Fuente: Instituto Mexicano para la Competitividad IMCO
-Gobierno,Índice de Desarrollo Democrático IDD-Mex,2017,1828,"Fuente: Fundación Konrad Adenauer, Polilat,  CEPOS y Confederación USEM. https://idd-mex.org/"
-Gobierno,Índice de Desarrollo Democrático IDD-Mex,2018,4751,
-Gobierno,Índice de Desarrollo Democrático IDD-Mex,2019,6892,
-Gobierno,Índice de Desarrollo Democrático IDD-Mex,2020,8303,
-Gobierno,Índice de Desarrollo Democrático IDD-Mex,2021,7582,
-Gobierno,Índice de Desarrollo Democrático IDD-Mex,2022,5072,
-Gobierno,Índice de Desarrollo Democrático IDD-Mex,2023,5755,
-Social,Índice de Intensidad Migratoria DP2,2000,3.34,Fuente: CONAPO
-Social,Índice de Intensidad Migratoria DP2,2010,6.47,
-Social,Índice de Intensidad Migratoria DP2,2020,18.89,
-Económico,Índice de la Tendencia Laboral de la Pobreza (ITLP),2024,0.992,Fuente: CONEVAL. Índice de la Tendencia Laboral de la Pobreza ITLP
-Social,Índice de marginación,2010,7.3,Fuente: CONAPO
-Social,Índice de marginación,2015,13.5,
-Social,Índice de marginación,2020,18.053,
-Gobierno,Índice de Monitoreo y Evaluación,2011,34.3,Fuente: CONEVAL. Evaluación de los Programas Sociales
-Gobierno,Índice de Monitoreo y Evaluación,2013,60.2,
-Gobierno,Índice de Monitoreo y Evaluación,2015,87,
-Gobierno,Índice de Monitoreo y Evaluación,2017,96.3,
-Gobierno,Índice de Monitoreo y Evaluación,2019,97.2,
-Gobierno,Índice de Monitoreo y Evaluación,2021,98.1,
-Gobierno,Índice de Monitoreo y Evaluación,2023,99.1,
-Seguridad,Índice de Paz México,2014,1.6,Índice de Paz México (indicedepazmexico.org)
-Seguridad,Índice de Paz México,2015,1.758,
-Seguridad,Índice de Paz México,2016,1.758,
-Seguridad,Índice de Paz México,2017,1.758,
-Seguridad,Índice de Paz México,2018,1.757,
-Seguridad,Índice de Paz México,2019,1.808,
-Seguridad,Índice de Paz México,2020,2.161,
-Seguridad,Índice de Paz México,2021,1.911,
-Seguridad,Índice de Paz México,2022,1.817,
-Seguridad,Índice de Paz México,2023,1.958,
-Seguridad,Índice de Paz México,2024,2.336,
-Social,Índice de Progreso Social,2015,59.1,Fuente: México como Vamos
-Social,Índice de Progreso Social,2016,60.7,
-Social,Índice de Progreso Social,2017,60.5,
-Social,Índice de Progreso Social,2018,61.7,
-Social,Índice de Progreso Social,2019,65.19,
-Social,Índice de Progreso Social,2020,64.9,
-Social,Índice de Progreso Social,2021,61.9,
-Social,Índice de Rezago Social,2000,0.8640431,https://www.coneval.org.mx/Medicion/IRS/Paginas/Indice_Rezago_Social_2015.aspx
-Social,Índice de Rezago Social,2005,0.5928121,
-Social,Índice de Rezago Social,2010,0.6076962,
-Social,Índice de Rezago Social,2015,0.4495519,
-Social,Índice de Rezago Social,2020,0.320126,
-Social,Índice de Rezago Social Longitudinal,2000,3.982832831,https://www.coneval.org.mx/Medicion/Paginas/AE_IRSL_20.aspx
-Social,Índice de Rezago Social Longitudinal,2005,2.801194306,
-Social,Índice de Rezago Social Longitudinal,2010,1.911700047,
-Social,Índice de Rezago Social Longitudinal,2015,1.046231142,
-Social,Índice de Rezago Social Longitudinal,2020,0.876356639,
-Gobierno,Índice de Transparencia y Disponibilidad de Información Fiscal ITDIF,2019,88.85,Fuente: Transparencia Fiscal. https://transparenciafiscal.edomex.gob.mx/ITDIF
-Gobierno,Índice de Transparencia y Disponibilidad de Información Fiscal ITDIF,2020,86.02,
-Gobierno,Índice de Transparencia y Disponibilidad de Información Fiscal ITDIF,2021,83.01,
-Gobierno,Índice del Estado de Derecho,2018,0.42,Fuente: World Justice Project WJP
-Gobierno,Índice del Estado de Derecho,2019,0.42,
-Gobierno,Índice del Estado de Derecho,2020,0.42,
-Gobierno,Índice del Estado de Derecho,2021,0.42,
-Gobierno,Índice del Estado de Derecho,2022,0.44,
-Gobierno,Índice Global de Impunidad,2016,67.9,Fuente: Universidad de las Américas Puebla (UDLAP) y el Centro de Estudios sobre Impunidad y Justicia (CESIJ)
-Gobierno,Índice Global de Impunidad,2018,70.47,
-Gobierno,Índice Global de Impunidad,2022,61.71,
-Género,Informalidad #Con Lupa de Género (Porcentaje),2024,72.3,CONEVAL
-Económico,Informalidad (porcentaje),2023,70.6,Fuente: INEGI Encuesta nacional de Ocupación y Empleo ENOE
-Económico,Ingreso corriente promedio trimestral por hogar,2022,53234,Fuente: INEGI. Encuesta Nacional de Ingresos y Gastos de los Hogares (ENIGH). 2022 Nueva serie
-Económico,"Ingreso laboral Per capita (Deflactado con la canasta alimentaria, pesos)",2024,2175.488773,Fuente CONEVAL
-Económico,Ingreso laboral per cápita a pesos corrientes (nominal),-,-,CONEVAL
-Gobierno,Ingresos brutos de los Gobiernos de los Estados (pesos),2016,46098966677,Fuente: INEGI. Finanzas Públicas Estatales y Municipales (EFIPEM). Datos Abiertos
-Gobierno,Ingresos brutos de los Gobiernos de los Estados (pesos),2017,47928797634,
-Gobierno,Ingresos brutos de los Gobiernos de los Estados (pesos),2018,50432874625,
-Gobierno,Ingresos brutos de los Gobiernos de los Estados (pesos),2019,54258090012,
-Gobierno,Ingresos brutos de los Gobiernos de los Estados (pesos),2020,52783297268,
-Gobierno,Ingresos brutos de los Gobiernos de los Estados (pesos),2021,51200175277,
-Gobierno,Ingresos brutos de los Gobiernos de los Estados (pesos),2022,59814455057,
-Económico,Ingresos por Remesas (millones de dólares),2024,478.52,Fuente Banco de México. Remesas por Entidad Federativa al 2o trimetsre de 2024
-Económico,Inversión Extranjera Directa (IED) (millones de dólares),2023,285.4,Fuente: Secretaría de Agricultura y Desarrollo Rural SADER. Servicio de Información Agroalimentaria y Pesquera  SIAP. Cierre de la Producción Pecuaria (1983-2023). Año 2022
-Género,Jornada laboral larga #Con Lupa de Género (Porcentaje),2024,NA,CONEVAL
-Económico,Lana Producción (toneladas),2022,1575.791,Fuente: Secretaría de Agricultura y Desarrollo Rural SADER. Servicio de Información Agroalimentaria y Pesquera  SIAP. Cierre de la Producción Pecuaria (1983-2023). Año 2022
-Económico,Lana Valor de la Producción (miles de pesos,2022,4820.306,Fuente: Secretaría de Agricultura y Desarrollo Rural SADER. Servicio de Información Agroalimentaria y Pesquera  SIAP. Cierre de la Producción Pecuaria (1983-2023). Año 2022
-Económico,Leche de Bovino Producción (toneladas),2022,422682.595,Fuente: Secretaría de Agricultura y Desarrollo Rural SADER. Servicio de Información Agroalimentaria y Pesquera  SIAP. Cierre de la Producción Pecuaria (1983-2023). Año 2022
-Económico,Leche de Bovino Valor de la Producción (miles de pesos),2022,3094036.587,Fuente: Secretaría de Agricultura y Desarrollo Rural SADER. Servicio de Información Agroalimentaria y Pesquera  SIAP. Cierre de la Producción Pecuaria (1983-2023). Año 2022
-Económico,Leche de Caprino Producción (toneladas),2022,62.02,Fuente: Secretaría de Agricultura y Desarrollo Rural SADER. Servicio de Información Agroalimentaria y Pesquera  SIAP. Cierre de la Producción Pecuaria (1983-2023). Año 2022
-Económico,Leche de Caprino Valor de la Producción (miles de pesos),2022,498.601,Fuente: Secretaría de Agricultura y Desarrollo Rural SADER. Servicio de Información Agroalimentaria y Pesquera  SIAP. Cierre de la Producción Pecuaria (1983-2023). Año 2022
-Seguridad,Lesiones,2015,3147,https://www.gob.mx/sesnsp/acciones-y-programas/incidencia-delictiva-del-fuero-comun-nueva-metodologia?state=published
-Seguridad,Lesiones,2016,3647,
-Seguridad,Lesiones,2017,5046,
-Seguridad,Lesiones,2018,7138,
-Seguridad,Lesiones,2019,6214,
-Seguridad,Lesiones,2020,5592,
-Seguridad,Lesiones,2021,5446,
-Seguridad,Lesiones,2022,6207,
-Seguridad,Lesiones,2023,6237,
-Seguridad,Lesiones,2024,3069,
-Económico,Llegada de Turistas a la Entidad por Tipo de Turismo (extranjeros),-,-,Fuente: INEGI. México en Cifras. Hidalgo. Tabulados de Integración. Turismo Edición 2022
-Económico,Llegada de Turistas a la Entidad por Tipo de Turismo (nacionales),-,-,Fuente: INEGI. México en Cifras. Hidalgo. Tabulados de Integración. Turismo Edición 2022
-Económico,Llegada de Turistas Totales a la Entidad,-,-,Fuente: INEGI. México en Cifras. Hidalgo. Tabulados de Integración. Turismo Edición 2022
-Económico,Longitud de la Red Carretera Federal,-,-,INEGI
-Económico,Longitud de la Red de Alimentadoras estatales,-,-,INEGI
-Económico,Longitud de la Red de Brechas Mejoradas,-,-,INEGI
-Económico,Longitud de la Red de Caminos Rurales,-,-,INEGI
-Económico,Miel (Producción toneladas),-,-,INEGI. Censo Agropecuario
-Económico,Miel (Valor de la Producción miles de pesos),-,-,INEGI. Censo Agropecuario
-Social,Mortalidad Defunciones registradas,2010,12668,https://www.inegi.org.mx/sistemas/olap/Proyectos/bd/continuas/mortalidad/MortalidadGeneral.asp
-Social,Mortalidad Defunciones registradas,2011,12851,
-Social,Mortalidad Defunciones registradas,2012,12937,
-Social,Mortalidad Defunciones registradas,2013,13533,
-Social,Mortalidad Defunciones registradas,2014,13723,
-Social,Mortalidad Defunciones registradas,2015,14207,
-Social,Mortalidad Defunciones registradas,2016,14818,
-Social,Mortalidad Defunciones registradas,2017,15283,
-Social,Mortalidad Defunciones registradas,2018,15633,
-Social,Mortalidad Defunciones registradas,2019,15956,
-Social,Mortalidad Defunciones registradas,2020,22365,
-Social,Mortalidad Defunciones registradas,2021,24554,
-Social,Mortalidad Defunciones registradas,2022,18031,
-Social,Mortalidad Defunciones registradas,2023,17024,
-Social,Mortalidad Defunciones registradas en Accidentes de Tránsito,2010,4388,Fuente: INEGI. Mortalidad General
-Social,Mortalidad Defunciones registradas en Accidentes de Tránsito,2011,3906,
-Social,Mortalidad Defunciones registradas en Accidentes de Tránsito,2012,4161,
-Social,Mortalidad Defunciones registradas en Accidentes de Tránsito,2013,4063,
-Social,Mortalidad Defunciones registradas en Accidentes de Tránsito,2014,4153,
-Social,Mortalidad Defunciones registradas en Accidentes de Tránsito,2015,3659,
-Social,Mortalidad Defunciones registradas en Accidentes de Tránsito,2016,3146,
-Social,Mortalidad Defunciones registradas en Accidentes de Tránsito,2017,3286,
-Social,Mortalidad Defunciones registradas en Accidentes de Tránsito,2018,3172,
-Social,Mortalidad Defunciones registradas en Accidentes de Tránsito,2019,21,
-Social,Mortalidad Defunciones registradas en Accidentes de Tránsito,2020,24,
-Social,Mortalidad Defunciones registradas en Accidentes de Tránsito,2021,20,
-Social,Mortalidad Defunciones registradas en Accidentes de Tránsito,2022,29,
-Social,Mortalidad Defunciones registradas en Accidentes de Tránsito,2023,48,
-Género,Mujeres Preparadas #Con Lupa de Género (Porcentaje),2024,NA,CONEVAL
-Género,Mujeres que quieren trabajar y no pueden #Con Lupa de Género (Porcentaje),2024,NA,CONEVAL
-Seguridad,Narco-menudeo,2015,110,https://www.gob.mx/sesnsp/acciones-y-programas/incidencia-delictiva-del-fuero-comun-nueva-metodologia?state=published
-Seguridad,Narco-menudeo,2016,187,
-Seguridad,Narco-menudeo,2017,255,
-Seguridad,Narco-menudeo,2018,270,
-Seguridad,Narco-menudeo,2019,422,
-Seguridad,Narco-menudeo,2020,363,
-Seguridad,Narco-menudeo,2021,786,
-Seguridad,Narco-menudeo,2022,485,
-Seguridad,Narco-menudeo,2023,580,
-Seguridad,Narco-menudeo,2024,304,
-Seguridad,Narco-menudeo,2017,255,
-Seguridad,Narco-menudeo,2018,270,
-Seguridad,Narco-menudeo,2019,422,
-Seguridad,Narco-menudeo,2020,363,
-Seguridad,Narco-menudeo,2021,786,
-Seguridad,Narco-menudeo,2022,485,
-Seguridad,Narco-menudeo,2023,580,
-Seguridad,Narco-menudeo,2024,304,
-Gobierno,Nivel de satisfacción general con los servicios públicos básicos y bajo demanda,2017,47.8,Fuente : INEGI. Encuesta Nacional de Calidad e Impacto Gubernamental (ENCIG)
-Gobierno,Nivel de satisfacción general con los servicios públicos básicos y bajo demanda,2019,51.9,
-Gobierno,Nivel de satisfacción general con los servicios públicos básicos y bajo demanda,2021,47.4,
-Gobierno,Nivel de satisfacción general con los servicios públicos básicos y bajo demanda,2023,46.6,
-Seguridad,Número de accidentes de Transito,2010,4388,https://www.inegi.org.mx/app/tabulados/interactivos/?px=ATUS_1&bd=ATUS&idrt=168&opc=t
-Seguridad,Número de accidentes de Transito,2011,3906,
-Seguridad,Número de accidentes de Transito,2012,4161,
-Seguridad,Número de accidentes de Transito,2013,4063,
-Seguridad,Número de accidentes de Transito,2014,4153,
-Seguridad,Número de accidentes de Transito,2015,3659,
-Seguridad,Número de accidentes de Transito,2016,3146,
-Seguridad,Número de accidentes de Transito,2017,3286,
-Seguridad,Número de accidentes de Transito,2018,3172,
-Seguridad,Número de accidentes de Transito,2019,2899,
-Seguridad,Número de accidentes de Transito,2020,2282,
-Seguridad,Número de accidentes de Transito,2021,2182,
-Seguridad,Número de accidentes de Transito,2022,3275,
-Seguridad,Número de accidentes de Transito,2023,4253,
-Económico,Ocupación del Gobierno (Población ocupada en el gobierno como porcentaje de la población ocupada),-,-,ENOE. Encuesta Nacional de Ocupación y Empleo
-Económico,Oferta de Alojamiento en la Entidad (cuartos),-,-,Fuente: INEGI. México en Cifras. Hidalgo. Tabulados de Integración. Turismo Edición 2022
-Económico,Oferta de Alojamiento en la Entidad (cuartos),-,-,Fuente: INEGI. México en Cifras. Hidalgo. Tabulados de Integración. Turismo Edición 2022
-Género,Oferta de cuidados de adultos mayores #Con Lupa de Género,2024,NA,CONEVAL
-Económico,Patentes,2024,10,Instituto Nacional de la Propiedad Industrial INPI
-Género,Percepción de inseguridad en transporte público #Con Lupa de Género (Porcentaje),2024,NA,CONEVAL
-Seguridad,Percepción Sobre el Tema de la Inseguridad,2014,47.8,https://www.inegi.org.mx/programas/envipe/2023/
-Seguridad,Percepción Sobre el Tema de la Inseguridad,2015,50.5,
-Seguridad,Percepción Sobre el Tema de la Inseguridad,2016,50.4,
-Seguridad,Percepción Sobre el Tema de la Inseguridad,2017,49.5,
-Seguridad,Percepción Sobre el Tema de la Inseguridad,2018,54.9,
-Seguridad,Percepción Sobre el Tema de la Inseguridad,2019,58.3,
-Seguridad,Percepción Sobre el Tema de la Inseguridad,2020,65.5,
-Seguridad,Percepción Sobre el Tema de la Inseguridad,2021,52.8,
-Seguridad,Percepción Sobre el Tema de la Inseguridad,2022,62,
-Seguridad,Percepción sobre Seguridad Pública Inseguro,2011,55.25,https://www.inegi.org.mx/contenidos/programas/envipe/2024/doc/envipe2024_presentacion_nacional.pdf
-Seguridad,Percepción sobre Seguridad Pública Inseguro,2012,49.24,
-Seguridad,Percepción sobre Seguridad Pública Inseguro,2013,56.35,
-Seguridad,Percepción sobre Seguridad Pública Inseguro,2014,65.5,
-Seguridad,Percepción sobre Seguridad Pública Inseguro,2015,60.88,
-Seguridad,Percepción sobre Seguridad Pública Inseguro,2016,61.56,
-Seguridad,Percepción sobre Seguridad Pública Inseguro,2017,55.06,
-Seguridad,Percepción sobre Seguridad Pública Inseguro,2018,63.28,
-Seguridad,Percepción sobre Seguridad Pública Inseguro,2019,65.55,
-Seguridad,Percepción sobre Seguridad Pública Inseguro,2020,66.08,
-Seguridad,Percepción sobre Seguridad Pública Inseguro,2021,65.04,
-Seguridad,Percepción sobre Seguridad Pública Inseguro,2022,63.81,
-Seguridad,Percepción sobre Seguridad Pública Inseguro,2023,62.6,
-Seguridad,Percepción sobre Seguridad Pública Inseguro,2024,62.9,
-Seguridad,Percepción sobre Seguridad Pública Seguro,2011,40.06,https://www.inegi.org.mx/programas/envipe/2023/
-Seguridad,Percepción sobre Seguridad Pública Seguro,2012,47.36,
-Seguridad,Percepción sobre Seguridad Pública Seguro,2013,39.29,
-Seguridad,Percepción sobre Seguridad Pública Seguro,2014,31.45,
-Seguridad,Percepción sobre Seguridad Pública Seguro,2015,37.2,
-Seguridad,Percepción sobre Seguridad Pública Seguro,2016,35.66,
-Seguridad,Percepción sobre Seguridad Pública Seguro,2017,43.34,
-Seguridad,Percepción sobre Seguridad Pública Seguro,2018,32.37,
-Seguridad,Percepción sobre Seguridad Pública Seguro,2019,31.73,
-Seguridad,Percepción sobre Seguridad Pública Seguro,2020,32.48,
-Seguridad,Percepción sobre Seguridad Pública Seguro,2021,32.94,
-Seguridad,Percepción sobre Seguridad Pública Seguro,2022,34.58,
-Seguridad,Percepción sobre Seguridad Pública Seguro,2023,35.6,
-Género,Permisos de paternidad #Con Lupa de Género,2024,NA,CONEVAL
-Social,Personal Médico,2015,4959,Fuente: México en Cifras. Hidalgo. Tabulados de Integración
-Social,Personal Médico,2016,5052,
-Social,Personal Médico,2017,4932,
-Social,Personal Médico,2018,5280,
-Social,Personal Médico,2019,5234,
-Social,Personal Médico,2020,5341,
-Social,Personal Médico,2021,5834,
-Social,Personal Médico,2022,5806,
-Social,Personal Médico,2023,5905,
-Económico,Personal ocupado en las Unidades Económicas,-,-,ENOE. Encuesta Nacional de Ocupación y Empleo
-Medio Ambiente,Plantas Tratadoras de Aguas residuales,2013,54,Fuente: INEGI. México en Cifras. Hidalgo. Tabulados de Integración. Medio Ambiente
-Medio Ambiente,Plantas Tratadoras de Aguas residuales,2014,65,
-Medio Ambiente,Plantas Tratadoras de Aguas residuales,2015,78,
-Medio Ambiente,Plantas Tratadoras de Aguas residuales,2016,95,
-Medio Ambiente,Plantas Tratadoras de Aguas residuales,2017,93,
-Medio Ambiente,Plantas Tratadoras de Aguas residuales,2018,105,
-Medio Ambiente,Plantas Tratadoras de Aguas residuales,2019,110,
-Medio Ambiente,Plantas Tratadoras de Aguas residuales,2020,123,
-Medio Ambiente,Plantas Tratadoras de Aguas residuales,2021,124,
-Medio Ambiente,Plantas Tratadoras de Aguas residuales,2022,105,
-Social,Población con Ingreso Inferior a la Línea de pobreza extrema por ingresos,2013,23.8,https://www.coneval.org.mx/Medicion/MP/Paginas/AE_pobreza_2022.aspx
-Social,Población con Ingreso Inferior a la Línea de pobreza extrema por ingresos,2014,24.7,
-Social,Población con Ingreso Inferior a la Línea de pobreza extrema por ingresos,2015,21.5,
-Social,Población con Ingreso Inferior a la Línea de pobreza extrema por ingresos,2016,19.26031074,
-Social,Población con Ingreso Inferior a la Línea de pobreza extrema por ingresos,2018,14.5,
-Social,Población con Ingreso Inferior a la Línea de pobreza extrema por ingresos,2020,16.9,
-Social,Población con Ingreso Inferior a la Línea de pobreza extrema por ingresos,2022,12,
-Social,Población con Ingreso Inferior a la Línea de pobreza por ingresos,2013,55.8,https://www.coneval.org.mx/Medicion/MP/Paginas/AE_pobreza_2022.aspx
-Social,Población con Ingreso Inferior a la Línea de pobreza por ingresos,2014,59.4,
-Social,Población con Ingreso Inferior a la Línea de pobreza por ingresos,2015,54.3,
-Social,Población con Ingreso Inferior a la Línea de pobreza por ingresos,2016,62.53445071,
-Social,Población con Ingreso Inferior a la Línea de pobreza por ingresos,2018,55.19442443,
-Social,Población con Ingreso Inferior a la Línea de pobreza por ingresos,2020,57.2,
-Social,Población con Ingreso Inferior a la Línea de pobreza por ingresos,2022,46.1,
-Económico,Población Desocupada,2024,36246,INEGI. Encuesta Nacional de Ocupación y Empleo ENOE
-Económico,Población Económicamente Activa,2024,1483511,INEGI. Encuesta Nacional de Ocupación y Empleo ENOE
-Económico,Población Ocupada,2024,1447265,INEGI. Encuesta Nacional de Ocupación y Empleo ENOE
-Género,Pobreza laboral #Con Lupa de Género (Porcentaje),2024,47.6,CONEVAL
-Social,Porcentaje de Abandono Escolar: Media Superior,2013,14,https://www.planeacion.sep.gob.mx/Doc/estadistica_e_indicadores/principales_cifras/principales_cifras_2012_2013.pdf
-Social,Porcentaje de Abandono Escolar: Media Superior,2014,16.8,
-Social,Porcentaje de Abandono Escolar: Media Superior,2015,14.3,
-Social,Porcentaje de Abandono Escolar: Media Superior,2016,13.8,
-Social,Porcentaje de Abandono Escolar: Media Superior,2017,15.8,
-Social,Porcentaje de Abandono Escolar: Media Superior,2018,13.2,
-Social,Porcentaje de Abandono Escolar: Media Superior,2019,13.4,
-Social,Porcentaje de Abandono Escolar: Media Superior,2020,10.7,
-Social,Porcentaje de Abandono Escolar: Media Superior,2021,13.7,
-Social,Porcentaje de Abandono Escolar: Media Superior,2022,13.7,
-Social,Porcentaje de Abandono Escolar: Media Superior,2023,7.9,
-Social,Porcentaje de Abandono Escolar: Primaria,2013,0.3,https://www.planeacion.sep.gob.mx/Doc/estadistica_e_indicadores/principales_cifras/principales_cifras_2013_2014.pdf
-Social,Porcentaje de Abandono Escolar: Primaria,2014,0.3,
-Social,Porcentaje de Abandono Escolar: Primaria,2015,2.6,
-Social,Porcentaje de Abandono Escolar: Primaria,2016,-0.2,
-Social,Porcentaje de Abandono Escolar: Primaria,2017,-0.16,
-Social,Porcentaje de Abandono Escolar: Primaria,2018,-0.4,
-Social,Porcentaje de Abandono Escolar: Primaria,2019,0.05,
-Social,Porcentaje de Abandono Escolar: Primaria,2020,-0.04,
-Social,Porcentaje de Abandono Escolar: Primaria,2021,-0.06,
-Social,Porcentaje de Abandono Escolar: Primaria,2022,-0.06,
-Social,Porcentaje de Abandono Escolar: Primaria,2023,-0.1,
-Social,Porcentaje de Abandono Escolar: Superior,2013,2.2,https://www.planeacion.sep.gob.mx/Doc/estadistica_e_indicadores/principales_cifras/principales_cifras_2013_2014.pdf
-Social,Porcentaje de Abandono Escolar: Superior,2014,2.9,
-Social,Porcentaje de Abandono Escolar: Superior,2015,3.2,
-Social,Porcentaje de Abandono Escolar: Superior,2016,4.8,
-Social,Porcentaje de Abandono Escolar: Superior,2017,4.1,
-Social,Porcentaje de Abandono Escolar: Superior,2018,3.2,
-Social,Porcentaje de Abandono Escolar: Superior,2019,4.9,
-Social,Porcentaje de Abandono Escolar: Superior,2020,6.2,
-Social,Porcentaje de Abandono Escolar: Superior,2021,8.5,
-Social,Porcentaje de Abandono Escolar: Superior,2022,8.5,
-Social,Porcentaje de Abandono Escolar: Superior,2023,7.9,
-Seguridad,Porcentaje de delitos denunciados,2014,11.9,https://www.inegi.org.mx/programas/envipe/2023/
-Seguridad,Porcentaje de delitos denunciados,2015,17,
-Seguridad,Porcentaje de delitos denunciados,2016,17.2,
-Seguridad,Porcentaje de delitos denunciados,2017,12.8,
-Seguridad,Porcentaje de delitos denunciados,2018,14.4,
-Seguridad,Porcentaje de delitos denunciados,2019,11.7,
-Seguridad,Porcentaje de delitos denunciados,2020,13,
-Seguridad,Porcentaje de delitos denunciados,2021,10.1,
-Seguridad,Porcentaje de delitos denunciados,2022,19.3,
-Económico,Porcentaje de la población con ingreso laboral inferior al costo de la canasta alimentaria (pobreza laboral),2024,46.3,CONEVAL. Índice de la Tendencia Laboral de la Pobreza
-Social,Porcentaje de la Población en situación de Pobreza,2015,49.4,https://www.coneval.org.mx/Medicion/MP/Paginas/AE_pobreza_2022.aspx
-Social,Porcentaje de la Población en situación de Pobreza,2016,56.9022436,
-Social,Porcentaje de la Población en situación de Pobreza,2018,49.86970881,
-Social,Porcentaje de la Población en situación de Pobreza,2020,50.75079345,
-Social,Porcentaje de la Población en situación de Pobreza,2021,50.8,
-Social,Porcentaje de la Población en situación de Pobreza,2022,40.99902128,
-Social,Porcentaje de la Población en situación de Pobreza Extrema,2015,9.3,https://www.coneval.org.mx/Medicion/MP/Paginas/AE_pobreza_2022.aspx
-Social,Porcentaje de la Población en situación de Pobreza Extrema,2016,9.512135761,
-Social,Porcentaje de la Población en situación de Pobreza Extrema,2018,7.029249123,
-Social,Porcentaje de la Población en situación de Pobreza Extrema,2020,8.142691792,
-Social,Porcentaje de la Población en situación de Pobreza Extrema,2021,8.1,
-Social,Porcentaje de la Población en situación de Pobreza Extrema,2022,6.778749458,
-Social,Porcentaje de la Población en situación de Pobreza Moderada,2016,47.39010784,https://www.coneval.org.mx/Medicion/MP/Paginas/AE_pobreza_2022.aspx
-Social,Porcentaje de la Población en situación de Pobreza Moderada,2018,42.84045969,
-Social,Porcentaje de la Población en situación de Pobreza Moderada,2020,42.60810165,
-Social,Porcentaje de la Población en situación de Pobreza Moderada,2022,34.22027182,
-Social,Porcentaje de la población vulnerable por ingresos,2016,5.632207,https://www.coneval.org.mx/Medicion/MP/Paginas/AE_pobreza_2022.aspx
-Social,Porcentaje de la población vulnerable por ingresos,2018,5.324716,
-Social,Porcentaje de la población vulnerable por ingresos,2020,6.459086,
-Social,Porcentaje de la población vulnerable por ingresos,2022,5.075462674,
-Económico,Porcentaje de Ocupación en la Entidad con respecto al Porcentaje de Ocupación Nacional,-,-,INEGI
-Social,Porcentaje de Población Afiliada a servicios de salud,2015,82.36,https://www.inegi.org.mx/programas/intercensal/2015/#tabulados
-Social,Porcentaje de Población Afiliada a servicios de salud,2020,69.7,
-Económico,Producción Bruta Total,2019,401036.694,INEGI. Censos Económicos 2019
-Económico,Producción Pesquera (Peso vivo toneladas),2022,455.643,Comisión Nacional de Acuacultura y Pesca CONAPESCA
-Económico,Producción Pesquera Valor de la Producción (Peso vivo miles de pesos),2022,42238.56043,Comisión Nacional de Acuacultura y Pesca CONAPESCA
-Económico,Productividad (pesos prod/hora trab),2024,160,México ¿cómo Vamos?
-Económico,Producto Interno Bruto (millones de pesos) / Porcentaje de Participación (VALORES CONSTANTES),-,-,IMCO
-Social,Rezago Educativo,2013,20.6,https://www.coneval.org.mx/Medicion/Paginas/Pobreza-municipio-2010-2020.aspx
-Social,Rezago Educativo,2014,19.1,
-Social,Rezago Educativo,2015,17.4,
-Social,Rezago Educativo,2016,19.92043194,
-Social,Rezago Educativo,2018,19.74273078,
-Social,Rezago Educativo,2020,18.85200822,
-Social,Rezago Educativo,2022,19.99604078,
-Seguridad,Robo a Casa habitación,2015,1983,https://www.gob.mx/sesnsp/acciones-y-programas/incidencia-delictiva-del-fuero-comun-nueva-metodologia?state=published
-Seguridad,Robo a Casa habitación,2016,2033,
-Seguridad,Robo a Casa habitación,2017,2728,
-Seguridad,Robo a Casa habitación,2018,2722,
-Seguridad,Robo a Casa habitación,2019,2853,
-Seguridad,Robo a Casa habitación,2020,2240,
-Seguridad,Robo a Casa habitación,2021,1413,
-Seguridad,Robo a Casa habitación,2022,1437,
-Seguridad,Robo a Casa habitación,2023,1341,
-Seguridad,Robo a Casa habitación,2024,508,
-Seguridad,Robo a negocio,2015,636,https://www.gob.mx/sesnsp/acciones-y-programas/incidencia-delictiva-del-fuero-comun-nueva-metodologia?state=published
-Seguridad,Robo a negocio,2016,1025,
-Seguridad,Robo a negocio,2017,1572,
-Seguridad,Robo a negocio,2018,1631,
-Seguridad,Robo a negocio,2019,2147,
-Seguridad,Robo a negocio,2020,1623,
-Seguridad,Robo a negocio,2021,1001,
-Seguridad,Robo a negocio,2022,1123,
-Seguridad,Robo a negocio,2023,1044,
-Seguridad,Robo a negocio,2024,466,
-Seguridad,Robo a vehículo,2015,2963,https://www.gob.mx/sesnsp/acciones-y-programas/incidencia-delictiva-del-fuero-comun-nueva-metodologia?state=published
-Seguridad,Robo a vehículo,2016,3601,
-Seguridad,Robo a vehículo,2017,4803,
-Seguridad,Robo a vehículo,2018,5190,
-Seguridad,Robo a vehículo,2019,4259,
-Seguridad,Robo a vehículo,2020,3222,
-Seguridad,Robo a vehículo,2021,2934,
-Seguridad,Robo a vehículo,2022,3458,
-Seguridad,Robo a vehículo,2023,3475,
-Seguridad,Robo a vehículo,2024,1772,
-Seguridad,Secuestro,2015,19,https://www.gob.mx/sesnsp/acciones-y-programas/incidencia-delictiva-del-fuero-comun-nueva-metodologia?state=published
-Seguridad,Secuestro,2016,14,
-Seguridad,Secuestro,2017,20,
-Seguridad,Secuestro,2018,21,
-Seguridad,Secuestro,2019,30,
-Seguridad,Secuestro,2020,22,
-Seguridad,Secuestro,2021,28,
-Seguridad,Secuestro,2022,15,
-Seguridad,Secuestro,2023,15,
-Seguridad,Secuestro,2024,8,
-Económico,Superficie Cosechada (has),2022,469587.27,Fuente: Secretaría de Agricultura y Desarrollo Rural SADER. Servicio de Información Agroalimentaria y Pesquera  SIAP. Cierre de la Producción Agrícola (1983-2023). Año 2022
-Económico,Superficie Sembrada (has),2022,483605.23,Fuente: Secretaría de Agricultura y Desarrollo Rural SADER. Servicio de Información Agroalimentaria y Pesquera  SIAP. Cierre de la Producción Agrícola (1983-2023). Año 2022
-Económico,Tasa de Condiciones Críticas de Ocupación,2024,34.808,Fuente: INEGI. Encuesta Nacional de Ocupación y Empleo ENOE
-Económico,Tasa de Desocupación,2024,2.443,Fuente: INEGI. Encuesta Nacional de Ocupación y Empleo ENOE
-Seguridad,Tasa de homicidios,2011,8,CNSP-Delitos-100 mil hab 2015-2024_jul24.pdf - Google Drive
-Seguridad,Tasa de homicidios,2012,6,
-Seguridad,Tasa de homicidios,2013,6,
-Seguridad,Tasa de homicidios,2014,7,
-Seguridad,Tasa de homicidios,2015,8,
-Seguridad,Tasa de homicidios,2016,7,
-Seguridad,Tasa de homicidios,2017,11,
-Seguridad,Tasa de homicidios,2018,11,
-Seguridad,Tasa de homicidios,2019,16,
-Seguridad,Tasa de homicidios,2020,12,
-Seguridad,Tasa de homicidios,2021,9,
-Seguridad,Tasa de homicidios,2022,12,
-Gobierno,Tasa de incidencia de la corrupción,2017,24552,"Fuente: INEGI. Gobierno, Seguridad y Justicia. Transparencia y Anticorrupción"
-Gobierno,Tasa de incidencia de la corrupción,2019,16402,
-Gobierno,Tasa de incidencia de la corrupción,2021,11849,
-Gobierno,Tasa de incidencia de la corrupción,2023,30353,
-Seguridad,Tasa de Incidencia Delictiva (100 mil hab),2017,23564,"Incidencia delictiva del Fuero Común, nueva metodología. | Secretariado Ejecutivo del Sistema Nacional de Seguridad Pública | Gobierno | gob.mx (www.gob.mx)"
-Seguridad,Tasa de Incidencia Delictiva (100 mil hab),2018,22134.5884,
-Seguridad,Tasa de Incidencia Delictiva (100 mil hab),2019,25987.45121,
-Seguridad,Tasa de Incidencia Delictiva (100 mil hab),2020,20732,
-Seguridad,Tasa de Incidencia Delictiva (100 mil hab),2021,23605,
-Seguridad,Tasa de Incidencia Delictiva (100 mil hab),2022,19649,
-Económico,Tasa de Informalidad Laboral,2024,72.854,Fuente: INEGI. Encuesta Nacional de Ocupación y Empleo ENOE
-Social,Tasa de Mortalidad Infantil (Proyección),2013,11.9,https://www.snieg.mx/cni/escenario.aspx?idorden=1.1&ind=6300000011&gen=146&d=n
-Social,Tasa de Mortalidad Infantil (Proyección),2014,11.7,
-Social,Tasa de Mortalidad Infantil (Proyección),2015,11.9,
-Social,Tasa de Mortalidad Infantil (Proyección),2016,16.3,
-Social,Tasa de Mortalidad Infantil (Proyección),2017,16.5,
-Social,Tasa de Mortalidad Infantil (Proyección),2018,16.5,
-Social,Tasa de Mortalidad Infantil (Proyección),2019,17,
-Social,Tasa de Mortalidad Infantil (Proyección),2020,8.8,
-Social,Tasa de Mortalidad Infantil (Proyección),2021,11.7,
-Social,Tasa de Mortalidad Infantil (Proyección),2022,12.5,
-Social,Tasa de Mortalidad Infantil (Proyección),2023,10.4,
-Económico,Tasa de Ocupación en el Sector Informal,2024,42.916,Fuente: INEGI. Encuesta Nacional de Ocupación y Empleo ENOE
-Social,Tasa de Ocupación no Permitida porcentaje respecto a la población de 5 a 17 años),2019,5.1,Fuente: INEGi. Modulo de Trabajo Infantil
-Social,Tasa de Ocupación no Permitida porcentaje respecto a la población de 5 a 17 años),2022,8.4,
-Económico,Tasa de Ocupación Parcial y Desocupación,2024,12.101,Fuente: INEGI. Encuesta Nacional de Ocupación y Empleo ENOE
-Económico,Tasa de Participación,2024,59.242,Fuente: INEGI. Encuesta Nacional de Ocupación y Empleo ENOE
-Económico,Tasa de Presión General,2024,5.791,Fuente: INEGI. Encuesta Nacional de Ocupación y Empleo ENOE
-Gobierno,Tasa de prevalencia de la corrupción,2017,13095,"Fuente: INEGI. Gobierno, Seguridad y Justicia. Transparencia y Anticorrupción"
-Gobierno,Tasa de prevalencia de la corrupción,2019,9883,
-Gobierno,Tasa de prevalencia de la corrupción,2021,9350,
-Gobierno,Tasa de prevalencia de la corrupción,2023,13107,
-Seguridad,Tasa de Prevalencia delictiva,2010,20225.3773,https://www.inegi.org.mx/programas/envipe/2023/
-Seguridad,Tasa de Prevalencia delictiva,2011,21787.44455,
-Seguridad,Tasa de Prevalencia delictiva,2012,19451.36128,
-Seguridad,Tasa de Prevalencia delictiva,2013,19889.69548,
-Seguridad,Tasa de Prevalencia delictiva,2014,18420.0697,
-Seguridad,Tasa de Prevalencia delictiva,2015,19245.44419,
-Seguridad,Tasa de Prevalencia delictiva,2016,20027.3937,
-Seguridad,Tasa de Prevalencia delictiva,2017,19027.66999,
-Seguridad,Tasa de Prevalencia delictiva,2018,22535.58089,
-Seguridad,Tasa de Prevalencia delictiva,2019,16609.50452,
-Seguridad,Tasa de Prevalencia delictiva,2020,20094.13829,
-Seguridad,Tasa de Prevalencia delictiva,2021,15265.66297,
-Social,Tasa de Quehaceres Domésticos en Condiciones no Adecuadas (porcentaje respecto a la población de 5 a 17 años),2019,4,Fuente: INEGi. Modulo de Trabajo Infantil
-Social,Tasa de Quehaceres Domésticos en Condiciones no Adecuadas (porcentaje respecto a la población de 5 a 17 años),2022,7.8,
-Económico,Tasa de Subocupación,2024,11.009,Fuente: INEGI. Encuesta Nacional de Ocupación y Empleo ENOE
-Económico,Tasa de Trabajo Asalariado,2024,60.65,Fuente: INEGI. Encuesta Nacional de Ocupación y Empleo ENOE
-Social,Tasa de Trabajo Infantil (porcentaje respecto a la población de 5 a 17 años),2019,8.4,Fuente: INEGi. Modulo de Trabajo Infantil
-Social,Tasa de Trabajo Infantil (porcentaje respecto a la población de 5 a 17 años),2022,15.5,
-Social,Tasa Global de Fecundidad,2013,2.31,https://www.inegi.org.mx/temas/natalidad/
-Social,Tasa Global de Fecundidad,2014,2.29,
-Social,Tasa Global de Fecundidad,2015,2.27,
-Social,Tasa Global de Fecundidad,2016,2.26,
-Social,Tasa Global de Fecundidad,2017,2.24,
-Social,Tasa Global de Fecundidad,2018,2.23,
-Social,Tasa Global de Fecundidad,2019,2.21,
-Social,Tasa Global de Fecundidad,2020,2.2,
-Social,Tasa Global de Fecundidad,2021,2.19,
-Social,Tasa Global de Fecundidad,2022,2.18,
-Social,Tasa Global de Fecundidad,2023,2.17,
-Económico,Trabajadores Asegurados Permanentes por el IMSS,2024,283925,Fuente: Secretaría del Trabajo y Previsón Social STyPS con datos del Instituto Mexicano del Seguro IMSS
-Económico,Unidades Económicas,2019,180358,Fuente : INEGI. Censos Económicos
-Social,Unidades Médicas,2015,925,https://www.inegi.org.mx/contenidos/productos/prod_serv/contenidos/espanol/bvinegi/productos/nueva_estruc/anuarios_2015/702825077143.pdf
-Social,Unidades Médicas,2016,926,
-Social,Unidades Médicas,2017,927,
-Social,Unidades Médicas,2018,929,
-Social,Unidades Médicas,2019,928,
-Social,Unidades Médicas,2020,938,
-Social,Unidades Médicas,2021,861,
-Social,Unidades Médicas,2022,860,
-Social,Unidades Médicas,2023,860,
-Económico,Valor de la Producción,-,-,INEGI. Censo Agropecuario
-Seguridad,Violación,2015,348,https://www.gob.mx/sesnsp/acciones-y-programas/incidencia-delictiva-del-fuero-comun-nueva-metodologia?state=published
-Seguridad,Violación,2016,450,
-Seguridad,Violación,2017,560,
-Seguridad,Violación,2018,612,
-Seguridad,Violación,2019,705,
-Seguridad,Violación,2020,704,
-Seguridad,Violación,2021,761,
-Seguridad,Violación,2022,1052,
-Seguridad,Violación,2023,494,
-Seguridad,Violación,2024,251,
-Seguridad,Violencia familiar,2015,2278,https://www.gob.mx/sesnsp/acciones-y-programas/incidencia-delictiva-del-fuero-comun-nueva-metodologia?state=published
-Seguridad,Violencia familiar,2016,3043,
-Seguridad,Violencia familiar,2017,4391,
-Seguridad,Violencia familiar,2018,5083,
-Seguridad,Violencia familiar,2019,5619,
-Seguridad,Violencia familiar,2020,5724,
-Seguridad,Violencia familiar,2021,5870,
-Seguridad,Violencia familiar,2022,6929,
-Seguridad,Violencia familiar,2023,7535,
-Seguridad,Violencia familiar,2024,3807,
-Económico,Volumen de la Producción (toneladas),2022,6922733.01,Fuente: Secretaría de Agricultura y Desarrollo Rural SADER. Servicio de Información Agroalimentaria y Pesquera  SIAP. Cierre de la Producción Agrícola (1983-2023). Año 2022
-Medio Ambiente,Volumen tratado en las PTARs  (Millones m3),2017,582.2,Fuente: INEGI. México en Cifras. Hidalgo. Tabulados de Integración. Medio Ambiente
-Medio Ambiente,Volumen tratado en las PTARs  (Millones m3),2018,51.9,
-Medio Ambiente,Volumen tratado en las PTARs  (Millones m3),2019,950,
-Medio Ambiente,Volumen tratado en las PTARs  (Millones m3),2020,953.6,
-Medio Ambiente,Volumen tratado en las PTARs  (Millones m3),2021,949.5,
-Medio Ambiente,Volumen tratado en las PTARs  (Millones m3),2022,61.6,
-Seguridad,Tasa de Incidencia Delictiva (100 mil hab),2023,21164,
+"Tema","Indicador","Año","Valor","Fuente"
+"Medio Ambiente","Áreas naturales protegidas de competencia todas las competencias","2015","135529","Fuente: Secretaría de Medio Ambiente y Recursos Naturales del Gobierno del Estado. Dirección de Recursos Naturales y Organización Institucional."
+"Medio Ambiente","Áreas naturales protegidas de competencia todas las competencias","2016","135590",
+"Medio Ambiente","Áreas naturales protegidas de competencia todas las competencias","2017","131305.9",
+"Medio Ambiente","Áreas naturales protegidas de competencia todas las competencias","2022","131667",
+"Medio Ambiente","Áreas naturales protegidas de competencia todas las competencias","2023","132770",
+"Medio Ambiente","Áreas naturales protegidas de competencia todas las competencias","2024","131775",
+"Económico","Aves Producción (toneladas)","2022","120227.523","Fuente: Secretaría de Agricultura y Desarrollo Rural SADER. Servicio de Información Agroalimentaria y Pesquera  SIAP. Cierre de la Producción Pecuaria (1983-2023). Año 2022"
+"Económico","Aves Valor de la Producción (miles de pesos)","2022","3240727.673","Fuente: Secretaría de Agricultura y Desarrollo Rural SADER. Servicio de Información Agroalimentaria y Pesquera  SIAP. Cierre de la Producción Pecuaria (1983-2023). Año 2022"
+"Gobierno","Barometro de Información Presupuestal Estatal BIPE","2023","97.41","Fuente: Instituto Mexicano para la Competitividad IMCO"
+"Género","Brecha de ingresos por género #Con Lupa de Género (Porcentaje)","2024","16.3","CONEVAL"
+"Medio Ambiente","Capacidad instalada en las PTARs  (Litros por segundo)","2017","2040.2","INEGI. México en Cifras. Hidalgo. Tabulados de Integración. Medio Ambiente"
+"Medio Ambiente","Capacidad instalada en las PTARs  (Litros por segundo)","2018","1989.4",
+"Medio Ambiente","Capacidad instalada en las PTARs  (Litros por segundo)","2019","37007.5",
+"Medio Ambiente","Capacidad instalada en las PTARs  (Litros por segundo)","2020","37314.8",
+"Medio Ambiente","Capacidad instalada en las PTARs  (Litros por segundo)","2021","37223",
+"Medio Ambiente","Capacidad instalada en las PTARs  (Litros por segundo)","2022","1985.6",
+"Social","Carencia por acceso a la seguridad social","2013","71.3","Fuente: CONEVAL. Medición de la Pobreza"
+"Social","Carencia por acceso a la seguridad social","2014","68.9",
+"Social","Carencia por acceso a la seguridad social","2015","68.7",
+"Social","Carencia por acceso a la seguridad social","2016","72.0223503",
+"Social","Carencia por acceso a la seguridad social","2018","69.7",
+"Social","Carencia por acceso a la seguridad social","2020","66.6",
+"Social","Carencia por acceso a la seguridad social","2022","65.4",
+"Social","Carencia por acceso a los servicios de salud","2013","18.7","Fuente: CONEVAL. Medición de la Pobreza"
+"Social","Carencia por acceso a los servicios de salud","2014","17.3",
+"Social","Carencia por acceso a los servicios de salud","2015","18.3",
+"Social","Carencia por acceso a los servicios de salud","2016","14.4",
+"Social","Carencia por acceso a los servicios de salud","2018","14.4",
+"Social","Carencia por acceso a los servicios de salud","2020","26.9",
+"Social","Carencia por acceso a los servicios de salud","2022","50.4",
+"Social","Carencia por calidad y espacios de la vivienda","2013","12.8","Fuente: CONEVAL. Medición de la Pobreza"
+"Social","Carencia por calidad y espacios de la vivienda","2014","9.2",
+"Social","Carencia por calidad y espacios de la vivienda","2015","9.6",
+"Social","Carencia por calidad y espacios de la vivienda","2016","11.2254388",
+"Social","Carencia por calidad y espacios de la vivienda","2018","9.8",
+"Social","Carencia por calidad y espacios de la vivienda","2020","7.9",
+"Social","Carencia por calidad y espacios de la vivienda","2022","6.4",
+"Económico","Cera Producción (toneladas)","2022","44.781","Fuente: Secretaría de Agricultura y Desarrollo Rural SADER. Servicio de Información Agroalimentaria y Pesquera  SIAP. Cierre de la Producción Pecuaria (1983-2023). Año 2022"
+"Económico","Cera Valor de la Producción (miles de pesos)","2022","3604.333","Fuente: Secretaría de Agricultura y Desarrollo Rural SADER. Servicio de Información Agroalimentaria y Pesquera  SIAP. Cierre de la Producción Pecuaria (1983-2023). Año 2022"
+"Seguridad","Cifra negra","2014","87.1694183","https://www.inegi.org.mx/contenidos/programas/envipe/2024/doc/envipe2024_presentacion_nacional.pdf"
+"Seguridad","Cifra negra","2015","89.66315393",
+"Seguridad","Cifra negra","2016","91.60399375",
+"Seguridad","Cifra negra","2017","88.97222449",
+"Seguridad","Cifra negra","2018","91.65558729",
+"Seguridad","Cifra negra","2019","90.42677287",
+"Seguridad","Cifra negra","2020","93.68689594",
+"Seguridad","Cifra negra","2021","92.27393188",
+"Seguridad","Cifra negra","2022","87.52195897",
+"Seguridad","Cifra negra","2023","89",
+"Género","Cobertura de educación en la primera infancia #Con Lupa de Género (Porcentaje)","2024","40.3","CONEVAL"
+"Social","Cobertura Media Superior","2023","79.6","https://www.planeacion.sep.gob.mx/Doc/estadistica_e_indicadores/principales_cifras/principales_cifras_2015_2016.pdf"
+"Social","Cobertura Preescolar","2013","73.7","https://www.planeacion.sep.gob.mx/Doc/estadistica_e_indicadores/principales_cifras/principales_cifras_2012_2013.pdf"
+"Social","Cobertura Preescolar","2014","73.6",
+"Social","Cobertura Preescolar","2015","73.6",
+"Social","Cobertura Preescolar","2016","73.1",
+"Social","Cobertura Preescolar","2017","74.2",
+"Social","Cobertura Preescolar","2018","74.2",
+"Social","Cobertura Preescolar","2019","72.8",
+"Social","Cobertura Preescolar","2020","69.7",
+"Social","Cobertura Preescolar","2021","63.9",
+"Social","Cobertura Preescolar","2022","60.9",
+"Social","Cobertura Preescolar","2023","69.8",
+"Social","Cobertura Primaria","2013","109.7","https://www.planeacion.sep.gob.mx/Doc/estadistica_e_indicadores/principales_cifras/principales_cifras_2012_2013.pdf"
+"Social","Cobertura Primaria","2014","109.1",
+"Social","Cobertura Primaria","2015","108.6",
+"Social","Cobertura Primaria","2016","107.4",
+"Social","Cobertura Primaria","2017","106.9",
+"Social","Cobertura Primaria","2018","106.5",
+"Social","Cobertura Primaria","2019","106.4",
+"Social","Cobertura Primaria","2020","105.4",
+"Social","Cobertura Primaria","2021","103.7",
+"Social","Cobertura Primaria","2022","102.1",
+"Social","Cobertura Primaria","2023","100.4",
+"Social","Cobertura Secundaria","2013","98.5","https://www.planeacion.sep.gob.mx/Doc/estadistica_e_indicadores/principales_cifras/principales_cifras_2012_2013.pdf"
+"Social","Cobertura Secundaria","2014","101.3",
+"Social","Cobertura Secundaria","2015","103.9",
+"Social","Cobertura Secundaria","2016","105.5",
+"Social","Cobertura Secundaria","2017","105.4",
+"Social","Cobertura Secundaria","2018","104.7",
+"Social","Cobertura Secundaria","2019","103.7",
+"Social","Cobertura Secundaria","2020","102.9",
+"Social","Cobertura Secundaria","2021","102.8",
+"Social","Cobertura Secundaria","2022","101.1",
+"Social","Cobertura Secundaria","2023","99.9",
+"Gobierno","Confianza en el Gobierno Estatal","2017","44.1","Fuente : INEGI. Encuesta Nacional de Calidad e Impacto Gubernamental (ENCIG)"
+"Gobierno","Confianza en el Gobierno Estatal","2019","41.2",
+"Gobierno","Confianza en el Gobierno Estatal","2021","46.4",
+"Gobierno","Confianza en el Gobierno Estatal","2023","48.5",
+"Económico","Crecimiento económico (porcentaje)","2024","4.4","Fuente: México cómo Vamos?"
+"Económico","Cuartos de establecimientos de Hospedaje","2021","15003","Fuente: INEGI. México en Cifras. Hidalgo. Tabulados de Integración. Turismo Edición 2022"
+"Económico","Cuartos de Hospedaje según categoría 1 estrella","2021","914","Fuente: INEGI. México en Cifras. Hidalgo. Tabulados de Integración. Turismo Edición 2022"
+"Económico","Cuartos de Hospedaje según categoría 2 estrellas","2021","2364","Fuente: INEGI. México en Cifras. Hidalgo. Tabulados de Integración. Turismo Edición 2022"
+"Económico","Cuartos de Hospedaje según categoría 3 estrellas","2021","4052","Fuente: INEGI. México en Cifras. Hidalgo. Tabulados de Integración. Turismo Edición 2022"
+"Económico","Cuartos de Hospedaje según categoría 4 estrellas","2021","1931","Fuente: INEGI. México en Cifras. Hidalgo. Tabulados de Integración. Turismo Edición 2022"
+"Económico","Cuartos de Hospedaje según categoría 5 estrellas","2021","1057","Fuente: INEGI. México en Cifras. Hidalgo. Tabulados de Integración. Turismo Edición 2022"
+"Seguridad","Defunciones","2015","14595","https://www.inegi.org.mx/app/tabulados/interactivos/?pxq=mortalidad_Mortalidad_01_c7703400-bbe0-48b5-9987-d589569c6b53"
+"Seguridad","Defunciones","2016","15391",
+"Seguridad","Defunciones","2017","15675",
+"Seguridad","Defunciones","2018","15945",
+"Seguridad","Defunciones","2019","16414",
+"Seguridad","Defunciones","2020","22655",
+"Seguridad","Defunciones","2021","25106",
+"Seguridad","Defunciones","2022","18403",
+"Seguridad","Defunciones","2023","17525",
+"Género","Delitos sexuales #Con Lupa de Género","2024","6.7","CONEVAL"
+"Género","Desigualdad en trabajo no remunerado (TNR) #Con Lupa de Género","2024","57.2","CONEVAL"
+"Social","Eficiencia Terminal Secundaria","2015","92.5","https://www.planeacion.sep.gob.mx/Doc/estadistica_e_indicadores/principales_cifras/principales_cifras_14_15.pdf"
+"Social","Eficiencia Terminal Secundaria","2016","91.8",
+"Social","Eficiencia Terminal Secundaria","2017","91.2",
+"Social","Eficiencia Terminal Secundaria","2018","91",
+"Social","Eficiencia Terminal Secundaria","2019","90.6",
+"Social","Eficiencia Terminal Secundaria","2020","92.6",
+"Social","Eficiencia Terminal Secundaria","2021","94.2",
+"Social","Eficiencia Terminal Secundaria","2022","94.2",
+"Social","Eficiencia Terminal Secundaria","2023","93.5",
+"Gobierno","Egresos brutos de los Gobiernos de los Estados (pesos)","2016","46098966677","Fuente: INEGI. Finanzas Públicas Estatales y Municipales (EFIPEM). Datos Abiertos"
+"Gobierno","Egresos brutos de los Gobiernos de los Estados (pesos)","2017","47928797634",
+"Gobierno","Egresos brutos de los Gobiernos de los Estados (pesos)","2018","50432874625",
+"Gobierno","Egresos brutos de los Gobiernos de los Estados (pesos)","2019","54258090012",
+"Gobierno","Egresos brutos de los Gobiernos de los Estados (pesos)","2020","52783297268",
+"Gobierno","Egresos brutos de los Gobiernos de los Estados (pesos)","2021","51200175277",
+"Gobierno","Egresos brutos de los Gobiernos de los Estados (pesos)","2022","59814455057",
+"Género","Embarazo Adolescente #Con Lupa de Género (Porcentaje)","2024","14.5","CONEVAL"
+"Medio Ambiente","Emisiones de Contaminantes","2005","1182007.77","Fuente: SEMARTNAT. Documentos del Inventario Nacional de Emisiones. https://www.gob.mx/semarnat/documentos/documentos-del-inventario-nacional-de-emisioneshttps://www.gob.mx/semarnat/documentos/documentos-del-inventario-nacional-de-emisiones  https://www.gob.mx/semarnat/documentos/documentos-del-inventario-nacional-de-emisiones"
+"Medio Ambiente","Emisiones de Contaminantes","2008","887217.1808",
+"Medio Ambiente","Emisiones de Contaminantes","2013","806918.2569",
+"Medio Ambiente","Emisiones de Contaminantes","2016","766396.8261",
+"Económico","Empleos Formales Generados Acumulados","2024","8938","Fuente: México como Vamos"
+"Económico","Establecimiento de Hospedaje","2021","713","Fuente: INEGI. México en Cifras. Hidalgo. Tabulados de Integración. Turismo"
+"Económico","Establecimiento de Hospedaje según categoría 1 estrella","2021","48","Fuente: INEGI. México en Cifras. Hidalgo. Tabulados de Integración. Turismo"
+"Económico","Establecimiento de Hospedaje según categoría 2 estrellas","2021","95","Fuente: INEGI. México en Cifras. Hidalgo. Tabulados de Integración. Turismo"
+"Económico","Establecimiento de Hospedaje según categoría 3 estrellas","2021","129","Fuente: INEGI. México en Cifras. Hidalgo. Tabulados de Integración. Turismo"
+"Económico","Establecimiento de Hospedaje según categoría 4 estrellas","2021","50","Fuente: INEGI. México en Cifras. Hidalgo. Tabulados de Integración. Turismo"
+"Económico","Establecimiento de Hospedaje según categoría 5 estrellas","2021","25","Fuente: INEGI. México en Cifras. Hidalgo. Tabulados de Integración. Turismo"
+"Económico","Exportaciones","2023","904187","Fuente: INEGI. Exportaciones por Entidad Federativa. https://www.inegi.org.mx/temas/exportacionesef/"
+"Económico","Exportaciones","2024","796212",
+"Seguridad","Extorsión","2015","42","https://www.gob.mx/sesnsp/acciones-y-programas/incidencia-delictiva-del-fuero-comun-nueva-metodologia?state=published"
+"Seguridad","Extorsión","2016","80",
+"Seguridad","Extorsión","2017","132",
+"Seguridad","Extorsión","2018","142",
+"Seguridad","Extorsión","2019","210",
+"Seguridad","Extorsión","2020","133",
+"Seguridad","Extorsión","2021","108",
+"Seguridad","Extorsión","2022","232",
+"Seguridad","Extorsión","2023","365",
+"Seguridad","Extorsión","2024","175",
+"Seguridad","Extorsión","2015","42",
+"Seguridad","Extorsión","2016","80",
+"Seguridad","Extorsión","2017","132",
+"Seguridad","Extorsión","2018","142",
+"Seguridad","Extorsión","2019","210",
+"Seguridad","Extorsión","2020","133",
+"Seguridad","Extorsión","2021","108",
+"Seguridad","Extorsión","2022","232",
+"Seguridad","Extorsión","2023","365",
+"Seguridad","Extorsión","2024","175",
+"Seguridad","Feminicidio","2016","22","https://www.gob.mx/sesnsp/acciones-y-programas/incidencia-delictiva-del-fuero-comun-nueva-metodologia?state=published"
+"Seguridad","Feminicidio","2017","22",
+"Seguridad","Feminicidio","2018","20",
+"Seguridad","Feminicidio","2019","20",
+"Seguridad","Feminicidio","2020","19",
+"Seguridad","Feminicidio","2021","21",
+"Seguridad","Feminicidio","2022","19",
+"Seguridad","Feminicidio","2023","20",
+"Seguridad","Feminicidio","2024","7",
+"Seguridad","Feminicidio","2016","22",
+"Seguridad","Feminicidio","2017","22",
+"Seguridad","Feminicidio","2018","20",
+"Seguridad","Feminicidio","2019","20",
+"Seguridad","Feminicidio","2020","19",
+"Seguridad","Feminicidio","2021","21",
+"Seguridad","Feminicidio","2022","19",
+"Seguridad","Feminicidio","2023","20",
+"Seguridad","Feminicidio","2024","7",
+"Económico","Ganado Bovino Producción (toneladas)","2022","60644.866","Fuente: Secretaría de Agricultura y Desarrollo Rural SADER. Servicio de Información Agroalimentaria y Pesquera  SIAP. Cierre de la Producción Pecuaria (1983-2023). Año 2022"
+"Económico","Ganado Bovino Valor de la Producción (miles de pesos)","2022","2245898.095","Fuente: Secretaría de Agricultura y Desarrollo Rural SADER. Servicio de Información Agroalimentaria y Pesquera  SIAP. Cierre de la Producción Pecuaria (1983-2023). Año 2022"
+"Económico","Ganado Caprino Producción (toneladas)","2022","1546.847","Fuente: Secretaría de Agricultura y Desarrollo Rural SADER. Servicio de Información Agroalimentaria y Pesquera  SIAP. Cierre de la Producción Pecuaria (1983-2023). Año 2022"
+"Económico","Ganado Caprino Valor de la Producción (miles de pesos)","2022","57666.874","Fuente: Secretaría de Agricultura y Desarrollo Rural SADER. Servicio de Información Agroalimentaria y Pesquera  SIAP. Cierre de la Producción Pecuaria (1983-2023). Año 2022"
+"Económico","Ganado Ovino Producción (toneladas)","2022","13273.775","Fuente: Secretaría de Agricultura y Desarrollo Rural SADER. Servicio de Información Agroalimentaria y Pesquera  SIAP. Cierre de la Producción Pecuaria (1983-2023). Año 2022"
+"Económico","Ganado Ovino Valor de la Producción (miles de pesos)","2022","620638.095","Fuente: Secretaría de Agricultura y Desarrollo Rural SADER. Servicio de Información Agroalimentaria y Pesquera  SIAP. Cierre de la Producción Pecuaria (1983-2023). Año 2022"
+"Económico","Ganado Porcino Producción (toneladas)","2022","21421.659","Fuente: Secretaría de Agricultura y Desarrollo Rural SADER. Servicio de Información Agroalimentaria y Pesquera  SIAP. Cierre de la Producción Pecuaria (1983-2023). Año 2022"
+"Económico","Ganado Porcino Valor de la Producción (miles de pesos)","2022","724862.187","Fuente: Secretaría de Agricultura y Desarrollo Rural SADER. Servicio de Información Agroalimentaria y Pesquera  SIAP. Cierre de la Producción Pecuaria (1983-2023). Año 2022"
+"Económico","Gasto corriente promedio trimestral por hogar (tabla 4.7)","2022","34086","Fuente: INEGI. Encuesta Nacional de Ingresos y Gastos de los Hogares (ENIGH). 2022 Nueva serie"
+"Social","Grado Promedio de Escolaridad","2013","8.4","https://www.planeacion.sep.gob.mx/Doc/estadistica_e_indicadores/principales_cifras/principales_cifras_2012_2013.pdf"
+"Social","Grado Promedio de Escolaridad","2014","8.4",
+"Social","Grado Promedio de Escolaridad","2015","8.6",
+"Social","Grado Promedio de Escolaridad","2016","8.7",
+"Social","Grado Promedio de Escolaridad","2017","8.9",
+"Social","Grado Promedio de Escolaridad","2018","9",
+"Social","Grado Promedio de Escolaridad","2019","9.1",
+"Social","Grado Promedio de Escolaridad","2020","9.37",
+"Social","Grado Promedio de Escolaridad","2022","9.37",
+"Social","Grado Promedio de Escolaridad","2023","9.4",
+"Económico","Guajolotes Producción (toneladas)","2022","1463.343","Fuente: Secretaría de Agricultura y Desarrollo Rural SADER. Servicio de Información Agroalimentaria y Pesquera  SIAP. Cierre de la Producción Pecuaria (1983-2023). Año 2022"
+"Económico","Guajolotes Valor de la Producción (miles de pesos)","2022","58946.359","Fuente: Secretaría de Agricultura y Desarrollo Rural SADER. Servicio de Información Agroalimentaria y Pesquera  SIAP. Cierre de la Producción Pecuaria (1983-2023). Año 2022"
+"Seguridad","Homicidios","2015","146","https://www.gob.mx/sesnsp/acciones-y-programas/incidencia-delictiva-del-fuero-comun-nueva-metodologia?state=published"
+"Seguridad","Homicidios","2016","653",
+"Seguridad","Homicidios","2017","700",
+"Seguridad","Homicidios","2018","733",
+"Seguridad","Homicidios","2019","646",
+"Seguridad","Homicidios","2020","540",
+"Seguridad","Homicidios","2021","530",
+"Seguridad","Homicidios","2022","545",
+"Seguridad","Homicidios","2023","379",
+"Seguridad","Homicidios","2024","228",
+"Género","Homicidios dolosos de mujeres y feminicidios #Con Lupa de Género","2024","2.3","CONEVAL"
+"Económico","Huevo para plato Producción (toneladas)","2022","6730.361","Fuente: Secretaría de Agricultura y Desarrollo Rural SADER. Servicio de Información Agroalimentaria y Pesquera  SIAP. Cierre de la Producción Pecuaria (1983-2023). Año 2022"
+"Económico","Huevo para plato Valor de la Producción (miles de pesos)","2022","214095.822","Fuente: Secretaría de Agricultura y Desarrollo Rural SADER. Servicio de Información Agroalimentaria y Pesquera  SIAP. Cierre de la Producción Pecuaria (1983-2023). Año 2022"
+"Seguridad","Incidencia Delictiva del Fuero Común","2015","27504","https://www.gob.mx/sesnsp/acciones-y-programas/incidencia-delictiva-del-fuero-comun-nueva-metodologia?state=published"
+"Seguridad","Incidencia Delictiva del Fuero Común","2016","33753",
+"Seguridad","Incidencia Delictiva del Fuero Común","2017","43963",
+"Seguridad","Incidencia Delictiva del Fuero Común","2018","51222",
+"Seguridad","Incidencia Delictiva del Fuero Común","2019","49750",
+"Seguridad","Incidencia Delictiva del Fuero Común","2020","41260",
+"Seguridad","Incidencia Delictiva del Fuero Común","2021","46464",
+"Seguridad","Incidencia Delictiva del Fuero Común","2022","52588",
+"Seguridad","Incidencia Delictiva del Fuero Común","2023","57225",
+"Seguridad","Incidencia Delictiva del Fuero Común","2024","27925",
+"Económico","Indicador Mensual de la Actividad Industrial por Entidad Federativa (IMAIEF)","2023","121.2","Fuente: INEGI"
+"Económico","Índicador Trimestral de la Actividad Económica Estatal ITAEE","2024","108.1","Fuente: INEGI. Indicador Trimestral de la Actividad Económica Estatal"
+"Económico","Índice de Competitividad Estatal ICE","2024","33.3","Fuente: Instituto Mexicano para la Competitividad IMCO"
+"Gobierno","Índice de Desarrollo Democrático IDD-Mex","2017","1828","Fuente: Fundación Konrad Adenauer, Polilat,  CEPOS y Confederación USEM. https://idd-mex.org/"
+"Gobierno","Índice de Desarrollo Democrático IDD-Mex","2018","4751",
+"Gobierno","Índice de Desarrollo Democrático IDD-Mex","2019","6892",
+"Gobierno","Índice de Desarrollo Democrático IDD-Mex","2020","8303",
+"Gobierno","Índice de Desarrollo Democrático IDD-Mex","2021","7582",
+"Gobierno","Índice de Desarrollo Democrático IDD-Mex","2022","5072",
+"Gobierno","Índice de Desarrollo Democrático IDD-Mex","2023","5755",
+"Social","Índice de Intensidad Migratoria DP2","2000","3.34","Fuente: CONAPO"
+"Social","Índice de Intensidad Migratoria DP2","2010","6.47",
+"Social","Índice de Intensidad Migratoria DP2","2020","18.89",
+"Económico","Índice de la Tendencia Laboral de la Pobreza (ITLP)","2024","0.992","Fuente: CONEVAL. Índice de la Tendencia Laboral de la Pobreza ITLP"
+"Social","Índice de marginación","2010","7.3","Fuente: CONAPO"
+"Social","Índice de marginación","2015","13.5",
+"Social","Índice de marginación","2020","18.053",
+"Gobierno","Índice de Monitoreo y Evaluación","2011","34.3","Fuente: CONEVAL. Evaluación de los Programas Sociales"
+"Gobierno","Índice de Monitoreo y Evaluación","2013","60.2",
+"Gobierno","Índice de Monitoreo y Evaluación","2015","87",
+"Gobierno","Índice de Monitoreo y Evaluación","2017","96.3",
+"Gobierno","Índice de Monitoreo y Evaluación","2019","97.2",
+"Gobierno","Índice de Monitoreo y Evaluación","2021","98.1",
+"Gobierno","Índice de Monitoreo y Evaluación","2023","99.1",
+"Seguridad","Índice de Paz México","2014","1.6","Índice de Paz México (indicedepazmexico.org)"
+"Seguridad","Índice de Paz México","2015","1.758",
+"Seguridad","Índice de Paz México","2016","1.758",
+"Seguridad","Índice de Paz México","2017","1.758",
+"Seguridad","Índice de Paz México","2018","1.757",
+"Seguridad","Índice de Paz México","2019","1.808",
+"Seguridad","Índice de Paz México","2020","2.161",
+"Seguridad","Índice de Paz México","2021","1.911",
+"Seguridad","Índice de Paz México","2022","1.817",
+"Seguridad","Índice de Paz México","2023","1.958",
+"Seguridad","Índice de Paz México","2024","2.336",
+"Social","Índice de Progreso Social","2015","59.1","Fuente: México como Vamos"
+"Social","Índice de Progreso Social","2016","60.7",
+"Social","Índice de Progreso Social","2017","60.5",
+"Social","Índice de Progreso Social","2018","61.7",
+"Social","Índice de Progreso Social","2019","65.19",
+"Social","Índice de Progreso Social","2020","64.9",
+"Social","Índice de Progreso Social","2021","61.9",
+"Social","Índice de Rezago Social","2000","0.8640431","https://www.coneval.org.mx/Medicion/IRS/Paginas/Indice_Rezago_Social_2015.aspx"
+"Social","Índice de Rezago Social","2005","0.5928121",
+"Social","Índice de Rezago Social","2010","0.6076962",
+"Social","Índice de Rezago Social","2015","0.4495519",
+"Social","Índice de Rezago Social","2020","0.320126",
+"Social","Índice de Rezago Social Longitudinal","2000","3.982832831","https://www.coneval.org.mx/Medicion/Paginas/AE_IRSL_20.aspx"
+"Social","Índice de Rezago Social Longitudinal","2005","2.801194306",
+"Social","Índice de Rezago Social Longitudinal","2010","1.911700047",
+"Social","Índice de Rezago Social Longitudinal","2015","1.046231142",
+"Social","Índice de Rezago Social Longitudinal","2020","0.876356639",
+"Gobierno","Índice de Transparencia y Disponibilidad de Información Fiscal ITDIF","2019","88.85","Fuente: Transparencia Fiscal. https://transparenciafiscal.edomex.gob.mx/ITDIF"
+"Gobierno","Índice de Transparencia y Disponibilidad de Información Fiscal ITDIF","2020","86.02",
+"Gobierno","Índice de Transparencia y Disponibilidad de Información Fiscal ITDIF","2021","83.01",
+"Gobierno","Índice del Estado de Derecho","2018","0.42","Fuente: World Justice Project WJP"
+"Gobierno","Índice del Estado de Derecho","2019","0.42",
+"Gobierno","Índice del Estado de Derecho","2020","0.42",
+"Gobierno","Índice del Estado de Derecho","2021","0.42",
+"Gobierno","Índice del Estado de Derecho","2022","0.44",
+"Gobierno","Índice Global de Impunidad","2016","67.9","Fuente: Universidad de las Américas Puebla (UDLAP) y el Centro de Estudios sobre Impunidad y Justicia (CESIJ)"
+"Gobierno","Índice Global de Impunidad","2018","70.47",
+"Gobierno","Índice Global de Impunidad","2022","61.71",
+"Género","Informalidad #Con Lupa de Género (Porcentaje)","2024","72.3","Insituto Mexicano para la Competitividad"
+"Económico","Informalidad (porcentaje)","2023","70.6","Fuente: INEGI Encuesta nacional de Ocupación y Empleo ENOE"
+"Económico","Ingreso corriente promedio trimestral por hogar","2022","53234","Fuente: INEGI. Encuesta Nacional de Ingresos y Gastos de los Hogares (ENIGH). 2022 Nueva serie"
+"Económico","Ingreso laboral Per capita (Deflactado con la canasta alimentaria, pesos)","2024","2175.488773","Fuente: CONEVAL. Pobreza Laboral"
+"Gobierno","Ingresos brutos de los Gobiernos de los Estados (pesos)","2016","46098966677","Fuente: INEGI. Finanzas Públicas Estatales y Municipales (EFIPEM). Datos Abiertos"
+"Gobierno","Ingresos brutos de los Gobiernos de los Estados (pesos)","2017","47928797634",
+"Gobierno","Ingresos brutos de los Gobiernos de los Estados (pesos)","2018","50432874625",
+"Gobierno","Ingresos brutos de los Gobiernos de los Estados (pesos)","2019","54258090012",
+"Gobierno","Ingresos brutos de los Gobiernos de los Estados (pesos)","2020","52783297268",
+"Gobierno","Ingresos brutos de los Gobiernos de los Estados (pesos)","2021","51200175277",
+"Gobierno","Ingresos brutos de los Gobiernos de los Estados (pesos)","2022","59814455057",
+"Económico","Ingresos por Remesas (millones de dólares)","2024","478.52","Fuente Banco de México. Remesas por Entidad Federativa al 2o trimetsre de 2024"
+"Económico","Inversión Extranjera Directa (IED) (millones de dólares)","2023","285.4","Fuente: Secretaría de Agricultura y Desarrollo Rural SADER. Servicio de Información Agroalimentaria y Pesquera  SIAP. Cierre de la Producción Pecuaria (1983-2023). Año 2022"
+"Económico","Lana Producción (toneladas)","2022","1575.791","Fuente: Secretaría de Agricultura y Desarrollo Rural SADER. Servicio de Información Agroalimentaria y Pesquera  SIAP. Cierre de la Producción Pecuaria (1983-2023). Año 2022"
+"Económico","Lana Valor de la Producción (miles de pesos","2022","4820.306","Fuente: Secretaría de Agricultura y Desarrollo Rural SADER. Servicio de Información Agroalimentaria y Pesquera  SIAP. Cierre de la Producción Pecuaria (1983-2023). Año 2022"
+"Económico","Leche de Bovino (miles de litros)","2022","422682.595","Fuente: Secretaría de Agricultura y Desarrollo Rural SADER. Servicio de Información Agroalimentaria y Pesquera  SIAP. Cierre de la Producción Pecuaria (1983-2023). Año 2022"
+"Económico","Leche de Bovino Valor de la Producción (miles de pesos)","2022","3094036.587","Fuente: Secretaría de Agricultura y Desarrollo Rural SADER. Servicio de Información Agroalimentaria y Pesquera  SIAP. Cierre de la Producción Pecuaria (1983-2023). Año 2022"
+"Económico","Leche de Caprino Producción (miles de litros)","2022","62.02","Fuente: Secretaría de Agricultura y Desarrollo Rural SADER. Servicio de Información Agroalimentaria y Pesquera  SIAP. Cierre de la Producción Pecuaria (1983-2023). Año 2022"
+"Económico","Leche de Caprino Valor de la Producción (miles de pesos)","2022","498.601","Fuente: Secretaría de Agricultura y Desarrollo Rural SADER. Servicio de Información Agroalimentaria y Pesquera  SIAP. Cierre de la Producción Pecuaria (1983-2023). Año 2022"
+"Seguridad","Lesiones","2015","3147","https://www.gob.mx/sesnsp/acciones-y-programas/incidencia-delictiva-del-fuero-comun-nueva-metodologia?state=published"
+"Seguridad","Lesiones","2016","3647",
+"Seguridad","Lesiones","2017","5046",
+"Seguridad","Lesiones","2018","7138",
+"Seguridad","Lesiones","2019","6214",
+"Seguridad","Lesiones","2020","5592",
+"Seguridad","Lesiones","2021","5446",
+"Seguridad","Lesiones","2022","6207",
+"Seguridad","Lesiones","2023","6237",
+"Seguridad","Lesiones","2024","3069",
+"Social","Mortalidad Defunciones registradas","2010","12668","https://www.inegi.org.mx/sistemas/olap/Proyectos/bd/continuas/mortalidad/MortalidadGeneral.asp"
+"Social","Mortalidad Defunciones registradas","2011","12851",
+"Social","Mortalidad Defunciones registradas","2012","12937",
+"Social","Mortalidad Defunciones registradas","2013","13533",
+"Social","Mortalidad Defunciones registradas","2014","13723",
+"Social","Mortalidad Defunciones registradas","2015","14207",
+"Social","Mortalidad Defunciones registradas","2016","14818",
+"Social","Mortalidad Defunciones registradas","2017","15283",
+"Social","Mortalidad Defunciones registradas","2018","15633",
+"Social","Mortalidad Defunciones registradas","2019","15956",
+"Social","Mortalidad Defunciones registradas","2020","22365",
+"Social","Mortalidad Defunciones registradas","2021","24554",
+"Social","Mortalidad Defunciones registradas","2022","18031",
+"Social","Mortalidad Defunciones registradas","2023","17024",
+"Social","Mortalidad Defunciones registradas en Accidentes de Tránsito","2010","4388","Fuente: INEGI. Mortalidad General"
+"Social","Mortalidad Defunciones registradas en Accidentes de Tránsito","2011","3906",
+"Social","Mortalidad Defunciones registradas en Accidentes de Tránsito","2012","4161",
+"Social","Mortalidad Defunciones registradas en Accidentes de Tránsito","2013","4063",
+"Social","Mortalidad Defunciones registradas en Accidentes de Tránsito","2014","4153",
+"Social","Mortalidad Defunciones registradas en Accidentes de Tránsito","2015","3659",
+"Social","Mortalidad Defunciones registradas en Accidentes de Tránsito","2016","3146",
+"Social","Mortalidad Defunciones registradas en Accidentes de Tránsito","2017","3286",
+"Social","Mortalidad Defunciones registradas en Accidentes de Tránsito","2018","3172",
+"Social","Mortalidad Defunciones registradas en Accidentes de Tránsito","2019","21",
+"Social","Mortalidad Defunciones registradas en Accidentes de Tránsito","2020","24",
+"Social","Mortalidad Defunciones registradas en Accidentes de Tránsito","2021","20",
+"Social","Mortalidad Defunciones registradas en Accidentes de Tránsito","2022","29",
+"Social","Mortalidad Defunciones registradas en Accidentes de Tránsito","2023","48",
+"Género","Mujeres Preparadas #Con Lupa de Género (Porcentaje)","2024","43.7","CONEVAL"
+"Género","Mujeres que quieren trabajar y no pueden #Con Lupa de Género (Porcentaje)","2024","25.6","CONEVAL"
+"Seguridad","Narco-menudeo","2015","110","https://www.gob.mx/sesnsp/acciones-y-programas/incidencia-delictiva-del-fuero-comun-nueva-metodologia?state=published"
+"Seguridad","Narco-menudeo","2016","187",
+"Seguridad","Narco-menudeo","2017","255",
+"Seguridad","Narco-menudeo","2018","270",
+"Seguridad","Narco-menudeo","2019","422",
+"Seguridad","Narco-menudeo","2020","363",
+"Seguridad","Narco-menudeo","2021","786",
+"Seguridad","Narco-menudeo","2022","485",
+"Seguridad","Narco-menudeo","2023","580",
+"Seguridad","Narco-menudeo","2024","304",
+"Seguridad","Narco-menudeo","2017","255",
+"Seguridad","Narco-menudeo","2018","270",
+"Seguridad","Narco-menudeo","2019","422",
+"Seguridad","Narco-menudeo","2020","363",
+"Seguridad","Narco-menudeo","2021","786",
+"Seguridad","Narco-menudeo","2022","485",
+"Seguridad","Narco-menudeo","2023","580",
+"Seguridad","Narco-menudeo","2024","304",
+"Gobierno","Nivel de satisfacción general con los servicios públicos básicos y bajo demanda","2017","47.8","Fuente : INEGI. Encuesta Nacional de Calidad e Impacto Gubernamental (ENCIG)"
+"Gobierno","Nivel de satisfacción general con los servicios públicos básicos y bajo demanda","2019","51.9",
+"Gobierno","Nivel de satisfacción general con los servicios públicos básicos y bajo demanda","2021","47.4",
+"Gobierno","Nivel de satisfacción general con los servicios públicos básicos y bajo demanda","2023","46.6",
+"Seguridad","Número de accidentes de Transito","2010","4388","https://www.inegi.org.mx/app/tabulados/interactivos/?px=ATUS_1&bd=ATUS&idrt=168&opc=t"
+"Seguridad","Número de accidentes de Transito","2011","3906",
+"Seguridad","Número de accidentes de Transito","2012","4161",
+"Seguridad","Número de accidentes de Transito","2013","4063",
+"Seguridad","Número de accidentes de Transito","2014","4153",
+"Seguridad","Número de accidentes de Transito","2015","3659",
+"Seguridad","Número de accidentes de Transito","2016","3146",
+"Seguridad","Número de accidentes de Transito","2017","3286",
+"Seguridad","Número de accidentes de Transito","2018","3172",
+"Seguridad","Número de accidentes de Transito","2019","2899",
+"Seguridad","Número de accidentes de Transito","2020","2282",
+"Seguridad","Número de accidentes de Transito","2021","2182",
+"Seguridad","Número de accidentes de Transito","2022","3275",
+"Seguridad","Número de accidentes de Transito","2023","4253",
+"Género","Oferta de cuidados de adultos mayores #Con Lupa de Género","2024","4.7","CONEVAL"
+"Económico","Patentes","2024","10","Instituto Nacional de la Propiedad Industrial INPI"
+"Género","Percepción de inseguridad en transporte público #Con Lupa de Género (Porcentaje)","2024","22.8","CONEVAL"
+"Seguridad","Percepción Sobre el Tema de la Inseguridad","2014","47.8","https://www.inegi.org.mx/programas/envipe/2023/"
+"Seguridad","Percepción Sobre el Tema de la Inseguridad","2015","50.5",
+"Seguridad","Percepción Sobre el Tema de la Inseguridad","2016","50.4",
+"Seguridad","Percepción Sobre el Tema de la Inseguridad","2017","49.5",
+"Seguridad","Percepción Sobre el Tema de la Inseguridad","2018","54.9",
+"Seguridad","Percepción Sobre el Tema de la Inseguridad","2019","58.3",
+"Seguridad","Percepción Sobre el Tema de la Inseguridad","2020","65.5",
+"Seguridad","Percepción Sobre el Tema de la Inseguridad","2021","52.8",
+"Seguridad","Percepción Sobre el Tema de la Inseguridad","2022","62",
+"Seguridad","Percepción sobre Seguridad Pública Inseguro","2011","55.25","https://www.inegi.org.mx/contenidos/programas/envipe/2024/doc/envipe2024_presentacion_nacional.pdf"
+"Seguridad","Percepción sobre Seguridad Pública Inseguro","2012","49.24",
+"Seguridad","Percepción sobre Seguridad Pública Inseguro","2013","56.35",
+"Seguridad","Percepción sobre Seguridad Pública Inseguro","2014","65.5",
+"Seguridad","Percepción sobre Seguridad Pública Inseguro","2015","60.88",
+"Seguridad","Percepción sobre Seguridad Pública Inseguro","2016","61.56",
+"Seguridad","Percepción sobre Seguridad Pública Inseguro","2017","55.06",
+"Seguridad","Percepción sobre Seguridad Pública Inseguro","2018","63.28",
+"Seguridad","Percepción sobre Seguridad Pública Inseguro","2019","65.55",
+"Seguridad","Percepción sobre Seguridad Pública Inseguro","2020","66.08",
+"Seguridad","Percepción sobre Seguridad Pública Inseguro","2021","65.04",
+"Seguridad","Percepción sobre Seguridad Pública Inseguro","2022","63.81",
+"Seguridad","Percepción sobre Seguridad Pública Inseguro","2023","62.6",
+"Seguridad","Percepción sobre Seguridad Pública Inseguro","2024","62.9",
+"Seguridad","Percepción sobre Seguridad Pública Seguro","2011","40.06","https://www.inegi.org.mx/programas/envipe/2023/"
+"Seguridad","Percepción sobre Seguridad Pública Seguro","2012","47.36",
+"Seguridad","Percepción sobre Seguridad Pública Seguro","2013","39.29",
+"Seguridad","Percepción sobre Seguridad Pública Seguro","2014","31.45",
+"Seguridad","Percepción sobre Seguridad Pública Seguro","2015","37.2",
+"Seguridad","Percepción sobre Seguridad Pública Seguro","2016","35.66",
+"Seguridad","Percepción sobre Seguridad Pública Seguro","2017","43.34",
+"Seguridad","Percepción sobre Seguridad Pública Seguro","2018","32.37",
+"Seguridad","Percepción sobre Seguridad Pública Seguro","2019","31.73",
+"Seguridad","Percepción sobre Seguridad Pública Seguro","2020","32.48",
+"Seguridad","Percepción sobre Seguridad Pública Seguro","2021","32.94",
+"Seguridad","Percepción sobre Seguridad Pública Seguro","2022","34.58",
+"Seguridad","Percepción sobre Seguridad Pública Seguro","2023","35.6",
+"Género","Permisos de paternidad #Con Lupa de Género","2024","56","CONEVAL"
+"Social","Personal Médico","2015","4959","Fuente: México en Cifras. Hidalgo. Tabulados de Integración"
+"Social","Personal Médico","2016","5052",
+"Social","Personal Médico","2017","4932",
+"Social","Personal Médico","2018","5280",
+"Social","Personal Médico","2019","5234",
+"Social","Personal Médico","2020","5341",
+"Social","Personal Médico","2021","5834",
+"Social","Personal Médico","2022","5806",
+"Social","Personal Médico","2023","5905",
+"Medio Ambiente","Plantas Tratadoras de Aguas residuales","2013","54","Fuente: INEGI. México en Cifras. Hidalgo. Tabulados de Integración. Medio Ambiente"
+"Medio Ambiente","Plantas Tratadoras de Aguas residuales","2014","65",
+"Medio Ambiente","Plantas Tratadoras de Aguas residuales","2015","78",
+"Medio Ambiente","Plantas Tratadoras de Aguas residuales","2016","95",
+"Medio Ambiente","Plantas Tratadoras de Aguas residuales","2017","93",
+"Medio Ambiente","Plantas Tratadoras de Aguas residuales","2018","105",
+"Medio Ambiente","Plantas Tratadoras de Aguas residuales","2019","110",
+"Medio Ambiente","Plantas Tratadoras de Aguas residuales","2020","123",
+"Medio Ambiente","Plantas Tratadoras de Aguas residuales","2021","124",
+"Medio Ambiente","Plantas Tratadoras de Aguas residuales","2022","105",
+"Social","Población con Ingreso Inferior a la Línea de pobreza extrema por ingresos","2013","23.8","https://www.coneval.org.mx/Medicion/MP/Paginas/AE_pobreza_2022.aspx"
+"Social","Población con Ingreso Inferior a la Línea de pobreza extrema por ingresos","2014","24.7",
+"Social","Población con Ingreso Inferior a la Línea de pobreza extrema por ingresos","2015","21.5",
+"Social","Población con Ingreso Inferior a la Línea de pobreza extrema por ingresos","2016","19.26031074",
+"Social","Población con Ingreso Inferior a la Línea de pobreza extrema por ingresos","2018","14.5",
+"Social","Población con Ingreso Inferior a la Línea de pobreza extrema por ingresos","2020","16.9",
+"Social","Población con Ingreso Inferior a la Línea de pobreza extrema por ingresos","2022","12",
+"Social","Población con Ingreso Inferior a la Línea de pobreza por ingresos","2013","55.8","https://www.coneval.org.mx/Medicion/MP/Paginas/AE_pobreza_2022.aspx"
+"Social","Población con Ingreso Inferior a la Línea de pobreza por ingresos","2014","59.4",
+"Social","Población con Ingreso Inferior a la Línea de pobreza por ingresos","2015","54.3",
+"Social","Población con Ingreso Inferior a la Línea de pobreza por ingresos","2016","62.53445071",
+"Social","Población con Ingreso Inferior a la Línea de pobreza por ingresos","2018","55.19442443",
+"Social","Población con Ingreso Inferior a la Línea de pobreza por ingresos","2020","57.2",
+"Social","Población con Ingreso Inferior a la Línea de pobreza por ingresos","2022","46.1",
+"Económico","Población Desocupada","2024","36246","INEGI. Encuesta Nacional de Ocupación y Empleo ENOE"
+"Económico","Población Económicamente Activa","2024","1483511","INEGI. Encuesta Nacional de Ocupación y Empleo ENOE"
+"Económico","Población Ocupada","2024","1447265","INEGI. Encuesta Nacional de Ocupación y Empleo ENOE"
+"Género","Pobreza laboral #Con Lupa de Género (Porcentaje)","2024","47.6","CONEVAL"
+"Social","Porcentaje de Abandono Escolar: Media Superior","2013","14","https://www.planeacion.sep.gob.mx/Doc/estadistica_e_indicadores/principales_cifras/principales_cifras_2012_2013.pdf"
+"Social","Porcentaje de Abandono Escolar: Media Superior","2014","16.8",
+"Social","Porcentaje de Abandono Escolar: Media Superior","2015","14.3",
+"Social","Porcentaje de Abandono Escolar: Media Superior","2016","13.8",
+"Social","Porcentaje de Abandono Escolar: Media Superior","2017","15.8",
+"Social","Porcentaje de Abandono Escolar: Media Superior","2018","13.2",
+"Social","Porcentaje de Abandono Escolar: Media Superior","2019","13.4",
+"Social","Porcentaje de Abandono Escolar: Media Superior","2020","10.7",
+"Social","Porcentaje de Abandono Escolar: Media Superior","2021","13.7",
+"Social","Porcentaje de Abandono Escolar: Media Superior","2022","13.7",
+"Social","Porcentaje de Abandono Escolar: Media Superior","2023","7.9",
+"Social","Porcentaje de Abandono Escolar: Primaria","2013","0.3","https://www.planeacion.sep.gob.mx/Doc/estadistica_e_indicadores/principales_cifras/principales_cifras_2013_2014.pdf"
+"Social","Porcentaje de Abandono Escolar: Primaria","2014","0.3",
+"Social","Porcentaje de Abandono Escolar: Primaria","2015","2.6",
+"Social","Porcentaje de Abandono Escolar: Primaria","2016","-0.2",
+"Social","Porcentaje de Abandono Escolar: Primaria","2017","-0.16",
+"Social","Porcentaje de Abandono Escolar: Primaria","2018","-0.4",
+"Social","Porcentaje de Abandono Escolar: Primaria","2019","0.05",
+"Social","Porcentaje de Abandono Escolar: Primaria","2020","-0.04",
+"Social","Porcentaje de Abandono Escolar: Primaria","2021","-0.06",
+"Social","Porcentaje de Abandono Escolar: Primaria","2022","-0.06",
+"Social","Porcentaje de Abandono Escolar: Primaria","2023","-0.1",
+"Social","Porcentaje de Abandono Escolar: Superior","2013","2.2","https://www.planeacion.sep.gob.mx/Doc/estadistica_e_indicadores/principales_cifras/principales_cifras_2013_2014.pdf"
+"Social","Porcentaje de Abandono Escolar: Superior","2014","2.9",
+"Social","Porcentaje de Abandono Escolar: Superior","2015","3.2",
+"Social","Porcentaje de Abandono Escolar: Superior","2016","4.8",
+"Social","Porcentaje de Abandono Escolar: Superior","2017","4.1",
+"Social","Porcentaje de Abandono Escolar: Superior","2018","3.2",
+"Social","Porcentaje de Abandono Escolar: Superior","2019","4.9",
+"Social","Porcentaje de Abandono Escolar: Superior","2020","6.2",
+"Social","Porcentaje de Abandono Escolar: Superior","2021","8.5",
+"Social","Porcentaje de Abandono Escolar: Superior","2022","8.5",
+"Social","Porcentaje de Abandono Escolar: Superior","2023","7.9",
+"Seguridad","Porcentaje de delitos denunciados","2014","11.9","https://www.inegi.org.mx/programas/envipe/2023/"
+"Seguridad","Porcentaje de delitos denunciados","2015","17",
+"Seguridad","Porcentaje de delitos denunciados","2016","17.2",
+"Seguridad","Porcentaje de delitos denunciados","2017","12.8",
+"Seguridad","Porcentaje de delitos denunciados","2018","14.4",
+"Seguridad","Porcentaje de delitos denunciados","2019","11.7",
+"Seguridad","Porcentaje de delitos denunciados","2020","13",
+"Seguridad","Porcentaje de delitos denunciados","2021","10.1",
+"Seguridad","Porcentaje de delitos denunciados","2022","19.3",
+"Económico","Porcentaje de la población con ingreso laboral inferior al costo de la canasta alimentaria (pobreza laboral)","2024","46.3","CONEVAL. Índice de la Tendencia Laboral de la Pobreza"
+"Social","Porcentaje de la Población en situación de Pobreza","2015","49.4","https://www.coneval.org.mx/Medicion/MP/Paginas/AE_pobreza_2022.aspx"
+"Social","Porcentaje de la Población en situación de Pobreza","2016","56.9022436",
+"Social","Porcentaje de la Población en situación de Pobreza","2018","49.86970881",
+"Social","Porcentaje de la Población en situación de Pobreza","2020","50.75079345",
+"Social","Porcentaje de la Población en situación de Pobreza","2021","50.8",
+"Social","Porcentaje de la Población en situación de Pobreza","2022","40.99902128",
+"Social","Porcentaje de la Población en situación de Pobreza Extrema","2015","9.3","https://www.coneval.org.mx/Medicion/MP/Paginas/AE_pobreza_2022.aspx"
+"Social","Porcentaje de la Población en situación de Pobreza Extrema","2016","9.512135761",
+"Social","Porcentaje de la Población en situación de Pobreza Extrema","2018","7.029249123",
+"Social","Porcentaje de la Población en situación de Pobreza Extrema","2020","8.142691792",
+"Social","Porcentaje de la Población en situación de Pobreza Extrema","2021","8.1",
+"Social","Porcentaje de la Población en situación de Pobreza Extrema","2022","6.778749458",
+"Social","Porcentaje de la Población en situación de Pobreza Moderada","2016","47.39010784","https://www.coneval.org.mx/Medicion/MP/Paginas/AE_pobreza_2022.aspx"
+"Social","Porcentaje de la Población en situación de Pobreza Moderada","2018","42.84045969",
+"Social","Porcentaje de la Población en situación de Pobreza Moderada","2020","42.60810165",
+"Social","Porcentaje de la Población en situación de Pobreza Moderada","2022","34.22027182",
+"Social","Porcentaje de la población vulnerable por ingresos","2016","5.632207","https://www.coneval.org.mx/Medicion/MP/Paginas/AE_pobreza_2022.aspx"
+"Social","Porcentaje de la población vulnerable por ingresos","2018","5.324716",
+"Social","Porcentaje de la población vulnerable por ingresos","2020","6.459086",
+"Social","Porcentaje de la población vulnerable por ingresos","2022","5.075462674",
+"Social","Porcentaje de Población Afiliada a servicios de salud","2015","82.36","https://www.inegi.org.mx/programas/intercensal/2015/#tabulados"
+"Social","Porcentaje de Población Afiliada a servicios de salud","2020","69.7",
+"Económico","Producción Bruta Total","2019","401036.694","INEGI. Censos Económicos 2019"
+"Económico","Producción Pesquera (Peso vivo kilogramos)","2022","455.643","Comisión Nacional de Acuacultura y Pesca CONAPESCA"
+"Económico","Producción Pesquera Valor de la Producción (Peso vivo miles de pesos)","2022","42238.56043","Comisión Nacional de Acuacultura y Pesca CONAPESCA"
+"Económico","Productividad (pesos prod/hora trab)","2024","160","México ¿cómo Vamos?"
+"Social","Rezago Educativo","2013","20.6","https://www.coneval.org.mx/Medicion/Paginas/Pobreza-municipio-2010-2020.aspx"
+"Social","Rezago Educativo","2014","19.1",
+"Social","Rezago Educativo","2015","17.4",
+"Social","Rezago Educativo","2016","19.92043194",
+"Social","Rezago Educativo","2018","19.74273078",
+"Social","Rezago Educativo","2020","18.85200822",
+"Social","Rezago Educativo","2022","19.99604078",
+"Seguridad","Robo a Casa habitación","2015","1983","https://www.gob.mx/sesnsp/acciones-y-programas/incidencia-delictiva-del-fuero-comun-nueva-metodologia?state=published"
+"Seguridad","Robo a Casa habitación","2016","2033",
+"Seguridad","Robo a Casa habitación","2017","2728",
+"Seguridad","Robo a Casa habitación","2018","2722",
+"Seguridad","Robo a Casa habitación","2019","2853",
+"Seguridad","Robo a Casa habitación","2020","2240",
+"Seguridad","Robo a Casa habitación","2021","1413",
+"Seguridad","Robo a Casa habitación","2022","1437",
+"Seguridad","Robo a Casa habitación","2023","1341",
+"Seguridad","Robo a Casa habitación","2024","508",
+"Seguridad","Robo a negocio","2015","636","https://www.gob.mx/sesnsp/acciones-y-programas/incidencia-delictiva-del-fuero-comun-nueva-metodologia?state=published"
+"Seguridad","Robo a negocio","2016","1025",
+"Seguridad","Robo a negocio","2017","1572",
+"Seguridad","Robo a negocio","2018","1631",
+"Seguridad","Robo a negocio","2019","2147",
+"Seguridad","Robo a negocio","2020","1623",
+"Seguridad","Robo a negocio","2021","1001",
+"Seguridad","Robo a negocio","2022","1123",
+"Seguridad","Robo a negocio","2023","1044",
+"Seguridad","Robo a negocio","2024","466",
+"Seguridad","Robo a vehículo","2015","2963","https://www.gob.mx/sesnsp/acciones-y-programas/incidencia-delictiva-del-fuero-comun-nueva-metodologia?state=published"
+"Seguridad","Robo a vehículo","2016","3601",
+"Seguridad","Robo a vehículo","2017","4803",
+"Seguridad","Robo a vehículo","2018","5190",
+"Seguridad","Robo a vehículo","2019","4259",
+"Seguridad","Robo a vehículo","2020","3222",
+"Seguridad","Robo a vehículo","2021","2934",
+"Seguridad","Robo a vehículo","2022","3458",
+"Seguridad","Robo a vehículo","2023","3475",
+"Seguridad","Robo a vehículo","2024","1772",
+"Seguridad","Secuestro","2015","19","https://www.gob.mx/sesnsp/acciones-y-programas/incidencia-delictiva-del-fuero-comun-nueva-metodologia?state=published"
+"Seguridad","Secuestro","2016","14",
+"Seguridad","Secuestro","2017","20",
+"Seguridad","Secuestro","2018","21",
+"Seguridad","Secuestro","2019","30",
+"Seguridad","Secuestro","2020","22",
+"Seguridad","Secuestro","2021","28",
+"Seguridad","Secuestro","2022","15",
+"Seguridad","Secuestro","2023","15",
+"Seguridad","Secuestro","2024","8",
+"Económico","Superficie Cosechada (has)","2022","469587.27","Fuente: Secretaría de Agricultura y Desarrollo Rural SADER. Servicio de Información Agroalimentaria y Pesquera  SIAP. Cierre de la Producción Agrícola (1983-2023). Año 2022"
+"Económico","Superficie Sembrada (has)","2022","483605.23","Fuente: Secretaría de Agricultura y Desarrollo Rural SADER. Servicio de Información Agroalimentaria y Pesquera  SIAP. Cierre de la Producción Agrícola (1983-2023). Año 2022"
+"Económico","Tasa de Condiciones Críticas de Ocupación","2024","34.808","Fuente: INEGI. Encuesta Nacional de Ocupación y Empleo ENOE"
+"Económico","Tasa de Desocupación","2024","2.443","Fuente: INEGI. Encuesta Nacional de Ocupación y Empleo ENOE"
+"Seguridad","Tasa de homicidios","2011","8","CNSP-Delitos-100 mil hab 2015-2024_jul24.pdf - Google Drive"
+"Seguridad","Tasa de homicidios","2012","6",
+"Seguridad","Tasa de homicidios","2013","6",
+"Seguridad","Tasa de homicidios","2014","7",
+"Seguridad","Tasa de homicidios","2015","8",
+"Seguridad","Tasa de homicidios","2016","7",
+"Seguridad","Tasa de homicidios","2017","11",
+"Seguridad","Tasa de homicidios","2018","11",
+"Seguridad","Tasa de homicidios","2019","16",
+"Seguridad","Tasa de homicidios","2020","12",
+"Seguridad","Tasa de homicidios","2021","9",
+"Seguridad","Tasa de homicidios","2022","12",
+"Gobierno","Tasa de incidencia de la corrupción","2017","24552","Fuente: INEGI. Gobierno, Seguridad y Justicia. Transparencia y Anticorrupción"
+"Gobierno","Tasa de incidencia de la corrupción","2019","16402",
+"Gobierno","Tasa de incidencia de la corrupción","2021","11849",
+"Gobierno","Tasa de incidencia de la corrupción","2023","30353",
+"Seguridad","Tasa de Incidencia Delictiva (100 mil hab)","2017","23564","Incidencia delictiva del Fuero Común, nueva metodología. | Secretariado Ejecutivo del Sistema Nacional de Seguridad Pública | Gobierno | gob.mx (www.gob.mx)"
+"Seguridad","Tasa de Incidencia Delictiva (100 mil hab)","2018","22134.5884",
+"Seguridad","Tasa de Incidencia Delictiva (100 mil hab)","2019","25987.45121",
+"Seguridad","Tasa de Incidencia Delictiva (100 mil hab)","2020","20732",
+"Seguridad","Tasa de Incidencia Delictiva (100 mil hab)","2021","23605",
+"Seguridad","Tasa de Incidencia Delictiva (100 mil hab)","2022","19649",
+"Económico","Tasa de Informalidad Laboral","2024","72.854","Fuente: INEGI. Encuesta Nacional de Ocupación y Empleo ENOE"
+"Social","Tasa de Mortalidad Infantil (Proyección)","2013","11.9","https://www.snieg.mx/cni/escenario.aspx?idorden=1.1&ind=6300000011&gen=146&d=n"
+"Social","Tasa de Mortalidad Infantil (Proyección)","2014","11.7",
+"Social","Tasa de Mortalidad Infantil (Proyección)","2015","11.9",
+"Social","Tasa de Mortalidad Infantil (Proyección)","2016","16.3",
+"Social","Tasa de Mortalidad Infantil (Proyección)","2017","16.5",
+"Social","Tasa de Mortalidad Infantil (Proyección)","2018","16.5",
+"Social","Tasa de Mortalidad Infantil (Proyección)","2019","17",
+"Social","Tasa de Mortalidad Infantil (Proyección)","2020","8.8",
+"Social","Tasa de Mortalidad Infantil (Proyección)","2021","11.7",
+"Social","Tasa de Mortalidad Infantil (Proyección)","2022","12.5",
+"Social","Tasa de Mortalidad Infantil (Proyección)","2023","10.4",
+"Económico","Tasa de Ocupación en el Sector Informal","2024","42.916","Fuente: INEGI. Encuesta Nacional de Ocupación y Empleo ENOE"
+"Social","Tasa de Ocupación no Permitida porcentaje respecto a la población de 5 a 17 años)","2019","5.1","Fuente: INEGi. Modulo de Trabajo Infantil"
+"Social","Tasa de Ocupación no Permitida porcentaje respecto a la población de 5 a 17 años)","2022","8.4",
+"Económico","Tasa de Ocupación Parcial y Desocupación","2024","12.101","Fuente: INEGI. Encuesta Nacional de Ocupación y Empleo ENOE"
+"Económico","Tasa de Participación","2024","59.242","Fuente: INEGI. Encuesta Nacional de Ocupación y Empleo ENOE"
+"Económico","Tasa de Presión General","2024","5.791","Fuente: INEGI. Encuesta Nacional de Ocupación y Empleo ENOE"
+"Gobierno","Tasa de prevalencia de la corrupción","2017","13095","Fuente: INEGI. Gobierno, Seguridad y Justicia. Transparencia y Anticorrupción"
+"Gobierno","Tasa de prevalencia de la corrupción","2019","9883",
+"Gobierno","Tasa de prevalencia de la corrupción","2021","9350",
+"Gobierno","Tasa de prevalencia de la corrupción","2023","13107",
+"Seguridad","Tasa de Prevalencia delictiva","2010","20225.3773","https://www.inegi.org.mx/programas/envipe/2023/"
+"Seguridad","Tasa de Prevalencia delictiva","2011","21787.44455",
+"Seguridad","Tasa de Prevalencia delictiva","2012","19451.36128",
+"Seguridad","Tasa de Prevalencia delictiva","2013","19889.69548",
+"Seguridad","Tasa de Prevalencia delictiva","2014","18420.0697",
+"Seguridad","Tasa de Prevalencia delictiva","2015","19245.44419",
+"Seguridad","Tasa de Prevalencia delictiva","2016","20027.3937",
+"Seguridad","Tasa de Prevalencia delictiva","2017","19027.66999",
+"Seguridad","Tasa de Prevalencia delictiva","2018","22535.58089",
+"Seguridad","Tasa de Prevalencia delictiva","2019","16609.50452",
+"Seguridad","Tasa de Prevalencia delictiva","2020","20094.13829",
+"Seguridad","Tasa de Prevalencia delictiva","2021","15265.66297",
+"Social","Tasa de Quehaceres Domésticos en Condiciones no Adecuadas (porcentaje respecto a la población de 5 a 17 años)","2019","4","Fuente: INEGi. Modulo de Trabajo Infantil"
+"Social","Tasa de Quehaceres Domésticos en Condiciones no Adecuadas (porcentaje respecto a la población de 5 a 17 años)","2022","7.8",
+"Económico","Tasa de Subocupación","2024","11.009","Fuente: INEGI. Encuesta Nacional de Ocupación y Empleo ENOE"
+"Económico","Tasa de Trabajo Asalariado","2024","60.65","Fuente: INEGI. Encuesta Nacional de Ocupación y Empleo ENOE"
+"Social","Tasa de Trabajo Infantil (porcentaje respecto a la población de 5 a 17 años)","2019","8.4","Fuente: INEGi. Modulo de Trabajo Infantil"
+"Social","Tasa de Trabajo Infantil (porcentaje respecto a la población de 5 a 17 años)","2022","15.5",
+"Social","Tasa Global de Fecundidad","2013","2.31","https://www.inegi.org.mx/temas/natalidad/"
+"Social","Tasa Global de Fecundidad","2014","2.29",
+"Social","Tasa Global de Fecundidad","2015","2.27",
+"Social","Tasa Global de Fecundidad","2016","2.26",
+"Social","Tasa Global de Fecundidad","2017","2.24",
+"Social","Tasa Global de Fecundidad","2018","2.23",
+"Social","Tasa Global de Fecundidad","2019","2.21",
+"Social","Tasa Global de Fecundidad","2020","2.2",
+"Social","Tasa Global de Fecundidad","2021","2.19",
+"Social","Tasa Global de Fecundidad","2022","2.18",
+"Social","Tasa Global de Fecundidad","2023","2.17",
+"Económico","Trabajadores Asegurados Permanentes por el IMSS","2024","283925","Fuente: Secretaría del Trabajo y Previsón Social STyPS con datos del Instituto Mexicano del Seguro IMSS"
+"Económico","Unidades Económicas","2019","180358","Fuente : INEGI. Censos Económicos"
+"Social","Unidades Médicas","2015","925","https://www.inegi.org.mx/contenidos/productos/prod_serv/contenidos/espanol/bvinegi/productos/nueva_estruc/anuarios_2015/702825077143.pdf"
+"Social","Unidades Médicas","2016","926",
+"Social","Unidades Médicas","2017","927",
+"Social","Unidades Médicas","2018","929",
+"Social","Unidades Médicas","2019","928",
+"Social","Unidades Médicas","2020","938",
+"Social","Unidades Médicas","2021","861",
+"Social","Unidades Médicas","2022","860",
+"Social","Unidades Médicas","2023","860",
+"Seguridad","Violación","2015","348","https://www.gob.mx/sesnsp/acciones-y-programas/incidencia-delictiva-del-fuero-comun-nueva-metodologia?state=published"
+"Seguridad","Violación","2016","450",
+"Seguridad","Violación","2017","560",
+"Seguridad","Violación","2018","612",
+"Seguridad","Violación","2019","705",
+"Seguridad","Violación","2020","704",
+"Seguridad","Violación","2021","761",
+"Seguridad","Violación","2022","1052",
+"Seguridad","Violación","2023","494",
+"Seguridad","Violación","2024","251",
+"Seguridad","Violencia familiar","2015","2278","https://www.gob.mx/sesnsp/acciones-y-programas/incidencia-delictiva-del-fuero-comun-nueva-metodologia?state=published"
+"Seguridad","Violencia familiar","2016","3043",
+"Seguridad","Violencia familiar","2017","4391",
+"Seguridad","Violencia familiar","2018","5083",
+"Seguridad","Violencia familiar","2019","5619",
+"Seguridad","Violencia familiar","2020","5724",
+"Seguridad","Violencia familiar","2021","5870",
+"Seguridad","Violencia familiar","2022","6929",
+"Seguridad","Violencia familiar","2023","7535",
+"Seguridad","Violencia familiar","2024","3807",
+"Económico","Volumen de la Producción (toneladas)","2022","6922733.01","Fuente: Secretaría de Agricultura y Desarrollo Rural SADER. Servicio de Información Agroalimentaria y Pesquera  SIAP. Cierre de la Producción Agrícola (1983-2023). Año 2022"
+"Medio Ambiente","Volumen tratado en las PTARs  (Millones m3)","2017","582.2","Fuente: INEGI. México en Cifras. Hidalgo. Tabulados de Integración. Medio Ambiente"
+"Medio Ambiente","Volumen tratado en las PTARs  (Millones m3)","2018","51.9",
+"Medio Ambiente","Volumen tratado en las PTARs  (Millones m3)","2019","950",
+"Medio Ambiente","Volumen tratado en las PTARs  (Millones m3)","2020","953.6",
+"Medio Ambiente","Volumen tratado en las PTARs  (Millones m3)","2021","949.5",
+"Medio Ambiente","Volumen tratado en las PTARs  (Millones m3)","2022","61.6","Fuente: INEGI. México en Cifras. Hidalgo. Tabulados de Integración. Medio Ambiente"
+"Seguridad","Tasa de Incidencia Delictiva (100 mil hab)","2023","21164",
+"Económico","Aves Producción (toneladas)","2023","119122.3","NA"
+"Económico","Aves Valor de la Producción (miles de pesos)","2023","3334169.73","NA"
+"Medio Ambiente","Capacidad instalada en las PTARs  (Litros por segundo)","2024","1985.6028","NA"
+"Económico","Cera Producción (toneladas)","2023","44.1","NA"
+"Económico","Cera Valor de la Producción (miles de pesos)","2023","3539.51","NA"
+"Social","Cobertura Media Superior",2024,"84.6798666","NA"
+"Social","Cobertura Preescolar",2024,"62.20083687","NA"
+"Social","Cobertura Primaria",2024,"99.62218422","NA"
+"Social","Cobertura Secundaria",2024,"102.3673201","NA"
+"Económico","Cuartos de establecimientos de Hospedaje","2023","14671","NA"
+"Económico","Cuartos de Hospedaje según categoría 1 estrella","2023","909","NA"
+"Económico","Cuartos de Hospedaje según categoría 2 estrellas","2023","2364","NA"
+"Económico","Cuartos de Hospedaje según categoría 3 estrellas","2023","4047","NA"
+"Económico","Cuartos de Hospedaje según categoría 4 estrellas","2023","1927","NA"
+"Económico","Cuartos de Hospedaje según categoría 5 estrellas","2023","1057","NA"
+"Económico","Cuartos de Hospedaje según categoría (sin categoría)","2023","4367","Fuente: INEGI. México en Cifras. Hidalgo. Tabulados de Integración. Turismo Edición 2022 "
+"Económico","Desigualdad laboral (coeficiente de Gini)","2024","0.404","Fuente: CONEVAL. Pobreza Laboral"
+"Económico","Deuda Pública (Porcentaje del PIB)","2020","0.2","Fuente: México ¿Como Vámos? "
+"Social","Eficiencia Terminal Primaria",2024,"100.3666345","Fuente: INEGI. México en Cifras. Hidalgo. Tabulados de Integración. Educación."
+"Social","Eficiencia Terminal Secundaria",2024,"95.78952929","Fuente: INEGI. México en Cifras. Hidalgo. Tabulados de Integración. Educación."
+"Económico","Establecimiento de Hospedaje","2023","713","NA"
+"Económico","Establecimiento de Hospedaje según categoría 1 estrella","2023","48","NA"
+"Económico","Establecimiento de Hospedaje según categoría 2 estrellas","2023","95","NA"
+"Económico","Establecimiento de Hospedaje según categoría 3 estrellas","2023","129","NA"
+"Económico","Establecimiento de Hospedaje según categoría 4 estrellas","2023","50","NA"
+"Económico","Establecimiento de Hospedaje según categoría 5 estrellas","2023","25","NA"
+"Económico","Ganado Bovino Producción (toneladas)","2023","61791.5","NA"
+"Económico","Ganado Bovino Valor de la Producción (miles de pesos)","2023","2322468.76","NA"
+"Económico","Ganado Caprino Producción (toneladas)","2023","1558.9","NA"
+"Económico","Ganado Caprino Valor de la Producción (miles de pesos)","2023","56784.85","NA"
+"Económico","Ganado Ovino Producción (toneladas)","2023","13484.4","NA"
+"Económico","Ganado Ovino Valor de la Producción (miles de pesos)","2023","657093.59","NA"
+"Económico","Ganado Porcino Producción (toneladas)","2023","21055.9","NA"
+"Económico","Ganado Porcino Valor de la Producción (miles de pesos)","2023","763207.63","NA"
+"Económico","Guajolotes Producción (toneladas)","2023","1472.1","NA"
+"Económico","Guajolotes Valor de la Producción (miles de pesos)","2023","59058.49","NA"
+"Económico","Huevo para plato Producción (toneladas)","2023","6601.1","NA"
+"Económico","Huevo para plato Valor de la Producción (miles de pesos)","2023","212502.95","NA"
+"Económico","Indicador Mensual de la Actividad Industrial por Entidad Federativa (IMAIEF)","2024","105.5346255","NA"
+"Gobierno","Índice de Transparencia y Disponibilidad de Información Fiscal ITDIF","2024","78.98","NA"
+"Gobierno","Índice del Estado de Derecho",2024,"0.421","NA"
+"Económico","Informalidad (porcentaje)","2024","70.9","NA"
+"Económico","Ingreso laboral Per capita (Deflactado con la canasta alimentaria, pesos)","2023","2175.488773","Fuente: CONEVAL. Pobreza Laboral"
+"Económico","Ingreso laboral per cápita a pesos corrientes (nominal)","2024","3015.51004","Fuente: CONEVAL. Pobreza Laboral"
+"Económico","Lana Producción (toneladas)","2023","1530.1","NA"
+"Económico","Lana Valor de la Producción (miles de pesos","2023","4808.79","NA"
+"Económico","Leche de Bovino (miles de litros)","2023","429856.9","NA"
+"Económico","Leche de Bovino Valor de la Producción (miles de pesos)","2023","3328283.46","NA"
+"Económico","Leche de Caprino Producción (miles de litros)","2023","61.3","NA"
+"Económico","Leche de Caprino Valor de la Producción (miles de pesos)","2023","495.32","NA"
+"Económico","Llegada de Turistas a la Entidad por Tipo de Turismo (extranjeros)","2023","636469.9964","Sectur. DataTur "
+"Económico","Llegada de Turistas a la Entidad por Tipo de Turismo (nacionales)","2023","42243846.3","Sectur. DataTur "
+"Económico","Llegada de Turistas Totales a la Entidad","2023","42880316.3","Sectur. DataTur "
+"Económico","Longitud de la Red Carretera Federal","2023","756","INEGI. México en Cifras. Tabulados de Integración. 2023. Transporte "
+"Económico","Longitud de la Red de Alimentadoras estatales","2023","2800","INEGI. México en Cifras. Tabulados de Integración. 2023. Transporte "
+"Económico","Longitud de la Red de Brechas Mejoradas","2023","2169","INEGI. México en Cifras. Tabulados de Integración. 2023. Transporte "
+"Económico","Longitud de la Red de Caminos Rurales","2023","5290","INEGI. México en Cifras. Tabulados de Integración. 2023. Transporte "
+"Económico","Miel (Producción toneladas)","2023","1451.7","Secretaría de Agricultura y Desarrollo Rural SADER. Servicio Agroalimentario y Pesquero SIAP "
+"Económico","Miel (Valor de la Producción miles de pesos)","2023","67691.26","Secretaría de Agricultura y Desarrollo Rural SADER. Servicio Agroalimentario y Pesquero SIAP "
+"Económico","Ocupación del Gobierno (Población ocupada en el gobierno como porcentaje de la población ocupada)","2021","4","México ¿Como Vámos? "
+"Económico","Oferta de Alojamiento en la Entidad (cuartos)","2023","67835740.83","Sectur. DataTur"
+"Económico","Personal ocupado en las Unidades Económicas","2019","691873.27","Censos Económicos 2024. Características del personal ocupado"
+"Medio Ambiente","Plantas Tratadoras de Aguas residuales","2024","106","NA"
+"Social","Porcentaje de Abandono Escolar: Media Superior",2024,"10.05889867","NA"
+"Social","Porcentaje de Abandono Escolar: Primaria",2024,"-0.0152","NA"
+"Social","Porcentaje de Abandono Escolar: Superior",2024,"7.349508921","NA"
+"Seguridad","Porcentaje de delitos denunciados","2023","17.82679073","NA"
+"Económico","Porcentaje de Ocupación en la Entidad con respecto al Porcentaje de Ocupación Nacional","2023","42.2","Sectur. DataTur "
+"Económico","Superficie Cosechada (has)","2023","429208.75","NA"
+"Económico","Superficie Sembrada (has)","2023","469753.04","NA"
+"Seguridad","Tasa de homicidios","2023","50","NA"
+"Seguridad","Tasa de Prevalencia delictiva","2023","21164","NA"
+"Económico","Valor de la Producción","2023","10150740.33","Secretaría de Agricultura y Desarrollo Rural SADER. Servicio Agroalimentario y Pesquero SIAP "
+"Económico","Volumen de la Producción (toneladas)","2023","6895026.57","NA"
+"Medio Ambiente","Volumen tratado en las PTARs  (Millones m3)","2024","61.6308931","NA"
+"Económico","Aves Producción (toneladas)","2024","121954.53599999999","NA"
+"Económico","Aves Valor de la Producción (miles de pesos)","2024","3679621.9720000001","NA"
+"Económico","Cera Producción (toneladas)","2024","33.097999999999999","NA"
+"Económico","Cera Valor de la Producción (miles de pesos)","2024","2665.95","NA"
+"Económico","Crecimiento económico (porcentaje)",2025,"0.5","NA"
+"Económico","Cuartos de establecimientos de Hospedaje","2024","16005","NA"
+"Económico","Cuartos de Hospedaje según categoría (sin categoría)","2024","6081","NA"
+"Económico","Cuartos de Hospedaje según categoría 1 estrella","2024","740","NA"
+"Económico","Cuartos de Hospedaje según categoría 2 estrellas","2024","2676","NA"
+"Económico","Cuartos de Hospedaje según categoría 3 estrellas","2024","3907","NA"
+"Económico","Cuartos de Hospedaje según categoría 4 estrellas","2024","1568","NA"
+"Económico","Cuartos de Hospedaje según categoría 5 estrellas","2024","1033","NA"
+"Económico","Desigualdad laboral (coeficiente de Gini)",2025,"0.38700000000000001","NA"
+"Económico","Empleos Formales Generados Acumulados",2025,"8464","NA"
+"Económico","Establecimiento de Hospedaje","2024","847","NA"
+"Económico","Establecimiento de Hospedaje según categoría 1 estrella","2024","41","NA"
+"Económico","Establecimiento de Hospedaje según categoría 2 estrellas","2024","11","NA"
+"Económico","Establecimiento de Hospedaje según categoría 3 estrellas","2024","129","NA"
+"Económico","Establecimiento de Hospedaje según categoría 4 estrellas","2024","41","NA"
+"Económico","Establecimiento de Hospedaje según categoría 5 estrellas","2024","20","NA"
+"Económico","Exportaciones","2025","750091","NA"
+"Económico","Ganado Bovino Producción (toneladas)","2024","62636.733999999997","NA"
+"Económico","Ganado Bovino Valor de la Producción (miles de pesos)","2024","2421808.8640000001","NA"
+"Económico","Ganado Caprino Producción (toneladas)","2024","1545.241","NA"
+"Económico","Ganado Caprino Valor de la Producción (miles de pesos)","2024","59095.031000000003","NA"
+"Económico","Ganado Ovino Producción (toneladas)","2024","13730.458000000001","NA"
+"Económico","Ganado Ovino Valor de la Producción (miles de pesos)","2024","702253.68200000003","NA"
+"Económico","Ganado Porcino Producción (toneladas)","2024","21127.411","NA"
+"Económico","Ganado Porcino Valor de la Producción (miles de pesos)","2024","792780.98300000001","NA"
+"Económico","Guajolotes Producción (toneladas)","2024","1478.8579999999999","NA"
+"Económico","Guajolotes Valor de la Producción (miles de pesos)","2024","62265.612999999998","NA"
+"Económico","Huevo para plato Producción (toneladas)","2024","6641.62","NA"
+"Económico","Huevo para plato Valor de la Producción (miles de pesos)","2024","214528.39600000001","NA"
+"Económico","Indicador Mensual de la Actividad Industrial por Entidad Federativa (IMAIEF)",2025,"96.5","NA"
+"Económico","Índice de Competitividad Estatal ICE","2025","14","NA"
+"Económico","Informalidad (porcentaje)",2025,"71.7","Fuente: INEGI Encuesta nacional de Ocupación y Empleo ENOE"
+"Económico","Ingresos por Remesas (millones de dólares)","2025","395.95253000000002","NA"
+"Económico","Inversión Extranjera Directa (IED) (millones de dólares)","2024","13.370712825712168","NA"
+"Económico","Lana Producción (toneladas)","2024","1530.722","NA"
+"Económico","Lana Valor de la Producción (miles de pesos","2024","7163.7790000000005","NA"
+"Económico","Leche de Bovino (miles de litros)","2024","436925.53","NA"
+"Económico","Leche de Bovino Valor de la Producción (miles de pesos)","2024","3757559.5580000002","NA"
+"Económico","Leche de Caprino Producción (miles de litros)","2024","60.944000000000003","NA"
+"Económico","Leche de Caprino Valor de la Producción (miles de pesos)","2024","523.54399999999998","NA"
+"Económico","Longitud de la Red Carretera Federal","2024","756","NA"
+"Económico","Longitud de la Red de Alimentadoras estatales","2024","2809","NA"
+"Económico","Longitud de la Red de Brechas Mejoradas","2024","2169","NA"
+"Económico","Longitud de la Red de Caminos Rurales","2024","5290","NA"
+"Económico","Miel (Producción toneladas)","2024","1421.521","NA"
+"Económico","Miel (Valor de la Producción miles de pesos)","2024","66570.364000000001","NA"
+"Económico","Personal ocupado en las Unidades Económicas","2024","757295","NA"
+"Económico","Población Desocupada",2025,"29655","INEGI. Encuesta Nacional de Ocupación y Empleo ENOE"
+"Económico","Población Económicamente Activa",2025,"1522196","INEGI. Encuesta Nacional de Ocupación y Empleo ENOE"
+"Económico","Población Ocupada",2025,"1492541","INEGI. Encuesta Nacional de Ocupación y Empleo ENOE"
+"Económico","Producción Pesquera (Peso vivo kilogramos)","2024","5879133.6999999993","NA"
+"Económico","Producción Pesquera Valor de la Producción (Peso vivo miles de pesos)","2024","588923809.02999997","NA"
+"Económico","Producto Interno Bruto (millones de pesos) / Porcentaje de Participación (VALORES CONSTANTES)",2023,"441422","INEGI. Programas de información/Información Económica/Sistema de Cuentas Nacionales/Producto Interno Bruto (PIB)/Producto Interno Bruto por Entidad Federativa (PIBE). Año base 2018"
+"Económico","Superficie Cosechada (has)","2024","487323.11","NA"
+"Económico","Superficie Sembrada (has)","2024","493471.39","NA"
+"Económico","Tasa de Condiciones Críticas de Ocupación",2025,"34.1158","Fuente: INEGI. Encuesta Nacional de Ocupación y Empleo ENOE"
+"Económico","Tasa de Desocupación",2025,"1.9481999999999999","Fuente: INEGI. Encuesta Nacional de Ocupación y Empleo ENOE"
+"Económico","Tasa de Informalidad Laboral",2025,"71.659099999999995","Fuente: INEGI. Encuesta Nacional de Ocupación y Empleo ENOE"
+"Económico","Tasa de Ocupación en el Sector Informal",2025,"38.806699999999999","Fuente: INEGI. Encuesta Nacional de Ocupación y Empleo ENOE"
+"Económico","Tasa de Ocupación Parcial y Desocupación",2025,"11.9406","Fuente: INEGI. Encuesta Nacional de Ocupación y Empleo ENOE"
+"Económico","Tasa de Participación",2025,"60.4465","Fuente: INEGI. Encuesta Nacional de Ocupación y Empleo ENOE"
+"Económico","Tasa de Presión General",2025,"5.1879","NFuente: INEGI. Encuesta Nacional de Ocupación y Empleo ENOE"
+"Económico","Tasa de Subocupación",2025,"10.131399999999999","Fuente: INEGI. Encuesta Nacional de Ocupación y Empleo ENOE"
+"Económico","Tasa de Trabajo Asalariado",2025,"60.290700000000001","Fuente: INEGI. Encuesta Nacional de Ocupación y Empleo ENOE"
+"Económico","Trabajadores Asegurados Permanentes por el IMSS",2025,"282679","NA"
+"Económico","Unidades Económicas","2024","200776","NA"
+"Económico","Valor de la Producción","2024","10358176.279999999","Secretaría de Agricultura y Desarrollo Rural SADER. Servicio Agroalimentario y Pesquero SIAP "
+"Económico","Volumen de la Producción (toneladas)","2024","7243253.1600000001","NA"

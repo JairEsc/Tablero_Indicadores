@@ -2,7 +2,9 @@ function openChart(evt, tagName) {
   //funcion para activar una de las gráficas según la elección.
   var i, tabcontent, tablinks;
   // Get all elements with class="tabcontent" and hide them
-  tabcontent = document.getElementsByClassName("tabcontent_tablero_indicadores");
+  tabcontent = document.getElementsByClassName(
+    "tabcontent_tablero_indicadores"
+  );
   for (i = 0; i < tabcontent.length; i++) {
     tabcontent[i].style.display = "none";
   }
@@ -79,7 +81,7 @@ let base;
 let base_Nac;
 Promise.all([
   fetch("Datos/Hidalgo_historico.csv").then((response) => response.text()),
-  fetch("Datos/Nacional.csv").then((response) => response.text())
+  fetch("Datos/Nacional.csv").then((response) => response.text()),
 ]).then(([historicoData, nacionalData]) => {
   // Procesar Hidalgo_historico.csv
   var lines = historicoData.split("\n");
@@ -189,14 +191,17 @@ $("#tema_tablero_indicadores").change(function () {
   // Ahora puedes usar el objeto base
   fetchData(base_Nac, $(this).val().toString()); //En principio debe ser equivalente usar historica o nacional para rellenar las opciones
 });
-let bienvenida_tab=true
+let bienvenida_tab = true;
 
 $("#indicador_tablero_indicadores").change(function () {
-  if(bienvenida_tab){
-    document.getElementsByClassName("bienvenida_tab_tablero_indicadores")[0].className="tabcontent_hist_tablero_indicadores"
-    bienvenida_tab=false
+  if (bienvenida_tab) {
+    document.getElementsByClassName(
+      "bienvenida_tab_tablero_indicadores"
+    )[0].className = "tabcontent_hist_tablero_indicadores";
+    bienvenida_tab = false;
   }
-  document.getElementById("section_tablero_indicadores").style.visibility = "visible";
+  document.getElementById("section_tablero_indicadores").style.visibility =
+    "visible";
   document.getElementById("defaultOpen").click(); //simulamos que estamos en la historica para que se creen ambas
   //cuando cambia el valor del indicador:
 
@@ -231,23 +236,18 @@ $("#indicador_tablero_indicadores").change(function () {
     document.getElementById("tab_map").style.visibility = "visible";
     document.getElementById("info_hoverable").style.visibility = "visible";
   }
-  
+
   document.getElementById("descripcion_indicador").innerHTML = nac[1][2];
-  document.getElementById("descripcion_indicador_title_tablero_indicadores").style.visibility = "visible"
-
-
-
-
+  document.getElementById(
+    "descripcion_indicador_title_tablero_indicadores"
+  ).style.visibility = "visible";
 
   //También temporalidad
-  
-  
 
-  
-  
-  
   var OriginalEstados = nac[0].slice(4).map((x) => x.replace(/^"|"|\r$/g, "")); //sus nombres originales// Va a cambiar el slice con la definitiva, porque trae descripcion
-  var datosEstados = nac[1].slice(4).map((x)=> parseFloat(x.replace(/^"|"|\r|,$/g, ""))); //datos originales
+  var datosEstados = nac[1]
+    .slice(4)
+    .map((x) => parseFloat(x.replace(/^"|"|\r|,$/g, ""))); //datos originales
   ///Falta hacer algo con los NA. Después, podría
   const combined_Estados = datosEstados.map((dato_est, index) => ({
     //ordenados por valor de indicador
@@ -265,7 +265,7 @@ $("#indicador_tablero_indicadores").change(function () {
   mexico.features.forEach((feature, index) => {
     //Actualiza el ranking de los estados
     //Vamos a hacer un default para cuando no haya datos.
-    feature.properties.Valor =datosEstados[index]
+    feature.properties.Valor = datosEstados[index];
     feature.properties.CVEGEO =
       combined_Estados_ordenados[
         SortedEstados.indexOf(feature.properties.NOMGEO)
@@ -302,7 +302,7 @@ $("#indicador_tablero_indicadores").change(function () {
     options: {
       maintainAspectRatio: false,
       responsive: true,
-      onHover: function(event, elements) {
+      onHover: function (event, elements) {
         if (elements.length) {
           resaltarPoligonoPorCVE(32 - elements[0].index);
         }
@@ -311,17 +311,17 @@ $("#indicador_tablero_indicadores").change(function () {
         x: {
           ticks: {
             font: {
-              size: 10 // small font size
-            }
-          }
+              size: 10, // small font size
+            },
+          },
         },
         y: {
           beginAtZero: true,
           ticks: {
             font: {
-              size: 10 // small font size
-            }
-          }
+              size: 10, // small font size
+            },
+          },
         },
       },
     },
@@ -334,20 +334,30 @@ $("#indicador_tablero_indicadores").change(function () {
   $("#indicador option[value='default']").remove();
   years = [];
   datos = [];
-  base.forEach((line, index) => {
+  base.filter((row)=>{
+    return row[1].trim().replace(/^"|"|'$/g, "") == $(this).val().replace(/^"|"|'$/g, "");
+  }).forEach((line, index) => {
     if (
       line[1].trim().replace(/^"|"|'$/g, "") ==
       $(this)
         .val()
         .replace(/^"|"|'$/g, "")
     ) {
-      console.log(line[4].length)
-      if(line[4].length>1){
-        document.getElementById("fuente").innerHTML = 
-        line[4].trim().replace(/^"|"|'$/g, "").slice(0,6)==='Fuente'?
-        line[4].trim().replace(/^"|"|'$/g, ""):
-        'Fuente: '+line[4].trim().replace(/^"|"|'$/g, "")
+      console.log(line[4].length);
+      if (line[4].length > 9) {
+        document.getElementById("fuente").innerHTML =
+          line[4]
+            .trim()
+            .replace(/^"|"|'$/g, "")
+            .slice(0, 6) === "Fuente"
+            ? line[4].trim().replace(/^"|"|'$/g, "")
+            : "Fuente: " + line[4].trim().replace(/^"|"|'$/g, "");
       }
+      else{
+        
+      }
+      
+
       years.push(line[2].trim().replace(/^"|"|'$/g, ""));
       datos.push(parseFloat(line[3].trim().replace(/^"|"|'$/g, "")));
     }
@@ -359,94 +369,93 @@ $("#indicador_tablero_indicadores").change(function () {
     document.getElementById("defaultOpen").click();
     document.getElementById("defaultOpen").style.visibility = "visible";
   }
-  if(years.length<=1){
-    console.log("No hay datos")
-  }
-  else{
+  if (years.length <= 1) {
+    console.log("No hay datos");
+  } else {
     const combined = years
-    .map((year, index) => ({
-      year: parseInt(JSON.parse(year), 10),
-      value: datos[index],
-    }))
-    .sort((a, b) => a.year - b.year);
-  const sortedYears = combined.map((item) => item.year.toString());
-  const sortedDatos = combined.map((item) => item.value);
-  //combined es un json, pero .year podria tener huecos.
+      .map((year, index) => ({
+        year: parseInt(JSON.parse(year), 10),
+        value: datos[index],
+      }))
+      .sort((a, b) => a.year - b.year);
+    const sortedYears = combined.map((item) => item.year.toString());
+    const sortedDatos = combined.map((item) => item.value);
+    //combined es un json, pero .year podria tener huecos.
 
-  var x_original = combined.map((item) => item.year).sort();
-  const lr = linearRegression(sortedDatos, x_original);
-  const x_0 = lr["intercept"];
-  const p = lr["slope"];
-  x_original.push(x_original[x_original.length - 1] + 1);
-  const x_completo = Array(
-    x_original[x_original.length - 1] - x_original[0] + 1
-  )
-    .fill()
-    .map((element, index) => index + x_original[0]);
-  function completeYearRange(data) {
-    const startYear = Math.min(...data.map((item) => item.year));
-    const endYear = Math.max(...data.map((item) => item.year));
+    var x_original = combined.map((item) => item.year).sort();
+    const lr = linearRegression(sortedDatos, x_original);
+    const x_0 = lr["intercept"];
+    const p = lr["slope"];
+    x_original.push(x_original[x_original.length - 1] + 1);
+    const x_completo = Array(
+      x_original[x_original.length - 1] - x_original[0] + 1
+    )
+      .fill()
+      .map((element, index) => index + x_original[0]);
+    function completeYearRange(data) {
+      const startYear = Math.min(...data.map((item) => item.year));
+      const endYear = Math.max(...data.map((item) => item.year));
 
-    const completeData = [];
+      const completeData = [];
 
-    for (let year = startYear; year <= endYear; year++) {
-      const foundItem = data.find((item) => item.year === year);
+      for (let year = startYear; year <= endYear; year++) {
+        const foundItem = data.find((item) => item.year === year);
 
-      if (foundItem) {
-        completeData.push(foundItem);
-      } else {
-        completeData.push({ year: year, value: null });
+        if (foundItem) {
+          completeData.push(foundItem);
+        } else {
+          completeData.push({ year: year, value: null });
+        }
       }
-    }
 
-    return completeData;
-  }
-  const x_sin_huecos = completeYearRange(combined);
-  const sortedYears2 = x_sin_huecos.map((item) => item.year.toString());
-  const sortedDatos2 = x_sin_huecos.map((item) => item.value);
-  if (typeof chart != "undefined") {
-    chart.destroy();
-  }
-  // Crear una nueva gráfica
-  const ctx = document.getElementById("historico").getContext("2d");
-  chart = new Chart(ctx, {
-    type: "line",
-    data: {
-      labels: x_completo,
-      datasets: [
-        {
-          label: $(this).val(),
-          data: sortedDatos2,
-          backgroundColor: "rgba(75, 192, 192, 0.2)",
-          borderColor: "rgba(75, 192, 192, 1)",
-          borderWidth: 1,
-          labels: sortedYears2,
-          spanGaps: true,
+      return completeData;
+    }
+    const x_sin_huecos = completeYearRange(combined);
+    const sortedYears2 = x_sin_huecos.map((item) => item.year.toString());
+    const sortedDatos2 = x_sin_huecos.map((item) => item.value);
+    if (typeof chart != "undefined") {
+      chart.destroy();
+    }
+    // Crear una nueva gráfica
+    const ctx = document.getElementById("historico").getContext("2d");
+    chart = new Chart(ctx, {
+      type: "line",
+      data: {
+        labels: x_completo,
+        datasets: [
+          {
+            label: $(this).val(),
+            data: sortedDatos2,
+            backgroundColor: "rgba(75, 192, 192, 0.2)",
+            borderColor: "rgba(75, 192, 192, 1)",
+            borderWidth: 1,
+            labels: sortedYears2,
+            spanGaps: true,
+          },
+          {
+            label: "Regresión",
+            data: x_completo.map(function (y) {
+              return x_0 + y * p;
+            }),
+            labels: x_completo,
+          },
+        ],
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          chartArea: {
+            backgroundColor: "rgba(240, 240, 240, 1)", // Cambia este color a lo que desees
+          },
         },
-        {
-          label: "Regresión",
-          data: x_completo.map(function (y) {
-            return x_0 + y * p;
-          }),
-          labels: x_completo,
-        },
-      ],
-    },
-    options: {
-      responsive: true,
-      maintainAspectRatio: false,
-      plugins: {
-        chartArea: {
-          backgroundColor: "rgba(240, 240, 240, 1)", // Cambia este color a lo que desees
+        scales: {
+          y: {
+            beginAtZero: false,
+          },
         },
       },
-      scales: {
-        y: {
-          beginAtZero: false,
-        },
-      },
-    },
-    /*plugins: [{
+      /*plugins: [{
                     id: 'custom_canvas_background_color',
                     beforeDraw: (chart) => {
                         const ctx = chart.canvas.getContext('2d');
@@ -457,9 +466,8 @@ $("#indicador_tablero_indicadores").change(function () {
                         ctx.restore();
                     }
                 }]*/
-  });
+    });
   }
-  
 });
 B.onChange = function (newValue) {
   //Utiliza una variable "global" que se usa en el script del mapa de méxico.
