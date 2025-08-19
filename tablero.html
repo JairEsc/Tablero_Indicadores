@@ -29,11 +29,16 @@
                     <option value="Seguridad" >Seguridad</option>
                     <option value="Género" >Género</option>
                 </select>
-                <select id="indicador_tablero_indicadores">
+                <!-- <select id="indicador_tablero_indicadores">
                     <option value="default">---Seleccione un indicador---</option>
-                </select>
+                </select> -->
+                <input type="text" id="indicador_tablero_indicadoresSearch" list="indicador_tablero_indicadores" placeholder="Escribe o selecciona un indicador" />
+                    <datalist id="indicador_tablero_indicadores">
+                        <option value="Indicador 1">-Tema 1</option>
+                        <option value="Indicador 1">-Tema 1-Indicador 2</option>
+                        <option value="Indicador 1">-Tema 1-Indicador 2</option>
+                    </datalist>
             </div>
-
         </header>
         
         <section class="indicator-description_tablero_indicadores">
@@ -45,12 +50,13 @@
             <div class="tab_tablero_indicadores" style="position: relative;">
                 <button class="tablinks" onclick="openChart(event, 'historico_chart')" id="defaultOpen">Histórico: Hidalgo</button>
                 <button class="tablinks " onclick="openChart(event, 'nacional_chart')" id="tab_map">Contexto Nacional</button>
-                <div id="info_hoverable" class="tooltip_tablero_indicadores"><div class="bg">
-                    <a href="#"><span class="infoHover_tablero_indicadores">i</span></a>
-                  </div>
+                <div id="info_hoverable" class="tooltip_tablero_indicadores">
+                    <div class="bg">
+                        <a href="#"><span class="infoHover_tablero_indicadores">i</span></a>
+                    </div>
                     <span class="tooltiptext_tablero_indicadores">El orden en que se muestran los estados y los colores no representan un nivel de desempeño, solamente representan el ranking respecto a otros estados</span>
-                  </div>
-              </div>
+                </div>
+            </div>
               
               <!-- Tab content -->
               <div id="historico_chart" class="tabcontent_tablero_indicadores">

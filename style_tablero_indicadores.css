@@ -37,6 +37,9 @@ body {
   #indicador_tablero_indicadores{
     max-width: 70vw;
   }
+  #indicador_tablero_indicadoresSearch{
+    max-width: 70vw;
+  }
   @media (max-width:720px){
     .header-top_tablero_indicadores{
       display: block;

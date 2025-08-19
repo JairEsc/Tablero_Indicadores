@@ -41,18 +41,18 @@ function linearRegression(y, x) {
   lr["intercept"] = (sum_y - lr.slope * sum_x) / n;
   return lr;
 }
-function fetchData(data, valor) {
+function fetchData(data, valor) {//Para este sería suficiente un .csv con header (Tema, Indicador)
   //Dado un conjunto de datos y una elección de tema, rellena las posibles opciones del indicador.
   const select = document.getElementById("indicador_tablero_indicadores");
   $("#indicador_tablero_indicadores").empty();
   var uniqueIndicators = new Set();
-  const option = document.createElement("option");
-  option.value = "default";
-  option.text = "Seleccione uno";
-  select.appendChild(option);
-  uniqueIndicators.add("Seleccione uno");
+  // const option = document.createElement("option");
+  // option.value = "default";
+  // option.text = "Seleccione uno";
+  // select.appendChild(option);
+  // uniqueIndicators.add("Seleccione uno");
   data.slice(1).forEach((line, index) => {
-    var indicadorValue = line[1].trim();
+    var indicadorValue = line[2].trim().replace(/^"|"$/g, "");
     //Se va a seleccionar
     if (!uniqueIndicators.has(indicadorValue)) {
       const option = document.createElement("option");
@@ -63,6 +63,7 @@ function fetchData(data, valor) {
     }
   });
 }
+
 document.getElementById("defaultOpen").click(); //El histórico es la gráfica por default.
 //Posibles Temas
 let Medio_Ambiente = [];
@@ -71,20 +72,14 @@ let Social = [];
 let Economico = [];
 let Seguridad = [];
 let Genero = [];
-let Medio_Ambiente_Nac = [];
-let Gobierno_Nac = [];
-let Social_Nac = [];
-let Economico_Nac = [];
-let Seguridad_Nac = [];
-let Genero_Nac = [];
 let base;
-let base_Nac;
+let Header;
 Promise.all([
-  fetch("Datos/Hidalgo_historico.csv").then((response) => response.text()),
-  fetch("Datos/Nacional.csv").then((response) => response.text()),
-]).then(([historicoData, nacionalData]) => {
-  // Procesar Hidalgo_historico.csv
+  fetch("Datos/layout_prueba.csv").then((response) => response.text()),
+]).then(([historicoData]) => {
+  //Simplemente particionamos por tema. 
   var lines = historicoData.split("\n");
+  Header=lines[0].split(",")
   lines.slice(1).forEach((line) => {
     let values = line.split(",");
     let tema = values[0].trim().replace(/^"|"$/g, "").replace(/^'|'$/g, "");
@@ -109,91 +104,43 @@ Promise.all([
         break;
     }
   });
-
-  // Procesar Nacional.csv
-  var linesNac = nacionalData.split("\n");
-  Medio_Ambiente_Nac.push(linesNac[0].split(","));
-  Gobierno_Nac.push(linesNac[0].split(","));
-  Economico_Nac.push(linesNac[0].split(","));
-  Social_Nac.push(linesNac[0].split(","));
-  Seguridad_Nac.push(linesNac[0].split(","));
-  Genero_Nac.push(linesNac[0].split(","));
-  linesNac.slice(1).forEach((line) => {
-    let tema = line.split(",")[0];
-    let values = [];
-    let current = "";
-    let inQuotes = false;
-    for (let char of line) {
-      if (char === '"') {
-        inQuotes = !inQuotes;
-      } else if (char === "," && !inQuotes) {
-        values.push(current.trim());
-        current = "";
-      } else {
-        current += char;
-      }
-    }
-    values.push(current.trim());
-    switch (tema.replace(/^"|"$/g, "")) {
-      case "Medio Ambiente":
-        Medio_Ambiente_Nac.push(values);
-        break;
-      case "Gobierno":
-        Gobierno_Nac.push(values);
-        break;
-      case "Social":
-        Social_Nac.push(values);
-        break;
-      case "Económico":
-        Economico_Nac.push(values);
-        break;
-      case "Seguridad":
-        Seguridad_Nac.push(values);
-        break;
-      case "Género":
-        Genero_Nac.push(values);
-        break;
-    }
-  });
 });
 
 $("#tema_tablero_indicadores").change(function () {
+  document.getElementById('indicador_tablero_indicadoresSearch').value=''
   //De manera dinámica, cada vez que se cambia el valor de "tema", hace lo siguiente:
   $("#option option[value='default']").remove();
   //Elegimos el tema:
   switch ($(this).val()) {
     case "Medio Ambiente":
       base = Medio_Ambiente;
-      base_Nac = Medio_Ambiente_Nac;
       break;
     case "Gobierno":
       base = Gobierno;
-      base_Nac = Gobierno_Nac;
       break;
     case "Social":
       base = Social;
-      base_Nac = Social_Nac;
       break;
     case "Económico":
       base = Economico;
-      base_Nac = Economico_Nac;
       break;
     case "Seguridad":
       base = Seguridad;
-      base_Nac = Seguridad_Nac;
       break;
     case "Género":
       base = Genero;
-      base_Nac = Genero_Nac;
       break;
   }
-
   // Ahora puedes usar el objeto base
-  fetchData(base_Nac, $(this).val().toString()); //En principio debe ser equivalente usar historica o nacional para rellenar las opciones
+  fetchData(base, $(this).val().toString()); //
 });
-let bienvenida_tab = true;
 
-$("#indicador_tablero_indicadores").change(function () {
+$("#indicador_tablero_indicadoresSearch").focus(function() {
+        // reiniciamos el valor del input a vacío.
+        $(this).val(' ');
+});
+$("#indicador_tablero_indicadoresSearch").change(function () {
+  document.activeElement.blur();
   if (bienvenida_tab) {
     document.getElementsByClassName(
       "bienvenida_tab_tablero_indicadores"
@@ -205,7 +152,7 @@ $("#indicador_tablero_indicadores").change(function () {
   document.getElementById("defaultOpen").click(); //simulamos que estamos en la historica para que se creen ambas
   //cuando cambia el valor del indicador:
 
-  function updateJsonData() {
+  function updateJsonData() {//Se puede utilizar una variable global en lugar del window.
     // Disparar un evento personalizado cuando se actualiza el JSON
     const event = new CustomEvent("jsonDataUpdated", {});
     window.dispatchEvent(event);
@@ -214,22 +161,22 @@ $("#indicador_tablero_indicadores").change(function () {
   //después, hará lo siguiente:
   nac = [];
   //console.log($(this).val())
-  base_Nac.map((line, index) => {
+  base.map((line, index) => {//esta base es el filtro de la nacinal dado el tema elegido.
     //filtro al indicador nacional
     //Todavía hay bugs cuando los nombres en historico y Nacional no coinciden. E.g.
-    // Aves (produccion toneladas) != Aves Produccion (toneladas)
+    // Aves (produccion toneladas) != Aves Produccion (toneladas)// Se preprocesaron para que no ocurra
     if (
-      line[1].replace(/^"|"|'$/g, "").toString() ===
+      line[2].replace(/^"|"|'$/g, "").toString() ===
         $(this)
           .val()
           .normalize()
-          .replace(/^"|"|'$/g, "") ||
-      line[0].replace(/^"|"|'$/g, "") === "Tema"
+          .replace(/^"|"|'$/g, "") 
     ) {
-      nac.push(line);
+      nac.push(line);//nac es el filtro de base_Nac dado el indicador elegido.
     } //Parece que esta parte funciona bien si las cadenas son iguales
   });
-  if (nac[1].slice(4).every((val) => val === "NA")) {
+  console.log(nac);
+  if (nac[1].slice(4).every((val) => val === "NA")) {//Todos los estados tienen NA.
     document.getElementById("tab_map").style.visibility = "hidden";
     document.getElementById("info_hoverable").style.visibility = "hidden";
   } else {
@@ -241,27 +188,53 @@ $("#indicador_tablero_indicadores").change(function () {
   document.getElementById(
     "descripcion_indicador_title_tablero_indicadores"
   ).style.visibility = "visible";
+  document.getElementById(
+    "descripcion_indicador_title_tablero_indicadores"
+  ).innerHTML='Descripción del Indicador:  <p style="all:unset">'+$(this).val()+'</p>';//Agregamos el nombre del indicador a la descripción.
 
   //También temporalidad
-
-  var OriginalEstados = nac[0].slice(4).map((x) => x.replace(/^"|"|\r$/g, "")); //sus nombres originales// Va a cambiar el slice con la definitiva, porque trae descripcion
-  var datosEstados = nac[1]
-    .slice(4)
+  var OriginalEstados = nac[0].map((_, colIndex) => nac.map(row => row[colIndex]))[1].map((x) => x.replace(/^"|"|\r$/g, ""))//nac[0].slice(3).map((x) => x.replace(/^"|"|\r$/g, "")); //sus nombres originales
+  //Para saber cuál es la pultima columna con datos no NA: 
+  let lastCol;
+  for (let i = 0; i < nac[0].length; i++) {
+    const currentColumn = nac[0].map((_, colIndex) => nac.map(row => row[colIndex])).reverse()[i];
+    //console.log(currentColumn)
+    lastCol=i
+    // Check if the current column is NOT entirely 'NA'
+    if (!currentColumn.every(x => x === 'NA' || x==='NA\r')&& !currentColumn.every(x=>x==0 || x=='0\r')) {
+      // If it's not all 'NA', we've found our column.
+      // Since we're iterating from right to left (due to .reverse()),
+      // this is the first non-completely-'NA' column we encounter.
+      break; // Exit the loop early
+    }
+    //console.log(lastCol)
+    // If it *is* entirely 'NA', decrement the resultIndex
+    
+  }
+  // console.log("Mes seleccionado: ", nac[0].length-1-lastCol-1)
+  // console.log(Header[nac[0].length-1-lastCol-1])
+  var datosEstados = nac[0].map((_, colIndex) => nac.map(row => row[colIndex]))[nac[0].length-1-lastCol]//Tomamos el primero
+    //.slice(3)
     .map((x) => parseFloat(x.replace(/^"|"|\r|,$/g, ""))); //datos originales
   ///Falta hacer algo con los NA. Después, podría
+  // console.log(OriginalEstados);
+  // console.log(datosEstados);
   const combined_Estados = datosEstados.map((dato_est, index) => ({
     //ordenados por valor de indicador
     dato: OriginalEstados[index], // Nombre estado
     value: dato_est == "NA" ? null : dato_est, // y su valor
   })); //orden segun su valor
+  //
   const combined_Estados_ordenados = [...combined_Estados];
   combined_Estados_ordenados.sort((a, b) => b.value - a.value);
+  
   SortedEstados = combined_Estados_ordenados.map((item) =>
     item.dato.toString()
   );
   indexedEstados = OriginalEstados.map(
     (item) => SortedEstados.indexOf(item.toString()) + 1
   ); //indices de los estados según su posición respecto al indicador
+  //console.log(indexedEstados)
   mexico.features.forEach((feature, index) => {
     //Actualiza el ranking de los estados
     //Vamos a hacer un default para cuando no haya datos.
@@ -271,11 +244,9 @@ $("#indicador_tablero_indicadores").change(function () {
         SortedEstados.indexOf(feature.properties.NOMGEO)
       ].value === null
         ? "NA"
-        : 33 - indexedEstados[index].toString().padStart(2, "0"); //CVEGEO es su posición a novel nacional
+        : 33 - indexedEstados[index].toString().padStart(2, "0"); //CVEGEO es su posición a nivel nacional
   });
-
   datosEstados = combined_Estados_ordenados.map((item) => item.value);
-
   if (typeof chart_nac != "undefined") {
     chart_nac.destroy();
   }
@@ -291,7 +262,7 @@ $("#indicador_tablero_indicadores").change(function () {
               .val()
               .replace(/^"|"|\r|'$/g, "") +
             " - " +
-            nac[1][3].replace(/^"|"|\r|'$/g, ""),
+            nac[1][2].replace(/^"|"|\r|'$/g, ""),
           data: datosEstados,
           backgroundColor: nac[1].slice(3).fill("rgba(75, 192, 192, 0.2)"),
           borderColor: "rgba(75, 192, 192, 1)",
@@ -313,6 +284,8 @@ $("#indicador_tablero_indicadores").change(function () {
             font: {
               size: 10, // small font size
             },
+            display: true,
+            autoSkip: false
           },
         },
         y: {
@@ -330,38 +303,10 @@ $("#indicador_tablero_indicadores").change(function () {
     "rgba(75, 192, 192, 1)"; //Ilumino a Hidalgo
   /*}*/
   updateJsonData();
-
   $("#indicador option[value='default']").remove();
-  years = [];
-  datos = [];
-  base.filter((row)=>{
-    return row[1].trim().replace(/^"|"|'$/g, "") == $(this).val().replace(/^"|"|'$/g, "");
-  }).forEach((line, index) => {
-    if (
-      line[1].trim().replace(/^"|"|'$/g, "") ==
-      $(this)
-        .val()
-        .replace(/^"|"|'$/g, "")
-    ) {
-      console.log(line[4].length);
-      if (line[4].length > 9) {
-        document.getElementById("fuente").innerHTML =
-          line[4]
-            .trim()
-            .replace(/^"|"|'$/g, "")
-            .slice(0, 6) === "Fuente"
-            ? line[4].trim().replace(/^"|"|'$/g, "")
-            : "Fuente: " + line[4].trim().replace(/^"|"|'$/g, "");
-      }
-      else{
-        
-      }
-      
+  years = Header.slice(4);
+  datos = base[12].slice(4).map((x)=>parseFloat(x.replace(/^"|"|\r|,$/g, ""))); ////PENDIENTE. Decidir desde donde tomar los datos. Podrían ser vaciíos los primeros años
 
-      years.push(line[2].trim().replace(/^"|"|'$/g, ""));
-      datos.push(parseFloat(line[3].trim().replace(/^"|"|'$/g, "")));
-    }
-  });
   if (years.length <= 1) {
     document.getElementById("tab_map").click();
     document.getElementById("defaultOpen").style.visibility = "hidden";
@@ -479,3 +424,5 @@ B.onChange = function (newValue) {
     "rgba(75, 192, 192, 1)";
   chart_nac.update();
 };
+
+let bienvenida_tab = true;

@@ -4,7 +4,7 @@ var bounds = L.latLngBounds(
   );
 var map = L.map('map_tablero_indicadores',{
     maxBounds: bounds,        // Establecer los límites máximos
-    maxBoundsViscosity: 0.8
+    maxBoundsViscosity: 0.5
 }).fitBounds(bounds);
 function getColor(d) {
     return d==1? "#a50026":
@@ -55,7 +55,7 @@ function style_ent(feature) {
         opacity: 1,
         color: 'white',
         dashArray: '3',
-        fillOpacity: 0.4
+        fillOpacity: 0.5
     };
 }
 poligonos_map = L.geoJson(mexico, {
@@ -70,7 +70,7 @@ function highlightFeature(e) {
 
     layer.setStyle({
         weight: 5,
-        color: '#666',
+        color: '#white',
         fillOpacity: 0.7
     });
 
@@ -78,7 +78,11 @@ function highlightFeature(e) {
     info.update(layer.feature.properties);
     B.myVariable =e.target.feature.properties.NOMGEO;
 }
-
+function clickFeature(e){
+    //Modificamos el contenido del popup
+    var layer = e.target; 
+    layer.bindPopup(Time)
+}
 function resetHighlight(e) {
     B.myVariable ='Hidalgo';
     poligonos_map.resetStyle();
@@ -88,6 +92,7 @@ function onEachFeature(feature, layer) {
     layer.on({
         mouseover: highlightFeature,
         mouseout: resetHighlight,
+        click: clickFeature,
     });
 }
 var info = L.control();
@@ -146,7 +151,7 @@ function resaltarPoligonoPorCVE(cve) {
     });
 }
 var controlSearch = new L.Control.Search({
-    position:'bottomleft',		
+    position:'topleft',		
     layer: poligonos_map,
     initial: false,
     zoom: 7,
