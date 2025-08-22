@@ -194,7 +194,7 @@ $("#indicador_tablero_indicadoresSearch").change(function () {
 
   //También temporalidad
   var OriginalEstados = nac[0].map((_, colIndex) => nac.map(row => row[colIndex]))[1].map((x) => x.replace(/^"|"|\r$/g, ""))//nac[0].slice(3).map((x) => x.replace(/^"|"|\r$/g, "")); //sus nombres originales
-  //Para saber cuál es la pultima columna con datos no NA: 
+  //Para saber cuál es la ultima columna con datos no NA: 
   let lastCol;
   for (let i = 0; i < nac[0].length; i++) {
     const currentColumn = nac[0].map((_, colIndex) => nac.map(row => row[colIndex])).reverse()[i];
@@ -304,115 +304,137 @@ $("#indicador_tablero_indicadoresSearch").change(function () {
   /*}*/
   updateJsonData();
   $("#indicador option[value='default']").remove();
-  years = Header.slice(4);
-  datos = base[12].slice(4).map((x)=>parseFloat(x.replace(/^"|"|\r|,$/g, ""))); ////PENDIENTE. Decidir desde donde tomar los datos. Podrían ser vaciíos los primeros años
 
-  if (years.length <= 1) {
+/////////////////////////////////////////////////////
+  //INICIA EL CAMBIO//
+////////////////////////////////////////////////////
+let firstCol;
+  for (let i = 4; i < nac[0].length; i++) {
+    const currentColumn = nac[0].map((_, colIndex) => nac.map(row => row[colIndex]))[i];
+
+    firstCol=i
+
+    if (!currentColumn.every(x => x === 'NA' || x==='NA\r')&& !currentColumn.every(x=>x==0 || x=='0\r')) {
+      break; // Exit the loop early
+    }
+    //console.log(firstCol)
+    // If it *is* entirely 'NA', decrement the resultIndex
+    
+  }
+let New_lastCol;
+  for (let i = 0; i < nac[0].length; i++) {
+    const currentColumn = nac[0].map((_, colIndex) => nac.map(row => row[colIndex])).reverse()[i];
+    New_lastCol=i
+    if (!currentColumn.every(x => x === 'NA' || x==='NA\r')&& !currentColumn.every(x=>x==0 || x=='0\r')) {
+      break;
+    }
+  }
+
+
+const Pre_Headers = Header.slice(firstCol,nac[0].length-New_lastCol);
+
+//Para seleccionar Hidalguito
+const Pre_Datos = nac.find(line =>
+  line[1].replace(/^"|"|\r/g, "") === "Hidalgo"
+)?.slice(firstCol,nac[0].length-New_lastCol);
+if (Pre_Datos.length <= 1) {
     document.getElementById("tab_map").click();
     document.getElementById("defaultOpen").style.visibility = "hidden";
   } else {
     document.getElementById("defaultOpen").click();
     document.getElementById("defaultOpen").style.visibility = "visible";
   }
-  if (years.length <= 1) {
+  if (Pre_Datos.length <= 1) {
     console.log("No hay datos");
   } else {
-    const combined = years
-      .map((year, index) => ({
-        year: parseInt(JSON.parse(year), 10),
-        value: datos[index],
-      }))
-      .sort((a, b) => a.year - b.year);
-    const sortedYears = combined.map((item) => item.year.toString());
-    const sortedDatos = combined.map((item) => item.value);
-    //combined es un json, pero .year podria tener huecos.
+//He aquí uno de los mayores cambios, para poder crear los label con "Año"_"Mes"
+//Tuve que eliminar lo del JSON porque no lo supe usar :C
+const combined = Pre_Headers.map((fecha, index) => {
+  const Año_Mes = fecha.replace(/^"|"|\r/g, "").split("_");
+  const año = parseInt(Año_Mes[0]);
+  const mes = parseInt(Año_Mes[1]);
 
-    var x_original = combined.map((item) => item.year).sort();
-    const lr = linearRegression(sortedDatos, x_original);
-    const x_0 = lr["intercept"];
-    const p = lr["slope"];
-    x_original.push(x_original[x_original.length - 1] + 1);
-    const x_completo = Array(
-      x_original[x_original.length - 1] - x_original[0] + 1
-    )
-      .fill()
-      .map((element, index) => index + x_original[0]);
-    function completeYearRange(data) {
-      const startYear = Math.min(...data.map((item) => item.year));
-      const endYear = Math.max(...data.map((item) => item.year));
+//Aquí me encuentro con un problema, al graficar hay varios puntos que no aparecen, no porque no aparezcan en el eje x
+//pues eso es por el zoom y que no caben, lo que yo tengo es que a pesar de tener registros de algun mes, al hacer la 
+//gráfica no aparecen los puntos y por ende la grafica no los contempla y supongo que la regresión eventualmente menos.
+//Chat me dijo que lo pudiera así:
+  const val = parseFloat(Pre_Datos[index]?.replace(/^"|"|\r|,$/g, ""));
+  return {
+    label: `${año}_${mes}`,
+    year: año,
+    month: mes,
+    value: isNaN(val) ? null : val
+  };
+});
+//Y si funcionó, bendito sea ChatGod 
 
-      const completeData = [];
+// Ordenanding por año y luego por mes
+const sortedCombined = combined.sort((a, b) =>
+  a.year === b.year ? a.month - b.month : a.year - b.year
+);
 
-      for (let year = startYear; year <= endYear; year++) {
-        const foundItem = data.find((item) => item.year === year);
+const labels = sortedCombined.map(item => item.label);
+const datos = sortedCombined.map(item => item.value);
 
-        if (foundItem) {
-          completeData.push(foundItem);
-        } else {
-          completeData.push({ year: year, value: null });
-        }
-      }
+const validPoints = datos
+  .map((value, index) => ({ x: index, y: value }))
+  .filter(point => point.y !== null && !isNaN(point.y));
 
-      return completeData;
-    }
-    const x_sin_huecos = completeYearRange(combined);
-    const sortedYears2 = x_sin_huecos.map((item) => item.year.toString());
-    const sortedDatos2 = x_sin_huecos.map((item) => item.value);
-    if (typeof chart != "undefined") {
-      chart.destroy();
-    }
-    // Crear una nueva gráfica
-    const ctx = document.getElementById("historico").getContext("2d");
-    chart = new Chart(ctx, {
-      type: "line",
-      data: {
-        labels: x_completo,
-        datasets: [
-          {
-            label: $(this).val(),
-            data: sortedDatos2,
-            backgroundColor: "rgba(75, 192, 192, 0.2)",
-            borderColor: "rgba(75, 192, 192, 1)",
-            borderWidth: 1,
-            labels: sortedYears2,
-            spanGaps: true,
-          },
-          {
-            label: "Regresión",
-            data: x_completo.map(function (y) {
-              return x_0 + y * p;
-            }),
-            labels: x_completo,
-          },
-        ],
+const x = validPoints.map(p => p.x);
+const y = validPoints.map(p => p.y);
+
+const lr = linearRegression(y, x);
+
+
+if (typeof chart != "undefined") {
+  chart.destroy();
+}
+
+// Crear nueva gráfica
+const ctx = document.getElementById("historico").getContext("2d");
+chart = new Chart(ctx, {
+  type: "line",
+  data: {
+    labels: labels,
+    datasets: [
+      {
+        label: $(this).val(),
+        data: datos,
+        backgroundColor: "rgba(75, 192, 192, 0.2)",
+        borderColor: "rgba(75, 192, 192, 1)",
+        borderWidth: 1,
+        spanGaps: true,
       },
-      options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        plugins: {
+      {
+        label: "Tendencia (Regresión Lineal)",
+        data: Array(labels.length).fill(null).map((_, i) =>
+          x.includes(i) ? lr.slope * i + lr.intercept : null
+        ),
+        borderColor: "rgba(255, 99, 132, 1)",
+        backgroundColor: "rgba(255, 99, 132, 1)",
+        borderWidth: 2,
+        fill: false,
+        pointRadius: 0,
+        spanGaps: true,
+      }
+    ]
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
           chartArea: {
             backgroundColor: "rgba(240, 240, 240, 1)", // Cambia este color a lo que desees
           },
         },
-        scales: {
-          y: {
-            beginAtZero: false,
-          },
-        },
-      },
-      /*plugins: [{
-                    id: 'custom_canvas_background_color',
-                    beforeDraw: (chart) => {
-                        const ctx = chart.canvas.getContext('2d');
-                        ctx.save();
-                        ctx.globalCompositeOperation = 'destination-over';
-                        ctx.fillStyle = '#d4c2a3'; // Cambia a tu color de fondo deseado
-                        ctx.fillRect(0, 0, chart.width, chart.height);
-                        ctx.restore();
-                    }
-                }]*/
-    });
+    scales: {
+      y: {
+        beginAtZero: false,
+      }
+    }
   }
+});
+}
 });
 B.onChange = function (newValue) {
   //Utiliza una variable "global" que se usa en el script del mapa de méxico.
