@@ -137,7 +137,7 @@ window.addEventListener('jsonDataUpdated', function(e) {
   
 function resaltarPoligonoPorCVE(cve) {
     poligonos_map.eachLayer(function(layer) {
-        if (layer.feature && layer.feature.properties.CVEGEO === cve) {
+        if (layer.feature && layer.feature.properties.  NOMGEO === cve) {
             layer.setStyle({
                 weight: 5,
                 color: '#666',

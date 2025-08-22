@@ -106,6 +106,8 @@ Promise.all([
   });
 });
 
+
+
 $("#tema_tablero_indicadores").change(function () {
   document.getElementById('indicador_tablero_indicadoresSearch').value=''
   //De manera dinámica, cada vez que se cambia el valor de "tema", hace lo siguiente:
@@ -134,6 +136,10 @@ $("#tema_tablero_indicadores").change(function () {
   // Ahora puedes usar el objeto base
   fetchData(base, $(this).val().toString()); //
 });
+
+
+
+
 
 $("#indicador_tablero_indicadoresSearch").focus(function() {
         // reiniciamos el valor del input a vacío.
@@ -175,7 +181,7 @@ $("#indicador_tablero_indicadoresSearch").change(function () {
       nac.push(line);//nac es el filtro de base_Nac dado el indicador elegido.
     } //Parece que esta parte funciona bien si las cadenas son iguales
   });
-  console.log(nac);
+  console.log("Estamos imprimiendo el nac: ", nac);
   if (nac[1].slice(4).every((val) => val === "NA")) {//Todos los estados tienen NA.
     document.getElementById("tab_map").style.visibility = "hidden";
     document.getElementById("info_hoverable").style.visibility = "hidden";
@@ -192,118 +198,148 @@ $("#indicador_tablero_indicadoresSearch").change(function () {
     "descripcion_indicador_title_tablero_indicadores"
   ).innerHTML='Descripción del Indicador:  <p style="all:unset">'+$(this).val()+'</p>';//Agregamos el nombre del indicador a la descripción.
 
-  //También temporalidad
-  var OriginalEstados = nac[0].map((_, colIndex) => nac.map(row => row[colIndex]))[1].map((x) => x.replace(/^"|"|\r$/g, ""))//nac[0].slice(3).map((x) => x.replace(/^"|"|\r$/g, "")); //sus nombres originales
-  //Para saber cuál es la ultima columna con datos no NA: 
-  let lastCol;
-  for (let i = 0; i < nac[0].length; i++) {
-    const currentColumn = nac[0].map((_, colIndex) => nac.map(row => row[colIndex])).reverse()[i];
-    //console.log(currentColumn)
-    lastCol=i
-    // Check if the current column is NOT entirely 'NA'
-    if (!currentColumn.every(x => x === 'NA' || x==='NA\r')&& !currentColumn.every(x=>x==0 || x=='0\r')) {
-      // If it's not all 'NA', we've found our column.
-      // Since we're iterating from right to left (due to .reverse()),
-      // this is the first non-completely-'NA' column we encounter.
-      break; // Exit the loop early
+  ///////////////////////
+  /// Cambios de Lalo ///
+  ///////////////////////
+  let ultima_columna;
+  const numero_columnas = nac[0].length;
+
+  for (let i = numero_columnas - 1; i >= 0; i--) { 
+    const currentColumn = nac.map(row => row[i]);
+
+    // Verificar si la columna NO es toda 'NA' ni 0
+    if (!currentColumn.every(x => x === 'NA' || x === 'NA\r') && !currentColumn.every(x => x == 0 || x == '0\r')) {
+      ultima_columna = i;
+      break;
     }
-    //console.log(lastCol)
-    // If it *is* entirely 'NA', decrement the resultIndex
+  }
+
+  let primera_columna;
+  for (let i = 4; i < nac[0].length; i++) {
+    const currentColumn = nac.map((row) => row[i]);
+
+    if (!currentColumn.every((x) => x === "NA" || x === "NA\r") && !currentColumn.every((x) => x == 0 || x == "0\r")) {
+      primera_columna = i;
+      break; 
+    }
+  }
+
+  console.log("Primera columna válida:", primera_columna, "Última columna válida:", ultima_columna);
+  console.log("Encabezado first:", Header[primera_columna], "Encabezado last:", Header[ultima_columna]);
+
+
+  const select = document.getElementById("anio_mes");
+  select.innerHTML = "";
+
+
+  for (let i = primera_columna; i <= ultima_columna; i++) {
+    let option = document.createElement("option");
+    option.value = i;
+    option.textContent = Header[i].replace(/^"|"|\r/g, "").replace(/_/g, " ");
+    select.appendChild(option);
+  }
+
+  let columna_seleccionada = ultima_columna;
+
+
+
+  document.getElementById("anio_mes").addEventListener("change", function() {
+    columna_seleccionada = this.value;//También temporalidad
+    let OriginalEstados = nac[0].map((_, colIndex) => nac.map(row => row[colIndex]))[1].map((x) => x.replace(/^"|"|\r$/g, ""))
+
+    var datosEstados = nac[0].map((_, colIndex) => nac.map(row => row[colIndex]))[columna_seleccionada]//Tomamos el primero
+    const combined_Estados = datosEstados.map((dato_est, index) => ({
+      dato: OriginalEstados[index], // Nombre estado
+      value: dato_est == "NA" ? null : dato_est, // y su valor
+    })); 
+
+    const combined_Estados_ordenados = [...combined_Estados];
+    combined_Estados_ordenados.sort((a, b) => b.value - a.value);
     
-  }
-  // console.log("Mes seleccionado: ", nac[0].length-1-lastCol-1)
-  // console.log(Header[nac[0].length-1-lastCol-1])
-  var datosEstados = nac[0].map((_, colIndex) => nac.map(row => row[colIndex]))[nac[0].length-1-lastCol]//Tomamos el primero
-    //.slice(3)
-    .map((x) => parseFloat(x.replace(/^"|"|\r|,$/g, ""))); //datos originales
-  ///Falta hacer algo con los NA. Después, podría
-  // console.log(OriginalEstados);
-  // console.log(datosEstados);
-  const combined_Estados = datosEstados.map((dato_est, index) => ({
-    //ordenados por valor de indicador
-    dato: OriginalEstados[index], // Nombre estado
-    value: dato_est == "NA" ? null : dato_est, // y su valor
-  })); //orden segun su valor
-  //
-  const combined_Estados_ordenados = [...combined_Estados];
-  combined_Estados_ordenados.sort((a, b) => b.value - a.value);
+    SortedEstados = combined_Estados_ordenados.map((item) =>
+      item.dato.toString()
+    );
+
+    indexedEstados = OriginalEstados.map(
+      (item) => SortedEstados.indexOf(item.toString()) + 1
+    ); 
+
+    mexico.features.forEach((feature, index) => {
+      feature.properties.Valor = datosEstados[index];
+      feature.properties.CVEGEO =
+        combined_Estados_ordenados[
+          SortedEstados.indexOf(feature.properties.NOMGEO)
+        ].value === null
+          ? "NA"
+          : 33 - indexedEstados[index].toString().padStart(2, "0"); //CVEGEO es su posición a nivel nacional
+    });
+
+    datosEstados = combined_Estados_ordenados.map((item) => item.value);
+
+    if (typeof chart_nac != "undefined") {
+      chart_nac.destroy();
+    }
+
+    const ctx_nac = document.getElementById("nacional").getContext("2d"); //inicio a crear la gráfica
+    chart_nac = new Chart(ctx_nac, {
+      type: "bar",
+      data: {
+        labels: SortedEstados,
+        datasets: [
+          {
+            label:
+              $(this)
+                .val()
+                .replace(/^"|"|\r|'$/g, "") +
+              " - " +
+              nac[1][2].replace(/^"|"|\r|'$/g, ""),
+            data: datosEstados,
+            backgroundColor: nac[1].slice(3).fill("rgba(75, 192, 192, 0.2)"),
+            borderColor: "rgba(75, 192, 192, 1)",
+            borderWidth: 1,
+          },
+        ],
+      },
+      options: {
+        maintainAspectRatio: false,
+        responsive: true,
+        onHover: function (event, elements) {
+          if (elements.length) {
+            resaltarPoligonoPorCVE(combined_Estados_ordenados[elements[0].index].dato);
+          }
+        },
+        scales: {
+          x: {
+            ticks: {
+              font: {
+                size: 10, // small font size
+              },
+              display: true,
+              autoSkip: false
+            },
+          },
+          y: {
+            beginAtZero: true,
+            ticks: {
+              font: {
+                size: 10, // small font size
+              },
+            },
+          },
+        },
+      },
+    });
+    chart_nac.data.datasets[0].backgroundColor[SortedEstados.indexOf("Hidalgo")] =
+      "rgba(75, 192, 192, 1)"; //Ilumino a Hidalgo
+    /*}*/
+    updateJsonData();
+    $("#indicador option[value='default']").remove();
+  })
+  document.getElementById("anio_mes").dispatchEvent(new Event("change"));
+
   
-  SortedEstados = combined_Estados_ordenados.map((item) =>
-    item.dato.toString()
-  );
-  indexedEstados = OriginalEstados.map(
-    (item) => SortedEstados.indexOf(item.toString()) + 1
-  ); //indices de los estados según su posición respecto al indicador
-  //console.log(indexedEstados)
-  mexico.features.forEach((feature, index) => {
-    //Actualiza el ranking de los estados
-    //Vamos a hacer un default para cuando no haya datos.
-    feature.properties.Valor = datosEstados[index];
-    feature.properties.CVEGEO =
-      combined_Estados_ordenados[
-        SortedEstados.indexOf(feature.properties.NOMGEO)
-      ].value === null
-        ? "NA"
-        : 33 - indexedEstados[index].toString().padStart(2, "0"); //CVEGEO es su posición a nivel nacional
-  });
-  datosEstados = combined_Estados_ordenados.map((item) => item.value);
-  if (typeof chart_nac != "undefined") {
-    chart_nac.destroy();
-  }
-  const ctx_nac = document.getElementById("nacional").getContext("2d"); //inicio a crear la gráfica
-  chart_nac = new Chart(ctx_nac, {
-    type: "bar",
-    data: {
-      labels: SortedEstados,
-      datasets: [
-        {
-          label:
-            $(this)
-              .val()
-              .replace(/^"|"|\r|'$/g, "") +
-            " - " +
-            nac[1][2].replace(/^"|"|\r|'$/g, ""),
-          data: datosEstados,
-          backgroundColor: nac[1].slice(3).fill("rgba(75, 192, 192, 0.2)"),
-          borderColor: "rgba(75, 192, 192, 1)",
-          borderWidth: 1,
-        },
-      ],
-    },
-    options: {
-      maintainAspectRatio: false,
-      responsive: true,
-      onHover: function (event, elements) {
-        if (elements.length) {
-          resaltarPoligonoPorCVE(32 - elements[0].index);
-        }
-      },
-      scales: {
-        x: {
-          ticks: {
-            font: {
-              size: 10, // small font size
-            },
-            display: true,
-            autoSkip: false
-          },
-        },
-        y: {
-          beginAtZero: true,
-          ticks: {
-            font: {
-              size: 10, // small font size
-            },
-          },
-        },
-      },
-    },
-  });
-  chart_nac.data.datasets[0].backgroundColor[SortedEstados.indexOf("Hidalgo")] =
-    "rgba(75, 192, 192, 1)"; //Ilumino a Hidalgo
-  /*}*/
-  updateJsonData();
-  $("#indicador option[value='default']").remove();
+
+  
 
 /////////////////////////////////////////////////////
   //INICIA EL CAMBIO//
@@ -330,9 +366,7 @@ let New_lastCol;
     }
   }
 
-
-const Pre_Headers = Header.slice(firstCol,nac[0].length-New_lastCol);
-
+  const Pre_Headers = Header.slice(firstCol, nac[0].length - New_lastCol);
 //Para seleccionar Hidalguito
 const Pre_Datos = nac.find(line =>
   line[1].replace(/^"|"|\r/g, "") === "Hidalgo"
@@ -416,6 +450,7 @@ chart = new Chart(ctx, {
         fill: false,
         pointRadius: 0,
         spanGaps: true,
+        hidden: true,
       }
     ]
   },
