@@ -428,44 +428,45 @@ if (typeof chart != "undefined") {
 const ctx = document.getElementById("historico").getContext("2d");
 
 const pendientePlugin = {
-            id: 'pendientePlugin',
-            afterDatasetsDraw(chart) {
-                const {ctx, scales: {x, y}} = chart;
-                ultimo_label = chart.data.labels[chart.data.labels.length - 1]; 
-                const indexFinal = chart.data.labels.indexOf(ultimo_label); 
+  id: "pendientePlugin",
+  afterDatasetsDraw(chart) {
+    const {
+      ctx,
+      scales: { x, y },
+    } = chart;
+    ultimo_label = chart.data.labels[chart.data.labels.length - 1];
+    const indexFinal = chart.data.labels.indexOf(ultimo_label);
 
-                
-                // Posición de Ultimo label en X
-                const xValue = chart.data.labels[indexFinal];
-                const xPos = x.getPixelForValue(xValue);
-                const yPos = y.bottom - 10; 
+    // Posición de Ultimo label en X
+    const xValue = chart.data.labels[indexFinal];
+    const xPos = x.getPixelForValue(xValue);
+    const yPos = y.bottom - 10;
 
-                ctx.save();
-                // Dibujar línea vertical punteada
-                ctx.beginPath();
-                ctx.setLineDash([6, 6]);   
-                ctx.moveTo(xPos, y.top);
-                ctx.lineTo(xPos, y.bottom);
-                ctx.strokeStyle = "red";
-                ctx.lineWidth = 2;
-                ctx.stroke();
+    ctx.save();
+    // Dibujar línea vertical punteada
+    ctx.beginPath();
+    ctx.setLineDash([6, 6]);
+    ctx.moveTo(xPos, y.top);
+    ctx.lineTo(xPos, y.bottom);
+    ctx.strokeStyle = "red";
+    ctx.lineWidth = 2;
+    ctx.stroke();
 
-                 // Mensaje
-                ctx.setLineDash([]); // Quitar punteado
-                ctx.fillStyle = "red";
-                ctx.font = "bold 14px Arial";
-                ctx.textAlign = "center";
-                ctx.textBaseline = "middle";
+    // Mensaje
+    ctx.setLineDash([]); // Quitar punteado
+    ctx.fillStyle = "red";
+    ctx.font = "bold 14px Arial";
+    ctx.textAlign = "center";
+    ctx.textBaseline = "middle";
 
-                const yMiddle = (y.top + y.bottom) / 2; 
-                ctx.translate(xPos - 15, yMiddle); 
-                ctx.rotate(-Math.PI / 2);          
-                ctx.fillText("Descansito", 0, 0);
+    const yMiddle = (y.top + y.bottom) / 2;
+    ctx.translate(xPos - 15, yMiddle);
+    ctx.rotate(-Math.PI / 2);
+    ctx.fillText("Descansito", 0, 0);
 
-                ctx.restore();
-
-            }
-        };
+    ctx.restore();
+  },
+};
 
 chart = new Chart(ctx, {
   type: "line",
