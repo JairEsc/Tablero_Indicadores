@@ -19,7 +19,15 @@ function openChart(evt, tagName) {
   evt.currentTarget.className = "tablinks ";
   evt.currentTarget.className += " active";
 
+  if (tagName === "nacional_chart") {
+    document.getElementById("anio_mes").style.display = "block";
+  } else {
+    document.getElementById("anio_mes").style.display = "none";
+  }
+
   window.dispatchEvent(new Event("resize"));
+  //console.log("Estamos imprimiendo tagName: ", tagName);
+
 }
 function linearRegression(y, x) {
   //Hace regresión lineal dados y,x
@@ -63,6 +71,7 @@ function fetchData(data, valor) {//Para este sería suficiente un .csv con heade
     }
   });
 }
+
 
 document.getElementById("defaultOpen").click(); //El histórico es la gráfica por default.
 //Posibles Temas
@@ -235,16 +244,15 @@ $("#indicador_tablero_indicadoresSearch").change(function () {
   for (let i = primera_columna; i <= ultima_columna; i++) {
     let option = document.createElement("option");
     option.value = i;
-    option.textContent = Header[i].replace(/^"|"|\r/g, "").replace(/_/g, " ");
+    option.textContent = Header[i].replace(/^"|"|\r/g, "").split("_").reverse().map((parte, idx) => idx === 0 ? parte.padStart(2, "0") : parte).join("/");
     select.appendChild(option);
   }
 
-  let columna_seleccionada = ultima_columna;
-
-
+  document.getElementById("anio_mes").value = ultima_columna; //Seleccionamos el último mes por default
 
   document.getElementById("anio_mes").addEventListener("change", function() {
-    columna_seleccionada = this.value;//También temporalidad
+    columna_seleccionada = this.value; //También temporalidad
+    console.log("Columna seleccionada:", columna_seleccionada);
     let OriginalEstados = nac[0].map((_, colIndex) => nac.map(row => row[colIndex]))[1].map((x) => x.replace(/^"|"|\r$/g, ""))
 
     var datosEstados = nac[0].map((_, colIndex) => nac.map(row => row[colIndex]))[columna_seleccionada]//Tomamos el primero
@@ -336,10 +344,6 @@ $("#indicador_tablero_indicadoresSearch").change(function () {
     $("#indicador option[value='default']").remove();
   })
   document.getElementById("anio_mes").dispatchEvent(new Event("change"));
-
-  
-
-  
 
 /////////////////////////////////////////////////////
   //INICIA EL CAMBIO//

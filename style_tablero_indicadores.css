@@ -119,6 +119,8 @@ body {
     overflow: hidden;
     border: 1px solid #ccc;
     background-color: #f1f1f1;
+    display: flex; 
+    align-items: center;
   }
   
   .tab_tablero_indicadores button {
@@ -138,6 +140,33 @@ body {
   .tab_tablero_indicadores button.active {
     background-color: #ccc;
   }
+
+
+  #anio_mes {
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    font-size: 14px;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  #anio_mes:hover {
+    border-color: #666;
+    box-shadow: 0 3px 7px rgba(0,0,0,0.15);
+  }
+
+  #anio_mes:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0,123,255,0.5);
+  }
+
+
+
+
   #id-para-el-canvas{
     width: 48vw;
     height: 65vh;
