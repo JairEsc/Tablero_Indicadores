@@ -200,6 +200,7 @@ $("#indicador_tablero_indicadoresSearch").change(function () {
   }
 
   document.getElementById("descripcion_indicador").innerHTML = nac[1][2];
+  document.getElementById("fuente").innerHTML = "Fuente:" + nac[1][3];
   document.getElementById(
     "descripcion_indicador_title_tablero_indicadores"
   ).style.visibility = "visible";
@@ -295,12 +296,7 @@ $("#indicador_tablero_indicadoresSearch").change(function () {
         labels: SortedEstados,
         datasets: [
           {
-            label:
-              $(this)
-                .val()
-                .replace(/^"|"|\r|'$/g, "") +
-              " - " +
-              nac[1][2].replace(/^"|"|\r|'$/g, ""),
+            label: nac[1][2].replace(/^"|"|\r|'$/g, ""),
             data: datosEstados,
             backgroundColor: nac[1].slice(3).fill("rgba(75, 192, 192, 0.2)"),
             borderColor: "rgba(75, 192, 192, 1)",
