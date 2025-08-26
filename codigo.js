@@ -462,7 +462,7 @@ const pendientePlugin = {
     const yMiddle = (y.top + y.bottom) / 2;
     ctx.translate(xPos - 15, yMiddle);
     ctx.rotate(-Math.PI / 2);
-    ctx.fillText("Descansito", 0, 0);
+    ctx.fillText("Pendiente", 0, 0);
 
     ctx.restore();
   },
