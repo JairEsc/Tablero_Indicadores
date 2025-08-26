@@ -385,8 +385,8 @@ if (Pre_Datos.length <= 1) {
 //Tuve que eliminar lo del JSON porque no lo supe usar :C
 const combined = Pre_Headers.map((fecha, index) => {
   const Año_Mes = fecha.replace(/^"|"|\r/g, "").split("_");
-  const año = parseInt(Año_Mes[0]);
-  const mes = parseInt(Año_Mes[1]);
+  const año = Año_Mes[0];
+  const mes = Año_Mes[1];
 
 //Aquí me encuentro con un problema, al graficar hay varios puntos que no aparecen, no porque no aparezcan en el eje x
 //pues eso es por el zoom y que no caben, lo que yo tengo es que a pesar de tener registros de algun mes, al hacer la 
@@ -404,7 +404,7 @@ const combined = Pre_Headers.map((fecha, index) => {
 
 // Ordenanding por año y luego por mes
 const sortedCombined = combined.sort((a, b) =>
-  a.year === b.year ? a.month - b.month : a.year - b.year
+  a.year === b.year ? a.month.localeCompare(b.month): a.year.localeCompare(b.year)
 );
 
 const labels = sortedCombined.map(item => item.label);
