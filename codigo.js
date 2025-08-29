@@ -1,3 +1,59 @@
+
+//Leemos el archivo que contiene la problemática y el perido en el 
+// que está registrado y lo guardamos en tablaTiempos, suponemos que está bien hecho
+// y en sus variables son: Tema, Indicador, Temporalidad
+let tablaTiempos = [];
+
+async function cargarTablaTiempos() {
+  const response = await fetch("Datos/Que_tiempo.csv");
+  const data = await response.text();
+  const lines = data.split("\n").filter(line => line.trim() !== "");
+  const rows = lines.slice(1).map(line => line.split(","));
+  tablaTiempos = rows.map(row => ({
+    tema: row[0].trim().replace(/^"|"$/g, ""),
+    indicador: row[1].trim().replace(/^"|"$/g, ""),
+    tiempo: row[2].trim().replace(/^"|"$/g, "")
+  }));
+  return tablaTiempos;
+}
+
+function limpiarTexto(txt) {
+  return txt.normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+            .replace(/["'\r]/g, "")
+            .trim();
+}
+async function cargarArchivoPorTemaEIndicador(temaSeleccionado, indicadorSeleccionado) {
+  const registro = tablaTiempos.find(entry =>
+    entry.tema === temaSeleccionado && entry.indicador === indicadorSeleccionado
+  );
+
+  if (!registro) {
+    alert("No se encontró el archivo correspondiente para esta combinación.");
+    return;
+  }
+
+  const tiempo = registro.tiempo;
+  const archivoCSV = `Datos/${tiempo}.csv`;
+
+  const response = await fetch(archivoCSV);
+  const csv = await response.text();
+
+  const lines = csv.split("\n");
+  Header = lines[0].split(",");
+  base = lines.slice(1).map(line => line.split(","));
+
+  console.log("Archivo cargado:", archivoCSV);
+nac = base.filter(line =>
+  limpiarTexto(line[0]) === limpiarTexto(temaSeleccionado) &&
+  limpiarTexto(line[2]) === limpiarTexto(indicadorSeleccionado)
+);
+}
+
+
+/////////////////////////////////////////////////////////
+//INICIO ORIGINAL
+/////////////////////////////////////////////////////////
+
 function openChart(evt, tagName) {
   //funcion para activar una de las gráficas según la elección.
   var i, tabcontent, tablinks;
@@ -59,8 +115,8 @@ function fetchData(data, valor) {//Para este sería suficiente un .csv con heade
   // option.text = "Seleccione uno";
   // select.appendChild(option);
   // uniqueIndicators.add("Seleccione uno");
-  data.slice(1).forEach((line, index) => {
-    var indicadorValue = line[2].trim().replace(/^"|"$/g, "");
+  data.slice(0).forEach((line, index) => {
+    var indicadorValue = line[1].trim().replace(/^"|"$/g, "");
     //Se va a seleccionar
     if (!uniqueIndicators.has(indicadorValue)) {
       const option = document.createElement("option");
@@ -83,8 +139,12 @@ let Seguridad = [];
 let Genero = [];
 let base;
 let Header;
+
+console.log(tablaTiempos);
+
 Promise.all([
-  fetch("Datos/layout_prueba.csv").then((response) => response.text()),
+  fetch("Datos/Que_tiempo.csv").then((response) => response.text()),
+  cargarTablaTiempos()
 ]).then(([historicoData]) => {
   //Simplemente particionamos por tema. 
   var lines = historicoData.split("\n");
@@ -118,6 +178,7 @@ Promise.all([
 
 
 $("#tema_tablero_indicadores").change(function () {
+
   document.getElementById('indicador_tablero_indicadoresSearch').value=''
   //De manera dinámica, cada vez que se cambia el valor de "tema", hace lo siguiente:
   $("#option option[value='default']").remove();
@@ -154,7 +215,12 @@ $("#indicador_tablero_indicadoresSearch").focus(function() {
         // reiniciamos el valor del input a vacío.
         $(this).val(' ');
 });
-$("#indicador_tablero_indicadoresSearch").change(function () {
+$("#indicador_tablero_indicadoresSearch").change(async function () {
+  const temaSeleccionado = $("#tema_tablero_indicadores").val();
+  const indicadorSeleccionado = $(this).val();
+
+  await cargarArchivoPorTemaEIndicador(temaSeleccionado, indicadorSeleccionado);
+
   document.activeElement.blur();
   if (bienvenida_tab) {
     document.getElementsByClassName(
@@ -172,24 +238,6 @@ $("#indicador_tablero_indicadoresSearch").change(function () {
     const event = new CustomEvent("jsonDataUpdated", {});
     window.dispatchEvent(event);
   }
-
-  //después, hará lo siguiente:
-  nac = [];
-  //console.log($(this).val())
-  base.map((line, index) => {//esta base es el filtro de la nacinal dado el tema elegido.
-    //filtro al indicador nacional
-    //Todavía hay bugs cuando los nombres en historico y Nacional no coinciden. E.g.
-    // Aves (produccion toneladas) != Aves Produccion (toneladas)// Se preprocesaron para que no ocurra
-    if (
-      line[2].replace(/^"|"|'$/g, "").toString() ===
-        $(this)
-          .val()
-          .normalize()
-          .replace(/^"|"|'$/g, "") 
-    ) {
-      nac.push(line);//nac es el filtro de base_Nac dado el indicador elegido.
-    } //Parece que esta parte funciona bien si las cadenas son iguales
-  });
   console.log("Estamos imprimiendo el nac: ", nac);
   if (nac[1].slice(4).every((val) => val === "NA")) {//Todos los estados tienen NA.
     document.getElementById("tab_map").style.visibility = "hidden";
@@ -342,7 +390,7 @@ $("#indicador_tablero_indicadoresSearch").change(function () {
   document.getElementById("anio_mes").dispatchEvent(new Event("change"));
 
 /////////////////////////////////////////////////////
-  //INICIA EL CAMBIO//
+  //INICIA EL CAMBIO by Enrique//
 ////////////////////////////////////////////////////
 let firstCol;
   for (let i = 4; i < nac[0].length; i++) {
@@ -367,10 +415,16 @@ let New_lastCol;
   }
 
   const Pre_Headers = Header.slice(firstCol, nac[0].length - New_lastCol + 1);
+
 //Para seleccionar Hidalguito
-const Pre_Datos = nac.find(line =>
-  line[1].replace(/^"|"|\r/g, "") === "Hidalgo"
-)?.slice(firstCol,nac[0].length-New_lastCol);
+const nac_Hidalgo = nac.find(line => limpiarTexto(line[1]) === "Hidalgo");
+
+if (!nac_Hidalgo) {
+  console.warn("Aguas! Hidalgo no está en este nac");
+}
+
+const Pre_Datos = nac_Hidalgo.slice(firstCol, nac[0].length - New_lastCol);
+
 if (Pre_Datos.length <= 1) {
     document.getElementById("tab_map").click();
     document.getElementById("defaultOpen").style.visibility = "hidden";
@@ -382,7 +436,6 @@ if (Pre_Datos.length <= 1) {
     console.log("No hay datos");
   } else {
 //He aquí uno de los mayores cambios, para poder crear los label con "Año"_"Mes"
-//Tuve que eliminar lo del JSON porque no lo supe usar :C
 const combined = Pre_Headers.map((fecha, index) => {
   const Año_Mes = fecha.replace(/^"|"|\r/g, "").split("_");
   const año = Año_Mes[0];
@@ -391,7 +444,7 @@ const combined = Pre_Headers.map((fecha, index) => {
 //Aquí me encuentro con un problema, al graficar hay varios puntos que no aparecen, no porque no aparezcan en el eje x
 //pues eso es por el zoom y que no caben, lo que yo tengo es que a pesar de tener registros de algun mes, al hacer la 
 //gráfica no aparecen los puntos y por ende la grafica no los contempla y supongo que la regresión eventualmente menos.
-//Chat me dijo que lo pudiera así:
+
   const val = parseFloat(Pre_Datos[index]?.replace(/^"|"|\r|,$/g, ""));
   return {
     label: `${año}_${mes}`,
@@ -400,12 +453,32 @@ const combined = Pre_Headers.map((fecha, index) => {
     value: isNaN(val) ? null : val
   };
 });
-//Y si funcionó, bendito sea ChatGod 
+
 
 // Ordenanding por año y luego por mes
+//Enrique:Una función toda fea pero fue la que se me ocurrio para solucionar mi error
+function comparadorT(a,b){
+  if(a.replace(/\D/g, '')===""){
+    return a.localeCompare(b); //La idea de esto es principalmente por si están en el formato 2015_I, 2015_II,...,2015_XI,...
+  }
+  else{
+    if(parseInt(a.replace(/\D/g, '')) < parseInt(b.replace(/\D/g, ''))){
+      return -1;
+    }
+    if(parseInt(a.replace(/\D/g, '')) > parseInt(b.replace(/\D/g, ''))){
+      return 1;
+    }
+    if(parseInt(a.replace(/\D/g, '')) == parseInt(b.replace(/\D/g, ''))){
+      return 0;
+    }
+  }
+}
+
 const sortedCombined = combined.sort((a, b) =>
-  a.year === b.year ? a.month.localeCompare(b.month): a.year.localeCompare(b.year)
+  a.year === b.year ? comparadorT(a.month,b.month): comparadorT(a.year,b.year)
 );
+
+
 
 const labels = sortedCombined.map(item => item.label);
 const datos = sortedCombined.map(item => item.value);
@@ -467,7 +540,9 @@ const pendientePlugin = {
     ctx.restore();
   },
 };
+//
 
+//
 chart = new Chart(ctx, {
   type: "line",
   data: {
@@ -500,23 +575,28 @@ chart = new Chart(ctx, {
     responsive: true,
     maintainAspectRatio: false,
     plugins: {
-          chartArea: {
-            backgroundColor: "rgba(240, 240, 240, 1)", // Cambia este color a lo que desees
-          },
+      zoom: {
+        limits: {
+          x : {min:	'original', max:	'original'},
+          y : {min:	'original', max:	'original', minRange:1}
         },
-    scales: {
-      x: {
-      type: 'category', 
-      },
-      y: {
-        beginAtZero: false,
+        zoom: {
+          wheel: {enabled: true},
+          drag: {enabled: true, maintainAspectRatio: true},
+          pinch: {enabled: true},
+          mode: 'x',
+          scaleMode: 'x'
+        }
       }
     }
   },
   plugins: [pendientePlugin]
 });
 }
-
+//Aqui está donde se quita el zoom con doble click
+document.getElementById('historico').addEventListener('dblclick', () => {
+  chart.resetZoom();
+});
 });
 B.onChange = function (newValue) {
   //Utiliza una variable "global" que se usa en el script del mapa de méxico.
