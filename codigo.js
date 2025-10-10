@@ -304,7 +304,7 @@ $("#indicador_tablero_indicadoresSearch").change(async function () {
     console.log("Columna seleccionada:", columna_seleccionada);
     let OriginalEstados = nac[0].map((_, colIndex) => nac.map(row => row[colIndex]))[1].map((x) => x.replace(/^"|"|\r$/g, ""))
 
-    var datosEstados = nac[0].map((_, colIndex) => nac.map(row => row[colIndex]))[columna_seleccionada]//Tomamos el primero
+    var datosEstados = nac[0].map((_, colIndex) => nac.map(row => row[colIndex].replace(/^"|"|\r/g, "")))[columna_seleccionada]//Tomamos el primero
     const combined_Estados = datosEstados.map((dato_est, index) => ({
       dato: OriginalEstados[index], // Nombre estado
       value: dato_est == "NA" ? null : dato_est, // y su valor
@@ -320,7 +320,8 @@ $("#indicador_tablero_indicadoresSearch").change(async function () {
     indexedEstados = OriginalEstados.map(
       (item) => SortedEstados.indexOf(item.toString()) + 1
     ); 
-
+    console.log("indexed", indexedEstados)
+    console.log("datos", combined_Estados_ordenados)
     mexico.features.forEach((feature, index) => {
       feature.properties.Valor = datosEstados[index];
       feature.properties.CVEGEO =

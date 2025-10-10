@@ -1,45 +1,5 @@
-"Tema","Indicador","Temporalidad"
-"Económico","Trabajadores Asegurados Permanentes por el IMSS","Mensual"
-"Seguridad","Aborto","Semestral"
-"Seguridad","Abuso de confianza","Semestral"
-"Seguridad","Abuso sexual","Semestral"
-"Seguridad","Acoso sexual","Semestral"
-"Seguridad","Allanamiento de morada","Semestral"
-"Seguridad","Amenazas","Semestral"
-"Seguridad","Contra el medio ambiente","Semestral"
-"Seguridad","Corrupción de menores","Semestral"
-"Seguridad","Daño a la propiedad","Semestral"
-"Seguridad","Delitos cometidos por servidores públicos","Semestral"
-"Seguridad","Despojo","Semestral"
-"Seguridad","Electorales","Semestral"
-"Seguridad","Evasión de presos","Semestral"
-"Seguridad","Extorsión","Semestral"
-"Seguridad","Falsedad","Semestral"
-"Seguridad","Falsificación","Semestral"
-"Seguridad","Feminicidio","Semestral"
-"Seguridad","Fraude","Semestral"
-"Seguridad","Homicidio","Semestral"
-"Seguridad","Hostigamiento sexual","Semestral"
-"Seguridad","Incesto","Semestral"
-"Seguridad","Incumplimiento de obligaciones de asistencia familiar","Semestral"
-"Seguridad","Lesiones","Semestral"
-"Seguridad","Narcomenudeo","Semestral"
-"Seguridad","Otros delitos contra el patrimonio","Semestral"
-"Seguridad","Otros delitos contra la familia","Semestral"
-"Seguridad","Otros delitos contra la sociedad","Semestral"
-"Seguridad","Otros delitos del Fuero Común","Semestral"
-"Seguridad","Otros delitos que atentan contra la libertad personal","Semestral"
-"Seguridad","Otros delitos que atentan contra la libertad y la seguridad sexual","Semestral"
-"Seguridad","Otros delitos que atentan contra la vida y la integridad corporal","Semestral"
-"Seguridad","Rapto","Semestral"
-"Seguridad","Robo","Semestral"
-"Seguridad","Secuestro","Semestral"
-"Seguridad","Trata de personas","Semestral"
-"Seguridad","Tráfico de menores","Semestral"
-"Seguridad","Violación equiparada","Semestral"
-"Seguridad","Violación simple","Semestral"
-"Seguridad","Violencia de género en todas sus modalidades distinta a la violencia familiar","Semestral"
-"Seguridad","Violencia familiar","Semestral""Medio Ambiente",
+"Tema","Indicador","aaa"
+"Medio Ambiente","Áreas naturales protegidas de competencia todas las competencias","Anual"
 "Económico","Aves Producción (toneladas)","Anual"
 "Económico","Aves Valor de la Producción (miles de pesos)","Anual"
 "Gobierno","Barometro de Información Presupuestal Estatal BIPE","Anual"
@@ -50,11 +10,18 @@
 "Social","Carencia por calidad y espacios de la vivienda","Anual"
 "Económico","Cera Producción (toneladas)","Anual"
 "Económico","Cera Valor de la Producción (miles de pesos)","Anual"
+,,
 "Género","Cobertura de educación en la primera infancia #Con Lupa de Género (Porcentaje)","Anual"
 "Social","Cobertura Media Superior","Anual"
 "Social","Cobertura Preescolar","Anual"
 "Social","Cobertura Primaria","Anual"
 "Social","Cobertura Secundaria","Anual"
+"Social","Porcentaje de Población Afiliada a servicios de salud","Anual"
+"Social","Personal Médico","Anual"
+"Social","Índice de Progreso Social","Anual"
+"Social","Tasa de Mortalidad Infantil (Proyección)","Anual"
+"Social","Tasa Global de Fecundidad","Anual"
+"Social","Unidades Médicas","Anual"
 "Gobierno","Confianza en el Gobierno Estatal","Anual"
 "Económico","Crecimiento económico (porcentaje)","Anual"
 "Económico","Cuartos de establecimientos de Hospedaje","Anual"
@@ -64,6 +31,7 @@
 "Económico","Cuartos de Hospedaje según categoría 4 estrellas","Anual"
 "Económico","Cuartos de Hospedaje según categoría 5 estrellas","Anual"
 "Económico","Cuartos de Hospedaje según categoría (sin categoría)","Anual"
+,,
 "Género","Delitos sexuales #Con Lupa de Género","Anual"
 "Género","Desigualdad en trabajo no remunerado (TNR) #Con Lupa de Género","Anual"
 "Económico","Desigualdad laboral (coeficiente de Gini)","Anual"
@@ -72,6 +40,7 @@
 "Social","Eficiencia Terminal Secundaria","Anual"
 "Gobierno","Egresos brutos de los Gobiernos de los Estados (pesos)","Anual"
 "Género","Embarazo Adolescente #Con Lupa de Género (Porcentaje)","Anual"
+"Medio Ambiente","Emisiones de Contaminantes","Anual"
 "Económico","Empleos Formales Generados Acumulados","Anual"
 "Económico","Establecimiento de Hospedaje","Anual"
 "Económico","Establecimiento de Hospedaje según categoría 1 estrella","Anual"
@@ -80,6 +49,8 @@
 "Económico","Establecimiento de Hospedaje según categoría 4 estrellas","Anual"
 "Económico","Establecimiento de Hospedaje según categoría 5 estrellas","Anual"
 "Económico","Exportaciones","Anual"
+,,
+,,
 "Económico","Ganado Bovino Producción (toneladas)","Anual"
 "Económico","Ganado Bovino Valor de la Producción (miles de pesos)","Anual"
 "Económico","Ganado Caprino Producción (toneladas)","Anual"
@@ -92,9 +63,11 @@
 "Social","Grado Promedio de Escolaridad","Anual"
 "Económico","Guajolotes Producción (toneladas)","Anual"
 "Económico","Guajolotes Valor de la Producción (miles de pesos)","Anual"
+,,
 "Género","Homicidios dolosos de mujeres y feminicidios #Con Lupa de Género","Anual"
 "Económico","Huevo para plato Producción (toneladas)","Anual"
 "Económico","Huevo para plato Valor de la Producción (miles de pesos)","Anual"
+,,
 "Económico","Indicador Mensual de la Actividad Industrial por Entidad Federativa (IMAIEF)","Anual"
 "Económico","Índicador Trimestral de la Actividad Económica Estatal ITAEE","Anual"
 "Económico","Índice de Competitividad Estatal ICE","Anual"
@@ -103,6 +76,7 @@
 "Económico","Índice de la Tendencia Laboral de la Pobreza (ITLP)","Anual"
 "Social","Índice de marginación","Anual"
 "Gobierno","Índice de Monitoreo y Evaluación","Anual"
+,,
 "Social","Índice de Rezago Social","Anual"
 "Social","Índice de Rezago Social Longitudinal","Anual"
 "Gobierno","Índice de Transparencia y Disponibilidad de Información Fiscal ITDIF","Anual"
@@ -122,6 +96,10 @@
 "Económico","Leche de Bovino Valor de la Producción (miles de pesos)","Anual"
 "Económico","Leche de Caprino Producción (toneladas)","Anual"
 "Económico","Leche de Caprino Valor de la Producción (miles de pesos)","Anual"
+,,
+"Económico","Llegada de Turistas a la Entidad por Tipo de Turismo (extranjeros)","Anual"
+"Económico","Llegada de Turistas a la Entidad por Tipo de Turismo (nacionales)","Anual"
+"Económico","Llegada de Turistas Totales a la Entidad","Anual"
 "Económico","Longitud de la Red Carretera Federal","Anual"
 "Económico","Longitud de la Red de Alimentadoras estatales","Anual"
 "Económico","Longitud de la Red de Brechas Mejoradas","Anual"
@@ -132,11 +110,17 @@
 "Social","Mortalidad Defunciones registradas en Accidentes de Tránsito","Anual"
 "Género","Mujeres Preparadas #Con Lupa de Género (Porcentaje)","Anual"
 "Género","Mujeres que quieren trabajar y no pueden #Con Lupa de Género (Porcentaje)","Anual"
+,,
 "Gobierno","Nivel de satisfacción general con los servicios públicos básicos y bajo demanda","Anual"
+,,
 "Económico","Ocupación del Gobierno (Población ocupada en el gobierno como porcentaje de la población ocupada)","Anual"
+"Económico","Oferta de Alojamiento en la Entidad (cuartos)","Anual"
 "Género","Oferta de cuidados de adultos mayores #Con Lupa de Género","Anual"
 "Económico","Patentes","Anual"
 "Género","Percepción de inseguridad en transporte público #Con Lupa de Género (Porcentaje)","Anual"
+,,
+,,
+,,
 "Género","Permisos de paternidad #Con Lupa de Género","Anual"
 "Económico","Personal ocupado en las Unidades Económicas","Anual"
 "Medio Ambiente","Plantas Tratadoras de Aguas residuales","Anual"
@@ -149,6 +133,7 @@
 "Social","Porcentaje de Abandono Escolar: Media Superior","Anual"
 "Social","Porcentaje de Abandono Escolar: Primaria","Anual"
 "Social","Porcentaje de Abandono Escolar: Superior","Anual"
+,,
 "Económico","Porcentaje de la población con ingreso laboral inferior al costo de la canasta alimentaria (pobreza laboral)","Anual"
 "Social","Porcentaje de la Población en situación de Pobreza","Anual"
 "Social","Porcentaje de la Población en situación de Pobreza Extrema","Anual"
@@ -161,11 +146,17 @@
 "Económico","Productividad (pesos prod/hora trab)","Anual"
 "Económico","Producto Interno Bruto (millones de pesos) / Porcentaje de Participación (VALORES CONSTANTES)","Anual"
 "Social","Rezago Educativo","Anual"
+,,
+,,
+,,
+,,
 "Económico","Superficie Cosechada (has)","Anual"
 "Económico","Superficie Sembrada (has)","Anual"
 "Económico","Tasa de Condiciones Críticas de Ocupación","Anual"
 "Económico","Tasa de Desocupación","Anual"
+,,
 "Gobierno","Tasa de incidencia de la corrupción","Anual"
+,,
 "Económico","Tasa de Informalidad Laboral","Anual"
 "Económico","Tasa de Ocupación en el Sector Informal","Anual"
 "Social","Tasa de Ocupación no Permitida porcentaje respecto a la población de 5 a 17 años)","Anual"
@@ -173,6 +164,7 @@
 "Económico","Tasa de Participación","Anual"
 "Económico","Tasa de Presión General","Anual"
 "Gobierno","Tasa de prevalencia de la corrupción","Anual"
+,,
 "Social","Tasa de Quehaceres Domésticos en Condiciones no Adecuadas (porcentaje respecto a la población de 5 a 17 años)","Anual"
 "Económico","Tasa de Subocupación","Anual"
 "Económico","Tasa de Trabajo Asalariado","Anual"
@@ -180,5 +172,7 @@
 "Económico","Trabajadores Asegurados Permanentes por el IMSS","Anual"
 "Económico","Unidades Económicas","Anual"
 "Económico","Valor de la Producción","Anual"
+,,
+,,
 "Económico","Volumen de la Producción (toneladas)","Anual"
 "Medio Ambiente","Volumen tratado en las PTARs  (Millones m3)","Anual"
