@@ -1,11 +1,11 @@
 
-//Leemos el archivo que contiene la problemática y el perido en el 
+//Leemos el archivo que contiene la problemática y el periodo en el 
 // que está registrado y lo guardamos en tablaTiempos, suponemos que está bien hecho
 // y en sus variables son: Tema, Indicador, Temporalidad
 let tablaTiempos = [];
 
 async function cargarTablaTiempos() {
-  const response = await fetch("Datos/Que_tiempo.csv");
+  const response = await fetch("Datos/Que_tiempo2.csv");
   const data = await response.text();
   const lines = data.split("\n").filter(line => line.trim() !== "");
   const rows = lines.slice(1).map(line => line.split(","));
@@ -43,12 +43,71 @@ async function cargarArchivoPorTemaEIndicador(temaSeleccionado, indicadorSelecci
   base = lines.slice(1).map(line => line.split(","));
 
   console.log("Archivo cargado:", archivoCSV);
+  if(temaSeleccionado=="Todo"){
+    temaSeleccionado2=indicadorSeleccionado.split(": ")[0];
+    indicadorSeleccionado2=indicadorSeleccionado.split(": ")[1];
+  }else{
+    temaSeleccionado2=temaSeleccionado;
+    indicadorSeleccionado2=indicadorSeleccionado;
+  }
+  console.log(temaSeleccionado2);
+  console.log(indicadorSeleccionado2);
 nac = base.filter(line =>
-  limpiarTexto(line[0]) === limpiarTexto(temaSeleccionado) &&
-  limpiarTexto(line[2]) === limpiarTexto(indicadorSeleccionado)
+  limpiarTexto(line[0]) === limpiarTexto(temaSeleccionado2) &&
+  limpiarTexto(line[2]) === limpiarTexto(indicadorSeleccionado2)
 );
 }
+// Para llenar todo en base a Todo
+let RRR=[];
+async function cargarArchivoParaTodo() {
+  const archivoCSV = `Datos/Que_tiempo2.csv`;
 
+  const response = await fetch(archivoCSV);
+  const csv = await response.text();
+
+  const lines = csv.split("\n");
+  Header = lines[0].split(",");
+  base = lines.slice(1).map(line => line.split(","));
+
+  console.log("Archivo cargado:", archivoCSV);
+  RRR = base.filter(line =>
+    limpiarTexto(line[0]) == "Todo"
+  );
+  return RRR;
+}
+
+async function todito() {
+  RRR = await cargarArchivoParaTodo();
+  console.log(RRR);
+  fetchData(RRR,5);
+}
+todito();
+// Fin del Todo
+
+//Después de quitar Todo
+let MA=[];
+async function cargarArchivoParaMA() {
+  const archivoCSV = `Datos/Que_tiempo2.csv`;
+
+  const response = await fetch(archivoCSV);
+  const csv = await response.text();
+
+  const lines = csv.split("\n");
+  Header = lines[0].split(",");
+  base = lines.slice(1).map(line => line.split(","));
+
+  console.log("Archivo cargado:", archivoCSV);
+  MA = base.filter(line =>
+    limpiarTexto(line[0]) == "Medio Ambiente"
+  );
+  return MA;
+}
+async function ActualizarParaMA() {
+  MA = await cargarArchivoParaMA();
+  console.log(MA);
+  fetchData(MA,5);
+}
+//
 
 /////////////////////////////////////////////////////////
 //INICIO ORIGINAL
@@ -127,8 +186,6 @@ function fetchData(data, valor) {//Para este sería suficiente un .csv con heade
     }
   });
 }
-
-
 document.getElementById("defaultOpen").click(); //El histórico es la gráfica por default.
 //Posibles Temas
 let Medio_Ambiente = [];
@@ -137,13 +194,14 @@ let Social = [];
 let Economico = [];
 let Seguridad = [];
 let Genero = [];
+let Todo = [];
 let base;
 let Header;
 
-console.log(tablaTiempos);
+console.log(tablaTiempos); //Aún no tiene nada
 
 Promise.all([
-  fetch("Datos/Que_tiempo.csv").then((response) => response.text()),
+  fetch("Datos/Que_tiempo2.csv").then((response) => response.text()),
   cargarTablaTiempos()
 ]).then(([historicoData]) => {
   //Simplemente particionamos por tema. 
@@ -170,6 +228,9 @@ Promise.all([
         break;
       case "Género":
         Genero.push(values);
+        break;
+      case "Todo":
+        Todo.push(values);
         break;
     }
   });
@@ -202,11 +263,13 @@ $("#tema_tablero_indicadores").change(function () {
     case "Género":
       base = Genero;
       break;
+    case "Todo":
+      base= Todo
+      break;
   }
   // Ahora puedes usar el objeto base
   fetchData(base, $(this).val().toString()); //
 });
-
 
 
 
@@ -255,6 +318,7 @@ $("#indicador_tablero_indicadoresSearch").change(async function () {
   document.getElementById(
     "descripcion_indicador_title_tablero_indicadores"
   ).innerHTML='Descripción del Indicador:  <p style="all:unset">'+$(this).val()+'</p>';//Agregamos el nombre del indicador a la descripción.
+
 
   ///////////////////////
   /// Cambios de Lalo ///
@@ -456,7 +520,7 @@ const combined = Pre_Headers.map((fecha, index) => {
 });
 
 
-// Ordenanding por año y luego por mes
+//Ordenanding por año y luego por mes
 //Enrique:Una función toda fea pero fue la que se me ocurrio para solucionar mi error
 function comparadorT(a,b){
   if(a.replace(/\D/g, '')===""){
@@ -598,6 +662,7 @@ chart = new Chart(ctx, {
 document.getElementById('historico').addEventListener('dblclick', () => {
   chart.resetZoom();
 });
+
 });
 B.onChange = function (newValue) {
   //Utiliza una variable "global" que se usa en el script del mapa de méxico.
@@ -610,4 +675,10 @@ B.onChange = function (newValue) {
   chart_nac.update();
 };
 
+document.getElementById('ForTema').addEventListener('click', () => {
+  console.log("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
+  document.getElementById("tema_tablero_indicadores").hidden = false;
+  document.getElementById("tema_tablero_indicadores").remove(0);
+  ActualizarParaMA();
+});
 let bienvenida_tab = true;

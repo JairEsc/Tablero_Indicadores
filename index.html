@@ -17,19 +17,22 @@
     crossorigin=""></script>
     <link rel="stylesheet" href="https://unpkg.com/leaflet-search@2.3.7/dist/leaflet-search.src.css" />
     <script src="https://unpkg.com/leaflet-search@2.3.7/dist/leaflet-search.src.js"></script>
+    <button class="tablinks" id="ForTema">Buscar por Tema</button>
 </head>
 <body>
     <div class="container_tablero_indicadores">
         <header>
-            <div class="header-top_tablero_indicadores">
-                <select id="tema_tablero_indicadores">
-                    <option value="default">---Seleccione un tema---</option>
+            <div class="header-top_tablero_indicadores" >
+                <p class="search_title">Busca un Indicador</p>
+                <select id="tema_tablero_indicadores" class="search__input" hidden>
+                    <option value="Todo" selected >Todo</option>
                     <option value="Medio Ambiente">Medio Ambiente</option>
                     <option value="Económico">Económico</option>
                     <option value="Gobierno" >Gobierno</option>
                     <option value="Social" >Social</option>
                     <option value="Seguridad" >Seguridad</option>
                     <option value="Género" >Género</option>
+                    <!--<option value="Todo" selected>Todo</option> -->
                 </select>
                 <!-- <select id="indicador_tablero_indicadores">
                     <option value="default">---Seleccione un indicador---</option>
