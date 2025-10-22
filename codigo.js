@@ -3,7 +3,7 @@
 // que está registrado y lo guardamos en tablaTiempos, suponemos que está bien hecho
 // y en sus variables son: Tema, Indicador, Temporalidad
 let tablaTiempos = [];
-
+let TODO_quitado = 0;
 async function cargarTablaTiempos() {
   const response = await fetch("Datos/Que_tiempo2.csv");
   const data = await response.text();
@@ -678,7 +678,13 @@ B.onChange = function (newValue) {
 document.getElementById('ForTema').addEventListener('click', () => {
   console.log("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
   document.getElementById("tema_tablero_indicadores").hidden = false;
-  document.getElementById("tema_tablero_indicadores").remove(0);
+  if(TODO_quitado == 0){
+    document.getElementById("tema_tablero_indicadores").remove(0);
+    document.getElementById("ForTema").style.display = "none";
+    document.querySelector('.search_title').textContent = 'Busca un Tema y luego un Indicador';
+  }
+  TODO_quitado=TODO_quitado+1;
+
   ActualizarParaMA();
 });
 let bienvenida_tab = true;
