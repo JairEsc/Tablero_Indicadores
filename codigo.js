@@ -676,11 +676,12 @@ B.onChange = function (newValue) {
 };
 
 document.getElementById('ForTema').addEventListener('click', () => {
-  console.log("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
+  //console.log("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
   document.getElementById("tema_tablero_indicadores").hidden = false;
   if(TODO_quitado == 0){
     document.getElementById("tema_tablero_indicadores").remove(0);
     document.getElementById("ForTema").style.display = "none";
+    document.getElementById("instruccion_buscar_por_indicador").style.display = "none";
     document.querySelector('.search_title').textContent = 'Busca un Tema y luego un Indicador';
   }
   TODO_quitado=TODO_quitado+1;
