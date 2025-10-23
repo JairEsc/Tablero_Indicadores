@@ -675,12 +675,14 @@ B.onChange = function (newValue) {
   chart_nac.update();
 };
 
-document.getElementById('ForTema').addEventListener('click', () => {
+document.getElementById('tema_tablero_indicadores').addEventListener('change', () => {
   //console.log("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
   document.getElementById("tema_tablero_indicadores").hidden = false;
+  console.log(TODO_quitado)
   if(TODO_quitado == 0){
-    document.getElementById("tema_tablero_indicadores").remove(0);
-    document.getElementById("ForTema").style.display = "none";
+    console.log(document.getElementById("tema_tablero_indicadores"))
+    document.getElementById("tema_tablero_indicadores").options[0].text = "Buscar entre todos los indicadores";
+    //document.getElementById("ForTema").style.display = "none";
     document.getElementById("instruccion_buscar_por_indicador").style.display = "none";
     document.querySelector('.search_title').textContent = 'Busca un Tema y luego un Indicador';
   }

@@ -80,8 +80,7 @@ function highlightFeature(e) {
 }
 function clickFeature(e){
     //Modificamos el contenido del popup
-    var layer = e.target; 
-    layer.bindPopup(Time)
+    
 }
 function resetHighlight(e) {
     B.myVariable ='Hidalgo';
