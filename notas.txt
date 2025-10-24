@@ -1,0 +1,25 @@
+Idea General.
+
+
+## Archivos
+##Que_tiempo2 -
+        Todos los posibles indicadores separados por tema
+        Y duplicamos este mismo para el tema "Todo" que se carga por default
+##Temporalidad (es).csv 
+        Tema-Entidad-Indicador-...Medidas...
+
+Inicio. (Promesa+Fetch+Creación dinámica de input_options)
+Se lee el archivo .csv de Los posibles indicadores, temas y sus temporalidades
+    Estos se dividen en conjuntos (temas + tema_TODO)
+Se alimenta el searchInput. (La opciones de temas están en el index.)
+
+#Elección de Indicador sin especificar tema. 
+    Si Tema==Todo e indicador es del tipo "Tema : Indicador", se genera unas gráficas. 
+    Si Tema != Todo, pasamos a elección de Tema
+
+#Elección de Tema (tema_i): 
+Se utiliza el conjunto tema_i para alimentar las opciones de indicadores. 
+
+#Elección de Indicador con tema especificado
+Se lee el archivo temporalidad(indicador_seleccionado).csv para conocer la informacion del indicador
+Se generan gráficas para el indicador seleccionado
