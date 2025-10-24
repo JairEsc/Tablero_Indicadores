@@ -678,7 +678,7 @@ B.onChange = function (newValue) {
 document.getElementById('tema_tablero_indicadores').addEventListener('change', () => {
   //console.log("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
   document.getElementById("tema_tablero_indicadores").hidden = false;
-  console.log(TODO_quitado)
+  //console.log(TODO_quitado)
   if(TODO_quitado == 0){
     console.log(document.getElementById("tema_tablero_indicadores"))
     document.getElementById("tema_tablero_indicadores").options[0].text = "Buscar entre todos los indicadores";
