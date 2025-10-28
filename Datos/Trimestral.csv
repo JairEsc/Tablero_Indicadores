@@ -1,0 +1,641 @@
+"Tema","Entidad","Indicador","link.de.consulta","2024_1t","2024_2t","2024_3t","2024_4t","2025_1t","2025_2t","2025_3t","2025_4t"
+"Económico","Aguascalientes","Crecimiento Economico","https://mexicocomovamos.mx/datos/","0.0195","0.007","-0.015","-0.0126","0.0091",NA,NA,NA
+"Económico","Baja California","Crecimiento Economico","https://mexicocomovamos.mx/datos/","0.0052","0.0315","0.0153","-0.0111","0.0123",NA,NA,NA
+"Económico","Baja California Sur","Crecimiento Economico","https://mexicocomovamos.mx/datos/","0.0353","0.0477","0.0289","0.0347","0.039",NA,NA,NA
+"Económico","Campeche","Crecimiento Economico","https://mexicocomovamos.mx/datos/","0.0613","-0.0835","-0.118","-0.1534","-0.1676",NA,NA,NA
+"Económico","Coahuila de Zaragoza","Crecimiento Economico","https://mexicocomovamos.mx/datos/","-0.0356","0.028","0.0075","-5e-04","0.0067",NA,NA,NA
+"Económico","Colima","Crecimiento Economico","https://mexicocomovamos.mx/datos/","0.0251","0.0577","0.0307","0.0279","0.0255",NA,NA,NA
+"Económico","Chiapas","Crecimiento Economico","https://mexicocomovamos.mx/datos/","0.0175","0.032","0.0291","0.0148","3e-04",NA,NA,NA
+"Económico","Chihuahua","Crecimiento Economico","https://mexicocomovamos.mx/datos/","0.006","0.0028","0.0032","1e-04","-0.0128",NA,NA,NA
+"Económico","Ciudad de México","Crecimiento Economico","https://mexicocomovamos.mx/datos/","0.0262","-4e-04","0.012","0.0358","0.0146",NA,NA,NA
+"Económico","Durango","Crecimiento Economico","https://mexicocomovamos.mx/datos/","0.0471","0.0803","0.048","0.0054","-0.0043",NA,NA,NA
+"Económico","Guanajuato","Crecimiento Economico","https://mexicocomovamos.mx/datos/","0.0351","0.0369","0.0537","0.0335","0.0217",NA,NA,NA
+"Económico","Guerrero","Crecimiento Economico","https://mexicocomovamos.mx/datos/","-0.0243","0.0267","0.0116","0.102","0.0801",NA,NA,NA
+"Económico","Hidalgo","Crecimiento Economico","https://mexicocomovamos.mx/datos/","0.0295","0.0107","0.0259","0.0088","0.0055",NA,NA,NA
+"Económico","Jalisco","Crecimiento Economico","https://mexicocomovamos.mx/datos/","0.0136","0.0122","7e-04","-0.0159","0.0063",NA,NA,NA
+"Económico","México","Crecimiento Economico","https://mexicocomovamos.mx/datos/","0.0356","0.0059","0.0252","0.0121","0.0059",NA,NA,NA
+"Económico","Michoacán de Ocampo","Crecimiento Economico","https://mexicocomovamos.mx/datos/","-0.009","0.0054","0.0154","-0.0207","0.013",NA,NA,NA
+"Económico","Morelos","Crecimiento Economico","https://mexicocomovamos.mx/datos/","-0.0022","0.0346","0.026","0.0085","0.0206",NA,NA,NA
+"Económico","Nayarit","Crecimiento Economico","https://mexicocomovamos.mx/datos/","-0.0229","0","-0.0181","-0.0135","0.047",NA,NA,NA
+"Económico","Nuevo León","Crecimiento Economico","https://mexicocomovamos.mx/datos/","0.0358","0.0326","0.0584","0.0324","0.0132",NA,NA,NA
+"Económico","Oaxaca","Crecimiento Economico","https://mexicocomovamos.mx/datos/","0.0233","0.0812","0.0695","0.0536","0.057",NA,NA,NA
+"Económico","Puebla","Crecimiento Economico","https://mexicocomovamos.mx/datos/","0.0403","0.0472","0.0531","0.0132","-0.007",NA,NA,NA
+"Económico","Querétaro","Crecimiento Economico","https://mexicocomovamos.mx/datos/","0.0369","0.0404","0.024","-0.0076","0.0057",NA,NA,NA
+"Económico","Quintana Roo","Crecimiento Economico","https://mexicocomovamos.mx/datos/","0.1662","0.059","-0.1431","-0.1795","-0.0924",NA,NA,NA
+"Económico","San Luis Potosí","Crecimiento Economico","https://mexicocomovamos.mx/datos/","0.0192","0.019","-0.0159","-0.0051","0.0226",NA,NA,NA
+"Económico","Sinaloa","Crecimiento Economico","https://mexicocomovamos.mx/datos/","-7e-04","-0.0145","-0.002","-0.0263","0.02",NA,NA,NA
+"Económico","Sonora","Crecimiento Economico","https://mexicocomovamos.mx/datos/","0.0166","0.0144","-0.0073","-0.0038","0.0038",NA,NA,NA
+"Económico","Tabasco","Crecimiento Economico","https://mexicocomovamos.mx/datos/","-0.0406","-0.0997","-0.0656","-0.1023","-0.1227",NA,NA,NA
+"Económico","Tamaulipas","Crecimiento Economico","https://mexicocomovamos.mx/datos/","-3e-04","0.0142","0.027","0.0429","0.0286",NA,NA,NA
+"Económico","Tlaxcala","Crecimiento Economico","https://mexicocomovamos.mx/datos/","0.0118","0.0336","0.0203","-0.0151","0.0121",NA,NA,NA
+"Económico","Veracruz de Ignacio de la Llave","Crecimiento Economico","https://mexicocomovamos.mx/datos/","0.0372","0.0296","0.0484","0.0117","-0.0036",NA,NA,NA
+"Económico","Yucatán","Crecimiento Economico","https://mexicocomovamos.mx/datos/","0.0367","0.0385","0.0202","0.0155","0.0212",NA,NA,NA
+"Económico","Zacatecas","Crecimiento Economico","https://mexicocomovamos.mx/datos/","-0.0306","0.022","0.0666","0.0521","0.0357",NA,NA,NA
+"Económico","Aguascalientes","Desigualdad Laboral","https://mexicocomovamos.mx/datos/","0.329552846346473","0.295682992717161","0.336540826736609","0.341264565575557","0.338591174313706",NA,NA,NA
+"Económico","Baja California","Desigualdad Laboral","https://mexicocomovamos.mx/datos/","0.303267283525201","0.280088076794982","0.282262449141854","0.273756146963933","0.267537939153726",NA,NA,NA
+"Económico","Baja California Sur","Desigualdad Laboral","https://mexicocomovamos.mx/datos/","0.359528590579544","0.35090168119018","0.360005710183941","0.367806897462742","0.35215342948436",NA,NA,NA
+"Económico","Campeche","Desigualdad Laboral","https://mexicocomovamos.mx/datos/","0.409741328241353","0.42207218688668","0.405354295347024","0.393500989535596","0.401401304929095",NA,NA,NA
+"Económico","Coahuila de Zaragoza","Desigualdad Laboral","https://mexicocomovamos.mx/datos/","0.325333534430229","0.329222936357837","0.324608001659271","0.332811469365197","0.313482162868695",NA,NA,NA
+"Económico","Colima","Desigualdad Laboral","https://mexicocomovamos.mx/datos/","0.353201135796894","0.33578401910961","0.34045693100029","0.332979913584609","0.33636417258424",NA,NA,NA
+"Económico","Chiapas","Desigualdad Laboral","https://mexicocomovamos.mx/datos/","0.426202357628881","0.41824556792335","0.424588989735184","0.422549073420669","0.399387151664541",NA,NA,NA
+"Económico","Chihuahua","Desigualdad Laboral","https://mexicocomovamos.mx/datos/","0.325415166414814","0.328442018074838","0.310851755565636","0.316982319149247","0.314449426826059",NA,NA,NA
+"Económico","Ciudad de México","Desigualdad Laboral","https://mexicocomovamos.mx/datos/","0.41697087359114","0.44617304963765","0.440373491164792","0.418911326129205","0.422550920821777",NA,NA,NA
+"Económico","Durango","Desigualdad Laboral","https://mexicocomovamos.mx/datos/","0.344894609372204","0.328037909531304","0.330115112295516","0.328484090547818","0.325995060328978",NA,NA,NA
+"Económico","Guanajuato","Desigualdad Laboral","https://mexicocomovamos.mx/datos/","0.323971843428808","0.324198172692604","0.32904931974781","0.312932030332604","0.309252347647089",NA,NA,NA
+"Económico","Guerrero","Desigualdad Laboral","https://mexicocomovamos.mx/datos/","0.395317242803912","0.371796541791582","0.356831609538858","0.388959499314296","0.381886085678843",NA,NA,NA
+"Económico","Hidalgo","Desigualdad Laboral","https://mexicocomovamos.mx/datos/","0.404024980826421","0.395627273673426","0.412463896819531","0.386623724632045","0.386884336223829",NA,NA,NA
+"Económico","Jalisco","Desigualdad Laboral","https://mexicocomovamos.mx/datos/","0.297019111983673","0.29244461438384","0.304065398686589","0.29642238966585","0.307287383575613",NA,NA,NA
+"Económico","México","Desigualdad Laboral","https://mexicocomovamos.mx/datos/","0.353959500220753","0.349896210144834","0.349918098353783","0.333717085251692","0.321002266513005",NA,NA,NA
+"Económico","Michoacán de Ocampo","Desigualdad Laboral","https://mexicocomovamos.mx/datos/","0.364388211054575","0.356642420504613","0.349038073180736","0.362107977980713","0.332270447591782",NA,NA,NA
+"Económico","Morelos","Desigualdad Laboral","https://mexicocomovamos.mx/datos/","0.309417212013273","0.306093472757993","0.324248733438822","0.320050580888392","0.316374491472629",NA,NA,NA
+"Económico","Nayarit","Desigualdad Laboral","https://mexicocomovamos.mx/datos/","0.357792348296471","0.343175112913968","0.36596135488071","0.355380261105438","0.355029480484518",NA,NA,NA
+"Económico","Nuevo León","Desigualdad Laboral","https://mexicocomovamos.mx/datos/","0.357620433924922","0.351799987240383","0.35268150617685","0.332087442740431","0.352719693087693",NA,NA,NA
+"Económico","Oaxaca","Desigualdad Laboral","https://mexicocomovamos.mx/datos/","0.400786280354623","0.402855871256634","0.404878719362159","0.416063855332823","0.403111365720406",NA,NA,NA
+"Económico","Puebla","Desigualdad Laboral","https://mexicocomovamos.mx/datos/","0.372762658756983","0.367745049253017","0.371648576962571","0.36975618647034","0.371930267028347",NA,NA,NA
+"Económico","Querétaro","Desigualdad Laboral","https://mexicocomovamos.mx/datos/","0.344576168399612","0.3386192071182","0.346177720977266","0.339565064907333","0.326244894703791",NA,NA,NA
+"Económico","Quintana Roo","Desigualdad Laboral","https://mexicocomovamos.mx/datos/","0.332525556371593","0.336243950592461","0.32368658751966","0.344129013230258","0.327862954427474",NA,NA,NA
+"Económico","San Luis Potosí","Desigualdad Laboral","https://mexicocomovamos.mx/datos/","0.365390427319426","0.355186934431231","0.360541420216805","0.383970650884862","0.359471938151501",NA,NA,NA
+"Económico","Sinaloa","Desigualdad Laboral","https://mexicocomovamos.mx/datos/","0.351973161906926","0.36364315136575","0.357543022122968","0.33752849652592","0.344747522663852",NA,NA,NA
+"Económico","Sonora","Desigualdad Laboral","https://mexicocomovamos.mx/datos/","0.31518700615004","0.312707872433521","0.324190354059965","0.319247750472528","0.310512987414427",NA,NA,NA
+"Económico","Tabasco","Desigualdad Laboral","https://mexicocomovamos.mx/datos/","0.417001233538258","0.411042616704208","0.389986006319759","0.406479808080803","0.397153432866844",NA,NA,NA
+"Económico","Tamaulipas","Desigualdad Laboral","https://mexicocomovamos.mx/datos/","0.339938124066975","0.336509763196773","0.342762507070347","0.343602336828326","0.338229528216971",NA,NA,NA
+"Económico","Tlaxcala","Desigualdad Laboral","https://mexicocomovamos.mx/datos/","0.354123559850905","0.352475920522693","0.351459410050893","0.347806751360849","0.349310134603229",NA,NA,NA
+"Económico","Veracruz de Ignacio de la Llave","Desigualdad Laboral","https://mexicocomovamos.mx/datos/","0.395680180076624","0.382158923724091","0.39610046759185","0.386638764831105","0.419338491666622",NA,NA,NA
+"Económico","Yucatán","Desigualdad Laboral","https://mexicocomovamos.mx/datos/","0.391570742438944","0.385676790409434","0.385722401929343","0.392594673717667","0.382356103650181",NA,NA,NA
+"Económico","Zacatecas","Desigualdad Laboral","https://mexicocomovamos.mx/datos/","0.341820199835865","0.338241809369947","0.349369556963211","0.332781312573275","0.340411753473404",NA,NA,NA
+"Económico","Aguascalientes","Población Económicamente Activa PEA","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"683487","672436",NA,NA
+"Económico","Aguascalientes","Población Ocupada","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"668839","652132",NA,NA
+"Económico","Aguascalientes","Población Desocupada","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"14648","20304",NA,NA
+"Económico","Aguascalientes","Tasa de Participación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"58.9","57.4904",NA,NA
+"Económico","Aguascalientes","Tasa de Desocupación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"2.1","3.0195",NA,NA
+"Económico","Aguascalientes","Tasa de Ocupación parcial y desocupación/","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"5.8","6.4875",NA,NA
+"Económico","Aguascalientes","Tasa de Presión general","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"4.3","4.768",NA,NA
+"Económico","Aguascalientes","Tasa de Trabajo asalariado","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"75.7","76.7618",NA,NA
+"Económico","Aguascalientes","Tasa de Subocupación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"3.2","2.1735",NA,NA
+"Económico","Aguascalientes","Tasa de Condiciones críticas de ocupación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"22","21.8171",NA,NA
+"Económico","Aguascalientes","Tasa de Informalidad laboral","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"40.9","41.8783",NA,NA
+"Económico","Aguascalientes","Tasa de Ocupación en el sector informal","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"22.1","22.8374",NA,NA
+"Económico","Baja California","Población Económicamente Activa PEA","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"1800869","1790619",NA,NA
+"Económico","Baja California","Población Ocupada","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"1761894","1749184",NA,NA
+"Económico","Baja California","Población Desocupada","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"38975","41435",NA,NA
+"Económico","Baja California","Tasa de Participación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"60","59.4052",NA,NA
+"Económico","Baja California","Tasa de Desocupación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"2.2","2.314",NA,NA
+"Económico","Baja California","Tasa de Ocupación parcial y desocupación/","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"5.6","5.9781",NA,NA
+"Económico","Baja California","Tasa de Presión general","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"3.6","3.7793",NA,NA
+"Económico","Baja California","Tasa de Trabajo asalariado","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"74.2","73.777",NA,NA
+"Económico","Baja California","Tasa de Subocupación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"2.2","2.3747",NA,NA
+"Económico","Baja California","Tasa de Condiciones críticas de ocupación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"31.4","31.0258",NA,NA
+"Económico","Baja California","Tasa de Informalidad laboral","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"37.2","18.9946",NA,NA
+"Económico","Baja California","Tasa de Ocupación en el sector informal","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"18.6","38.3883",NA,NA
+"Económico","Baja California Sur","Población Económicamente Activa PEA","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"463281","456933",NA,NA
+"Económico","Baja California Sur","Población Ocupada","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"450178","446160",NA,NA
+"Económico","Baja California Sur","Población Desocupada","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"13103","10773",NA,NA
+"Económico","Baja California Sur","Tasa de Participación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"68","66.726",NA,NA
+"Económico","Baja California Sur","Tasa de Desocupación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"2.8","2.3577",NA,NA
+"Económico","Baja California Sur","Tasa de Ocupación parcial y desocupación/","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"10","8.868",NA,NA
+"Económico","Baja California Sur","Tasa de Presión general","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"6.9","6.9349",NA,NA
+"Económico","Baja California Sur","Tasa de Trabajo asalariado","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"75.3","76.1247",NA,NA
+"Económico","Baja California Sur","Tasa de Subocupación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"7.2","6.8296",NA,NA
+"Económico","Baja California Sur","Tasa de Condiciones críticas de ocupación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"20.6","18.4109",NA,NA
+"Económico","Baja California Sur","Tasa de Informalidad laboral","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"37.5","19.1584",NA,NA
+"Económico","Baja California Sur","Tasa de Ocupación en el sector informal","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"18.7","37.3662",NA,NA
+"Económico","Campeche","Población Económicamente Activa PEA","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"449083","434788",NA,NA
+"Económico","Campeche","Población Ocupada","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"439803","423431",NA,NA
+"Económico","Campeche","Población Desocupada","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"9280","11357",NA,NA
+"Económico","Campeche","Tasa de Participación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"61.6","60.2642",NA,NA
+"Económico","Campeche","Tasa de Desocupación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"2.1","2.6121",NA,NA
+"Económico","Campeche","Tasa de Ocupación parcial y desocupación/","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"11.5","11.3635",NA,NA
+"Económico","Campeche","Tasa de Presión general","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"6.4","8.1136",NA,NA
+"Económico","Campeche","Tasa de Trabajo asalariado","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"61.1","62.8428",NA,NA
+"Económico","Campeche","Tasa de Subocupación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"10.2","12.0338",NA,NA
+"Económico","Campeche","Tasa de Condiciones críticas de ocupación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"39.5","38.8056",NA,NA
+"Económico","Campeche","Tasa de Informalidad laboral","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"60.3","27.2491",NA,NA
+"Económico","Campeche","Tasa de Ocupación en el sector informal","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"28.3","59.8126",NA,NA
+"Económico","Coahuila de Zaragoza","Población Económicamente Activa PEA","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"1572146","1622542",NA,NA
+"Económico","Coahuila de Zaragoza","Población Ocupada","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"1516383","1561461",NA,NA
+"Económico","Coahuila de Zaragoza","Población Desocupada","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"55763","61081",NA,NA
+"Económico","Coahuila de Zaragoza","Tasa de Participación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"59.4","60.8508",NA,NA
+"Económico","Coahuila de Zaragoza","Tasa de Desocupación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"3.5","3.7645",NA,NA
+"Económico","Coahuila de Zaragoza","Tasa de Ocupación parcial y desocupación/","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"9.4","8.6708",NA,NA
+"Económico","Coahuila de Zaragoza","Tasa de Presión general","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"6.3","7.3989",NA,NA
+"Económico","Coahuila de Zaragoza","Tasa de Trabajo asalariado","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"77.9","78.0676",NA,NA
+"Económico","Coahuila de Zaragoza","Tasa de Subocupación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"3.7","4.4257",NA,NA
+"Económico","Coahuila de Zaragoza","Tasa de Condiciones críticas de ocupación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"28.7","29.8795",NA,NA
+"Económico","Coahuila de Zaragoza","Tasa de Informalidad laboral","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"33.1","20.9773",NA,NA
+"Económico","Coahuila de Zaragoza","Tasa de Ocupación en el sector informal","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"20.5","34.207",NA,NA
+"Económico","Colima","Población Económicamente Activa PEA","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"372980","373142",NA,NA
+"Económico","Colima","Población Ocupada","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"363903","366562",NA,NA
+"Económico","Colima","Población Desocupada","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"9077","6580",NA,NA
+"Económico","Colima","Tasa de Participación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"66","65.6417",NA,NA
+"Económico","Colima","Tasa de Desocupación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"2.4","1.7634",NA,NA
+"Económico","Colima","Tasa de Ocupación parcial y desocupación/","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"9.1","8.8567",NA,NA
+"Económico","Colima","Tasa de Presión general","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"4.5","4.6808",NA,NA
+"Económico","Colima","Tasa de Trabajo asalariado","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"69.7","69.5454",NA,NA
+"Económico","Colima","Tasa de Subocupación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"3.8","3.915",NA,NA
+"Económico","Colima","Tasa de Condiciones críticas de ocupación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"24.1","22.9931",NA,NA
+"Económico","Colima","Tasa de Informalidad laboral","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"47.6","17.8011",NA,NA
+"Económico","Colima","Tasa de Ocupación en el sector informal","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"18.6","48.2017",NA,NA
+"Económico","Chiapas","Población Económicamente Activa PEA","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"2309506","2272301",NA,NA
+"Económico","Chiapas","Población Ocupada","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"2252361","2220465",NA,NA
+"Económico","Chiapas","Población Desocupada","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"57145","51836",NA,NA
+"Económico","Chiapas","Tasa de Participación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"54.7","53.5811",NA,NA
+"Económico","Chiapas","Tasa de Desocupación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"2.5","2.2812",NA,NA
+"Económico","Chiapas","Tasa de Ocupación parcial y desocupación/","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"6.9","6.8932",NA,NA
+"Económico","Chiapas","Tasa de Presión general","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"8","8.2166",NA,NA
+"Económico","Chiapas","Tasa de Trabajo asalariado","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"45.2","45.2239",NA,NA
+"Económico","Chiapas","Tasa de Subocupación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"7.8","8.3535",NA,NA
+"Económico","Chiapas","Tasa de Condiciones críticas de ocupación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"49.8","48.3199",NA,NA
+"Económico","Chiapas","Tasa de Informalidad laboral","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"76","29.2986",NA,NA
+"Económico","Chiapas","Tasa de Ocupación en el sector informal","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"29.6","77.964",NA,NA
+"Económico","Chihuahua","Población Económicamente Activa PEA","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"1817473","1905079",NA,NA
+"Económico","Chihuahua","Población Ocupada","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"1780300","1860675",NA,NA
+"Económico","Chihuahua","Población Desocupada","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"37173","44404",NA,NA
+"Económico","Chihuahua","Tasa de Participación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"59.6","62.0244",NA,NA
+"Económico","Chihuahua","Tasa de Desocupación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"2","2.3308",NA,NA
+"Económico","Chihuahua","Tasa de Ocupación parcial y desocupación/","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"6.3","6.6544",NA,NA
+"Económico","Chihuahua","Tasa de Presión general","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"4.3","5.5255",NA,NA
+"Económico","Chihuahua","Tasa de Trabajo asalariado","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"76.7","76.0834",NA,NA
+"Económico","Chihuahua","Tasa de Subocupación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"3.5","4.3392",NA,NA
+"Económico","Chihuahua","Tasa de Condiciones críticas de ocupación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"27.2","27.7028",NA,NA
+"Económico","Chihuahua","Tasa de Informalidad laboral","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"33.6","15.185",NA,NA
+"Económico","Chihuahua","Tasa de Ocupación en el sector informal","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"14.2","34.3209",NA,NA
+"Económico","Ciudad de México","Población Económicamente Activa PEA","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"5066685","5144421",NA,NA
+"Económico","Ciudad de México","Población Ocupada","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"4892875","4940775",NA,NA
+"Económico","Ciudad de México","Población Desocupada","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"173810","203646",NA,NA
+"Económico","Ciudad de México","Tasa de Participación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"63.2","63.8546",NA,NA
+"Económico","Ciudad de México","Tasa de Desocupación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"3.4","3.9586",NA,NA
+"Económico","Ciudad de México","Tasa de Ocupación parcial y desocupación/","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"9.6","10.0659",NA,NA
+"Económico","Ciudad de México","Tasa de Presión general","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"8.4","8.6437",NA,NA
+"Económico","Ciudad de México","Tasa de Trabajo asalariado","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"69.2","69.9212",NA,NA
+"Económico","Ciudad de México","Tasa de Subocupación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"9.5","10.2225",NA,NA
+"Económico","Ciudad de México","Tasa de Condiciones críticas de ocupación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"30.8","28.6038",NA,NA
+"Económico","Ciudad de México","Tasa de Informalidad laboral","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"44.7","26.448",NA,NA
+"Económico","Ciudad de México","Tasa de Ocupación en el sector informal","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"27.1","44.1095",NA,NA
+"Económico","Durango","Población Económicamente Activa PEA","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"873367","884069",NA,NA
+"Económico","Durango","Población Ocupada","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"843260","860551",NA,NA
+"Económico","Durango","Población Desocupada","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"30107","23518",NA,NA
+"Económico","Durango","Tasa de Participación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"59.8","60.7715",NA,NA
+"Económico","Durango","Tasa de Desocupación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"3.4","2.6602",NA,NA
+"Económico","Durango","Tasa de Ocupación parcial y desocupación/","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"10.6","10.6526",NA,NA
+"Económico","Durango","Tasa de Presión general","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"7","6.0427",NA,NA
+"Económico","Durango","Tasa de Trabajo asalariado","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"69.4","69.3981",NA,NA
+"Económico","Durango","Tasa de Subocupación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"4.4","4.4699",NA,NA
+"Económico","Durango","Tasa de Condiciones críticas de ocupación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"32.8","32.965",NA,NA
+"Económico","Durango","Tasa de Informalidad laboral","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"50","26.194",NA,NA
+"Económico","Durango","Tasa de Ocupación en el sector informal","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"25.4","51.2",NA,NA
+"Económico","Guanajuato","Población Económicamente Activa PEA","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"2859767","2923616",NA,NA
+"Económico","Guanajuato","Población Ocupada","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"2787056","2850322",NA,NA
+"Económico","Guanajuato","Población Desocupada","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"72711","73294",NA,NA
+"Económico","Guanajuato","Tasa de Participación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"58.3","59.5751",NA,NA
+"Económico","Guanajuato","Tasa de Desocupación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"2.5","2.507",NA,NA
+"Económico","Guanajuato","Tasa de Ocupación parcial y desocupación/","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"8.5","9.8661",NA,NA
+"Económico","Guanajuato","Tasa de Presión general","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"5.2","5.4655",NA,NA
+"Económico","Guanajuato","Tasa de Trabajo asalariado","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"69.4","68.8293",NA,NA
+"Económico","Guanajuato","Tasa de Subocupación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"8.2","10.7836",NA,NA
+"Económico","Guanajuato","Tasa de Condiciones críticas de ocupación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"35.8","35.5764",NA,NA
+"Económico","Guanajuato","Tasa de Informalidad laboral","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"54.7","29.5686",NA,NA
+"Económico","Guanajuato","Tasa de Ocupación en el sector informal","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"30","54.6955",NA,NA
+"Económico","Guerrero","Población Económicamente Activa PEA","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"1533997","1521970",NA,NA
+"Económico","Guerrero","Población Ocupada","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"1520453","1507245",NA,NA
+"Económico","Guerrero","Población Desocupada","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"13544","14725",NA,NA
+"Económico","Guerrero","Tasa de Participación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"58.4","56.6519",NA,NA
+"Económico","Guerrero","Tasa de Desocupación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"0.9","0.9675",NA,NA
+"Económico","Guerrero","Tasa de Ocupación parcial y desocupación/","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"9.1","9.9426",NA,NA
+"Económico","Guerrero","Tasa de Presión general","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"2.9","3.7846",NA,NA
+"Económico","Guerrero","Tasa de Trabajo asalariado","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"49.3","48.4041",NA,NA
+"Económico","Guerrero","Tasa de Subocupación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"5.7","5.8034",NA,NA
+"Económico","Guerrero","Tasa de Condiciones críticas de ocupación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"36.9","32.8469",NA,NA
+"Económico","Guerrero","Tasa de Informalidad laboral","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"76.5","40.5261",NA,NA
+"Económico","Guerrero","Tasa de Ocupación en el sector informal","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"40.8","76.0457",NA,NA
+"Económico","Hidalgo","Población Económicamente Activa PEA","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"1522196","1484516",NA,NA
+"Económico","Hidalgo","Población Ocupada","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"1492541","1457012",NA,NA
+"Económico","Hidalgo","Población Desocupada","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"29655","27504",NA,NA
+"Económico","Hidalgo","Tasa de Participación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"60.4","58.5323",NA,NA
+"Económico","Hidalgo","Tasa de Desocupación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"1.9","1.8527",NA,NA
+"Económico","Hidalgo","Tasa de Ocupación parcial y desocupación/","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"11.9","13.1626",NA,NA
+"Económico","Hidalgo","Tasa de Presión general","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"5.2","4.7903",NA,NA
+"Económico","Hidalgo","Tasa de Trabajo asalariado","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"60.3","62.4173",NA,NA
+"Económico","Hidalgo","Tasa de Subocupación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"10.1","11.4356",NA,NA
+"Económico","Hidalgo","Tasa de Condiciones críticas de ocupación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"34.1","31.6544",NA,NA
+"Económico","Hidalgo","Tasa de Informalidad laboral","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"71.7","36.2309",NA,NA
+"Económico","Hidalgo","Tasa de Ocupación en el sector informal","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"38.8","70.7712",NA,NA
+"Económico","Jalisco","Población Económicamente Activa PEA","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"3992241","3982670",NA,NA
+"Económico","Jalisco","Población Ocupada","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"3924755","3874934",NA,NA
+"Económico","Jalisco","Población Desocupada","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"67486","107736",NA,NA
+"Económico","Jalisco","Tasa de Participación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"58.2","57.8609",NA,NA
+"Económico","Jalisco","Tasa de Desocupación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"1.7","2.7051",NA,NA
+"Económico","Jalisco","Tasa de Ocupación parcial y desocupación/","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"4.3","5.3892",NA,NA
+"Económico","Jalisco","Tasa de Presión general","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"2.4","3.2029",NA,NA
+"Económico","Jalisco","Tasa de Trabajo asalariado","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"73.7","72.5717",NA,NA
+"Económico","Jalisco","Tasa de Subocupación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"1.6","1.1205",NA,NA
+"Económico","Jalisco","Tasa de Condiciones críticas de ocupación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"22","16.8662",NA,NA
+"Económico","Jalisco","Tasa de Informalidad laboral","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"46.9","23.9684",NA,NA
+"Económico","Jalisco","Tasa de Ocupación en el sector informal","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"24.7","45.2906",NA,NA
+"Económico","México","Población Económicamente Activa PEA","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"8230321","8397293",NA,NA
+"Económico","México","Población Ocupada","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"8005145","8152117",NA,NA
+"Económico","México","Población Desocupada","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"225176","245176",NA,NA
+"Económico","México","Tasa de Participación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"57.5","58.3905",NA,NA
+"Económico","México","Tasa de Desocupación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"2.7","2.9197",NA,NA
+"Económico","México","Tasa de Ocupación parcial y desocupación/","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"7.3","6.9084",NA,NA
+"Económico","México","Tasa de Presión general","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"4.2","4.0416",NA,NA
+"Económico","México","Tasa de Trabajo asalariado","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"67.9","66.2454",NA,NA
+"Económico","México","Tasa de Subocupación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"5.1","4.4012",NA,NA
+"Económico","México","Tasa de Condiciones críticas de ocupación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"40.2","41.8008",NA,NA
+"Económico","México","Tasa de Informalidad laboral","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"54.1","35.8569",NA,NA
+"Económico","México","Tasa de Ocupación en el sector informal","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"34.8","55.8562",NA,NA
+"Económico","Michoacán de Ocampo","Población Económicamente Activa PEA","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"2257524","2295756",NA,NA
+"Económico","Michoacán de Ocampo","Población Ocupada","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"2231080","2258881",NA,NA
+"Económico","Michoacán de Ocampo","Población Desocupada","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"26444","36875",NA,NA
+"Económico","Michoacán de Ocampo","Tasa de Participación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"60.5","60.6511",NA,NA
+"Económico","Michoacán de Ocampo","Tasa de Desocupación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"1.2","1.6062",NA,NA
+"Económico","Michoacán de Ocampo","Tasa de Ocupación parcial y desocupación/","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"9.3","10.0373",NA,NA
+"Económico","Michoacán de Ocampo","Tasa de Presión general","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"3.3","4.2163",NA,NA
+"Económico","Michoacán de Ocampo","Tasa de Trabajo asalariado","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"62.9","62.57",NA,NA
+"Económico","Michoacán de Ocampo","Tasa de Subocupación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"9.1","11.1517",NA,NA
+"Económico","Michoacán de Ocampo","Tasa de Condiciones críticas de ocupación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"38.1","32.934",NA,NA
+"Económico","Michoacán de Ocampo","Tasa de Informalidad laboral","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"67.8","37.6109",NA,NA
+"Económico","Michoacán de Ocampo","Tasa de Ocupación en el sector informal","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"34.7","69.5219",NA,NA
+"Económico","Morelos","Población Económicamente Activa PEA","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"888797","859970",NA,NA
+"Económico","Morelos","Población Ocupada","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"879461","845616",NA,NA
+"Económico","Morelos","Población Desocupada","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"9336","14354",NA,NA
+"Económico","Morelos","Tasa de Participación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"56","54.935",NA,NA
+"Económico","Morelos","Tasa de Desocupación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"1.1","1.6691",NA,NA
+"Económico","Morelos","Tasa de Ocupación parcial y desocupación/","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"6.4","6.5512",NA,NA
+"Económico","Morelos","Tasa de Presión general","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"2.8","3.2177",NA,NA
+"Económico","Morelos","Tasa de Trabajo asalariado","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"63","63.8641",NA,NA
+"Económico","Morelos","Tasa de Subocupación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"3.5","3.5574",NA,NA
+"Económico","Morelos","Tasa de Condiciones críticas de ocupación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"25.4","28.0069",NA,NA
+"Económico","Morelos","Tasa de Informalidad laboral","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"66.1","34.532",NA,NA
+"Económico","Morelos","Tasa de Ocupación en el sector informal","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"34.7","64.9005",NA,NA
+"Económico","Nayarit","Población Económicamente Activa PEA","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"644192","635734",NA,NA
+"Económico","Nayarit","Población Ocupada","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"628516","619858",NA,NA
+"Económico","Nayarit","Población Desocupada","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"15676","15876",NA,NA
+"Económico","Nayarit","Tasa de Participación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"66.5","65.5397",NA,NA
+"Económico","Nayarit","Tasa de Desocupación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"2.4","2.4973",NA,NA
+"Económico","Nayarit","Tasa de Ocupación parcial y desocupación/","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"11.6","11.9929",NA,NA
+"Económico","Nayarit","Tasa de Presión general","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"6.4","6.6641",NA,NA
+"Económico","Nayarit","Tasa de Trabajo asalariado","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"61.1","61.8843",NA,NA
+"Económico","Nayarit","Tasa de Subocupación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"7.1","9.4651",NA,NA
+"Económico","Nayarit","Tasa de Condiciones críticas de ocupación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"28.4","26.1923",NA,NA
+"Económico","Nayarit","Tasa de Informalidad laboral","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"58.9","26.5817",NA,NA
+"Económico","Nayarit","Tasa de Ocupación en el sector informal","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"25.7","59.7584",NA,NA
+"Económico","Nuevo León","Población Económicamente Activa PEA","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"2926208","2996190",NA,NA
+"Económico","Nuevo León","Población Ocupada","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"2845606","2911204",NA,NA
+"Económico","Nuevo León","Población Desocupada","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"80602","84986",NA,NA
+"Económico","Nuevo León","Tasa de Participación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"60.1","61.482",NA,NA
+"Económico","Nuevo León","Tasa de Desocupación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"2.8","2.8365",NA,NA
+"Económico","Nuevo León","Tasa de Ocupación parcial y desocupación/","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"7.9","7.5153",NA,NA
+"Económico","Nuevo León","Tasa de Presión general","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"5.2","5.6",NA,NA
+"Económico","Nuevo León","Tasa de Trabajo asalariado","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"78","77.6552",NA,NA
+"Económico","Nuevo León","Tasa de Subocupación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"3.4","3.5691",NA,NA
+"Económico","Nuevo León","Tasa de Condiciones críticas de ocupación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"20.8","20.0873",NA,NA
+"Económico","Nuevo León","Tasa de Informalidad laboral","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"32.5","19.8597",NA,NA
+"Económico","Nuevo León","Tasa de Ocupación en el sector informal","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"19.9","33.6943",NA,NA
+"Económico","Oaxaca","Población Económicamente Activa PEA","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"1829474","1853747",NA,NA
+"Económico","Oaxaca","Población Ocupada","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"1799614","1833693",NA,NA
+"Económico","Oaxaca","Población Desocupada","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"29860","20054",NA,NA
+"Económico","Oaxaca","Tasa de Participación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"56.9","57.6629",NA,NA
+"Económico","Oaxaca","Tasa de Desocupación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"1.6","1.0818",NA,NA
+"Económico","Oaxaca","Tasa de Ocupación parcial y desocupación/","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"12.7","12.1313",NA,NA
+"Económico","Oaxaca","Tasa de Presión general","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"4.8","4.3949",NA,NA
+"Económico","Oaxaca","Tasa de Trabajo asalariado","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"47.6","45.299",NA,NA
+"Económico","Oaxaca","Tasa de Subocupación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"13.2","13.4237",NA,NA
+"Económico","Oaxaca","Tasa de Condiciones críticas de ocupación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"34.8","32.8587",NA,NA
+"Económico","Oaxaca","Tasa de Informalidad laboral","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"76.3","40.7524",NA,NA
+"Económico","Oaxaca","Tasa de Ocupación en el sector informal","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"39","78.534",NA,NA
+"Económico","Puebla","Población Económicamente Activa PEA","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"3092122","3082983",NA,NA
+"Económico","Puebla","Población Ocupada","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"3014438","2993256",NA,NA
+"Económico","Puebla","Población Desocupada","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"77684","89727",NA,NA
+"Económico","Puebla","Tasa de Participación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"61.1","60.7483",NA,NA
+"Económico","Puebla","Tasa de Desocupación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"2.5","2.9104",NA,NA
+"Económico","Puebla","Tasa de Ocupación parcial y desocupación/","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"9.5","9.9611",NA,NA
+"Económico","Puebla","Tasa de Presión general","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"5.3","6.0638",NA,NA
+"Económico","Puebla","Tasa de Trabajo asalariado","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"58.8","60.9833",NA,NA
+"Económico","Puebla","Tasa de Subocupación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"8.1","8.14",NA,NA
+"Económico","Puebla","Tasa de Condiciones críticas de ocupación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"42.2","41.0134",NA,NA
+"Económico","Puebla","Tasa de Informalidad laboral","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"72","36.6988",NA,NA
+"Económico","Puebla","Tasa de Ocupación en el sector informal","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"36.2","71.0799",NA,NA
+"Económico","Qurétaro","Población Económicamente Activa PEA","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"1216822","1212666",NA,NA
+"Económico","Qurétaro","Población Ocupada","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"1192757","1187467",NA,NA
+"Económico","Qurétaro","Población Desocupada","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"24065","25199",NA,NA
+"Económico","Qurétaro","Tasa de Participación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"61.2","60.9368",NA,NA
+"Económico","Qurétaro","Tasa de Desocupación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"2","2.078",NA,NA
+"Económico","Qurétaro","Tasa de Ocupación parcial y desocupación/","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"5.5","5.8724",NA,NA
+"Económico","Qurétaro","Tasa de Presión general","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"2.5","2.6466",NA,NA
+"Económico","Qurétaro","Tasa de Trabajo asalariado","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"71.9","70.9352",NA,NA
+"Económico","Qurétaro","Tasa de Subocupación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"0.9","1.1114",NA,NA
+"Económico","Qurétaro","Tasa de Condiciones críticas de ocupación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"23.2","25.5157",NA,NA
+"Económico","Qurétaro","Tasa de Informalidad laboral","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"40.1","22.233",NA,NA
+"Económico","Qurétaro","Tasa de Ocupación en el sector informal","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"19.9","42.104",NA,NA
+"Económico","Quintana Roo","Población Económicamente Activa PEA","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"995271","1016025",NA,NA
+"Económico","Quintana Roo","Población Ocupada","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"971564","987728",NA,NA
+"Económico","Quintana Roo","Población Desocupada","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"23707","28297",NA,NA
+"Económico","Quintana Roo","Tasa de Participación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"66","67.0122",NA,NA
+"Económico","Quintana Roo","Tasa de Desocupación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"2.4","2.7851",NA,NA
+"Económico","Quintana Roo","Tasa de Ocupación parcial y desocupación/","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"7.7","9.7148",NA,NA
+"Económico","Quintana Roo","Tasa de Presión general","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"5.2","5.4186",NA,NA
+"Económico","Quintana Roo","Tasa de Trabajo asalariado","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"72.8","72.114",NA,NA
+"Económico","Quintana Roo","Tasa de Subocupación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"5.8","5.8027",NA,NA
+"Económico","Quintana Roo","Tasa de Condiciones críticas de ocupación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"34.9","32.3404",NA,NA
+"Económico","Quintana Roo","Tasa de Informalidad laboral","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"42.7","21.6441",NA,NA
+"Económico","Quintana Roo","Tasa de Ocupación en el sector informal","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"23.4","43.9192",NA,NA
+"Económico","San Luis Potosí","Población Económicamente Activa PEA","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"1285696","1278818",NA,NA
+"Económico","San Luis Potosí","Población Ocupada","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"1244751","1231029",NA,NA
+"Económico","San Luis Potosí","Población Desocupada","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"40945","47789",NA,NA
+"Económico","San Luis Potosí","Tasa de Participación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"58","57.5713",NA,NA
+"Económico","San Luis Potosí","Tasa de Desocupación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"3.2","3.737",NA,NA
+"Económico","San Luis Potosí","Tasa de Ocupación parcial y desocupación/","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"12.4","12.9677",NA,NA
+"Económico","San Luis Potosí","Tasa de Presión general","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"6.3","7.6022",NA,NA
+"Económico","San Luis Potosí","Tasa de Trabajo asalariado","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"66","65.3505",NA,NA
+"Económico","San Luis Potosí","Tasa de Subocupación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"9","10.4725",NA,NA
+"Económico","San Luis Potosí","Tasa de Condiciones críticas de ocupación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"27","25.9404",NA,NA
+"Económico","San Luis Potosí","Tasa de Informalidad laboral","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"55.2","27.0596",NA,NA
+"Económico","San Luis Potosí","Tasa de Ocupación en el sector informal","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"27","56.666",NA,NA
+"Económico","Sinaloa","Población Económicamente Activa PEA","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"1481009","1481895",NA,NA
+"Económico","Sinaloa","Población Ocupada","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"1440348","1449072",NA,NA
+"Económico","Sinaloa","Población Desocupada","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"40661","32823",NA,NA
+"Económico","Sinaloa","Tasa de Participación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"59.5","59.7298",NA,NA
+"Económico","Sinaloa","Tasa de Desocupación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"2.7","2.2149",NA,NA
+"Económico","Sinaloa","Tasa de Ocupación parcial y desocupación/","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"10.3","11.2805",NA,NA
+"Económico","Sinaloa","Tasa de Presión general","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"5.3","6.1299",NA,NA
+"Económico","Sinaloa","Tasa de Trabajo asalariado","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"70.2","70.219",NA,NA
+"Económico","Sinaloa","Tasa de Subocupación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"11.1","13.697",NA,NA
+"Económico","Sinaloa","Tasa de Condiciones críticas de ocupación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"25","20.8029",NA,NA
+"Económico","Sinaloa","Tasa de Informalidad laboral","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"46.6","21.9094",NA,NA
+"Económico","Sinaloa","Tasa de Ocupación en el sector informal","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"22.8","46.5593",NA,NA
+"Económico","Sonora","Población Económicamente Activa PEA","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"1425411","1500120",NA,NA
+"Económico","Sonora","Población Ocupada","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"1388847","1462445",NA,NA
+"Económico","Sonora","Población Desocupada","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"36564","37675",NA,NA
+"Económico","Sonora","Tasa de Participación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"60.1","62.5048",NA,NA
+"Económico","Sonora","Tasa de Desocupación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"2.6","2.5115",NA,NA
+"Económico","Sonora","Tasa de Ocupación parcial y desocupación/","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"7.7","8.6846",NA,NA
+"Económico","Sonora","Tasa de Presión general","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"5.8","6.2444",NA,NA
+"Económico","Sonora","Tasa de Trabajo asalariado","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"74.2","72.6072",NA,NA
+"Económico","Sonora","Tasa de Subocupación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"4.2","5.7791",NA,NA
+"Económico","Sonora","Tasa de Condiciones críticas de ocupación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"24.7","25.109",NA,NA
+"Económico","Sonora","Tasa de Informalidad laboral","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"40.8","20.3755",NA,NA
+"Económico","Sonora","Tasa de Ocupación en el sector informal","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"19","43.7054",NA,NA
+"Económico","Tabasco","Población Económicamente Activa PEA","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"1121839","1143069",NA,NA
+"Económico","Tabasco","Población Ocupada","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"1066427","1093156",NA,NA
+"Económico","Tabasco","Población Desocupada","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"55412","49913",NA,NA
+"Económico","Tabasco","Tasa de Participación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"57.2","58.2624",NA,NA
+"Económico","Tabasco","Tasa de Desocupación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"4.9","4.3666",NA,NA
+"Económico","Tabasco","Tasa de Ocupación parcial y desocupación/","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"14.9","16.3245",NA,NA
+"Económico","Tabasco","Tasa de Presión general","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"10.9","11.0901",NA,NA
+"Económico","Tabasco","Tasa de Trabajo asalariado","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"61.8","63.0945",NA,NA
+"Económico","Tabasco","Tasa de Subocupación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"15","15.4738",NA,NA
+"Económico","Tabasco","Tasa de Condiciones críticas de ocupación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"38.4","36.8018",NA,NA
+"Económico","Tabasco","Tasa de Informalidad laboral","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"66.7","35.9566",NA,NA
+"Económico","Tabasco","Tasa de Ocupación en el sector informal","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"35.4","66.9505",NA,NA
+"Económico","Tamaulipas","Población Económicamente Activa PEA","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"1690458","1715946",NA,NA
+"Económico","Tamaulipas","Población Ocupada","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"1633145","1653268",NA,NA
+"Económico","Tamaulipas","Población Desocupada","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"57313","62678",NA,NA
+"Económico","Tamaulipas","Tasa de Participación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"59.6","60.3175",NA,NA
+"Económico","Tamaulipas","Tasa de Desocupación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"3.4","3.6527",NA,NA
+"Económico","Tamaulipas","Tasa de Ocupación parcial y desocupación/","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"11.1","11.3184",NA,NA
+"Económico","Tamaulipas","Tasa de Presión general","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"7.7","7.6984",NA,NA
+"Económico","Tamaulipas","Tasa de Trabajo asalariado","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"69.1","70.1665",NA,NA
+"Económico","Tamaulipas","Tasa de Subocupación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"11.1","9.5018",NA,NA
+"Económico","Tamaulipas","Tasa de Condiciones críticas de ocupación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"39.3","39.5423",NA,NA
+"Económico","Tamaulipas","Tasa de Informalidad laboral","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"45.5","24.7375",NA,NA
+"Económico","Tamaulipas","Tasa de Ocupación en el sector informal","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"23.8","46.4384",NA,NA
+"Económico","Tlaxcala","Población Económicamente Activa PEA","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"692989","703274",NA,NA
+"Económico","Tlaxcala","Población Ocupada","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"675389","686868",NA,NA
+"Económico","Tlaxcala","Población Desocupada","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"17600","16406",NA,NA
+"Económico","Tlaxcala","Tasa de Participación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"60.2","60.882",NA,NA
+"Económico","Tlaxcala","Tasa de Desocupación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"2.5","2.3328",NA,NA
+"Económico","Tlaxcala","Tasa de Ocupación parcial y desocupación/","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"10.6","10.5049",NA,NA
+"Económico","Tlaxcala","Tasa de Presión general","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"6.4","6.4385",NA,NA
+"Económico","Tlaxcala","Tasa de Trabajo asalariado","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"63.8","62.7091",NA,NA
+"Económico","Tlaxcala","Tasa de Subocupación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"11.6","12.426",NA,NA
+"Económico","Tlaxcala","Tasa de Condiciones críticas de ocupación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"44.8","42.2773",NA,NA
+"Económico","Tlaxcala","Tasa de Informalidad laboral","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"70.9","42.1503",NA,NA
+"Económico","Tlaxcala","Tasa de Ocupación en el sector informal","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"41.5","72.1772",NA,NA
+"Económico","Veracruz de Ignacio de la Llave","Población Económicamente Activa PEA","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"3486109","3478565",NA,NA
+"Económico","Veracruz de Ignacio de la Llave","Población Ocupada","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"3417651","3398317",NA,NA
+"Económico","Veracruz de Ignacio de la Llave","Población Desocupada","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"68458","80248",NA,NA
+"Económico","Veracruz de Ignacio de la Llave","Tasa de Participación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"54.4","54.6315",NA,NA
+"Económico","Veracruz de Ignacio de la Llave","Tasa de Desocupación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"2","2.3069",NA,NA
+"Económico","Veracruz de Ignacio de la Llave","Tasa de Ocupación parcial y desocupación/","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"9.2","10.5222",NA,NA
+"Económico","Veracruz de Ignacio de la Llave","Tasa de Presión general","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"3.2","4.0315",NA,NA
+"Económico","Veracruz de Ignacio de la Llave","Tasa de Trabajo asalariado","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"58.4","60.8658",NA,NA
+"Económico","Veracruz de Ignacio de la Llave","Tasa de Subocupación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"6.2","8.5745",NA,NA
+"Económico","Veracruz de Ignacio de la Llave","Tasa de Condiciones críticas de ocupación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"40.5","35.643",NA,NA
+"Económico","Veracruz de Ignacio de la Llave","Tasa de Informalidad laboral","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"70.1","31.0722",NA,NA
+"Económico","Veracruz de Ignacio de la Llave","Tasa de Ocupación en el sector informal","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"31.8","70.0727",NA,NA
+"Económico","Yucatan","Población Económicamente Activa PEA","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"1239857","1241774",NA,NA
+"Económico","Yucatan","Población Ocupada","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"1220915","1217647",NA,NA
+"Económico","Yucatan","Población Desocupada","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"18942","24127",NA,NA
+"Económico","Yucatan","Tasa de Participación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"65.6","65.8104",NA,NA
+"Económico","Yucatan","Tasa de Desocupación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"1.5","1.9429",NA,NA
+"Económico","Yucatan","Tasa de Ocupación parcial y desocupación/","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"11.7","12.7802",NA,NA
+"Económico","Yucatan","Tasa de Presión general","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"5.2","6.1399",NA,NA
+"Económico","Yucatan","Tasa de Trabajo asalariado","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"67.3","66.5087",NA,NA
+"Económico","Yucatan","Tasa de Subocupación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"6.7","8.4932",NA,NA
+"Económico","Yucatan","Tasa de Condiciones críticas de ocupación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"33.7","33.0017",NA,NA
+"Económico","Yucatan","Tasa de Informalidad laboral","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"57","32.7931",NA,NA
+"Económico","Yucatan","Tasa de Ocupación en el sector informal","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"31.9","58.6446",NA,NA
+"Económico","Zacatecas","Población Económicamente Activa PEA","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"670058","702078",NA,NA
+"Económico","Zacatecas","Población Ocupada","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"650754","688229",NA,NA
+"Económico","Zacatecas","Población Desocupada","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"19304","13849",NA,NA
+"Económico","Zacatecas","Tasa de Participación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"53.3","55.5632",NA,NA
+"Económico","Zacatecas","Tasa de Desocupación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"2.9","1.9726",NA,NA
+"Económico","Zacatecas","Tasa de Ocupación parcial y desocupación/","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"11.2","9.9456",NA,NA
+"Económico","Zacatecas","Tasa de Presión general","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"6.1","5.8734",NA,NA
+"Económico","Zacatecas","Tasa de Trabajo asalariado","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"67.5","64.2007",NA,NA
+"Económico","Zacatecas","Tasa de Subocupación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"8.1","10.4019",NA,NA
+"Económico","Zacatecas","Tasa de Condiciones críticas de ocupación","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"36.4","34.433",NA,NA
+"Económico","Zacatecas","Tasa de Informalidad laboral","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"57.8","23.7511",NA,NA
+"Económico","Zacatecas","Tasa de Ocupación en el sector informal","https://www.inegi.org.mx/programas/enoe/15ymas/#tabulados",NA,NA,NA,NA,"24.7","58.8481",NA,NA
+"Económico","Aguascalientes","Exportaciones por Entidad Federativa","https://www.inegi.org.mx/temas/exportacionesef/#tabulados","3913330","3333573","3450795","3558598","3252237","3212701",NA,NA
+"Económico","Baja California","Exportaciones por Entidad Federativa","https://www.inegi.org.mx/temas/exportacionesef/#tabulados","11507691","14360683","14488252","15237937","12588098","13634081",NA,NA
+"Económico","Baja California Sur","Exportaciones por Entidad Federativa","https://www.inegi.org.mx/temas/exportacionesef/#tabulados","110652","131022","162355","186275","114865","109490",NA,NA
+"Económico","Campeche","Exportaciones por Entidad Federativa","https://www.inegi.org.mx/temas/exportacionesef/#tabulados","3299368","3136642","2812682","3109012","2525137","2090686",NA,NA
+"Económico","Coahuila de Zaragoza","Exportaciones por Entidad Federativa","https://www.inegi.org.mx/temas/exportacionesef/#tabulados","15465276","17665981","17238048","17236852","15811519","17733473",NA,NA
+"Económico","Colima","Exportaciones por Entidad Federativa","https://www.inegi.org.mx/temas/exportacionesef/#tabulados","347186","377715","387300","371297","440573","465581",NA,NA
+"Económico","Chiapas","Exportaciones por Entidad Federativa","https://www.inegi.org.mx/temas/exportacionesef/#tabulados","309972","345236","250704","266895","297995","422270",NA,NA
+"Económico","Chihuahua","Exportaciones por Entidad Federativa","https://www.inegi.org.mx/temas/exportacionesef/#tabulados","16720440","18321119","20229251","20122805","21320700","26230508",NA,NA
+"Económico","Ciudad de México","Exportaciones por Entidad Federativa","https://www.inegi.org.mx/temas/exportacionesef/#tabulados","936075","1032161","1047072","1016663","942219","953806",NA,NA
+"Económico","Durango","Exportaciones por Entidad Federativa","https://www.inegi.org.mx/temas/exportacionesef/#tabulados","679310","759153","768080","737093","694175","715623",NA,NA
+"Económico","Guanajuato","Exportaciones por Entidad Federativa","https://www.inegi.org.mx/temas/exportacionesef/#tabulados","8947765","8921156","8919946","9526227","7520703","8570708",NA,NA
+"Económico","Guerrero","Exportaciones por Entidad Federativa","https://www.inegi.org.mx/temas/exportacionesef/#tabulados","312340","356695","456989","442927","270453","250095",NA,NA
+"Económico","Hidalgo","Exportaciones por Entidad Federativa","https://www.inegi.org.mx/temas/exportacionesef/#tabulados","885270","796493","953462","940656","750091","808885",NA,NA
+"Económico","Jalisco","Exportaciones por Entidad Federativa","https://www.inegi.org.mx/temas/exportacionesef/#tabulados","6768212","7276357","7320325","9060059","8457107","10249521",NA,NA
+"Económico","México","Exportaciones por Entidad Federativa","https://www.inegi.org.mx/temas/exportacionesef/#tabulados","5310987","6126029","5634832","5787681","5909847","5419427",NA,NA
+"Económico","Michoacán de Ocampo","Exportaciones por Entidad Federativa","https://www.inegi.org.mx/temas/exportacionesef/#tabulados","1855090","1384252","1341245","1777586","2074049","1706107",NA,NA
+"Económico","Morelos","Exportaciones por Entidad Federativa","https://www.inegi.org.mx/temas/exportacionesef/#tabulados","860041","934528","1038014","997632","1000285","862665",NA,NA
+"Económico","Nayarit","Exportaciones por Entidad Federativa","https://www.inegi.org.mx/temas/exportacionesef/#tabulados","95407","119619","94865","85105","91825","116528",NA,NA
+"Económico","Nuevo León","Exportaciones por Entidad Federativa","https://www.inegi.org.mx/temas/exportacionesef/#tabulados","13045249","13781297","15287899","15195491","13259403","14471046",NA,NA
+"Económico","Oaxaca","Exportaciones por Entidad Federativa","https://www.inegi.org.mx/temas/exportacionesef/#tabulados","323432","467880","391405","229368","318174","363340",NA,NA
+"Económico","Puebla","Exportaciones por Entidad Federativa","https://www.inegi.org.mx/temas/exportacionesef/#tabulados","4149143","4975693","4932138","4829966","3360222","4047006",NA,NA
+"Económico","Querétaro","Exportaciones por Entidad Federativa","https://www.inegi.org.mx/temas/exportacionesef/#tabulados","4499936","4789119","4231284","4121865","4016949","4656141",NA,NA
+"Económico","Quintana Roo","Exportaciones por Entidad Federativa","https://www.inegi.org.mx/temas/exportacionesef/#tabulados","11326","6176","4159","14589","5238","9307",NA,NA
+"Económico","San Luis Potosí","Exportaciones por Entidad Federativa","https://www.inegi.org.mx/temas/exportacionesef/#tabulados","5723725","5957859","5487630","6202145","5676929","6038305",NA,NA
+"Económico","Sinaloa","Exportaciones por Entidad Federativa","https://www.inegi.org.mx/temas/exportacionesef/#tabulados","1469722","980491","586145","581647","1329199","814758",NA,NA
+"Económico","Sonora","Exportaciones por Entidad Federativa","https://www.inegi.org.mx/temas/exportacionesef/#tabulados","6844614","7928037","6946126","6777105","6994659","7519154",NA,NA
+"Económico","Tabasco","Exportaciones por Entidad Federativa","https://www.inegi.org.mx/temas/exportacionesef/#tabulados","2325822","2267823","2067100","2219547","1955702","1468118",NA,NA
+"Económico","Tamaulipas","Exportaciones por Entidad Federativa","https://www.inegi.org.mx/temas/exportacionesef/#tabulados","8527195","9231139","9549347","9600488","8606640","9761515",NA,NA
+"Económico","Tlaxcala","Exportaciones por Entidad Federativa","https://www.inegi.org.mx/temas/exportacionesef/#tabulados","436405","488694","519575","484018","472085","527094",NA,NA
+"Económico","Veracruz de Ignacio de la Llave","Exportaciones por Entidad Federativa","https://www.inegi.org.mx/temas/exportacionesef/#tabulados","1974628","1963125","1672203","1810483","1939962","1820805",NA,NA
+"Económico","Yucatán","Exportaciones por Entidad Federativa","https://www.inegi.org.mx/temas/exportacionesef/#tabulados","433240","506718","570093","591923","560094","604065",NA,NA
+"Económico","Zacatecas","Exportaciones por Entidad Federativa","https://www.inegi.org.mx/temas/exportacionesef/#tabulados","848987","970354","862938","1271151","1067838","1330670",NA,NA
+"Económico","Aguascalientes","Indicador Trimestral de la Actividad Economica Estatal ITAEE","https://www.inegi.org.mx/temas/itaee/#tabulados","101.082600100438","102.137879463541","102.095990139426","101.407092797225","102.001388087601",NA,NA,NA
+"Económico","Baja California","Indicador Trimestral de la Actividad Economica Estatal ITAEE","https://www.inegi.org.mx/temas/itaee/#tabulados","107.388917498658","110.573757194141","109.61326410789","107.870727037409","108.705645958065",NA,NA,NA
+"Económico","Baja California Sur","Indicador Trimestral de la Actividad Economica Estatal ITAEE","https://www.inegi.org.mx/temas/itaee/#tabulados","100.054444566575","101.071661011701","100.723554416557","102.088343576072","103.961098832325",NA,NA,NA
+"Económico","Campeche","Indicador Trimestral de la Actividad Economica Estatal ITAEE","https://www.inegi.org.mx/temas/itaee/#tabulados","90.2589636367784","85.4833838235278","79.6688762410917","80.3029976963613","75.1338153931645",NA,NA,NA
+"Económico","Coahuila de Zaragoza","Indicador Trimestral de la Actividad Economica Estatal ITAEE","https://www.inegi.org.mx/temas/itaee/#tabulados","93.0767386733529","97.539499604008","96.3955976275628","95.0679679612086","93.7009811619066",NA,NA,NA
+"Económico","Colima","Indicador Trimestral de la Actividad Economica Estatal ITAEE","https://www.inegi.org.mx/temas/itaee/#tabulados","102.81437724784","103.863777344233","102.554508298957","103.791573496266","105.440876676313",NA,NA,NA
+"Económico","Chiapas","Indicador Trimestral de la Actividad Economica Estatal ITAEE","https://www.inegi.org.mx/temas/itaee/#tabulados","108.833769880819","109.382532313117","110.529687176331","110.222206099042","108.864688674202",NA,NA,NA
+"Económico","Chihuahua","Indicador Trimestral de la Actividad Economica Estatal ITAEE","https://www.inegi.org.mx/temas/itaee/#tabulados","110.3868061912","110.141721862521","110.934706527891","109.971610510703","108.971660066289",NA,NA,NA
+"Económico","Ciudad de México","Indicador Trimestral de la Actividad Economica Estatal ITAEE","https://www.inegi.org.mx/temas/itaee/#tabulados","103.979509406799","103.580119814047","105.298713814194","105.934928649105","105.497161731774",NA,NA,NA
+"Económico","Durango","Indicador Trimestral de la Actividad Economica Estatal ITAEE","https://www.inegi.org.mx/temas/itaee/#tabulados","104.278733287771","108.788414262473","104.728241891087","102.636298036629","103.830322638758",NA,NA,NA
+"Económico","Guanajuato","Indicador Trimestral de la Actividad Economica Estatal ITAEE","https://www.inegi.org.mx/temas/itaee/#tabulados","102.50995479686","102.987938274972","105.476940672706","106.303220062425","104.735338119958",NA,NA,NA
+"Económico","Guerrero","Indicador Trimestral de la Actividad Economica Estatal ITAEE","https://www.inegi.org.mx/temas/itaee/#tabulados","97.599518915544","101.910439242421","102.144706162756","102.974906248249","105.417876749268",NA,NA,NA
+"Económico","Hidalgo","Indicador Trimestral de la Actividad Economica Estatal ITAEE","https://www.inegi.org.mx/temas/itaee/#tabulados","106.701559267036","104.618311637647","108.875371670381","106.560303908556","107.287974809132",NA,NA,NA
+"Económico","Jalisco","Indicador Trimestral de la Actividad Economica Estatal ITAEE","https://www.inegi.org.mx/temas/itaee/#tabulados","105.510557141612","105.918090741106","105.494827899207","105.339686487106","106.172084829029",NA,NA,NA
+"Económico","México","Indicador Trimestral de la Actividad Economica Estatal ITAEE","https://www.inegi.org.mx/temas/itaee/#tabulados","103.031182178983","102.955977592727","103.937543624763","103.270437070932","103.637356224215",NA,NA,NA
+"Económico","Michoacán de Ocampo","Indicador Trimestral de la Actividad Economica Estatal ITAEE","https://www.inegi.org.mx/temas/itaee/#tabulados","105.883940428227","106.901024885739","107.89579905216","105.140841932007","107.264514270212",NA,NA,NA
+"Económico","Morelos","Indicador Trimestral de la Actividad Economica Estatal ITAEE","https://www.inegi.org.mx/temas/itaee/#tabulados","98.1145388829525","100.416845129265","100.343654260668","98.2190519083964","100.13422238747",NA,NA,NA
+"Económico","Nayarit","Indicador Trimestral de la Actividad Economica Estatal ITAEE","https://www.inegi.org.mx/temas/itaee/#tabulados","101.240584900157","101.334892324608","102.535243373728","102.638380283924","106.000208644623",NA,NA,NA
+"Económico","Nuevo León","Indicador Trimestral de la Actividad Economica Estatal ITAEE","https://www.inegi.org.mx/temas/itaee/#tabulados","107.115015530274","106.879911630685","110.796459026259","109.699932332708","108.526977546055",NA,NA,NA
+"Económico","Oaxaca","Indicador Trimestral de la Actividad Economica Estatal ITAEE","https://www.inegi.org.mx/temas/itaee/#tabulados","118.916590370047","124.563479092837","126.688849159988","123.743323034827","125.698253353736",NA,NA,NA
+"Económico","Puebla","Indicador Trimestral de la Actividad Economica Estatal ITAEE","https://www.inegi.org.mx/temas/itaee/#tabulados","102.59295468951","104.347103980295","105.045562675557","102.553927905868","101.870868276034",NA,NA,NA
+"Económico","Querétaro","Indicador Trimestral de la Actividad Economica Estatal ITAEE","https://www.inegi.org.mx/temas/itaee/#tabulados","101.708004404742","102.67853014945","102.791056002602","101.592370419785","102.288101981095",NA,NA,NA
+"Económico","Quintana Roo","Indicador Trimestral de la Actividad Economica Estatal ITAEE","https://www.inegi.org.mx/temas/itaee/#tabulados","106.46178729461","105.987172468303","102.284216913036","100.851209798706","96.6201291901089",NA,NA,NA
+"Económico","San Luis Potosí","Indicador Trimestral de la Actividad Economica Estatal ITAEE","https://www.inegi.org.mx/temas/itaee/#tabulados","102.730439648486","103.171402062163","104.880166417475","102.699058035539","105.052973573262",NA,NA,NA
+"Económico","Sinaloa","Indicador Trimestral de la Actividad Economica Estatal ITAEE","https://www.inegi.org.mx/temas/itaee/#tabulados","98.3541380083834","97.5926560655242","98.6682875385459","93.7409320801134","100.322337912261",NA,NA,NA
+"Económico","Sonora","Indicador Trimestral de la Actividad Economica Estatal ITAEE","https://www.inegi.org.mx/temas/itaee/#tabulados","105.381979063213","105.832200713177","106.102344390797","105.518776646826","105.781730940244",NA,NA,NA
+"Económico","Tabasco","Indicador Trimestral de la Actividad Economica Estatal ITAEE","https://www.inegi.org.mx/temas/itaee/#tabulados","135.424313046369","129.674167946465","127.269301012937","122.126777604792","118.812776734732",NA,NA,NA
+"Económico","Tamaulipas","Indicador Trimestral de la Actividad Economica Estatal ITAEE","https://www.inegi.org.mx/temas/itaee/#tabulados","102.356556049969","103.746801633263","104.970445892253","105.993748677834","105.279930287428",NA,NA,NA
+"Económico","Tlaxcala","Indicador Trimestral de la Actividad Economica Estatal ITAEE","https://www.inegi.org.mx/temas/itaee/#tabulados","100.873348864667","102.921095846409","102.371917544388","100.655588117324","102.096329990239",NA,NA,NA
+"Económico","Veracruz de Ignacio de la Llave","Indicador Trimestral de la Actividad Economica Estatal ITAEE","https://www.inegi.org.mx/temas/itaee/#tabulados","106.472494321039","107.023976596549","107.502120521394","106.683080662294","106.091340807569",NA,NA,NA
+"Económico","Yucatán","Indicador Trimestral de la Actividad Economica Estatal ITAEE","https://www.inegi.org.mx/temas/itaee/#tabulados","108.427580050924","109.260885846274","110.402755241226","110.032153968331","110.723744909503",NA,NA,NA
+"Económico","Zacatecas","Indicador Trimestral de la Actividad Economica Estatal ITAEE","https://www.inegi.org.mx/temas/itaee/#tabulados","102.72507160276","104.787418623725","105.764188718089","104.12510537312","106.390829860812",NA,NA,NA
+"Económico","Aguascalientes","Informalidad Laboral","https://mexicocomovamos.mx/datos/","39.4%","41.0%","41.6%","42.0%","40.9%","42.7%",NA,NA
+"Económico","Baja California","Informalidad Laboral","https://mexicocomovamos.mx/datos/","37.1%","36.2%","36.6%","37.4%","36.1%","37.3%",NA,NA
+"Económico","Baja California Sur","Informalidad Laboral","https://mexicocomovamos.mx/datos/","40.7%","39.9%","37.9%","39.1%","37.7%","36.7%",NA,NA
+"Económico","Campeche","Informalidad Laboral","https://mexicocomovamos.mx/datos/","62.5%","60.5%","60.3%","61.9%","61.7%","61.1%",NA,NA
+"Económico","Coahuila de Zaragoza","Informalidad Laboral","https://mexicocomovamos.mx/datos/","36.2%","38.3%","38.0%","37.6%","36.4%","37.4%",NA,NA
+"Económico","Colima","Informalidad Laboral","https://mexicocomovamos.mx/datos/","52.0%","50.6%","47.8%","48.9%","50.8%","51.0%",NA,NA
+"Económico","Chiapas","Informalidad Laboral","https://mexicocomovamos.mx/datos/","70.6%","71.4%","72.3%","74.4%","73.5%","73.4%",NA,NA
+"Económico","Chihuahua","Informalidad Laboral","https://mexicocomovamos.mx/datos/","31.7%","33.2%","33.1%","32.5%","30.9%","31.8%",NA,NA
+"Económico","Ciudad de México","Informalidad Laboral","https://mexicocomovamos.mx/datos/","47.7%","45.8%","46.4%","46.1%","44.8%","44.2%",NA,NA
+"Económico","Durango","Informalidad Laboral","https://mexicocomovamos.mx/datos/","52.1%","51.6%","52.7%","53.1%","51.5%","52.9%",NA,NA
+"Económico","Guanajuato","Informalidad Laboral","https://mexicocomovamos.mx/datos/","56.4%","56.5%","56.5%","56.5%","54.9%","56.1%",NA,NA
+"Económico","Guerrero","Informalidad Laboral","https://mexicocomovamos.mx/datos/","80.1%","78.7%","79.5%","79.2%","76.8%","75.2%",NA,NA
+"Económico","Hidalgo","Informalidad Laboral","https://mexicocomovamos.mx/datos/","72.7%","74.3%","72.9%","74.3%","76.7%","74.1%",NA,NA
+"Económico","Jalisco","Informalidad Laboral","https://mexicocomovamos.mx/datos/","50.4%","49.6%","48.0%","48.2%","47.5%","46.6%",NA,NA
+"Económico","México","Informalidad Laboral","https://mexicocomovamos.mx/datos/","56.5%","53.6%","55.1%","55.5%","56.8%","56.3%",NA,NA
+"Económico","Michoacán de Ocampo","Informalidad Laboral","https://mexicocomovamos.mx/datos/","65.3%","65.3%","67.1%","66.8%","66.7%","68.7%",NA,NA
+"Económico","Morelos","Informalidad Laboral","https://mexicocomovamos.mx/datos/","67.2%","67.1%","67.0%","68.1%","66.1%","64.6%",NA,NA
+"Económico","Nayarit","Informalidad Laboral","https://mexicocomovamos.mx/datos/","56.3%","58.5%","59.9%","60.2%","59.6%","58.8%",NA,NA
+"Económico","Nuevo León","Informalidad Laboral","https://mexicocomovamos.mx/datos/","40.3%","39.5%","38.9%","35.6%","36.1%","37.7%",NA,NA
+"Económico","Oaxaca","Informalidad Laboral","https://mexicocomovamos.mx/datos/","79.7%","79.2%","81.5%","78.0%","75.7%","79.3%",NA,NA
+"Económico","Puebla","Informalidad Laboral","https://mexicocomovamos.mx/datos/","73.0%","71.5%","72.1%","72.7%","74.1%","72.7%",NA,NA
+"Económico","Querétaro","Informalidad Laboral","https://mexicocomovamos.mx/datos/","45.9%","43.9%","45.5%","42.5%","41.0%","43.5%",NA,NA
+"Económico","Quintana Roo","Informalidad Laboral","https://mexicocomovamos.mx/datos/","47.4%","47.4%","45.8%","46.7%","45.8%","45.2%",NA,NA
+"Económico","San Luis Potosí","Informalidad Laboral","https://mexicocomovamos.mx/datos/","54.0%","54.6%","56.0%","55.8%","55.8%","56.4%",NA,NA
+"Económico","Sinaloa","Informalidad Laboral","https://mexicocomovamos.mx/datos/","49.2%","49.0%","46.3%","44.7%","44.6%","47.0%",NA,NA
+"Económico","Sonora","Informalidad Laboral","https://mexicocomovamos.mx/datos/","39.4%","42.7%","40.9%","40.6%","42.1%","46.2%",NA,NA
+"Económico","Tabasco","Informalidad Laboral","https://mexicocomovamos.mx/datos/","66.1%","65.3%","63.7%","67.0%","68.0%","67.6%",NA,NA
+"Económico","Tamaulipas","Informalidad Laboral","https://mexicocomovamos.mx/datos/","43.0%","43.6%","47.3%","48.6%","49.3%","48.8%",NA,NA
+"Económico","Tlaxcala","Informalidad Laboral","https://mexicocomovamos.mx/datos/","72.0%","70.9%","70.7%","70.9%","71.2%","72.9%",NA,NA
+"Económico","Veracruz de Ignacio de la Llave","Informalidad Laboral","https://mexicocomovamos.mx/datos/","67.3%","67.8%","70.9%","70.0%","69.5%","70.4%",NA,NA
+"Económico","Yucatán","Informalidad Laboral","https://mexicocomovamos.mx/datos/","63.6%","64.3%","63.3%","61.6%","61.1%","62.2%",NA,NA
+"Económico","Zacatecas","Informalidad Laboral","https://mexicocomovamos.mx/datos/","57.1%","59.2%","57.9%","56.7%","55.0%","57.2%",NA,NA
+"Económico","Aguascalientes","Ingresos por Remesas","https://www.banxico.org.mx/SieInternet/consultarDirectorioInternetAction.do?accion=consultarCuadroAnalitico&idCuadro=CA79",NA,NA,NA,NA,"216.615052","236.20795",NA,NA
+"Económico","Baja California","Ingresos por Remesas","https://www.banxico.org.mx/SieInternet/consultarDirectorioInternetAction.do?accion=consultarCuadroAnalitico&idCuadro=CA79",NA,NA,NA,NA,"340.163344","472.009694",NA,NA
+"Económico","Baja California Sur","Ingresos por Remesas","https://www.banxico.org.mx/SieInternet/consultarDirectorioInternetAction.do?accion=consultarCuadroAnalitico&idCuadro=CA79",NA,NA,NA,NA,"34.211966","34.033457",NA,NA
+"Económico","Campeche","Ingresos por Remesas","https://www.banxico.org.mx/SieInternet/consultarDirectorioInternetAction.do?accion=consultarCuadroAnalitico&idCuadro=CA79",NA,NA,NA,NA,"39.66907","44.163663",NA,NA
+"Económico","Coahuila de Zaragoza","Ingresos por Remesas","https://www.banxico.org.mx/SieInternet/consultarDirectorioInternetAction.do?accion=consultarCuadroAnalitico&idCuadro=CA79",NA,NA,NA,NA,"201.325101","210.578693",NA,NA
+"Económico","Colima","Ingresos por Remesas","https://www.banxico.org.mx/SieInternet/consultarDirectorioInternetAction.do?accion=consultarCuadroAnalitico&idCuadro=CA79",NA,NA,NA,NA,"98.470401","102.014745",NA,NA
+"Económico","Chiapas","Ingresos por Remesas","https://www.banxico.org.mx/SieInternet/consultarDirectorioInternetAction.do?accion=consultarCuadroAnalitico&idCuadro=CA79",NA,NA,NA,NA,"971.383016","1067.439015",NA,NA
+"Económico","Chihuahua","Ingresos por Remesas","https://www.banxico.org.mx/SieInternet/consultarDirectorioInternetAction.do?accion=consultarCuadroAnalitico&idCuadro=CA79",NA,NA,NA,NA,"320.892214","328.519716",NA,NA
+"Económico","Ciudad de México","Ingresos por Remesas","https://www.banxico.org.mx/SieInternet/consultarDirectorioInternetAction.do?accion=consultarCuadroAnalitico&idCuadro=CA79",NA,NA,NA,NA,"942.873313","817.672728",NA,NA
+"Económico","Durango","Ingresos por Remesas","https://www.banxico.org.mx/SieInternet/consultarDirectorioInternetAction.do?accion=consultarCuadroAnalitico&idCuadro=CA79",NA,NA,NA,NA,"284.393357","329.517199",NA,NA
+"Económico","Guanajuato","Ingresos por Remesas","https://www.banxico.org.mx/SieInternet/consultarDirectorioInternetAction.do?accion=consultarCuadroAnalitico&idCuadro=CA79",NA,NA,NA,NA,"1216.969375","1387.251686",NA,NA
+"Económico","Guerrero","Ingresos por Remesas","https://www.banxico.org.mx/SieInternet/consultarDirectorioInternetAction.do?accion=consultarCuadroAnalitico&idCuadro=CA79",NA,NA,NA,NA,"797.985951","856.996177",NA,NA
+"Económico","Hidalgo","Ingresos por Remesas","https://www.banxico.org.mx/SieInternet/consultarDirectorioInternetAction.do?accion=consultarCuadroAnalitico&idCuadro=CA79",NA,NA,NA,NA,"395.523388","447.926037",NA,NA
+"Económico","Jalisco","Ingresos por Remesas","https://www.banxico.org.mx/SieInternet/consultarDirectorioInternetAction.do?accion=consultarCuadroAnalitico&idCuadro=CA79",NA,NA,NA,NA,"1248.592002","1260.464068",NA,NA
+"Económico","México","Ingresos por Remesas","https://www.banxico.org.mx/SieInternet/consultarDirectorioInternetAction.do?accion=consultarCuadroAnalitico&idCuadro=CA79",NA,NA,NA,NA,"890.688557","933.680731",NA,NA
+"Económico","Michoacán de Ocampo","Ingresos por Remesas","https://www.banxico.org.mx/SieInternet/consultarDirectorioInternetAction.do?accion=consultarCuadroAnalitico&idCuadro=CA79",NA,NA,NA,NA,"1267.818903","1328.874207",NA,NA
+"Económico","Morelos","Ingresos por Remesas","https://www.banxico.org.mx/SieInternet/consultarDirectorioInternetAction.do?accion=consultarCuadroAnalitico&idCuadro=CA79",NA,NA,NA,NA,"263.355221","293.387714",NA,NA
+"Económico","Nayarit","Ingresos por Remesas","https://www.banxico.org.mx/SieInternet/consultarDirectorioInternetAction.do?accion=consultarCuadroAnalitico&idCuadro=CA79",NA,NA,NA,NA,"184.541358","197.330378",NA,NA
+"Económico","Nuevo León","Ingresos por Remesas","https://www.banxico.org.mx/SieInternet/consultarDirectorioInternetAction.do?accion=consultarCuadroAnalitico&idCuadro=CA79",NA,NA,NA,NA,"270.201278","289.490166",NA,NA
+"Económico","Oaxaca","Ingresos por Remesas","https://www.banxico.org.mx/SieInternet/consultarDirectorioInternetAction.do?accion=consultarCuadroAnalitico&idCuadro=CA79",NA,NA,NA,NA,"807.635373","870.859941",NA,NA
+"Económico","Puebla","Ingresos por Remesas","https://www.banxico.org.mx/SieInternet/consultarDirectorioInternetAction.do?accion=consultarCuadroAnalitico&idCuadro=CA79",NA,NA,NA,NA,"788.559122","857.198628",NA,NA
+"Económico","Querétaro","Ingresos por Remesas","https://www.banxico.org.mx/SieInternet/consultarDirectorioInternetAction.do?accion=consultarCuadroAnalitico&idCuadro=CA79",NA,NA,NA,NA,"278.336915","309.273325",NA,NA
+"Económico","Quintana Roo","Ingresos por Remesas","https://www.banxico.org.mx/SieInternet/consultarDirectorioInternetAction.do?accion=consultarCuadroAnalitico&idCuadro=CA79",NA,NA,NA,NA,"84.747818","84.424953",NA,NA
+"Económico","San Luis Potosí","Ingresos por Remesas","https://www.banxico.org.mx/SieInternet/consultarDirectorioInternetAction.do?accion=consultarCuadroAnalitico&idCuadro=CA79",NA,NA,NA,NA,"449.549621","518.56414",NA,NA
+"Económico","Sinaloa","Ingresos por Remesas","https://www.banxico.org.mx/SieInternet/consultarDirectorioInternetAction.do?accion=consultarCuadroAnalitico&idCuadro=CA79",NA,NA,NA,NA,"175.560766","184.467603",NA,NA
+"Económico","Sonora","Ingresos por Remesas","https://www.banxico.org.mx/SieInternet/consultarDirectorioInternetAction.do?accion=consultarCuadroAnalitico&idCuadro=CA79",NA,NA,NA,NA,"178.123637","174.791762",NA,NA
+"Económico","Tabasco","Ingresos por Remesas","https://www.banxico.org.mx/SieInternet/consultarDirectorioInternetAction.do?accion=consultarCuadroAnalitico&idCuadro=CA79",NA,NA,NA,NA,"79.07274","83.439349",NA,NA
+"Económico","Tamaulipas","Ingresos por Remesas","https://www.banxico.org.mx/SieInternet/consultarDirectorioInternetAction.do?accion=consultarCuadroAnalitico&idCuadro=CA79",NA,NA,NA,NA,"217.548092","245.758508",NA,NA
+"Económico","Tlaxcala","Ingresos por Remesas","https://www.banxico.org.mx/SieInternet/consultarDirectorioInternetAction.do?accion=consultarCuadroAnalitico&idCuadro=CA79",NA,NA,NA,NA,"86.55154","101.254059",NA,NA
+"Económico","Veracruz de Ignacio de la Llave","Ingresos por Remesas","https://www.banxico.org.mx/SieInternet/consultarDirectorioInternetAction.do?accion=consultarCuadroAnalitico&idCuadro=CA79",NA,NA,NA,NA,"594.45251","658.599735",NA,NA
+"Económico","Yucatán","Ingresos por Remesas","https://www.banxico.org.mx/SieInternet/consultarDirectorioInternetAction.do?accion=consultarCuadroAnalitico&idCuadro=CA79",NA,NA,NA,NA,"107.702574","113.921142",NA,NA
+"Económico","Zacatecas","Ingresos por Remesas","https://www.banxico.org.mx/SieInternet/consultarDirectorioInternetAction.do?accion=consultarCuadroAnalitico&idCuadro=CA79",NA,NA,NA,NA,"420.216829","482.215934",NA,NA
+"Económico","Aguascalientes","Inversion Extranjera Directa IED","https://www.gob.mx/se/acciones-y-programas/competitividad-y-normatividad-inversion-extranjera-directa?state=published","-89.5803474388188","394.128879718849","724.879700705787","993.069874008631","109.853080577278","394.592189786924",NA,NA
+"Económico","Baja California","Inversion Extranjera Directa IED","https://www.gob.mx/se/acciones-y-programas/competitividad-y-normatividad-inversion-extranjera-directa?state=published","1082.63286753132","1809.06587697644","1998.27799435655","2478.52534795626","857.12456019552","1576.56110749051",NA,NA
+"Económico","Baja California Sur","Inversion Extranjera Directa IED","https://www.gob.mx/se/acciones-y-programas/competitividad-y-normatividad-inversion-extranjera-directa?state=published","174.323505472245","366.939143268178","819.722169974017","1353.15764638548","83.7326389688449","565.634457681109",NA,NA
+"Económico","Campeche","Inversion Extranjera Directa IED","https://www.gob.mx/se/acciones-y-programas/competitividad-y-normatividad-inversion-extranjera-directa?state=published","12.5982099930438","126.609792033818","136.216160863963","535.955691244807","-2.87875536026484","11.6089934254017",NA,NA
+"Económico","Coahuila de Zaragoza","Inversion Extranjera Directa IED","https://www.gob.mx/se/acciones-y-programas/competitividad-y-normatividad-inversion-extranjera-directa?state=published","6.24943929964958","391.998695809047","481.481519072","396.740199236577","538.400142046803","845.115200660775",NA,NA
+"Económico","Colima","Inversion Extranjera Directa IED","https://www.gob.mx/se/acciones-y-programas/competitividad-y-normatividad-inversion-extranjera-directa?state=published","65.1935686478598","245.373983889813","261.371530899697","260.978809218263","3.93887042916335","275.089042754161",NA,NA
+"Económico","Chiapas","Inversion Extranjera Directa IED","https://www.gob.mx/se/acciones-y-programas/competitividad-y-normatividad-inversion-extranjera-directa?state=published","9.41843733051251","101.242476102337","107.39340855486","104.736610992126","1.99202690569613","28.1309485201945",NA,NA
+"Económico","Chihuahua","Inversion Extranjera Directa IED","https://www.gob.mx/se/acciones-y-programas/competitividad-y-normatividad-inversion-extranjera-directa?state=published","683.057354779836","1076.27237967783","1250.21084651373","1496.72583295936","440.473920073655","936.102466520854",NA,NA
+"Económico","Ciudad de México","Inversion Extranjera Directa IED","https://www.gob.mx/se/acciones-y-programas/competitividad-y-normatividad-inversion-extranjera-directa?state=published","12042.9936790362","14184.3720872113","15778.1854485985","14426.5323594284","11805.7773086041","19311.7753951304",NA,NA
+"Económico","Durango","Inversion Extranjera Directa IED","https://www.gob.mx/se/acciones-y-programas/competitividad-y-normatividad-inversion-extranjera-directa?state=published","106.711506642557","134.915198868122","226.383765751086","230.172685077265","-13.8901780137951","-58.5683131277078",NA,NA
+"Económico","Guanajuato","Inversion Extranjera Directa IED","https://www.gob.mx/se/acciones-y-programas/competitividad-y-normatividad-inversion-extranjera-directa?state=published","596.779225336805","1351.01505352748","1671.2278357925","1442.37896093707","700.469845619409","870.657619864121",NA,NA
+"Económico","Guerrero","Inversion Extranjera Directa IED","https://www.gob.mx/se/acciones-y-programas/competitividad-y-normatividad-inversion-extranjera-directa?state=published","0","0","0","0","0","37.0445803534853",NA,NA
+"Económico","Hidalgo","Inversion Extranjera Directa IED","https://www.gob.mx/se/acciones-y-programas/competitividad-y-normatividad-inversion-extranjera-directa?state=published","136.287793627865","210.899821563922","282.915720777724","295.968784658782","68.9463814107983","73.628569400306",NA,NA
+"Económico","Jalisco","Inversion Extranjera Directa IED","https://www.gob.mx/se/acciones-y-programas/competitividad-y-normatividad-inversion-extranjera-directa?state=published","593.356034100826","892.974924475249","1160.97342348383","1100.30241013084","606.872441068148","933.005115823801",NA,NA
+"Económico","México","Inversion Extranjera Directa IED","https://www.gob.mx/se/acciones-y-programas/competitividad-y-normatividad-inversion-extranjera-directa?state=published","674.805480627456","1709.32452412002","2594.54312591404","2641.65669655403","1888.25829677624","2248.79111084686",NA,NA
+"Económico","Michoacán de Ocampo","Inversion Extranjera Directa IED","https://www.gob.mx/se/acciones-y-programas/competitividad-y-normatividad-inversion-extranjera-directa?state=published","167.544687020514","201.253541383167","174.640305048317","110.557158862264","106.332658014775","161.41036867201",NA,NA
+"Económico","Morelos","Inversion Extranjera Directa IED","https://www.gob.mx/se/acciones-y-programas/competitividad-y-normatividad-inversion-extranjera-directa?state=published","-42.1972484972852","148.396156062396","152.333897576236","160.547107083773","5.36801689489784","116.849251889515",NA,NA
+"Económico","Nayarit","Inversion Extranjera Directa IED","https://www.gob.mx/se/acciones-y-programas/competitividad-y-normatividad-inversion-extranjera-directa?state=published","11.3673073423648","183.338752425417","317.360511226913","363.4808494674","45.887520435822","129.6349976233",NA,NA
+"Económico","Nuevo León","Inversion Extranjera Directa IED","https://www.gob.mx/se/acciones-y-programas/competitividad-y-normatividad-inversion-extranjera-directa?state=published","1350.72162672428","2304.2460963132","1582.36124260061","2098.24569987928","2674.17976813692","3032.24123962361",NA,NA
+"Económico","Oaxaca","Inversion Extranjera Directa IED","https://www.gob.mx/se/acciones-y-programas/competitividad-y-normatividad-inversion-extranjera-directa?state=published","0","0","0","0","0","-14.1039118903956",NA,NA
+"Económico","Puebla","Inversion Extranjera Directa IED","https://www.gob.mx/se/acciones-y-programas/competitividad-y-normatividad-inversion-extranjera-directa?state=published","362.462708310311","933.350627960772","1113.15988911543","1168.41450142668","384.445152138386","107.317656727022",NA,NA
+"Económico","Querétaro","Inversion Extranjera Directa IED","https://www.gob.mx/se/acciones-y-programas/competitividad-y-normatividad-inversion-extranjera-directa?state=published","489.314217916008","878.62829031088","994.483078385214","1055.14882929516","302.013001325108","970.28402864431",NA,NA
+"Económico","Quintana Roo","Inversion Extranjera Directa IED","https://www.gob.mx/se/acciones-y-programas/competitividad-y-normatividad-inversion-extranjera-directa?state=published","82.9075930127644","578.973271378994","841.158270873929","921.326501830851","289.579854912326","509.099724864251",NA,NA
+"Económico","San Luis Potosí","Inversion Extranjera Directa IED","https://www.gob.mx/se/acciones-y-programas/competitividad-y-normatividad-inversion-extranjera-directa?state=published","663.565510377195","1064.23427398635","984.477164317244","843.682633381596","125.714555381126","223.025236596706",NA,NA
+"Económico","Sinaloa","Inversion Extranjera Directa IED","https://www.gob.mx/se/acciones-y-programas/competitividad-y-normatividad-inversion-extranjera-directa?state=published","141.758561302156","262.842780294053","283.137528619095","316.107907354019","17.3702117377685","34.3486288791986",NA,NA
+"Económico","Sonora","Inversion Extranjera Directa IED","https://www.gob.mx/se/acciones-y-programas/competitividad-y-normatividad-inversion-extranjera-directa?state=published","63.8627721163061","105.003104145238","213.196050697441","305.402461791065","3.92092439476793","162.049410028621",NA,NA
+"Económico","Tabasco","Inversion Extranjera Directa IED","https://www.gob.mx/se/acciones-y-programas/competitividad-y-normatividad-inversion-extranjera-directa?state=published","0","0","0","0","0","-69.2199714974776",NA,NA
+"Económico","Tamaulipas","Inversion Extranjera Directa IED","https://www.gob.mx/se/acciones-y-programas/competitividad-y-normatividad-inversion-extranjera-directa?state=published","104.105107805591","341.689177753211","317.27443879248","463.044537711866","232.253388359109","457.204220276756",NA,NA
+"Económico","Tlaxcala","Inversion Extranjera Directa IED","https://www.gob.mx/se/acciones-y-programas/competitividad-y-normatividad-inversion-extranjera-directa?state=published","33.3374802930201","69.6662576355149","77.0147881858841","94.1626401716613","34.2408773521917","105.904032472431",NA,NA
+"Económico","Veracruz de Ignacio de la Llave","Inversion Extranjera Directa IED","https://www.gob.mx/se/acciones-y-programas/competitividad-y-normatividad-inversion-extranjera-directa?state=published","684.884154914323","361.284284167291","519.694158833504","419.892260262718","99.8845965007002","94.5798940243471",NA,NA
+"Económico","Yucatán","Inversion Extranjera Directa IED","https://www.gob.mx/se/acciones-y-programas/competitividad-y-normatividad-inversion-extranjera-directa?state=published","48.5535411551798","98.7601934409064","130.66403891151","147.829054821653","16.4938541359072","59.9526381286406",NA,NA
+"Económico","Zacatecas","Inversion Extranjera Directa IED","https://www.gob.mx/se/acciones-y-programas/competitividad-y-normatividad-inversion-extranjera-directa?state=published","-11.4473384361778","72.8825050419034","81.1845567517165","130.997852361988","12.1448226072391","134.821532771815",NA,NA
+"Económico","Aguascalientes","Productividad Laboral","https://mexicocomovamos.mx/datos/","$237","$241","$237","$235","$246",NA,NA,NA
+"Económico","Baja California","Productividad Laboral","https://mexicocomovamos.mx/datos/","$280","$280","$279","$275","$285",NA,NA,NA
+"Económico","Baja California Sur","Productividad Laboral","https://mexicocomovamos.mx/datos/","$203","$210","$203","$208","$211",NA,NA,NA
+"Económico","Campeche","Productividad Laboral","https://mexicocomovamos.mx/datos/","$555","$542","$504","$502","$579",NA,NA,NA
+"Económico","Coahuila de Zaragoza","Productividad Laboral","https://mexicocomovamos.mx/datos/","$312","$315","$311","$296","$310",NA,NA,NA
+"Económico","Colima","Productividad Laboral","https://mexicocomovamos.mx/datos/","$224","$227","$220","$227","$227",NA,NA,NA
+"Económico","Chiapas","Productividad Laboral","https://mexicocomovamos.mx/datos/","$84","$88","$89","$86","$85",NA,NA,NA
+"Económico","Chihuahua","Productividad Laboral","https://mexicocomovamos.mx/datos/","$277","$275","$274","$265","$279",NA,NA,NA
+"Económico","Ciudad de México","Productividad Laboral","https://mexicocomovamos.mx/datos/","$423","$411","$410","$402","$407",NA,NA,NA
+"Económico","Durango","Productividad Laboral","https://mexicocomovamos.mx/datos/","$206","$212","$196","$192","$198",NA,NA,NA
+"Económico","Guanajuato","Productividad Laboral","https://mexicocomovamos.mx/datos/","$199","$201","$203","$205","$200",NA,NA,NA
+"Económico","Guerrero","Productividad Laboral","https://mexicocomovamos.mx/datos/","$104","$111","$112","$118","$108",NA,NA,NA
+"Económico","Hidalgo","Productividad Laboral","https://mexicocomovamos.mx/datos/","$162","$158","$163","$159","$157",NA,NA,NA
+"Económico","Jalisco","Productividad Laboral","https://mexicocomovamos.mx/datos/","$236","$241","$239","$239","$247",NA,NA,NA
+"Económico","México","Productividad Laboral","https://mexicocomovamos.mx/datos/","$141","$136","$137","$132","$138",NA,NA,NA
+"Económico","Michoacán de Ocampo","Productividad Laboral","https://mexicocomovamos.mx/datos/","$156","$159","$163","$157","$161",NA,NA,NA
+"Económico","Morelos","Productividad Laboral","https://mexicocomovamos.mx/datos/","$149","$156","$154","$158","$153",NA,NA,NA
+"Económico","Nayarit","Productividad Laboral","https://mexicocomovamos.mx/datos/","$129","$133","$140","$137","$144",NA,NA,NA
+"Económico","Nuevo León","Productividad Laboral","https://mexicocomovamos.mx/datos/","$348","$344","$356","$348","$351",NA,NA,NA
+"Económico","Oaxaca","Productividad Laboral","https://mexicocomovamos.mx/datos/","$130","$139","$144","$148","$137",NA,NA,NA
+"Económico","Puebla","Productividad Laboral","https://mexicocomovamos.mx/datos/","$142","$145","$141","$142","$144",NA,NA,NA
+"Económico","Querétaro","Productividad Laboral","https://mexicocomovamos.mx/datos/","$261","$261","$252","$246","$263",NA,NA,NA
+"Económico","Quintana Roo","Productividad Laboral","https://mexicocomovamos.mx/datos/","$181","$182","$173","$168","$194",NA,NA,NA
+"Económico","San Luis Potosí","Productividad Laboral","https://mexicocomovamos.mx/datos/","$229","$235","$244","$242","$264",NA,NA,NA
+"Económico","Sinaloa","Productividad Laboral","https://mexicocomovamos.mx/datos/","$198","$202","$210","$188","$212",NA,NA,NA
+"Económico","Sonora","Productividad Laboral","https://mexicocomovamos.mx/datos/","$309","$307","$316","$304","$319",NA,NA,NA
+"Económico","Tabasco","Productividad Laboral","https://mexicocomovamos.mx/datos/","$304","$305","$298","$283","$313",NA,NA,NA
+"Económico","Tamaulipas","Productividad Laboral","https://mexicocomovamos.mx/datos/","$244","$250","$249","$250","$244",NA,NA,NA
+"Económico","Tlaxcala","Productividad Laboral","https://mexicocomovamos.mx/datos/","$110","$111","$109","$108","$112",NA,NA,NA
+"Económico","Veracruz de Ignacio de la Llave","Productividad Laboral","https://mexicocomovamos.mx/datos/","$155","$160","$162","$165","$158",NA,NA,NA
+"Económico","Yucatán","Productividad Laboral","https://mexicocomovamos.mx/datos/","$176","$176","$177","$178","$175",NA,NA,NA
+"Económico","Zacatecas","Productividad Laboral","https://mexicocomovamos.mx/datos/","$186","$189","$184","$183","$185",NA,NA,NA

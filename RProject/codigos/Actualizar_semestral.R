@@ -1,6 +1,6 @@
-datos = read.csv("Datos/Municipal-Delitos-2015-2025_ago2025.csv", fileEncoding = "latin1")
+datos = read.csv("../../../Repositorios/Seguridad_Tablero_Movil/Municipal-Delitos - Septiembre 2025 (2015-2025).csv", fileEncoding = "latin1")
 
-ejemplo = read.csv("Datos/Semestral.csv")
+ejemplo = read.csv("../Datos/Semestral.csv")
 
 datos = datos |> 
   dplyr::rename(Indicador = Tipo.de.delito)

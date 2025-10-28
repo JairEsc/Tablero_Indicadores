@@ -1,131 +1,119 @@
-//Reestructuración.
-let bienvenida_tab = true;
-let posiblesIndicadores=[];//Variable global para guardar los indicadores.
-let indicadoresMensuales=[];//Variable global para guardar los indicadores.
-let indicadoresTrimestrales=[];//Variable global para guardar los indicadores.
-function linearRegression(y, x) {
-  //Hace regresión lineal dados y,x
-  var lr = {};
-  var n = y.length;
-  var sum_x = 0;
-  var sum_y = 0;
-  var sum_xy = 0;
-  var sum_xx = 0;
-  var sum_yy = 0;
-  for (var i = 0; i < y.length; i++) {
-    sum_x += x[i];
-    sum_y += y[i];
-    sum_xy += x[i] * y[i];
-    sum_xx += x[i] * x[i];
-    sum_yy += y[i] * y[i];
-  }
-  lr["slope"] = (n * sum_xy - sum_x * sum_y) / (n * sum_xx - sum_x * sum_x);
-  lr["intercept"] = (sum_y - lr.slope * sum_x) / n;
-  return lr;
-}
-document.getElementById('historico').addEventListener('dblclick', () => {
-  chart.resetZoom();
-});
 
-B.onChange = function (newValue) {
-  //console.log(newValue);
-  var sortedEstados = chart_nac.data.labels;
-  
-  chart_nac.data.datasets[0].backgroundColor = sortedEstados.map(() => 
-    "rgba(220, 220, 220, 0.2)" // or whatever default color you want
+//Leemos el archivo que contiene la problemática y el periodo en el 
+// que está registrado y lo guardamos en tablaTiempos, suponemos que está bien hecho
+// y en sus variables son: Tema, Indicador, Temporalidad
+let tablaTiempos = [];
+let TODO_quitado = 0;
+async function cargarTablaTiempos() {
+  const response = await fetch("Datos/Que_tiempo2.csv");
+  const data = await response.text();
+  const lines = data.split("\n").filter(line => line.trim() !== "");
+  const rows = lines.slice(1).map(line => line.split(","));
+  tablaTiempos = rows.map(row => ({
+    tema: row[0].trim().replace(/^"|"$/g, ""),
+    indicador: row[1].trim().replace(/^"|"$/g, ""),
+    tiempo: row[2].trim().replace(/^"|"$/g, "")
+  }));
+  return tablaTiempos;
+}
+
+function limpiarTexto(txt) {
+  return txt.normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+            .replace(/["'\r]/g, "")
+            .trim();
+}
+async function cargarArchivoPorTemaEIndicador(temaSeleccionado, indicadorSeleccionado) {
+  const registro = tablaTiempos.find(entry =>
+    entry.tema === temaSeleccionado && entry.indicador === indicadorSeleccionado
   );
-  chart_nac.data.datasets[0].backgroundColor[sortedEstados.indexOf(newValue)] =
-    "rgba(75, 192, 192, 1)";
-  chart_nac.data.datasets[0].backgroundColor[sortedEstados.indexOf('Hidalgo')] =
-    "rgba(75, 192, 192, 1)";
-    
-  chart_nac.update();
-};
-//Pasos. 
-//1. Consumir el archivo de temporalidad.csv para alimentar los indicadores generales
 
-PromesaLeerPosiblesIndicadores= new Promise ((res,rej)=>{
-    fetch("Datos/Que_tiempo2.csv").then(respuesta=>{
-      //console.log(respuesta)
-      respuesta.text().then(datos=>{res(datos.split("\r\n").slice(1).map(line => line.split(",").map(item =>item.trim().replace(/^"|"$/g, ""))))})
-    })
-})
-rellenarIndicadores=function(datos,tema='Todo'){
-  const select = document.getElementById("indicador_tablero_indicadores");
-  $("#indicador_tablero_indicadores").empty();
-  var uniqueIndicators = new Set();
-  datos.forEach((line, index) => {
-    var indicadorValue = line[0]+': '+line[1];
-    //Se va a seleccionar
-    if (!uniqueIndicators.has(indicadorValue)) {
-      const option = document.createElement("option");
-      option.value = indicadorValue;
-      if(tema=='Todo'){
-        option.text  = indicadorValue;}
-      else{
-        option.text  = line[1];
-      }
-      select.appendChild(option);
-      uniqueIndicators.add(indicadorValue);
-    }
-  });
-}
-PromesaLeerPosiblesIndicadores.then(//Alimentamos el select de indicadores generales
-  datos=>{
-    posiblesIndicadores=datos
-  console.log(datos)
-  rellenarIndicadores(datos)
-})
-
-PromesaLeerMensuales= new Promise ((res,rej)=>{
-    fetch("Datos/Mensual.csv").then(respuesta=>{
-      respuesta.text().then(datos=>{res(datos.split("\r\n").slice(0).map(line => line.split(",").map(item =>item.trim().replace(/^"|"$/g, ""))))})
-    })
-})
-PromesaLeerTrimestrales= new Promise ((res,rej)=>{
-    fetch("Datos/Trimestral.csv").then(respuesta=>{
-      respuesta.text().then(datos=>{res(datos.split("\r\n").slice(0).map(line => line.split(",").map(item =>item.trim().replace(/^"|"$/g, ""))))})
-    })
-})
-
-PromesaLeerMensuales.then(datos=>{
-  indicadoresMensuales=datos
-})
-PromesaLeerTrimestrales.then(datos=>{
-  indicadoresTrimestrales=datos
-})
-//2. Supongamos que elige indicador sin especificar tema
-revisarTemporalidadIndicador=function(indicador){
-    const filaIndicador = posiblesIndicadores.find(line => (line[0]+': '+line[1]) === indicador);
-    if(filaIndicador){
-      //console.log(filaIndicador)
-      return filaIndicador[2]; // temporalidad
-    }else{
-      return null; //Indicador no encontrado
-    }
-}
-generarDatos_DadoIndicadorTema=function(tema="Todo",indicador){
-  let base;
-  //Se deben generar dos listas. Histórico y Nacional. 
-  const temporalidadIndicadorSeleccionado=revisarTemporalidadIndicador(indicador)
-  switch(temporalidadIndicadorSeleccionado){
-    case "Mensual":
-      base=indicadoresMensuales;
-      break;
-    case "Trimestral":
-      base= indicadoresTrimestrales;
-      break;
+  if (!registro) {
+    alert("No se encontró el archivo correspondiente para esta combinación.");
+    return;
   }
-  console.log(base)
-  //base contiene la informacion de todos los indicadores.
-  base_filtrada=base.filter(line=>{return((line[0]+': '+line[2])==indicador || line[0]==='Tema')})
-  //base_filtrada solamente la del indicador.
-  console.log(base_filtrada)
-  if(tema==="Todo"){
-    console.log("Estamos en Todo")
+
+  const tiempo = registro.tiempo;
+  const archivoCSV = `Datos/${tiempo}.csv`;
+
+  const response = await fetch(archivoCSV);
+  const csv = await response.text();
+
+  const lines = csv.split("\n");
+  Header = lines[0].split(",");
+  base = lines.slice(1).map(line => line.split(","));
+
+  console.log("Archivo cargado:", archivoCSV);
+  if(temaSeleccionado=="Todo"){
+    temaSeleccionado2=indicadorSeleccionado.split(": ")[0];
+    indicadorSeleccionado2=indicadorSeleccionado.split(": ")[1];
+  }else{
+    temaSeleccionado2=temaSeleccionado;
+    indicadorSeleccionado2=indicadorSeleccionado;
   }
-  return(base_filtrada)
+  console.log(temaSeleccionado2);
+  console.log(indicadorSeleccionado2);
+nac = base.filter(line =>
+  limpiarTexto(line[0]) === limpiarTexto(temaSeleccionado2) &&
+  limpiarTexto(line[2]) === limpiarTexto(indicadorSeleccionado2)
+);
+return(tiempo)
 }
+// Para llenar todo en base a Todo
+let RRR=[];
+async function cargarArchivoParaTodo() {
+  const archivoCSV = `Datos/Que_tiempo2.csv`;
+
+  const response = await fetch(archivoCSV);
+  const csv = await response.text();
+
+  const lines = csv.split("\n");
+  Header = lines[0].split(",");
+  base = lines.slice(1).map(line => line.split(","));
+
+  console.log("Archivo cargado:", archivoCSV);
+  RRR = base.filter(line =>
+    limpiarTexto(line[0]) == "Todo"
+  );
+  return RRR;
+}
+
+async function todito() {
+  RRR = await cargarArchivoParaTodo();
+  console.log(RRR);
+  fetchData(RRR,5);
+}
+todito();
+// Fin del Todo
+
+//Después de quitar Todo
+let MA=[];
+async function cargarArchivoParaMA() {
+  const archivoCSV = `Datos/Que_tiempo2.csv`;
+
+  const response = await fetch(archivoCSV);
+  const csv = await response.text();
+
+  const lines = csv.split("\n");
+  Header = lines[0].split(",");
+  base = lines.slice(1).map(line => line.split(","));
+
+  console.log("Archivo cargado:", archivoCSV);
+  MA = base.filter(line =>
+    limpiarTexto(line[0]) == "Medio Ambiente"
+  );
+  return MA;
+}
+async function ActualizarParaMA() {
+  MA = await cargarArchivoParaMA();
+  console.log(MA);
+  fetchData(MA,5);
+}
+//
+
+/////////////////////////////////////////////////////////
+//INICIO ORIGINAL
+/////////////////////////////////////////////////////////
+
 function openChart(evt, tagName) {
   //funcion para activar una de las gráficas según la elección.
   var i, tabcontent, tablinks;
@@ -157,27 +145,131 @@ function openChart(evt, tagName) {
   //console.log("Estamos imprimiendo tagName: ", tagName);
 
 }
+function linearRegression(y, x) {
+  //Hace regresión lineal dados y,x
+  var lr = {};
+  var n = y.length;
+  var sum_x = 0;
+  var sum_y = 0;
+  var sum_xy = 0;
+  var sum_xx = 0;
+  var sum_yy = 0;
+  for (var i = 0; i < y.length; i++) {
+    sum_x += x[i];
+    sum_y += y[i];
+    sum_xy += x[i] * y[i];
+    sum_xx += x[i] * x[i];
+    sum_yy += y[i] * y[i];
+  }
+  lr["slope"] = (n * sum_xy - sum_x * sum_y) / (n * sum_xx - sum_x * sum_x);
+  lr["intercept"] = (sum_y - lr.slope * sum_x) / n;
+  return lr;
+}
+function fetchData(data, valor) {//Para este sería suficiente un .csv con header (Tema, Indicador)
+  //Dado un conjunto de datos y una elección de tema, rellena las posibles opciones del indicador.
+  const select = document.getElementById("indicador_tablero_indicadores");
+  $("#indicador_tablero_indicadores").empty();
+  var uniqueIndicators = new Set();
+  // const option = document.createElement("option");
+  // option.value = "default";
+  // option.text = "Seleccione uno";
+  // select.appendChild(option);
+  // uniqueIndicators.add("Seleccione uno");
+  data.slice(0).forEach((line, index) => {
+    var indicadorValue = line[1].trim().replace(/^"|"$/g, "");
+    //Se va a seleccionar
+    if (!uniqueIndicators.has(indicadorValue)) {
+      const option = document.createElement("option");
+      option.value = indicadorValue;
+      option.text = indicadorValue;
+      select.appendChild(option);
+      uniqueIndicators.add(indicadorValue);
+    }
+  });
+}
+document.getElementById("defaultOpen").click(); //El histórico es la gráfica por default.
+//Posibles Temas
+let Medio_Ambiente = [];
+let Gobierno = [];
+let Social = [];
+let Economico = [];
+let Seguridad = [];
+let Genero = [];
+let Todo = [];
+let base;
+let Header;
+
+console.log(tablaTiempos); //Aún no tiene nada
+
+Promise.all([
+  fetch("Datos/Que_tiempo2.csv").then((response) => response.text()),
+  cargarTablaTiempos()
+]).then(([historicoData]) => {
+  //Simplemente particionamos por tema. 
+  var lines = historicoData.split("\n");
+  Header=lines[0].split(",")
+  lines.slice(1).forEach((line) => {
+    let values = line.split(",");
+    let tema = values[0].trim().replace(/^"|"$/g, "").replace(/^'|'$/g, "");
+    switch (tema) {
+      case "Medio Ambiente":
+        Medio_Ambiente.push(values);
+        break;
+      case "Gobierno":
+        Gobierno.push(values);
+        break;
+      case "Social":
+        Social.push(values);
+        break;
+      case "Económico":
+        Economico.push(values);
+        break;
+      case "Seguridad":
+        Seguridad.push(values);
+        break;
+      case "Género":
+        Genero.push(values);
+        break;
+      case "Todo":
+        Todo.push(values);
+        break;
+    }
+  });
+});
+
+
 
 $("#tema_tablero_indicadores").change(function () {
 
   document.getElementById('indicador_tablero_indicadoresSearch').value=''
   //De manera dinámica, cada vez que se cambia el valor de "tema", hace lo siguiente:
-  //$("#option option[value='default']").remove();
+  $("#option option[value='default']").remove();
   //Elegimos el tema:
-  console.log($(this).val())
-  posiblesIndicadores_filtrados=posiblesIndicadores.filter(
-    line=>{
-      return (line[0]===$(this).val() || $(this).val()=='Todo')
-    }
-  )
-  document.getElementById("tema_tablero_indicadores").hidden = false;
-  document.getElementById("tema_tablero_indicadores").options[0].text = "Buscar entre todos los indicadores";
-  //document.getElementById("ForTema").style.display = "none";
-  document.getElementById("instruccion_buscar_por_indicador").style.display = "none";
-  //document.querySelector('.search_title').textContent = 'Busca un Tema y luego un Indicador';
-
-  rellenarIndicadores(posiblesIndicadores_filtrados,tema=$(this).val())
-
+  switch ($(this).val()) {
+    case "Medio Ambiente":
+      base = Medio_Ambiente;
+      break;
+    case "Gobierno":
+      base = Gobierno;
+      break;
+    case "Social":
+      base = Social;
+      break;
+    case "Económico":
+      base = Economico;
+      break;
+    case "Seguridad":
+      base = Seguridad;
+      break;
+    case "Género":
+      base = Genero;
+      break;
+    case "Todo":
+      base= Todo
+      break;
+  }
+  // Ahora puedes usar el objeto base
+  fetchData(base, $(this).val().toString()); //
 });
 
 
@@ -190,20 +282,16 @@ $("#indicador_tablero_indicadoresSearch").focus(function() {
 $("#indicador_tablero_indicadoresSearch").change(async function () {
   const temaSeleccionado = $("#tema_tablero_indicadores").val();
   const indicadorSeleccionado = $(this).val();
-  console.log($(this).val())
-  console.log(revisarTemporalidadIndicador($(this).val()))
-  tiempo_del_indic_sel=revisarTemporalidadIndicador($(this).val())
-  datosIndicadorTema=generarDatos_DadoIndicadorTema(tema='Todo',$(this).val())
-  //DatosIndicadorTema tiene header + datos nacionales del indicador.
-  console.log(datosIndicadorTema)
-  //Ocultar imagen de bienvenida.
+
+  tiempo_del_indic_sel=await cargarArchivoPorTemaEIndicador(temaSeleccionado, indicadorSeleccionado);
+
+  document.activeElement.blur();
   if (bienvenida_tab) {
     document.getElementsByClassName(
       "bienvenida_tab_tablero_indicadores"
     )[0].className = "tabcontent_hist_tablero_indicadores";
     bienvenida_tab = false;
   }
-  //Mostrar la seccion del tablero.
   document.getElementById("section_tablero_indicadores").style.visibility =
     "visible";
   document.getElementById("defaultOpen").click(); //simulamos que estamos en la historica para que se creen ambas
@@ -214,61 +302,74 @@ $("#indicador_tablero_indicadoresSearch").change(async function () {
     const event = new CustomEvent("jsonDataUpdated", {});
     window.dispatchEvent(event);
   }
-  console.log("Estamos imprimiendo el nac: ", datosIndicadorTema);
-  //Actualizar la descripción del indicador
-  document.getElementById("descripcion_indicador").innerHTML = datosIndicadorTema[1][2]+' (Temporalidad : '+tiempo_del_indic_sel+')';
-  document.getElementById("fuente").innerHTML = "Fuente:" + datosIndicadorTema[1][3];
+  console.log("Estamos imprimiendo el nac: ", nac);
+  if (nac[1].slice(4).every((val) => val === "NA")) {//Todos los estados tienen NA.
+    document.getElementById("tab_map").style.visibility = "hidden";
+    document.getElementById("info_hoverable").style.visibility = "hidden";
+  } else {
+    document.getElementById("tab_map").style.visibility = "visible";
+    document.getElementById("info_hoverable").style.visibility = "visible";
+  }
+
+  document.getElementById("descripcion_indicador").innerHTML = nac[1][2];
+  document.getElementById("fuente").innerHTML = "Fuente:" + nac[1][3];
   document.getElementById(
     "descripcion_indicador_title_tablero_indicadores"
   ).style.visibility = "visible";
   document.getElementById(
     "descripcion_indicador_title_tablero_indicadores"
-  ).innerHTML='Descripción del Indicador:  <p style="all:unset">'+$(this).val()+'</p>';//Agregamos el nombre del indicador a la descripción.
+  ).innerHTML='Descripción del Indicador:  <p style="all:unset">'+$(this).val()+' (Temporalidad : '+tiempo_del_indic_sel+')'+'</p>';//Agregamos el nombre del indicador a la descripción.
+
+
   ///////////////////////
   /// Cambios de Lalo ///
   ///////////////////////
-  Header=datosIndicadorTema[0]//Header de la base filtrada.
-  datosIndicadorTema=datosIndicadorTema.slice(1)
   let ultima_columna;
-  const numero_columnas = datosIndicadorTema[0].length;
+  const numero_columnas = nac[0].length;
+
   for (let i = numero_columnas - 1; i >= 0; i--) { 
-    const currentColumn = datosIndicadorTema.map(row => row[i]);
+    const currentColumn = nac.map(row => row[i]);
+
     // Verificar si la columna NO es toda 'NA' ni 0
     if (!currentColumn.every(x => x === 'NA' || x === 'NA\r') && !currentColumn.every(x => x == 0 || x == '0\r')) {
       ultima_columna = i;
       break;
     }
   }
+
   let primera_columna;
-  for (let i = 4; i < datosIndicadorTema[0].length; i++) {
-    const currentColumn = datosIndicadorTema.map((row) => row[i]);
+  for (let i = 4; i < nac[0].length; i++) {
+    const currentColumn = nac.map((row) => row[i]);
+
     if (!currentColumn.every((x) => x === "NA" || x === "NA\r") && !currentColumn.every((x) => x == 0 || x == "0\r")) {
       primera_columna = i;
       break; 
     }
   }
+
   console.log("Primera columna válida:", primera_columna, "Última columna válida:", ultima_columna);
   console.log("Encabezado first:", Header[primera_columna], "Encabezado last:", Header[ultima_columna]);
-  
-  //Rellenar select de años/meses en el mapa
+
+
   const select = document.getElementById("anio_mes");
   select.innerHTML = "";
+
+
   for (let i = primera_columna; i <= ultima_columna; i++) {
     let option = document.createElement("option");
     option.value = i;
     option.textContent = Header[i].replace(/^"|"|\r/g, "").split("_").reverse().map((parte, idx) => idx === 0 ? parte.padStart(2, "0") : parte).join("/");
     select.appendChild(option);
   }
+
   document.getElementById("anio_mes").value = ultima_columna; //Seleccionamos el último mes por default
 
-  //Cuando cambia la seleccion del mes/año en el mapa:
   document.getElementById("anio_mes").addEventListener("change", function() {
     columna_seleccionada = this.value; //También temporalidad
     console.log("Columna seleccionada:", columna_seleccionada);
-    let OriginalEstados = datosIndicadorTema[0].map((_, colIndex) => datosIndicadorTema.map(row => row[colIndex]))[1].map((x) => x.replace(/^"|"|\r$/g, ""))
-    //OriginalEstados=OriginalEstados.slice(1)//Quitamos header
-    var datosEstados = datosIndicadorTema[0].map((_, colIndex) => datosIndicadorTema.map(row => row[colIndex].replace(/^"|"|\r/g, "")))[columna_seleccionada]//Tomamos el primero
-    //datosEstados=datosEstados.slice(1)//Quitamosheader
+    let OriginalEstados = nac[0].map((_, colIndex) => nac.map(row => row[colIndex]))[1].map((x) => x.replace(/^"|"|\r$/g, ""))
+
+    var datosEstados = nac[0].map((_, colIndex) => nac.map(row => row[colIndex].replace(/^"|"|\r/g, "")))[columna_seleccionada]//Tomamos el primero
     const combined_Estados = datosEstados.map((dato_est, index) => ({
       dato: OriginalEstados[index], // Nombre estado
       value: dato_est == "NA" ? null : dato_est, // y su valor
@@ -309,9 +410,9 @@ $("#indicador_tablero_indicadoresSearch").change(async function () {
         labels: SortedEstados,
         datasets: [
           {
-            label: datosIndicadorTema[1][2].replace(/^"|"|\r|'$/g, ""),
+            label: nac[1][2].replace(/^"|"|\r|'$/g, ""),
             data: datosEstados,
-            backgroundColor:SortedEstados.map(()=>"rgba(75, 192, 192, 0.2)"),
+            backgroundColor: nac[1].slice(3).fill("rgba(75, 192, 192, 0.2)"),
             borderColor: "rgba(75, 192, 192, 1)",
             borderWidth: 1,
           },
@@ -358,8 +459,8 @@ $("#indicador_tablero_indicadoresSearch").change(async function () {
     //INICIA EL CAMBIO by Enrique//
   ////////////////////////////////////////////////////
   let firstCol;
-  for (let i = 4; i < datosIndicadorTema[0].length; i++) {
-    const currentColumn = datosIndicadorTema[0].map((_, colIndex) => datosIndicadorTema.map(row => row[colIndex]))[i];
+  for (let i = 4; i < nac[0].length; i++) {
+    const currentColumn = nac[0].map((_, colIndex) => nac.map(row => row[colIndex]))[i];
 
     firstCol=i
 
@@ -371,24 +472,24 @@ $("#indicador_tablero_indicadoresSearch").change(async function () {
     
   }
   let New_lastCol;
-  for (let i = 0; i < datosIndicadorTema[0].length; i++) {
-    const currentColumn = datosIndicadorTema[0].map((_, colIndex) => datosIndicadorTema.map(row => row[colIndex])).reverse()[i];
+  for (let i = 0; i < nac[0].length; i++) {
+    const currentColumn = nac[0].map((_, colIndex) => nac.map(row => row[colIndex])).reverse()[i];
     New_lastCol=i
     if (!currentColumn.every(x => x === 'NA' || x==='NA\r')&& !currentColumn.every(x=>x==0 || x=='0\r')) {
       break;
     }
   }
 
-  const Pre_Headers = Header.slice(firstCol, datosIndicadorTema[0].length - New_lastCol + 1);
+  const Pre_Headers = Header.slice(firstCol, nac[0].length - New_lastCol + 1);
 
   //Para seleccionar Hidalguito
-  const nac_Hidalgo = datosIndicadorTema.find(line => line[1] === "Hidalgo");
+  const nac_Hidalgo = nac.find(line => limpiarTexto(line[1]) === "Hidalgo");
 
   if (!nac_Hidalgo) {
   console.warn("Aguas! Hidalgo no está en este nac");
   }
 
-  const Pre_Datos = nac_Hidalgo.slice(firstCol, datosIndicadorTema[0].length - New_lastCol);
+  const Pre_Datos = nac_Hidalgo.slice(firstCol, nac[0].length - New_lastCol);
 
   if (Pre_Datos.length <= 1) {
     document.getElementById("tab_map").click();
@@ -564,3 +665,30 @@ document.getElementById('historico').addEventListener('dblclick', () => {
 });
 
 });
+B.onChange = function (newValue) {
+  //Utiliza una variable "global" que se usa en el script del mapa de méxico.
+  chart_nac.data.datasets[0].backgroundColor.fill("rgba(75, 192, 192, 0.2)");
+  var sortedEstados = chart_nac.data.labels;
+  chart_nac.data.datasets[0].backgroundColor[sortedEstados.indexOf("Hidalgo")] =
+    "rgba(75, 192, 192, 1)";
+  chart_nac.data.datasets[0].backgroundColor[sortedEstados.indexOf(newValue)] =
+    "rgba(75, 192, 192, 1)";
+  chart_nac.update();
+};
+
+document.getElementById('tema_tablero_indicadores').addEventListener('change', () => {
+  //console.log("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
+  document.getElementById("tema_tablero_indicadores").hidden = false;
+  //console.log(TODO_quitado)
+  if(TODO_quitado == 0){
+    console.log(document.getElementById("tema_tablero_indicadores"))
+    document.getElementById("tema_tablero_indicadores").options[0].text = "Buscar entre todos los indicadores";
+    //document.getElementById("ForTema").style.display = "none";
+    document.getElementById("instruccion_buscar_por_indicador").style.display = "none";
+    document.querySelector('.search_title').textContent = 'Busca un Tema y luego un Indicador';
+  }
+  TODO_quitado=TODO_quitado+1;
+
+  ActualizarParaMA();
+});
+let bienvenida_tab = true;
