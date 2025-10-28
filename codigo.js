@@ -3,6 +3,7 @@ let bienvenida_tab = true;
 let posiblesIndicadores=[];//Variable global para guardar los indicadores.
 let indicadoresMensuales=[];//Variable global para guardar los indicadores.
 let indicadoresTrimestrales=[];//Variable global para guardar los indicadores.
+let indicadoresAnuales=[];//Variable global para guardar los indicadores.
 function linearRegression(y, x) {
   //Hace regresión lineal dados y,x
   var lr = {};
@@ -87,12 +88,20 @@ PromesaLeerTrimestrales= new Promise ((res,rej)=>{
       respuesta.text().then(datos=>{res(datos.split("\r\n").slice(0).map(line => line.split(",").map(item =>item.trim().replace(/^"|"$/g, ""))))})
     })
 })
+PromesaLeerAnuales= new Promise ((res,rej)=>{
+    fetch("Datos/Anual.csv").then(respuesta=>{
+      respuesta.text().then(datos=>{res(datos.split("\r\n").slice(0).map(line => line.split(",").map(item =>item.trim().replace(/^"|"$/g, ""))))})
+    })
+})
 
 PromesaLeerMensuales.then(datos=>{
   indicadoresMensuales=datos
 })
 PromesaLeerTrimestrales.then(datos=>{
   indicadoresTrimestrales=datos
+})
+PromesaLeerAnuales.then(datos=>{
+  indicadoresAnuales=datos
 })
 //2. Supongamos que elige indicador sin especificar tema
 revisarTemporalidadIndicador=function(indicador){
@@ -114,6 +123,9 @@ generarDatos_DadoIndicadorTema=function(tema="Todo",indicador){
       break;
     case "Trimestral":
       base= indicadoresTrimestrales;
+      break;
+    case "Anual":
+      base= indicadoresAnuales;
       break;
   }
   console.log(base)

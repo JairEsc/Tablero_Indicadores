@@ -19,80 +19,80 @@
 </head>
 <body>
     <div class="container_tablero_indicadores">
-        <header style="
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    padding: 0px;
-">
-    
-    <div id="titulo_busqueda" style="
-        text-align: center; 
-        width: 100%;
-    ">
-        <p id='instruccion_buscar_por_indicador'style="
-            font-weight: bold;
-            margin: 0;
-        ">Busca un Indicador</p>
-    </div>
-
-    <div id="contenedor_busqueda" style="
-        display: flex;
-        flex-direction: row; 
-        gap: 10px; 
-        width: 100%;
-        max-width: 600px;
-        align-items: flex-start;
-    ">
-        
-        <div id="contenedor_input_indicador" style="flex-grow: 1;">
-             <input type="text" id="indicador_tablero_indicadoresSearch" list="indicador_tablero_indicadores" placeholder="Escribe o selecciona un indicador" style="
-                width: 100%;
-                padding: 8px;
-                border: 1px solid #ccc;
-                border-radius: 4px;
-                box-sizing: border-box;
-            "/>
-            <datalist id="indicador_tablero_indicadores">
-                <option value="Indicador 1">-Tema 1</option>
-                <option value="Indicador 1">-Tema 1-Indicador 2</option>
-                <option value="Indicador 1">-Tema 1-Indicador 2</option>
-            </datalist>
-        </div>
-        
-        <select id="tema_tablero_indicadores" style="
-            flex-grow: 1; 
-            padding: 8px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box;
+        <header style="height: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            padding: 0px;
         ">
-            <option value="Todo" selected >O Busca por Tema</option>
-            <option value="Medio Ambiente">Medio Ambiente</option>
-            <option value="Económico">Económico</option>
-            <option value="Gobierno">Gobierno</option>
-            <option value="Social">Social</option>
-            <option value="Seguridad">Seguridad</option>
-            <option value="Género">Género</option>
-        </select>
-    </div>
+            
+            <div id="titulo_busqueda" style="
+                text-align: center; 
+                width: 100%;
+            ">
+                <p id='instruccion_buscar_por_indicador'style="
+                    font-weight: bold;
+                    margin: 0;
+                ">Busca un Indicador</p>
+            </div>
 
-    <!-- <div style="
-        text-align: center;
-        width: 100%;
-        max-width: 600px; 
-    ">
-        <button id="ForTema" style="
-            background: none;
-            border: none;
-            color: blue;
-            cursor: pointer;
-            text-decoration: underline;
-            padding: 5px 0;
-        ">O busca por Tema</button>
-    </div> -->
-</header>
+            <div id="contenedor_busqueda" style="
+                display: flex;
+                flex-direction: row; 
+                gap: 10px; 
+                width: 100%;
+                max-width: 600px;
+                align-items: flex-start;
+            ">
+                
+                <div id="contenedor_input_indicador" style="flex-grow: 1;">
+                    <input type="text" id="indicador_tablero_indicadoresSearch" list="indicador_tablero_indicadores" placeholder="Escribe o selecciona un indicador" style="
+                        width: 100%;
+                        padding: 8px;
+                        border: 1px solid #ccc;
+                        border-radius: 4px;
+                        box-sizing: border-box;
+                    "/>
+                    <datalist id="indicador_tablero_indicadores">
+                        <option value="Indicador 1">-Tema 1</option>
+                        <option value="Indicador 1">-Tema 1-Indicador 2</option>
+                        <option value="Indicador 1">-Tema 1-Indicador 2</option>
+                    </datalist>
+                </div>
+                
+                <select id="tema_tablero_indicadores" style="
+                    flex-grow: 1; 
+                    padding: 8px;
+                    border: 1px solid #ccc;
+                    border-radius: 4px;
+                    box-sizing: border-box;
+                ">
+                    <option value="Todo" selected >O Busca por Tema</option>
+                    <option value="Medio Ambiente">Medio Ambiente</option>
+                    <option value="Económico">Económico</option>
+                    <option value="Gobierno">Gobierno</option>
+                    <option value="Social">Social</option>
+                    <option value="Seguridad">Seguridad</option>
+                    <option value="Género">Género</option>
+                </select>
+            </div>
+
+            <!-- <div style="
+                text-align: center;
+                width: 100%;
+                max-width: 600px; 
+            ">
+                <button id="ForTema" style="
+                    background: none;
+                    border: none;
+                    color: blue;
+                    cursor: pointer;
+                    text-decoration: underline;
+                    padding: 5px 0;
+                ">O busca por Tema</button>
+            </div> -->
+        </header>
         
         <section class="indicator-description_tablero_indicadores">
             <h2 id="descripcion_indicador_title_tablero_indicadores">Descripción del Indicador</h2>
@@ -119,7 +119,7 @@
                 </div>
             </div>
               
-            <div id="nacional_chart" class="tabcontent_tablero_indicadores" >
+            <div id="nacional_chart" class="tabcontent_tablero_indicadores" style="display: none;" >
                 <div id="id-para-el-canvas">
                     <canvas class="chart2_tablero_indicadores" id="nacional" >
                     </canvas>
