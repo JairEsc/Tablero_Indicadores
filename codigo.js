@@ -82,12 +82,12 @@ $("#indicador_tablero_indicadoresSearch").focus(function() {
 $("#indicador_tablero_indicadoresSearch").change(async function () {
   const temaSeleccionado = $("#tema_tablero_indicadores").val();
   const indicadorSeleccionado = $(this).val();
-  console.log($(this).val())
-  console.log(revisarTemporalidadIndicador($(this).val()))
+  //console.log($(this).val())
+  //console.log(revisarTemporalidadIndicador($(this).val()))
   tiempo_del_indic_sel=revisarTemporalidadIndicador($(this).val())
   datosIndicadorTema=generarDatos_DadoIndicadorTema(tema='Todo',$(this).val())
   //DatosIndicadorTema tiene header + datos nacionales del indicador.
-  console.log(datosIndicadorTema)
+  //console.log(datosIndicadorTema)
   //Ocultar imagen de bienvenida.
   if (bienvenida_tab) {
     document.getElementsByClassName(
@@ -106,7 +106,7 @@ $("#indicador_tablero_indicadoresSearch").change(async function () {
     const event = new CustomEvent("jsonDataUpdated", {});
     window.dispatchEvent(event);
   }
-  console.log("Estamos imprimiendo el nac: ", datosIndicadorTema);
+  //console.log("Estamos imprimiendo el nac: ", datosIndicadorTema);
   //Actualizar la descripción del indicador
   document.getElementById("descripcion_indicador").innerHTML = datosIndicadorTema[1][2]+' (Temporalidad : '+tiempo_del_indic_sel+')';
   document.getElementById("fuente").innerHTML = "Fuente:" + datosIndicadorTema[1][3];
@@ -121,168 +121,38 @@ $("#indicador_tablero_indicadoresSearch").change(async function () {
   ///////////////////////
   Header=datosIndicadorTema[0]//Header de la base filtrada.
   datosIndicadorTema=datosIndicadorTema.slice(1)
-  let ultima_columna;
-  const numero_columnas = datosIndicadorTema[0].length;
-  for (let i = numero_columnas - 1; i >= 0; i--) { 
-    const currentColumn = datosIndicadorTema.map(row => row[i]);
-    // Verificar si la columna NO es toda 'NA' ni 0
-    if (!currentColumn.every(x => x === 'NA' || x === 'NA\r') && !currentColumn.every(x => x == 0 || x == '0\r')) {
-      ultima_columna = i;
-      break;
-    }
-  }
-  let primera_columna;
-  for (let i = 4; i < datosIndicadorTema[0].length; i++) {
-    const currentColumn = datosIndicadorTema.map((row) => row[i]);
-    if (!currentColumn.every((x) => x === "NA" || x === "NA\r") && !currentColumn.every((x) => x == 0 || x == "0\r")) {
-      primera_columna = i;
-      break; 
-    }
-  }
-  console.log("Primera columna válida:", primera_columna, "Última columna válida:", ultima_columna);
-  console.log("Encabezado first:", Header[primera_columna], "Encabezado last:", Header[ultima_columna]);
+  //Encontrar los datos no nulos (intervalo)
+  intervalosDatos=encontrarIntervaloDatos(datosIndicadorTema)
+  //console.log(intervalosDatos)
+  let primera_columna=intervalosDatos.primera_columna
+  let ultima_columna=intervalosDatos.ultima_columna
+  //console.log("Primera columna válida:", primera_columna, "Última columna válida:", ultima_columna);
+  //console.log("Encabezado first:", Header[primera_columna], "Encabezado last:", Header[ultima_columna]);
   
   //Rellenar select de años/meses en el mapa
-  const select = document.getElementById("anio_mes");
-  select.innerHTML = "";
+  const selectAnioMes = document.getElementById("anio_mes");
+  selectAnioMes.removeEventListener("change", updateChartAndMap);
+  selectAnioMes.innerHTML = "";
   for (let i = primera_columna; i <= ultima_columna; i++) {
     let option = document.createElement("option");
     option.value = i;
     option.textContent = Header[i].replace(/^"|"|\r/g, "").split("_").reverse().map((parte, idx) => idx === 0 ? parte.padStart(2, "0") : parte).join("/");
-    select.appendChild(option);
+    selectAnioMes.appendChild(option);
   }
   document.getElementById("anio_mes").value = ultima_columna; //Seleccionamos el último mes por default
 
   //Cuando cambia la seleccion del mes/año en el mapa:
-  document.getElementById("anio_mes").addEventListener("change", function() {
-    columna_seleccionada = this.value; //También temporalidad
-    console.log("Columna seleccionada:", columna_seleccionada);
-    let OriginalEstados = datosIndicadorTema[0].map((_, colIndex) => datosIndicadorTema.map(row => row[colIndex]))[1].map((x) => x.replace(/^"|"|\r$/g, ""))
-    //OriginalEstados=OriginalEstados.slice(1)//Quitamos header
-    var datosEstados = datosIndicadorTema[0].map((_, colIndex) => datosIndicadorTema.map(row => row[colIndex].replace(/^"|"|\r/g, "")))[columna_seleccionada]//Tomamos el primero
-    //datosEstados=datosEstados.slice(1)//Quitamosheader
-    const combined_Estados = datosEstados.map((dato_est, index) => ({
-      dato: OriginalEstados[index], // Nombre estado
-      value: dato_est == "NA" ? null : dato_est, // y su valor
-    })); 
-
-    const combined_Estados_ordenados = [...combined_Estados];
-    combined_Estados_ordenados.sort((a, b) => b.value - a.value);
-    
-    SortedEstados = combined_Estados_ordenados.map((item) =>
-      item.dato.toString()
-    );
-
-    indexedEstados = OriginalEstados.map(
-      (item) => SortedEstados.indexOf(item.toString()) + 1
-    ); 
-    console.log("indexed", indexedEstados)
-    console.log("datos", combined_Estados_ordenados)
-    mexico.features.forEach((feature, index) => {
-      feature.properties.Valor = datosEstados[index];
-      feature.properties.CVEGEO =
-        combined_Estados_ordenados[
-          SortedEstados.indexOf(feature.properties.NOMGEO)
-        ].value === null
-          ? "NA"
-          : 33 - indexedEstados[index].toString().padStart(2, "0"); //CVEGEO es su posición a nivel nacional
-    });
-
-    datosEstados = combined_Estados_ordenados.map((item) => item.value);
-
-    if (typeof chart_nac != "undefined") {
-      chart_nac.destroy();
-    }
-
-    const ctx_nac = document.getElementById("nacional").getContext("2d"); //inicio a crear la gráfica
-    chart_nac = new Chart(ctx_nac, {
-      type: "bar",
-      data: {
-        labels: SortedEstados,
-        datasets: [
-          {
-            label: datosIndicadorTema[1][2].replace(/^"|"|\r|'$/g, ""),
-            data: datosEstados,
-            backgroundColor:SortedEstados.map(()=>"rgba(75, 192, 192, 0.2)"),
-            borderColor: "rgba(75, 192, 192, 1)",
-            borderWidth: 1,
-          },
-        ],
-      },
-      options: {
-        maintainAspectRatio: false,
-        responsive: true,
-        onHover: function (event, elements) {
-          if (elements.length) {
-            resaltarPoligonoPorCVE(combined_Estados_ordenados[elements[0].index].dato);
-          }
-        },
-        scales: {
-          x: {
-            ticks: {
-              font: {
-                size: 10, // small font size
-              },
-              display: true,
-              autoSkip: false
-            },
-          },
-          y: {
-            beginAtZero: true,
-            ticks: {
-              font: {
-                size: 10, // small font size
-              },
-            },
-          },
-        },
-      },
-    });
-    chart_nac.data.datasets[0].backgroundColor[SortedEstados.indexOf("Hidalgo")] =
-      "rgba(75, 192, 192, 1)"; //Ilumino a Hidalgo
-    /*}*/
-    updateJsonData();
-    $("#indicador option[value='default']").remove();
-  })
-  document.getElementById("anio_mes").dispatchEvent(new Event("change"));
+  selectAnioMes.addEventListener("change", updateChartAndMap);
+  document.getElementById("anio_mes").dispatchEvent(new Event("change"));//El año/mes default
 
   /////////////////////////////////////////////////////
     //INICIA EL CAMBIO by Enrique//
   ////////////////////////////////////////////////////
-  let firstCol;
-  for (let i = 4; i < datosIndicadorTema[0].length; i++) {
-    const currentColumn = datosIndicadorTema[0].map((_, colIndex) => datosIndicadorTema.map(row => row[colIndex]))[i];
-
-    firstCol=i
-
-    if (!currentColumn.every(x => x === 'NA' || x==='NA\r')&& !currentColumn.every(x=>x==0 || x=='0\r')) {
-      break; // Exit the loop early
-    }
-    //console.log(firstCol)
-    // If it *is* entirely 'NA', decrement the resultIndex
-    
-  }
-  let New_lastCol;
-  for (let i = 0; i < datosIndicadorTema[0].length; i++) {
-    const currentColumn = datosIndicadorTema[0].map((_, colIndex) => datosIndicadorTema.map(row => row[colIndex])).reverse()[i];
-    New_lastCol=i
-    if (!currentColumn.every(x => x === 'NA' || x==='NA\r')&& !currentColumn.every(x=>x==0 || x=='0\r')) {
-      break;
-    }
-  }
-
-  const Pre_Headers = Header.slice(firstCol, datosIndicadorTema[0].length - New_lastCol + 1);
-
+  const Pre_Headers = Header.slice(primera_columna, ultima_columna );
   //Para seleccionar Hidalguito
   const nac_Hidalgo = datosIndicadorTema.find(line => line[1] === "Hidalgo");
-
-  if (!nac_Hidalgo) {
-  console.warn("Aguas! Hidalgo no está en este nac");
-  }
-
-  const Pre_Datos = nac_Hidalgo.slice(firstCol, datosIndicadorTema[0].length - New_lastCol);
-
-  if (Pre_Datos.length <= 1) {
+  const Pre_Datos = nac_Hidalgo.slice(primera_columna,ultima_columna);
+  if (Pre_Datos.length <= 1) {///Decidir si se muestra el histórico de hidalgo
     document.getElementById("tab_map").click();
     document.getElementById("defaultOpen").style.visibility = "hidden";
   } else {
@@ -309,12 +179,12 @@ $("#indicador_tablero_indicadoresSearch").change(async function () {
     month: mes,
     value: isNaN(val) ? null : val
   };
-});
+  });
 
 
-//Ordenanding por año y luego por mes
-//Enrique:Una función toda fea pero fue la que se me ocurrio para solucionar mi error
-function comparadorT(a,b){
+  //Ordenanding por año y luego por mes
+  //Enrique:Una función toda fea pero fue la que se me ocurrio para solucionar mi error
+  function comparadorT(a,b){
   if(a.replace(/\D/g, '')===""){
     return a.localeCompare(b); //La idea de esto es principalmente por si están en el formato 2015_I, 2015_II,...,2015_XI,...
   }
@@ -329,130 +199,126 @@ function comparadorT(a,b){
       return 0;
     }
   }
-}
+  }
 
-const sortedCombined = combined.sort((a, b) =>
+  const sortedCombined = combined.sort((a, b) =>
   a.year === b.year ? comparadorT(a.month,b.month): comparadorT(a.year,b.year)
-);
+  );
 
+  const labels = sortedCombined.map(item => item.label);
+  const datos = sortedCombined.map(item => item.value);
 
-
-const labels = sortedCombined.map(item => item.label);
-const datos = sortedCombined.map(item => item.value);
-
-const validPoints = datos
+  const validPoints = datos
   .map((value, index) => ({ x: index, y: value }))
   .filter(point => point.y !== null && !isNaN(point.y));
 
-const x = validPoints.map(p => p.x);
-const y = validPoints.map(p => p.y);
+  const x = validPoints.map(p => p.x);
+  const y = validPoints.map(p => p.y);
 
-const lr = linearRegression(y, x);
+  const lr = linearRegression(y, x);
 
+  if (typeof chart != "undefined") {
+    chart.destroy();
+  }
+  // Crear nueva gráfica
+  const ctx = document.getElementById("historico").getContext("2d");
 
-if (typeof chart != "undefined") {
-  chart.destroy();
-}
+  const pendientePlugin = {
+    id: "pendientePlugin",
+    afterDatasetsDraw(chart) {
+      const {
+        ctx,
+        scales: { x, y },
+      } = chart;
+      ultimo_label = chart.data.labels[chart.data.labels.length - 1];
+      const indexFinal = chart.data.labels.indexOf(ultimo_label);
 
-// Crear nueva gráfica
-const ctx = document.getElementById("historico").getContext("2d");
+      // Posición de Ultimo label en X
+      const xValue = chart.data.labels[indexFinal];
+      const xPos = x.getPixelForValue(xValue);
+      const yPos = y.bottom - 10;
 
-const pendientePlugin = {
-  id: "pendientePlugin",
-  afterDatasetsDraw(chart) {
-    const {
-      ctx,
-      scales: { x, y },
-    } = chart;
-    ultimo_label = chart.data.labels[chart.data.labels.length - 1];
-    const indexFinal = chart.data.labels.indexOf(ultimo_label);
+      ctx.save();
+      // Dibujar línea vertical punteada
+      ctx.beginPath();
+      ctx.setLineDash([6, 6]);
+      ctx.moveTo(xPos, y.top);
+      ctx.lineTo(xPos, y.bottom);
+      ctx.strokeStyle = "red";
+      ctx.lineWidth = 2;
+      ctx.stroke();
 
-    // Posición de Ultimo label en X
-    const xValue = chart.data.labels[indexFinal];
-    const xPos = x.getPixelForValue(xValue);
-    const yPos = y.bottom - 10;
+      // Mensaje
+      ctx.setLineDash([]); // Quitar punteado
+      ctx.fillStyle = "red";
+      ctx.font = "bold 14px Arial";
+      ctx.textAlign = "center";
+      ctx.textBaseline = "middle";
 
-    ctx.save();
-    // Dibujar línea vertical punteada
-    ctx.beginPath();
-    ctx.setLineDash([6, 6]);
-    ctx.moveTo(xPos, y.top);
-    ctx.lineTo(xPos, y.bottom);
-    ctx.strokeStyle = "red";
-    ctx.lineWidth = 2;
-    ctx.stroke();
+      const yMiddle = (y.top + y.bottom) / 2;
+      ctx.translate(xPos - 15, yMiddle);
+      ctx.rotate(-Math.PI / 2);
+      ctx.fillText("Pendiente", 0, 0);
 
-    // Mensaje
-    ctx.setLineDash([]); // Quitar punteado
-    ctx.fillStyle = "red";
-    ctx.font = "bold 14px Arial";
-    ctx.textAlign = "center";
-    ctx.textBaseline = "middle";
+      ctx.restore();
+    },
+  };
+  //
 
-    const yMiddle = (y.top + y.bottom) / 2;
-    ctx.translate(xPos - 15, yMiddle);
-    ctx.rotate(-Math.PI / 2);
-    ctx.fillText("Pendiente", 0, 0);
-
-    ctx.restore();
-  },
-};
-//
-
-//
-chart = new Chart(ctx, {
-  type: "line",
-  data: {
-    labels: labels,
-    datasets: [
-      {
-        label: $(this).val(),
-        data: datos,
-        backgroundColor: "rgba(75, 192, 192, 0.2)",
-        borderColor: "rgba(75, 192, 192, 1)",
-        borderWidth: 1,
-        spanGaps: true,
-      },
-      {
-        label: "Tendencia (Regresión Lineal)",
-        data: Array(labels.length).fill(null).map((_, i) =>
-          x.includes(i) ? lr.slope * i + lr.intercept : null
-        ),
-        borderColor: "rgba(255, 99, 132, 1)",
-        backgroundColor: "rgba(255, 99, 132, 1)",
-        borderWidth: 2,
-        fill: false,
-        pointRadius: 0,
-        spanGaps: true,
-        hidden: true,
-      }
-    ]
-  },
-  options: {
-    responsive: true,
-    maintainAspectRatio: false,
-    plugins: {
-      zoom: {
-        limits: {
-          x : {min:	'original', max:	'original'},
-          y : {min:	'original', max:	'original', minRange:1}
+  //
+  chart = new Chart(ctx, {
+    type: "line",
+    data: {
+      labels: labels,
+      datasets: [
+        {
+          label: $(this).val(),
+          data: datos,
+          backgroundColor: "rgba(75, 192, 192, 0.2)",
+          borderColor: "rgba(75, 192, 192, 1)",
+          borderWidth: 1,
+          spanGaps: true,
         },
+        {
+          label: "Tendencia (Regresión Lineal)",
+          data: Array(labels.length).fill(null).map((_, i) =>
+            x.includes(i) ? lr.slope * i + lr.intercept : null
+          ),
+          borderColor: "rgba(255, 99, 132, 1)",
+          backgroundColor: "rgba(255, 99, 132, 1)",
+          borderWidth: 2,
+          fill: false,
+          pointRadius: 0,
+          spanGaps: true,
+          hidden: true,
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
         zoom: {
-          wheel: {enabled: true},
-          drag: {enabled: true, maintainAspectRatio: true},
-          pinch: {enabled: true},
-          mode: 'x',
-          scaleMode: 'x'
+          limits: {
+            x : {min:	'original', max:	'original'},
+            y : {min:	'original', max:	'original', minRange:1}
+          },
+          zoom: {
+            wheel: {enabled: true},
+            drag: {enabled: true, maintainAspectRatio: true},
+            pinch: {enabled: true},
+            mode: 'x',
+            scaleMode: 'x'
+          }
         }
       }
-    }
-  },
-  plugins: [pendientePlugin]
-});
-}
-//Aqui está donde se quita el zoom con doble click
-document.getElementById('historico').addEventListener('dblclick', () => {
-  chart.resetZoom();
-});
+    },
+    plugins: [pendientePlugin]
+  });
+  }
+  //Aqui está donde se quita el zoom con doble click
+  document.getElementById('historico').addEventListener('dblclick', () => {
+    chart.resetZoom();
+  });
 
 });

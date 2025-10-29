@@ -118,3 +118,139 @@ B.onChange = function (newValue) {
     
   chart_nac.update();
 };
+
+encontrarIntervaloDatos=function(dat){
+  let ultima_columna;
+  const numero_columnas = dat[0].length;
+  for (let i = numero_columnas - 1; i >= 0; i--) { 
+    const currentColumn = dat.map(row => row[i]);
+    // Verificar si la columna NO es toda 'NA' ni 0
+    if (!currentColumn.every(x => x === 'NA' || x === 'NA\r') && !currentColumn.every(x => x == 0 || x == '0\r')) {
+      ultima_columna = i;
+      break;
+    }
+  }
+  let primera_columna;
+  for (let i = 4; i < dat[0].length; i++) {
+    const currentColumn = dat.map((row) => row[i]);
+    if (!currentColumn.every((x) => x === "NA" || x === "NA\r") && !currentColumn.every((x) => x == 0 || x == "0\r")) {
+      primera_columna = i;
+      break; 
+    }
+  }
+  return { primera_columna, ultima_columna };
+}
+
+function updateJsonData() {
+    // Disparar un evento personalizado cuando se actualiza el JSON
+    const event = new CustomEvent("jsonDataUpdated", {});
+    window.dispatchEvent(event);
+}
+
+function updateChartAndMap() {
+    // 'this' será el elemento 'anio_mes' al ser llamado como handler de evento.
+    const columna_seleccionada = this.value; //También temporalidad
+    
+    // Transponer y tomar la columna con los nombres de los estados.
+    // Usamos datosIndicadorTema (variable global actualizada)
+    let OriginalEstados = datosIndicadorTema[0].map((_, colIndex) => datosIndicadorTema.map(row => row[colIndex]))[1].map((x) => x.replace(/^"|"|\r$/g, ""))
+    
+    // Transponer y tomar la columna con los valores de los estados (columna seleccionada).
+    var datosEstados = datosIndicadorTema[0].map((_, colIndex) => datosIndicadorTema.map(row => row[colIndex].replace(/^"|"|\r/g, "")))[columna_seleccionada]
+    
+    const combined_Estados = datosEstados.map((dato_est, index) => ({
+        dato: OriginalEstados[index], // Nombre estado
+        // Convertimos a null si es "NA", y a número si no lo es (usando parseFloat).
+        value: dato_est == "NA" ? null : parseFloat(dato_est.replace(/,$/g, "")), 
+    })); 
+
+    // Copia y ordenación (se mantiene la copia para no modificar combined_Estados si fuera usado de nuevo)
+    const combined_Estados_ordenados = [...combined_Estados];
+    combined_Estados_ordenados.sort((a, b) => b.value - a.value);
+    
+    SortedEstados = combined_Estados_ordenados.map((item) =>
+        item.dato.toString()
+    );
+
+    indexedEstados = OriginalEstados.map(
+        (item) => SortedEstados.indexOf(item.toString()) + 1
+    ); 
+    
+    console.log("indexed", indexedEstados)
+    console.log("datos", combined_Estados_ordenados)
+    
+    // Actualizar datos del mapa (mexico.features)
+    mexico.features.forEach((feature, index) => {
+        // Encontrar el estado correspondiente en el array combinado (ya que combined_Estados está en el orden original del GeoJSON)
+        // Buscamos el objeto estado por su nombre NOMGEO
+        const estadoData = combined_Estados_ordenados.find(item => item.dato === feature.properties.NOMGEO);
+        const index_en_original = OriginalEstados.indexOf(feature.properties.NOMGEO);
+
+        feature.properties.Valor = datosEstados[index_en_original];
+
+        // Calcular CVEGEO basado en la posición ordenada.
+        feature.properties.CVEGEO =
+            estadoData.value === null
+                ? "NA"
+                : 33 - indexedEstados[index_en_original].toString().padStart(2, "0"); // CVEGEO es su posición a nivel nacional
+    });
+
+    // Reordenar los datos de estados según el array ordenado para la gráfica
+    datosEstados = combined_Estados_ordenados.map((item) => item.value);
+
+    // Destruir gráfica anterior
+    if (typeof chart_nac != "undefined") {
+        chart_nac.destroy();
+    }
+
+    // Crear la nueva gráfica de barras
+    const ctx_nac = document.getElementById("nacional").getContext("2d"); 
+    chart_nac = new Chart(ctx_nac, {
+        type: "bar",
+        data: {
+            labels: SortedEstados,
+            datasets: [
+                {
+                    label: datosIndicadorTema[1][2].replace(/^"|"|\r|'$/g, ""),
+                    data: datosEstados,
+                    backgroundColor:SortedEstados.map(()=>"rgba(75, 192, 192, 0.2)"),
+                    borderColor: "rgba(75, 192, 192, 1)",
+                    borderWidth: 1,
+                },
+            ],
+        },
+        options: {
+            maintainAspectRatio: false,
+            responsive: true,
+            onHover: function (event, elements) {
+                if (elements.length) {
+                    resaltarPoligonoPorCVE(combined_Estados_ordenados[elements[0].index].dato);
+                }
+            },
+            scales: {
+                x: {
+                    ticks: {
+                        font: {
+                            size: 10, // small font size
+                        },
+                        display: true,
+                        autoSkip: false
+                    },
+                },
+                y: {
+                    beginAtZero: true,
+                    ticks: {
+                        font: {
+                            size: 10, // small font size
+                        },
+                    },
+                },
+            },
+        },
+    });
+    // Iluminar a Hidalgo
+    chart_nac.data.datasets[0].backgroundColor[SortedEstados.indexOf("Hidalgo")] = "rgba(75, 192, 192, 1)"; 
+    
+    updateJsonData();
+    $("#indicador option[value='default']").remove();
+}
