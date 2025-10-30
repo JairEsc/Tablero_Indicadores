@@ -109,7 +109,9 @@ $("#indicador_tablero_indicadoresSearch").change(async function () {
   //console.log("Estamos imprimiendo el nac: ", datosIndicadorTema);
   //Actualizar la descripción del indicador
   document.getElementById("descripcion_indicador").innerHTML = datosIndicadorTema[1][2]+' (Temporalidad : '+tiempo_del_indic_sel+')';
-  document.getElementById("fuente").innerHTML = "Fuente:" + datosIndicadorTema[1][3];
+  document.getElementById("fuente").innerHTML = "Fuente: " + (datosIndicadorTema[1][3]?.length > 50 ? 
+    `<a href="${datosIndicadorTema[1][3]}" target="_blank">${datosIndicadorTema[1][3].substring(0,50)}...</a>` : 
+    datosIndicadorTema[1][3] || '');
   document.getElementById(
     "descripcion_indicador_title_tablero_indicadores"
   ).style.visibility = "visible";
