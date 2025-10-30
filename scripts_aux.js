@@ -47,6 +47,24 @@ revisarTemporalidadIndicador=function(indicador){
       return null; //Indicador no encontrado
     }
 }
+revisarEscalamientoIndicador=function(indicador){
+    const filaIndicador = posiblesIndicadores.find(line => (line[1]) === indicador);
+    if(filaIndicador){
+      //console.log(filaIndicador)
+      return filaIndicador[3]; // temporalidad
+    }else{
+      return null; //Indicador no encontrado
+    }
+}
+revisarInterpretacionIndicador=function(indicador){
+    const filaIndicador = posiblesIndicadores.find(line => (line[1]) === indicador);
+    if(filaIndicador){
+      //console.log(filaIndicador)
+      return filaIndicador[4]; // temporalidad
+    }else{
+      return null; //Indicador no encontrado
+    }
+}
 generarDatos_DadoIndicadorTema=function(tema="Todo",indicador){
   let base;
   //Se deben generar dos listas. Histórico y Nacional. 
@@ -149,54 +167,61 @@ function updateJsonData() {
 
 function updateChartAndMap() {
     // 'this' será el elemento 'anio_mes' al ser llamado como handler de evento.
-    const columna_seleccionada = this.value; //También temporalidad
-    
-    // Transponer y tomar la columna con los nombres de los estados.
-    // Usamos datosIndicadorTema (variable global actualizada)
-    let OriginalEstados = datosIndicadorTema[0].map((_, colIndex) => datosIndicadorTema.map(row => row[colIndex]))[1].map((x) => x.replace(/^"|"|\r$/g, ""))
-    
-    // Transponer y tomar la columna con los valores de los estados (columna seleccionada).
-    var datosEstados = datosIndicadorTema[0].map((_, colIndex) => datosIndicadorTema.map(row => row[colIndex].replace(/^"|"|\r/g, "")))[columna_seleccionada]
-    
-    const combined_Estados = datosEstados.map((dato_est, index) => ({
-        dato: OriginalEstados[index], // Nombre estado
-        // Convertimos a null si es "NA", y a número si no lo es (usando parseFloat).
-        value: dato_est == "NA" ? null : parseFloat(dato_est.replace(/,$/g, "")), 
-    })); 
+    const columna_seleccionada = this.value;
 
-    // Copia y ordenación (se mantiene la copia para no modificar combined_Estados si fuera usado de nuevo)
-    const combined_Estados_ordenados = [...combined_Estados];
-    combined_Estados_ordenados.sort((a, b) => b.value - a.value);
+    // Get original states and data from datosIndicadorTema
+    let OriginalEstados = datosIndicadorTema[0].map((_, colIndex) => 
+      datosIndicadorTema.map(row => row[colIndex]))[1]
+      .map((x) => x.replace(/^"|"|\r$/g, ""));
+
+    var datosEstados = datosIndicadorTema[0].map((_, colIndex) => 
+      datosIndicadorTema.map(row => row[colIndex].replace(/^"|"|\r/g, "")))[columna_seleccionada];
+
+    //Combindados
+    const seNecesitaEscalar=revisarEscalamientoIndicador(datosIndicadorTema[0][2])
+    const seNecesitaInvertir=revisarInterpretacionIndicador(datosIndicadorTema[0][2])
+    console.log(seNecesitaEscalar)
+    console.log(datosEstados)
+    const combined_Estados = datosEstados.map((dato_est, index) => ({
+      dato: OriginalEstados[index],
+      value: dato_est == "NA" ? null : parseFloat(dato_est.replace(/,$/g, "")),
+      //Aquí deberíamos preguntarnos si se hará la transofrmación. 
+      transformed: dato_est == "NA" ? null : (seNecesitaEscalar=='No'? dato_est:1000*parseFloat(dato_est.replace(/,$/g, ""))/mexico.features[index].properties['2020_Total'])
+    }));
+    console.log(combined_Estados)
     
-    SortedEstados = combined_Estados_ordenados.map((item) =>
-        item.dato.toString()
+    const combined_Estados_ordenados = [...combined_Estados];
+    combined_Estados_ordenados.sort((a, b) => b.transformed - a.transformed);
+
+    // Update sorted states array
+    SortedEstados = combined_Estados_ordenados.map((item) => item.dato.toString());
+
+    // Calculate rankings based on transformed values
+    indexedEstados = OriginalEstados.map(
+      (item) => SortedEstados.indexOf(item.toString()) + 1
     );
 
-    indexedEstados = OriginalEstados.map(
-        (item) => SortedEstados.indexOf(item.toString()) + 1
-    ); 
-    
-    console.log("indexed", indexedEstados)
-    console.log("datos", combined_Estados_ordenados)
-    
-    // Actualizar datos del mapa (mexico.features)
-    mexico.features.forEach((feature, index) => {
-        // Encontrar el estado correspondiente en el array combinado (ya que combined_Estados está en el orden original del GeoJSON)
-        // Buscamos el objeto estado por su nombre NOMGEO
-        const estadoData = combined_Estados_ordenados.find(item => item.dato === feature.properties.NOMGEO);
-        const index_en_original = OriginalEstados.indexOf(feature.properties.NOMGEO);
-
-        feature.properties.Valor = datosEstados[index_en_original];
-
-        // Calcular CVEGEO basado en la posición ordenada.
-        feature.properties.CVEGEO =
-            estadoData.value === null
-                ? "NA"
-                : 33 - indexedEstados[index_en_original].toString().padStart(2, "0"); // CVEGEO es su posición a nivel nacional
+    // Update mexico.features properties
+    //console.log("mexico")
+    mexico.features.forEach((feature) => {
+      const index_en_original = OriginalEstados.indexOf(feature.properties.NOMGEO);
+      
+      // Set original value
+      feature.properties.Valor = datosEstados[index_en_original];
+      
+      // Set transformed value (value/population)
+      feature.properties.Valor_Transf = combined_Estados[index_en_original].transformed;
+      console.log(combined_Estados[index_en_original])
+      // Aquí iría la interpretación del ranking. 
+      feature.properties.Ranking = 
+        combined_Estados[index_en_original].transformed === null 
+          ? "NA" 
+          :(seNecesitaInvertir=='Menos'?( indexedEstados[index_en_original]).toString().padStart(2, "0"): (33 - indexedEstados[index_en_original]).toString().padStart(2, "0"));
+      feature.properties.Sentido=seNecesitaInvertir=='Menos'?'Menos es mejor':'Más es mejor';
     });
 
-    // Reordenar los datos de estados según el array ordenado para la gráfica
-    datosEstados = combined_Estados_ordenados.map((item) => item.value);
+    // Update datosEstados for the chart using transformed values
+    datosEstados = combined_Estados_ordenados.map((item) => item.transformed);
 
     // Destruir gráfica anterior
     if (typeof chart_nac != "undefined") {

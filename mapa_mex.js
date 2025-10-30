@@ -50,7 +50,7 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 function style_ent(feature) {
     return {
-        fillColor: getColor(feature.properties.CVEGEO),
+        fillColor: getColor(feature.properties.Ranking),
         weight: 2,
         opacity: 1,
         color: 'white',
@@ -104,10 +104,15 @@ info.onAdd = function (map) {
 
 // method that we will use to update the control based on feature properties passed
 info.update = function (props) {
-    this._div.innerHTML = 
-    '<h4>' +  (props ?
-        props.NOMGEO ? props.NOMGEO+'</h4>'+"<p style='font:8px;float:right'>"+"Dato: "+Math.round(props.Valor*100)/100+"</p>"
-        : props.NOMGEO+'</h4>': ' ');
+    this._div.innerHTML = props ? 
+        `<h4>${props.NOMGEO}</h4>
+         <div style="font-size: 12px; margin-top: 5px; display:inline-grid">
+            <p><strong>Valor:</strong> ${props.Valor || 'N/A'}</p><br>
+            <p><strong>Valor transformado:</strong> ${props.Valor_Transf }</p><br>
+            <p><strong>Ranking:</strong> ${props.Ranking || 'N/A'}</p><br>
+            <p><strong>Sentido:</strong> ${props.Sentido || 'N/A'}</p><br>
+         </div>`
+        : '<h4>Seleccione un estado</h4>';
 };
 
 info.addTo(map);
