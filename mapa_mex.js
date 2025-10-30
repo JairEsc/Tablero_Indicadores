@@ -70,17 +70,44 @@ function highlightFeature(e) {
 
     layer.setStyle({
         weight: 5,
-        color: '#white',
-        fillOpacity: 0.7
+        color: '#666',
+        fillOpacity: 0.9,
+    
     });
 
     layer.bringToFront();
     info.update(layer.feature.properties);
     B.myVariable =e.target.feature.properties.NOMGEO;
 }
-function clickFeature(e){
-    //Modificamos el contenido del popup
+function clickFeature(e) {
+    var props = e.target.feature.properties;
+    var popupContent = `
+        <div style="font-family: Arial, sans-serif; padding: 10px; min-width: 200px;">
+            <h3 style="color: #2c3e50; margin-bottom: 10px; border-bottom: 2px solid #3498db;">
+                ${props.NOMGEO}
+            </h3>
+            <div style="font-size: 14px; line-height: 1.4;">
+                <p style="margin: 5px 0;">
+                    <strong style="color: #2c3e50;">Dato:</strong> 
+                    <span style="color: #34495e;">${props.Valor || 'N/A'}</span>
+                </p>
+                <p style="margin: 5px 0;">
+                    <strong style="color: #2c3e50;">Valor transformado:</strong> 
+                    <span style="color: #34495e;">${props.Valor_Transf }</span>
+                </p>
+                <p style="margin: 5px 0;">
+                    <strong style="color: #2c3e50;">Ranking:</strong> 
+                    <span style="color: #34495e;">${props.Ranking || 'N/A'}</span>
+                </p>
+                <p style="margin: 5px 0;">
+                    <strong style="color: #2c3e50;">Sentido:</strong> 
+                    <span style="color: #34495e;">${props.Sentido || 'N/A'}</span>
+                </p>
+            </div>
+        </div>
+    `;
     
+    e.target.bindPopup(popupContent).openPopup();
 }
 function resetHighlight(e) {
     B.myVariable ='Hidalgo';
@@ -107,11 +134,12 @@ info.update = function (props) {
     this._div.innerHTML = props ? 
         `<h4>${props.NOMGEO}</h4>
          <div style="font-size: 12px; margin-top: 5px; display:inline-grid">
-            <p><strong>Valor:</strong> ${props.Valor || 'N/A'}</p><br>
-            <p><strong>Valor transformado:</strong> ${props.Valor_Transf }</p><br>
-            <p><strong>Ranking:</strong> ${props.Ranking || 'N/A'}</p><br>
-            <p><strong>Sentido:</strong> ${props.Sentido || 'N/A'}</p><br>
-         </div>`
+            <p><strong>Dato:</strong> ${props.Valor || 'N/A'}</p><br>
+            <p style='font-size: xx-small'>click para más información</p>
+            </div>`
+            // <p><strong>Valor transformado:</strong> ${props.Valor_Transf }</p><br>
+            // <p><strong>Ranking:</strong> ${props.Ranking || 'N/A'}</p><br>
+            // <p><strong>Sentido:</strong> ${props.Sentido || 'N/A'}</p><br>
         : '<h4>Seleccione un estado</h4>';
 };
 

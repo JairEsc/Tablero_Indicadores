@@ -193,34 +193,45 @@ function updateChartAndMap() {
     const combined_Estados_ordenados = [...combined_Estados];
     combined_Estados_ordenados.sort((a, b) => b.transformed - a.transformed);
 
-    // Update sorted states array
     SortedEstados = combined_Estados_ordenados.map((item) => item.dato.toString());
 
-    // Calculate rankings based on transformed values
-    indexedEstados = OriginalEstados.map(
-      (item) => SortedEstados.indexOf(item.toString()) + 1
+    // Calculate rankings with ties
+    let currentRank = 1;
+    let previousValue = null;
+    const valueToRank = new Map();
+
+    combined_Estados_ordenados.forEach((item, index) => {
+      if (item.transformed === null) {
+        valueToRank.set(item.dato, "NA");
+      } else if (item.transformed !== previousValue) {
+        currentRank = index + 1;
+        valueToRank.set(item.dato, currentRank);
+        previousValue = item.transformed;
+      } else {
+        valueToRank.set(item.dato, currentRank);
+      }
+    });
+
+    indexedEstados = OriginalEstados.map(item => 
+      valueToRank.get(item)
     );
 
-    // Update mexico.features properties
-    //console.log("mexico")
     mexico.features.forEach((feature) => {
       const index_en_original = OriginalEstados.indexOf(feature.properties.NOMGEO);
       
-      // Set original value
       feature.properties.Valor = datosEstados[index_en_original];
-      
-      // Set transformed value (value/population)
       feature.properties.Valor_Transf = combined_Estados[index_en_original].transformed;
-      console.log(combined_Estados[index_en_original])
-      // Aquí iría la interpretación del ranking. 
+
+      const rank = valueToRank.get(feature.properties.NOMGEO);
       feature.properties.Ranking = 
-        combined_Estados[index_en_original].transformed === null 
+        rank === "NA" 
           ? "NA" 
-          :(seNecesitaInvertir=='Menos'?( indexedEstados[index_en_original]).toString().padStart(2, "0"): (33 - indexedEstados[index_en_original]).toString().padStart(2, "0"));
-      feature.properties.Sentido=seNecesitaInvertir=='Menos'?'Menos es mejor':'Más es mejor';
+          : (seNecesitaInvertir == 'Menos' 
+            ? rank.toString().padStart(2, "0") 
+            : (33 - rank).toString().padStart(2, "0"));
+      feature.properties.Sentido = seNecesitaInvertir == 'Menos' ? 'Menos es mejor' : 'Más es mejor';
     });
 
-    // Update datosEstados for the chart using transformed values
     datosEstados = combined_Estados_ordenados.map((item) => item.transformed);
 
     // Destruir gráfica anterior
