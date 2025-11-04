@@ -1,36 +1,57 @@
-"Tema","Indicador","Temporalidad","En_razon","Sentido"
-"Económico","Crecimiento Economico","Trimestral","No","Más"
-"Económico","Desigualdad Laboral","Trimestral","No","Menos"
-"Económico","Exportaciones por Entidad Federativa","Trimestral","Sí","Más"
-"Económico","Indicador Trimestral de la Actividad Economica Estatal ITAEE","Trimestral","No","Más"
-"Económico","Informalidad Laboral","Trimestral","Sí","Menos"
-"Económico","Ingresos por Remesas","Trimestral","Sí","Más"
-"Económico","Inversion Extranjera Directa IED","Trimestral","Sí","Más"
-"Económico","Población Desocupada","Trimestral","Sí","Menos"
-"Económico","Población Económicamente Activa PEA","Trimestral","Sí","Más"
-"Económico","Población Ocupada","Trimestral","Sí","Más"
-"Económico","Productividad Laboral","Trimestral","No","Más"
-"Económico","Tasa de Condiciones críticas de ocupación","Trimestral","No","Menos"
-"Económico","Tasa de Desocupación","Trimestral","No","Menos"
-"Económico","Tasa de Informalidad laboral","Trimestral","No","Menos"
-"Económico","Tasa de Ocupación en el sector informal","Trimestral","No","Menos"
-"Económico","Tasa de Ocupación parcial y desocupación/","Trimestral","No","Menos"
-"Económico","Tasa de Participación","Trimestral","No","Más"
-"Económico","Tasa de Presión general","Trimestral","No","Más"
-"Económico","Tasa de Subocupación","Trimestral","No","Más"
-"Económico","Tasa de Trabajo asalariado","Trimestral","No","Más"
-"Económico","Empleos formales generados","Mensual","Sí","Más"
-"Económico","Indicador Mensual de la Actividad Industrial por Entidad Federativa IMAIEF","Mensual","No","Más"
-"Económico","Trabajadores Asegurados del IMSS","Mensual","Sí","Más"
-"Seguridad Pública","Extorsión","Mensual","Sí","Menos"
-"Seguridad Pública","Femicicidios","Mensual","Sí","Menos"
-"Seguridad Pública","Homicidios","Mensual","Sí","Menos"
-"Seguridad Pública","Incidencia delictiva","Mensual","Sí","Menos"
-"Seguridad Pública","Lesiones","Mensual","Sí","Menos"
-"Seguridad Pública","Narcomenudeo","Mensual","Sí","Menos"
-"Seguridad Pública","Robo a Casa Habitación","Mensual","Sí","Menos"
-"Seguridad Pública","Robo a Negocio","Mensual","Sí","Menos"
-"Seguridad Pública","Robo de Vehículos","Mensual","Sí","Menos"
-"Seguridad Pública","Secuestro","Mensual","Sí","Menos"
-"Seguridad Pública","Violacion","Mensual","Sí","Menos"
-"Seguridad Pública","Violencia familiar","Mensual","Sí","Menos"
+﻿Tema,Indicador,Temporalidad,En_razon,Sentido
+Económico,Ingreso corriente promedio trimestral por hogar,Bianual,No,Más es mejor
+Económico,Gasto corriente promedio trimestral por hogar,Bianual,No,Más es mejor
+Económico,Empleos formales generados,Mensual,No,Más es mejor
+Económico,Indicador Mensual de la Actividad Industrial por Entidad Federativa IMAIEF,Mensual,No,Más es mejor
+Económico,Trabajadores Asegurados del IMSS,Mensual,Si,Más es mejor
+Económico,Crecimiento Economico,Trimestral,No,Más es mejor
+Económico,Desigualdad Laboral,Trimestral,No,Menos es mejor
+Económico,Población Económicamente Activa PEA,Trimestral,Si,Más es mejor
+Económico,Población Ocupada,Trimestral,Si,Más es mejor
+Económico,Población Desocupada,Trimestral,Si,Menos es mejor
+Económico,Tasa de Participación,Trimestral,No,Más es mejor
+Económico,Tasa de Desocupación,Trimestral,No,Menos es mejor
+Económico,Tasa de Ocupación parcial y desocupación/,Trimestral,No,Menos es mejor
+Económico,Tasa de Presión general,Trimestral,No,Más es mejor
+Económico,Tasa de Trabajo asalariado,Trimestral,No,Más es mejor
+Económico,Tasa de Subocupación,Trimestral,No,Más es mejor
+Económico,Tasa de Condiciones críticas de ocupación,Trimestral,No,Menos es mejor
+Económico,Tasa de Informalidad laboral,Trimestral,No,Menos es mejor
+Económico,Tasa de Ocupación en el sector informal,Trimestral,No,Menos es mejor
+Económico,Exportaciones por Entidad Federativa,Trimestral,No,Más es mejor
+Económico,Indicador Trimestral de la Actividad Economica Estatal ITAEE,Trimestral,No,Más es mejor
+Económico,Informalidad Laboral,Trimestral,No,Menos es mejor
+Económico,Ingresos por Remesas,Trimestral,No,Más es mejor
+Económico,Inversion Extranjera Directa IED,Trimestral,No,Más es mejor
+Económico,Productividad Laboral,Trimestral,No,Más es mejor
+Gobierno,Confianza en el Gobierno Estatal,Bianual,No,Más es mejor
+Gobierno,Nivel de satisfacción general con los servicios públicos básicos y bajo demanda,Bianual,No,Más es mejor
+Gobierno,Tasa de incidencia de corrupción por cada cien mil habitantes,Bianual,No,Menos es mejor
+Gobierno,Tasa de prevalencia de la corrupción por cada 100 mil habitantes,Bianual,No,Menos es mejor
+Seguridad Pública,Incidencia delictiva,Mensual,Si,Menos es mejor
+Seguridad Pública,Homicidios,Mensual,Si,Menos es mejor
+Seguridad Pública,Lesiones,Mensual,Si,Menos es mejor
+Seguridad Pública,Femicicidios,Mensual,Si,Menos es mejor
+Seguridad Pública,Secuestro,Mensual,Si,Menos es mejor
+Seguridad Pública,Violacion,Mensual,Si,Menos es mejor
+Seguridad Pública,Robo a Casa Habitación,Mensual,Si,Menos es mejor
+Seguridad Pública,Robo de Vehículos,Mensual,Si,Menos es mejor
+Seguridad Pública,Robo a Negocio,Mensual,Si,Menos es mejor
+Seguridad Pública,Extorsión,Mensual,Si,Menos es mejor
+Seguridad Pública,Violencia familiar,Mensual,Si,Menos es mejor
+Seguridad Pública,Narcomenudeo,Mensual,Si,Menos es mejor
+Social,Porcentaje de la Población en situación de Pobreza,Bianual,No,Menos es mejor
+Social,Porcentaje de la Población en situación de Pobreza Moderada,Bianual,No,Menos es mejor
+Social,Porcentaje de la Poblaciónn en situación de Pobreza Extrema,Bianual,No,Menos es mejor
+Social,Porcentaje de la población vulnerable por ingresos,Bianual,No,Menos es mejor
+Social,Porcentaje de la Población con Rezago Educativo,Bianual,No,Menos es mejor
+Social,Porcentaje de la Población con Carencia por acceso a la seguridad social,Bianual,No,Menos es mejor
+Social,Porcentaje de la Población con Carencia por acceso a los servicios de salud,Bianual,No,Menos es mejor
+Social,Porcentaje de la Población con Carencia por calidad y espacios de la vivienda,Bianual,No,Menos es mejor
+Social,Porcentaje de la Población con Carencia por acceso a los servicios básicos en la vivienda,Bianual,No,Menos es mejor
+Social,Porcentaje de la Población con Carencia por acceso a la alimentación nutritiva y de calidad,Bianual,No,Menos es mejor
+Social,Porcentaje de la Población con Población con Ingreso Inferior a la Línea de pobreza extrema por ingresos,Bianual,No,Menos es mejor
+Social,Porcentaje de la Población con Población con Ingreso Inferior a la Línea de pobreza por ingresos,Bianual,No,Menos es mejor
+Social,Grado promedio de escolaridad (años),Quinquenal,No,Más es mejor
+Social,Tasa de ocupación infantil no permitida,Trianual,No,Menos es mejor
+Social,Tasa de quehaceres domésticos en condiciones no adecuadas,Trianual,No,Menos es mejor

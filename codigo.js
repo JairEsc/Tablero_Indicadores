@@ -121,8 +121,8 @@ $("#indicador_tablero_indicadoresSearch").change(async function () {
   //console.log(intervalosDatos)
   let primera_columna=intervalosDatos.primera_columna
   let ultima_columna=intervalosDatos.ultima_columna
-  //console.log("Primera columna válida:", primera_columna, "Última columna válida:", ultima_columna);
-  //console.log("Encabezado first:", Header[primera_columna], "Encabezado last:", Header[ultima_columna]);
+  console.log("Primera columna válida:", primera_columna, "Última columna válida:", ultima_columna);
+  console.log("Encabezado first:", Header[primera_columna], "Encabezado last:", Header[ultima_columna]);
   
   //Rellenar select de años/meses en el mapa
   const selectAnioMes = document.getElementById("anio_mes");
@@ -143,81 +143,35 @@ $("#indicador_tablero_indicadoresSearch").change(async function () {
   /////////////////////////////////////////////////////
     //INICIA EL CAMBIO by Enrique//
   ////////////////////////////////////////////////////
-  const Pre_Headers = Header.slice(primera_columna, ultima_columna );
-  //Para seleccionar Hidalguito
-  const nac_Hidalgo = datosIndicadorTema.find(line => line[1] === "Hidalgo");
-  const Pre_Datos = nac_Hidalgo.slice(primera_columna,ultima_columna);
-  if (Pre_Datos.length <= 1) {///Decidir si se muestra el histórico de hidalgo
-    document.getElementById("tab_map").click();
-    document.getElementById("defaultOpen").style.visibility = "hidden";
-  } else {
-    document.getElementById("defaultOpen").click();
-    document.getElementById("defaultOpen").style.visibility = "visible";
-  }
-  if (Pre_Datos.length <= 1) {
-    console.log("No hay datos");
-  } else {
-  //He aquí uno de los mayores cambios, para poder crear los label con "Año"_"Mes"
-  const combined = Pre_Headers.map((fecha, index) => {
-  const Año_Mes = fecha.replace(/^"|"|\r/g, "").split("_");
-  const año = Año_Mes[0];
-  const mes = Año_Mes[1];
+  const hidalgoData = datosIndicadorTema.find(line => line[1] === "Hidalgo");
+  const timeData = hidalgoData.slice(primera_columna, ultima_columna + 1)
+    .map((value, index) => ({
+      x: index,
+      y: parseFloat(value.replace(/^"|"|\r|,$/g, "")),
+      label: Header[primera_columna + index]
+    }))
+    //.filter(point => !isNaN(point.y));
 
-  //Aquí me encuentro con un problema, al graficar hay varios puntos que no aparecen, no porque no aparezcan en el eje x
-  //pues eso es por el zoom y que no caben, lo que yo tengo es que a pesar de tener registros de algun mes, al hacer la 
-  //gráfica no aparecen los puntos y por ende la grafica no los contempla y supongo que la regresión eventualmente menos.
-
-  const val = parseFloat(Pre_Datos[index]?.replace(/^"|"|\r|,$/g, ""));
-  return {
-    label: `${año}_${mes}`,
-    year: año,
-    month: mes,
-    value: isNaN(val) ? null : val
-  };
-  });
-
-
-  //Ordenanding por año y luego por mes
-  //Enrique:Una función toda fea pero fue la que se me ocurrio para solucionar mi error
-  function comparadorT(a,b){
-  if(a.replace(/\D/g, '')===""){
-    return a.localeCompare(b); //La idea de esto es principalmente por si están en el formato 2015_I, 2015_II,...,2015_XI,...
-  }
-  else{
-    if(parseInt(a.replace(/\D/g, '')) < parseInt(b.replace(/\D/g, ''))){
-      return -1;
-    }
-    if(parseInt(a.replace(/\D/g, '')) > parseInt(b.replace(/\D/g, ''))){
-      return 1;
-    }
-    if(parseInt(a.replace(/\D/g, '')) == parseInt(b.replace(/\D/g, ''))){
-      return 0;
-    }
-  }
-  }
-
-  const sortedCombined = combined.sort((a, b) =>
-  a.year === b.year ? comparadorT(a.month,b.month): comparadorT(a.year,b.year)
-  );
-
-  const labels = sortedCombined.map(item => item.label);
-  const datos = sortedCombined.map(item => item.value);
-
-  const validPoints = datos
-  .map((value, index) => ({ x: index, y: value }))
-  .filter(point => point.y !== null && !isNaN(point.y));
-
-  const x = validPoints.map(p => p.x);
-  const y = validPoints.map(p => p.y);
-
+  const x = timeData.map(p => p.x);
+  const y = timeData.map(p => p.y);
   const lr = linearRegression(y, x);
 
-  if (typeof chart != "undefined") {
+  if (typeof chart !== "undefined") {
     chart.destroy();
   }
-  // Crear nueva gráfica
-  const ctx = document.getElementById("historico").getContext("2d");
 
+  // Create new chart
+  const nextIndex = timeData.length;
+  const nextValue = lr.slope * nextIndex + lr.intercept;
+  timeData.push({
+    x: nextIndex,
+    y: null,
+    label: 'Próximo periodo'
+  });
+
+  const xn = timeData.map(p => p.x);
+
+  const ctx = document.getElementById("historico").getContext("2d");
   const pendientePlugin = {
     id: "pendientePlugin",
     afterDatasetsDraw(chart) {
@@ -231,7 +185,6 @@ $("#indicador_tablero_indicadoresSearch").change(async function () {
       // Posición de Ultimo label en X
       const xValue = chart.data.labels[indexFinal];
       const xPos = x.getPixelForValue(xValue);
-      const yPos = y.bottom - 10;
 
       ctx.save();
       // Dibujar línea vertical punteada
@@ -257,28 +210,22 @@ $("#indicador_tablero_indicadoresSearch").change(async function () {
 
       ctx.restore();
     },
-  };
-  //
-
-  //
+  }
   chart = new Chart(ctx, {
     type: "line",
     data: {
-      labels: labels,
+      labels: timeData.map(d => d.label),
       datasets: [
         {
           label: $(this).val(),
-          data: datos,
-          backgroundColor: "rgba(75, 192, 192, 0.2)",
+          data: timeData.map(d => d.y),
           borderColor: "rgba(75, 192, 192, 1)",
+          backgroundColor: "rgba(75, 192, 192, 0.2)", 
           borderWidth: 1,
-          spanGaps: true,
         },
         {
           label: "Tendencia (Regresión Lineal)",
-          data: Array(labels.length).fill(null).map((_, i) =>
-            x.includes(i) ? lr.slope * i + lr.intercept : null
-          ),
+          data: xn.map(i => lr.slope * i + lr.intercept),
           borderColor: "rgba(255, 99, 132, 1)",
           backgroundColor: "rgba(255, 99, 132, 1)",
           borderWidth: 2,
@@ -294,24 +241,17 @@ $("#indicador_tablero_indicadoresSearch").change(async function () {
       maintainAspectRatio: false,
       plugins: {
         zoom: {
-          limits: {
-            x : {min:	'original', max:	'original'},
-            y : {min:	'original', max:	'original', minRange:1}
-          },
           zoom: {
             wheel: {enabled: true},
-            drag: {enabled: true, maintainAspectRatio: true},
-            pinch: {enabled: true},
             mode: 'x',
-            scaleMode: 'x'
           }
         }
       }
     },
     plugins: [pendientePlugin]
   });
-  }
-  //Aqui está donde se quita el zoom con doble click
+
+  // Reset zoom on double click
   document.getElementById('historico').addEventListener('dblclick', () => {
     chart.resetZoom();
   });

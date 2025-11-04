@@ -97,7 +97,7 @@ function clickFeature(e) {
                 </p>
                 <p style="margin: 5px 0;">
                     <strong style="color: #2c3e50;">Ranking:</strong> 
-                    <span style="color: #34495e;">${props.Ranking || 'N/A'}</span>
+                    <span style="color: #34495e;">${props.Sentido=='Menos es mejor'? (props.Ranking || 'N/A') : (33-props.Ranking)}</span>
                 </p>
                 <p style="margin: 5px 0;">
                     <strong style="color: #2c3e50;">Sentido:</strong> 

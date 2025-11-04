@@ -226,10 +226,10 @@ function updateChartAndMap() {
       feature.properties.Ranking = 
         rank === "NA" 
           ? "NA" 
-          : (seNecesitaInvertir == 'Menos' 
+          : (seNecesitaInvertir == 'Menos es mejor' 
             ? rank.toString().padStart(2, "0") 
             : (33 - rank).toString().padStart(2, "0"));
-      feature.properties.Sentido = seNecesitaInvertir == 'Menos' ? 'Menos es mejor' : 'Más es mejor';
+      feature.properties.Sentido = seNecesitaInvertir == 'Menos es mejor' ? 'Menos es mejor' : 'Más es mejor';
     });
 
     datosEstados = combined_Estados_ordenados.map((item) => item.transformed);
