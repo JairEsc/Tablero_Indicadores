@@ -81,34 +81,57 @@ function highlightFeature(e) {
 }
 function clickFeature(e) {
     var props = e.target.feature.properties;
+    var imagenUrl = "https://framework-gb.cdn.gob.mx/landing/img/states/" + props.NOMGEO.normalize('NFD').replace(/[\u0300-\u036f]/g, "").replace(/\s+/g, '') + ".png";
+    var lineaValorTransf = "";
+
+    if (parseFloat(props.Valor_Transf) !== parseFloat(props.Valor)) {
+        lineaValorTransf = `
+            <p style="margin: 5px 0;">
+                <span style="color: #34495e;">Al ajustar este valor por su población, se obtiene un valor transformado de</span>
+                <strong style="color: #2c3e50;">
+                    ${parseFloat(props.Valor_Transf) >= 1 
+                        ? parseFloat(props.Valor_Transf).toFixed(2).replace(/\.00$/, '') 
+                        : parseFloat(props.Valor_Transf).toFixed(5).replace(/\.00$/, '')}
+                </strong> 
+                <span style="color: #34495e;"> lo que refleja su nivel por habitante.</span>
+            </p>
+        `;
+    }
+
     var popupContent = `
-        <div style="font-family: Arial, sans-serif; padding: 10px; min-width: 200px;">
-            <h3 style="color: #2c3e50; margin-bottom: 10px; border-bottom: 2px solid #3498db;">
-                ${props.NOMGEO}
-            </h3>
+        <div style="font-family: Arial, sans-serif; padding: 10px; min-width: 220px;">
+            <div style="display: flex; align-items: center; border-bottom: 2px solid rgba(98, 17, 50, 1); margin-bottom: 10px;">
+                <img src="${imagenUrl}" alt="${props.NOMGEO}" style="width: 35px; height: 35px; object-fit: contain; margin-right: 10px;">
+                <h3 style="color: rgba(98, 17, 50, 1); margin: 0; font-size: 18px;">${props.NOMGEO}</h3>
+            </div>
             <div style="font-size: 14px; line-height: 1.4;">
                 <p style="margin: 5px 0;">
-                    <strong style="color: #2c3e50;">Dato:</strong> 
-                    <span style="color: #34495e;">${props.Valor || 'N/A'}</span>
+                    <span style="color: #34495e;">El dato oficial de ${datosIndicadorTema[1][2].toLowerCase()} en ${props.NOMGEO} es</span>
+                    <strong style="color: #2c3e50;">
+                        ${parseFloat(props.Valor) >= 1 
+                            ? parseFloat(props.Valor).toFixed(2).replace(/\.00$/, '') 
+                            : parseFloat(props.Valor).toFixed(5).replace(/\.00$/, '') || 'N/A'}
+                    </strong> 
                 </p>
+                ${lineaValorTransf}
                 <p style="margin: 5px 0;">
-                    <strong style="color: #2c3e50;">Valor transformado:</strong> 
-                    <span style="color: #34495e;">${props.Valor_Transf }</span>
-                </p>
-                <p style="margin: 5px 0;">
-                    <strong style="color: #2c3e50;">Ranking:</strong> 
-                    <span style="color: #34495e;">${props.Ranking || 'N/A'}</span>
-                </p>
-                <p style="margin: 5px 0;">
-                    <strong style="color: #2c3e50;">Sentido:</strong> 
-                    <span style="color: #34495e;">${props.Sentido || 'N/A'}</span>
+                    <span style="color: #34495e;">Con este resultado, ${props.NOMGEO} ocupa el puesto</span>
+                    <strong style="color: #2c3e50;">
+                        ${props.Sentido == 'Menos es mejor' ? (props.Ranking || 'N/A') : (33 - props.Ranking)} 
+                    </strong> 
+                    <span style="color: #34495e;">
+                        en el ranking nacional ${(props.Sentido == 'Más es mejor'
+                            ? '(siendo 1 el mejor desempeño).'
+                            : '(siendo 1 el peor desempeño).') || 'N/A'}
+                    </span>
                 </p>
             </div>
         </div>
     `;
-    
+
     e.target.bindPopup(popupContent).openPopup();
 }
+
 function resetHighlight(e) {
     B.myVariable ='Hidalgo';
     poligonos_map.resetStyle();
@@ -135,11 +158,8 @@ info.update = function (props) {
         `<h4>${props.NOMGEO}</h4>
          <div style="font-size: 12px; margin-top: 5px; display:inline-grid">
             <p><strong>Dato:</strong> ${props.Valor || 'N/A'}</p><br>
-            <p style='font-size: xx-small'>click para más información</p>
+            <p style='font-size: xx-small'>Clic en el estado para más información.</p>
             </div>`
-            // <p><strong>Valor transformado:</strong> ${props.Valor_Transf }</p><br>
-            // <p><strong>Ranking:</strong> ${props.Ranking || 'N/A'}</p><br>
-            // <p><strong>Sentido:</strong> ${props.Sentido || 'N/A'}</p><br>
         : '<h4>Seleccione un estado</h4>';
 };
 
