@@ -73,11 +73,20 @@ generarDatos_DadoIndicadorTema=function(tema="Todo",indicador){
     case "Mensual":
       base=indicadoresMensuales;
       break;
-    case "Trimestral":
-      base= indicadoresTrimestrales;
+    case "Trimestral": 
+      base=indicadoresTrimestrales;
       break;
     case "Anual":
-      base= indicadoresAnuales;
+      base=indicadoresAnuales;
+      break;
+    case "Bianual":
+      base=indicadoresBianuales;
+      break;
+    case "Trianual":
+      base=indicadoresTrianuales; 
+      break;
+    case "Quinquenal":
+      base=indicadoresQuinquenales;
       break;
   }
   //console.log(base)
@@ -179,6 +188,9 @@ function updateChartAndMap() {
 
     //Combindados
     const seNecesitaEscalar=revisarEscalamientoIndicador(datosIndicadorTema[0][2])
+    document.getElementsByClassName('tooltiptext_tablero_indicadores')[0].innerHTML=
+      seNecesitaEscalar=='No' ?'El orden en que se muestran los estados y los colores no representan un nivel de desempeño, solamente representan el ranking respecto a otros estados':
+      'El orden en que se muestran los estados y los colores representan una interpretación relativa (a la población) del desempeño';
     const seNecesitaInvertir=revisarInterpretacionIndicador(datosIndicadorTema[0][2])
     console.log(seNecesitaEscalar)
     console.log(datosEstados)

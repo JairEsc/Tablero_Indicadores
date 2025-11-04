@@ -3,6 +3,9 @@ let bienvenida_tab = true;
 let posiblesIndicadores=[];//Variable global para guardar los indicadores.
 let indicadoresMensuales=[];//Variable global para guardar los indicadores.
 let indicadoresTrimestrales=[];//Variable global para guardar los indicadores.
+let indicadoresBianuales=[];//Variable global para guardar los indicadores.
+let indicadoresTrianuales=[];//Variable global para guardar los indicadores.
+let indicadoresQuinquenales=[];//Variable global para guardar los indicadores.
 let indicadoresAnuales=[];//Variable global para guardar los indicadores.
 
 
@@ -10,33 +13,51 @@ let indicadoresAnuales=[];//Variable global para guardar los indicadores.
 //1. Consumir el archivo de temporalidad.csv para alimentar los indicadores generales
 
 PromesaLeerPosiblesIndicadores= new Promise ((res,rej)=>{
-    fetch("Datos/Temporalidad.csv").then(respuesta=>{
-      //console.log(respuesta)
-      respuesta.text().then(datos=>{res(datos.split("\r\n").slice(1).map(line => line.split(",").map(item =>item.trim().replace(/^"|"$/g, ""))))})
-    })
+  fetch("Datos/Temporalidad.csv").then(respuesta=>{
+    //console.log(respuesta)
+    respuesta.text().then(datos=>{res(datos.split("\r\n").slice(1).map(line => line.split(",").map(item =>item.trim().replace(/^"|"$/g, ""))))})
+  })
 })
 
 PromesaLeerPosiblesIndicadores.then(//Alimentamos el select de indicadores generales
   datos=>{
-    posiblesIndicadores=datos
+  posiblesIndicadores=datos
   console.log(datos)
   rellenarIndicadores(datos)
 })
 
 PromesaLeerMensuales= new Promise ((res,rej)=>{
-    fetch("Datos/Mensual.csv").then(respuesta=>{
-      respuesta.text().then(datos=>{res(datos.split("\r\n").slice(0).map(line => line.split(",").map(item =>item.trim().replace(/^"|"$/g, ""))))})
-    })
+  fetch("Datos/Mensual.csv").then(respuesta=>{
+    respuesta.text().then(datos=>{res(datos.split("\r\n").slice(0).map(line => line.split(",").map(item =>item.trim().replace(/^"|"$/g, ""))))})
+  })
 })
 PromesaLeerTrimestrales= new Promise ((res,rej)=>{
-    fetch("Datos/Trimestral.csv").then(respuesta=>{
-      respuesta.text().then(datos=>{res(datos.split("\r\n").slice(0).map(line => line.split(",").map(item =>item.trim().replace(/^"|"$/g, ""))))})
-    })
+  fetch("Datos/Trimestral.csv").then(respuesta=>{
+    respuesta.text().then(datos=>{res(datos.split("\r\n").slice(0).map(line => line.split(",").map(item =>item.trim().replace(/^"|"$/g, ""))))})
+  })
 })
 PromesaLeerAnuales= new Promise ((res,rej)=>{
-    fetch("Datos/Anual.csv").then(respuesta=>{
-      respuesta.text().then(datos=>{res(datos.split("\r\n").slice(0).map(line => line.split(",").map(item =>item.trim().replace(/^"|"$/g, ""))))})
-    })
+  fetch("Datos/Anual.csv").then(respuesta=>{
+    respuesta.text().then(datos=>{res(datos.split("\r\n").slice(0).map(line => line.split(",").map(item =>item.trim().replace(/^"|"$/g, ""))))})
+  })
+})
+
+PromesaLeerBianuales= new Promise ((res,rej)=>{
+  fetch("Datos/Bianual.csv").then(respuesta=>{
+    respuesta.text().then(datos=>{res(datos.split("\r\n").slice(0).map(line => line.split(",").map(item =>item.trim().replace(/^"|"$/g, ""))))})
+  })
+})
+
+PromesaLeerTrianuales= new Promise ((res,rej)=>{
+  fetch("Datos/Trianual.csv").then(respuesta=>{
+    respuesta.text().then(datos=>{res(datos.split("\r\n").slice(0).map(line => line.split(",").map(item =>item.trim().replace(/^"|"$/g, ""))))})
+  })
+})
+
+PromesaLeerQuinquenales= new Promise ((res,rej)=>{
+  fetch("Datos/Quinquenal.csv").then(respuesta=>{
+    respuesta.text().then(datos=>{res(datos.split("\r\n").slice(0).map(line => line.split(",").map(item =>item.trim().replace(/^"|"$/g, ""))))})
+  })
 })
 
 PromesaLeerMensuales.then(datos=>{
@@ -47,6 +68,15 @@ PromesaLeerTrimestrales.then(datos=>{
 })
 PromesaLeerAnuales.then(datos=>{
   indicadoresAnuales=datos
+})
+PromesaLeerBianuales.then(datos=>{
+  indicadoresBianuales=datos  
+})
+PromesaLeerTrianuales.then(datos=>{
+  indicadoresTrianuales=datos
+})
+PromesaLeerQuinquenales.then(datos=>{
+  indicadoresQuinquenales=datos
 })
 //2. Supongamos que elige indicador sin especificar tema
 
@@ -150,18 +180,20 @@ $("#indicador_tablero_indicadoresSearch").change(async function () {
       y: parseFloat(value.replace(/^"|"|\r|,$/g, "")),
       label: Header[primera_columna + index]
     }))
-    //.filter(point => !isNaN(point.y));
+    .filter(point => !isNaN(point.y));
 
   const x = timeData.map(p => p.x);
   const y = timeData.map(p => p.y);
+  console.log("regresion")
+  console.log(x, y);
   const lr = linearRegression(y, x);
-
+  console.log(lr);
   if (typeof chart !== "undefined") {
     chart.destroy();
   }
 
   // Create new chart
-  const nextIndex = timeData.length;
+  const nextIndex = x[x.length-1]+(x[x.length-1]-x[x.length-2]);
   const nextValue = lr.slope * nextIndex + lr.intercept;
   timeData.push({
     x: nextIndex,
@@ -170,7 +202,7 @@ $("#indicador_tablero_indicadoresSearch").change(async function () {
   });
 
   const xn = timeData.map(p => p.x);
-
+  console.log(xn)
   const ctx = document.getElementById("historico").getContext("2d");
   const pendientePlugin = {
     id: "pendientePlugin",
@@ -257,3 +289,4 @@ $("#indicador_tablero_indicadoresSearch").change(async function () {
   });
 
 });
+
