@@ -175,6 +175,7 @@ function updateJsonData() {
 }
 
 function updateChartAndMap() {
+    map.closePopup();
     // 'this' será el elemento 'anio_mes' al ser llamado como handler de evento.
     const columna_seleccionada = this.value;
 
