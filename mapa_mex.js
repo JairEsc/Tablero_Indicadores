@@ -1,9 +1,9 @@
 var bounds = L.latLngBounds(
-    L.latLng(35.0, -122.0), 
-    L.latLng(12.0, -83.0)   
+    L.latLng(38.0, -125.0), 
+    L.latLng(10.0, -80.0)   
 );
 var map = L.map('map_tablero_indicadores',{
-    maxBounds: bounds,        // Establecer los límites máximos
+    maxBounds: bounds,
     maxBoundsViscosity: 0.5
 }).fitBounds(bounds);
 function getColor(d) {
