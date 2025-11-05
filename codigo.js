@@ -36,11 +36,11 @@ PromesaLeerTrimestrales= new Promise ((res,rej)=>{
     respuesta.text().then(datos=>{res(datos.split("\r\n").slice(0).map(line => line.split(",").map(item =>item.trim().replace(/^"|"$/g, ""))))})
   })
 })
-PromesaLeerAnuales= new Promise ((res,rej)=>{
-  fetch("Datos/Anual.csv").then(respuesta=>{
-    respuesta.text().then(datos=>{res(datos.split("\r\n").slice(0).map(line => line.split(",").map(item =>item.trim().replace(/^"|"$/g, ""))))})
-  })
-})
+// PromesaLeerAnuales= new Promise ((res,rej)=>{
+//   fetch("Datos/Anual.csv").then(respuesta=>{
+//     respuesta.text().then(datos=>{res(datos.split("\r\n").slice(0).map(line => line.split(",").map(item =>item.trim().replace(/^"|"$/g, ""))))})
+//   })
+// })
 
 PromesaLeerBianuales= new Promise ((res,rej)=>{
   fetch("Datos/Bianual.csv").then(respuesta=>{
@@ -66,9 +66,9 @@ PromesaLeerMensuales.then(datos=>{
 PromesaLeerTrimestrales.then(datos=>{
   indicadoresTrimestrales=datos
 })
-PromesaLeerAnuales.then(datos=>{
-  indicadoresAnuales=datos
-})
+// PromesaLeerAnuales.then(datos=>{
+//   indicadoresAnuales=datos
+// })
 PromesaLeerBianuales.then(datos=>{
   indicadoresBianuales=datos  
 })
