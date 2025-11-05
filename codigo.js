@@ -43,19 +43,19 @@ PromesaLeerTrimestrales= new Promise ((res,rej)=>{
 // })
 
 PromesaLeerBianuales= new Promise ((res,rej)=>{
-  fetch("Datos/Bianual.csv").then(respuesta=>{
+  fetch("Datos/bianual.csv").then(respuesta=>{
     respuesta.text().then(datos=>{res(datos.split("\r\n").slice(0).map(line => line.split(",").map(item =>item.trim().replace(/^"|"$/g, ""))))})
   })
 })
 
 PromesaLeerTrianuales= new Promise ((res,rej)=>{
-  fetch("Datos/Trianual.csv").then(respuesta=>{
+  fetch("Datos/trianual.csv").then(respuesta=>{
     respuesta.text().then(datos=>{res(datos.split("\r\n").slice(0).map(line => line.split(",").map(item =>item.trim().replace(/^"|"$/g, ""))))})
   })
 })
 
 PromesaLeerQuinquenales= new Promise ((res,rej)=>{
-  fetch("Datos/Quinquenal.csv").then(respuesta=>{
+  fetch("Datos/quinquenal.csv").then(respuesta=>{
     respuesta.text().then(datos=>{res(datos.split("\r\n").slice(0).map(line => line.split(",").map(item =>item.trim().replace(/^"|"$/g, ""))))})
   })
 })
