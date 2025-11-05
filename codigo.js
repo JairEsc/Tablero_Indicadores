@@ -13,7 +13,7 @@ let indicadoresAnuales=[];//Variable global para guardar los indicadores.
 //1. Consumir el archivo de temporalidad.csv para alimentar los indicadores generales
 
 PromesaLeerPosiblesIndicadores= new Promise ((res,rej)=>{
-  fetch("https://raw.githubusercontent.com/JairEsc/Tablero_indicadores/main/Datos/Temporalidad.csv").then(respuesta=>{
+  fetch("Datos/Temporalidad.csv").then(respuesta=>{
     //console.log(respuesta)
     respuesta.text().then(datos=>{res(datos.split("\r\n").slice(1).map(line => line.split(",").map(item =>item.trim().replace(/^"|"$/g, ""))))})
   })
@@ -27,12 +27,12 @@ PromesaLeerPosiblesIndicadores.then(//Alimentamos el select de indicadores gener
 })
  
 PromesaLeerMensuales= new Promise ((res,rej)=>{
-  fetch("https://raw.githubusercontent.com/JairEsc/Tablero_indicadores/main/Datos/Mensual.csv").then(respuesta=>{
+  fetch("Datos/Mensual.csv").then(respuesta=>{
     respuesta.text().then(datos=>{res(datos.split("\r\n").slice(0).map(line => line.split(",").map(item =>item.trim().replace(/^"|"$/g, ""))))})
   })
 })
 PromesaLeerTrimestrales= new Promise ((res,rej)=>{
-  fetch("https://raw.githubusercontent.com/JairEsc/Tablero_indicadores/main/Datos/Trimestral.csv").then(respuesta=>{
+  fetch("Datos/Trimestral.csv").then(respuesta=>{
     respuesta.text().then(datos=>{res(datos.split("\r\n").slice(0).map(line => line.split(",").map(item =>item.trim().replace(/^"|"$/g, ""))))})
   })
 })
@@ -43,19 +43,19 @@ PromesaLeerTrimestrales= new Promise ((res,rej)=>{
 // })
 
 PromesaLeerBianuales= new Promise ((res,rej)=>{
-  fetch("https://raw.githubusercontent.com/JairEsc/Tablero_indicadores/main/Datos/bianual.csv").then(respuesta=>{
+  fetch("Datos/bianual.csv").then(respuesta=>{
     respuesta.text().then(datos=>{res(datos.split("\r\n").slice(0).map(line => line.split(",").map(item =>item.trim().replace(/^"|"$/g, ""))))})
   })
 })
 
 PromesaLeerTrianuales= new Promise ((res,rej)=>{
-  fetch("https://raw.githubusercontent.com/JairEsc/Tablero_indicadores/main/Datos/trianual.csv").then(respuesta=>{
+  fetch("Datos/trianual.csv").then(respuesta=>{
     respuesta.text().then(datos=>{res(datos.split("\r\n").slice(0).map(line => line.split(",").map(item =>item.trim().replace(/^"|"$/g, ""))))})
   })
 })
 
 PromesaLeerQuinquenales= new Promise ((res,rej)=>{
-  fetch("https://raw.githubusercontent.com/JairEsc/Tablero_indicadores/main/Datos/quinquenal.csv").then(respuesta=>{
+  fetch("Datos/quinquenal.csv").then(respuesta=>{
     respuesta.text().then(datos=>{res(datos.split("\r\n").slice(0).map(line => line.split(",").map(item =>item.trim().replace(/^"|"$/g, ""))))})
   })
 })
