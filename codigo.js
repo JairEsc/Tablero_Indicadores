@@ -110,6 +110,7 @@ $("#indicador_tablero_indicadoresSearch").focus(function() {
         $(this).val(' ');
 });
 $("#indicador_tablero_indicadoresSearch").change(async function () {
+  map.closePopup();
   const temaSeleccionado = $("#tema_tablero_indicadores").val();
   const indicadorSeleccionado = $(this).val();
   //console.log($(this).val())
