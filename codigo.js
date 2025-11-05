@@ -25,7 +25,7 @@ PromesaLeerPosiblesIndicadores.then(//Alimentamos el select de indicadores gener
   console.log(datos)
   rellenarIndicadores(datos)
 })
-
+ 
 PromesaLeerMensuales= new Promise ((res,rej)=>{
   fetch("Datos/Mensual.csv").then(respuesta=>{
     respuesta.text().then(datos=>{res(datos.split("\r\n").slice(0).map(line => line.split(",").map(item =>item.trim().replace(/^"|"$/g, ""))))})
