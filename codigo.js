@@ -83,6 +83,17 @@ const PromesaLeerQuinquenales = new Promise((res, rej) => {
             res(results.data);
         });
 });
+const PromesaLeerAnuales = new Promise((res, rej) => {
+    fetch("./datos/anual.csv")
+        .then(response => response.text())
+        .then(csvData => {
+            const results = Papa.parse(csvData, {
+                header: false,
+                skipEmptyLines: true
+            });
+            res(results.data);
+        });
+});
 
 PromesaLeerMensuales.then(datos => {
     indicadoresMensuales = datos;
@@ -106,6 +117,10 @@ PromesaLeerTrianuales.then(datos => {
 
 PromesaLeerQuinquenales.then(datos => {
     indicadoresQuinquenales = datos;
+    //console.log(datos);
+});
+PromesaLeerAnuales.then(datos => {
+    indicadoresAnuales = datos;
     //console.log(datos);
 });
 
@@ -170,7 +185,7 @@ $("#indicador_tablero_indicadoresSearch").change(async function () {
   ).style.visibility = "visible";
   document.getElementById(
     "descripcion_indicador_title_tablero_indicadores"
-  ).innerHTML='Descripción del Indicador:  <p style="all:unset">'+$(this).val()+'</p>';//Agregamos el nombre del indicador a la descripción.
+  ).innerHTML='<p style="all:unset">'+$(this).val()+'</p>';//Agregamos el nombre del indicador a la descripción.
   ///////////////////////
   /// Cambios de Lalo ///
   ///////////////////////
@@ -181,8 +196,8 @@ $("#indicador_tablero_indicadoresSearch").change(async function () {
   //console.log(intervalosDatos)
   let primera_columna=intervalosDatos.primera_columna
   let ultima_columna=intervalosDatos.ultima_columna
-  console.log("Primera columna válida:", primera_columna, "Última columna válida:", ultima_columna);
-  console.log("Encabezado first:", Header[primera_columna], "Encabezado last:", Header[ultima_columna]);
+  //console.log("Primera columna válida:", primera_columna, "Última columna válida:", ultima_columna);
+  //console.log("Encabezado first:", Header[primera_columna], "Encabezado last:", Header[ultima_columna]);
   
   //Rellenar select de años/meses en el mapa
   const selectAnioMes = document.getElementById("anio_mes");
@@ -214,10 +229,10 @@ $("#indicador_tablero_indicadoresSearch").change(async function () {
 
   const x = timeData.map(p => p.x);
   const y = timeData.map(p => p.y);
-  console.log("regresion")
-  console.log(x, y);
+  //console.log("regresion")
+  //console.log(x, y);
   const lr = linearRegression(y, x);
-  console.log(lr);
+  //console.log(lr);
   if (typeof chart !== "undefined") {
     chart.destroy();
   }
@@ -232,7 +247,7 @@ $("#indicador_tablero_indicadoresSearch").change(async function () {
   });
 
   const xn = timeData.map(p => p.x);
-  console.log(xn)
+  //console.log(xn)
   const ctx = document.getElementById("historico").getContext("2d");
   const pendientePlugin = {
     id: "pendientePlugin",

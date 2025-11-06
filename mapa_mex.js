@@ -93,7 +93,7 @@ function clickFeature(e) {
                         ? parseFloat(props.Valor_Transf).toFixed(2).replace(/\.00$/, '') 
                         : parseFloat(props.Valor_Transf).toFixed(5).replace(/\.00$/, '')}
                 </strong> 
-                <span style="color: #34495e;"> lo que refleja su nivel por habitante.</span>
+                <span style="color: #34495e;"> lo que refleja su nivel por cada ${props.Superficie_km2} habitantes.</span>
             </p>
         `;
     }

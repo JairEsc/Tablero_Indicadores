@@ -193,15 +193,15 @@ function updateChartAndMap() {
       seNecesitaEscalar=='No' ?'El orden en que se muestran los estados y los colores no representan un nivel de desempeño, solamente representan el ranking respecto a otros estados':
       'El orden en que se muestran los estados y los colores representan una interpretación relativa (a la población) del desempeño';
     const seNecesitaInvertir=revisarInterpretacionIndicador(datosIndicadorTema[0][2])
-    console.log(seNecesitaEscalar)
-    console.log(datosEstados)
+    //console.log(seNecesitaEscalar)
+    //console.log(datosEstados)
     const combined_Estados = datosEstados.map((dato_est, index) => ({
       dato: OriginalEstados[index],
       value: dato_est == "NA" ? null : parseFloat(dato_est.replace(/,$/g, "")),
       //Aquí deberíamos preguntarnos si se hará la transofrmación. 
-      transformed: dato_est == "NA" ? null : (seNecesitaEscalar=='No'? dato_est:1000*parseFloat(dato_est.replace(/,$/g, ""))/mexico.features[index].properties['2020_Total'])
+      transformed: dato_est == "NA" ? null : (seNecesitaEscalar=='No'? dato_est:(parseFloat(seNecesitaEscalar.split('_')[1]))*parseFloat(dato_est.replace(/,$/g, ""))/mexico.features[index].properties['2020_Total'])
     }));
-    console.log(combined_Estados)
+    //console.log(combined_Estados)
     
     const combined_Estados_ordenados = [...combined_Estados];
     combined_Estados_ordenados.sort((a, b) => b.transformed - a.transformed);
@@ -243,6 +243,7 @@ function updateChartAndMap() {
             ? rank.toString().padStart(2, "0") 
             : (33 - rank).toString().padStart(2, "0"));
       feature.properties.Sentido = seNecesitaInvertir == 'Menos es mejor' ? 'Menos es mejor' : 'Más es mejor';
+      feature.properties.Superficie_km2 = seNecesitaEscalar == 'No' ? 0 : parseInt(seNecesitaEscalar.split("_")[1]);
     });
 
     datosEstados = combined_Estados_ordenados.map((item) => item.transformed);
