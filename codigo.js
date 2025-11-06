@@ -25113,11 +25113,24 @@ let indicadoresAnuales=[];//Variable global para guardar los indicadores.
 //Pasos. 
 //1. Consumir el archivo de temporalidad.csv para alimentar los indicadores generales
 
-PromesaLeerPosiblesIndicadores= new Promise ((res,rej)=>{
-  fetch("./datos/Temporalidad.csv").then(respuesta=>{
-    console.log(respuesta)
-    respuesta.text().then(datos=>{res(datos.split("\r\n").slice(1).map(line => line.split(",").map(item =>item.trim().replace(/^"|"$/g, ""))))})
-  })
+PromesaLeerPosiblesIndicadores = new Promise((res,rej)=>{
+    fetch("./datos/temporalidad.csv")
+        .then(respuesta => {
+            console.log(respuesta)
+            if (!respuesta.ok) {
+                throw new Error(`HTTP error! status: ${respuesta.status}`);
+            }
+            return respuesta.text();
+        })
+        .then(datos => {
+            res(datos.split("\r\n").slice(1).map(line => 
+                line.split(",").map(item => item.trim().replace(/^"|"$/g, ""))
+            ))
+        })
+        .catch(error => {
+            console.error('Error fetching data:', error);
+            rej(error);
+        });
 })
 
 PromesaLeerPosiblesIndicadores.then(//Alimentamos el select de indicadores generales
