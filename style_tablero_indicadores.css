@@ -6,7 +6,7 @@ body{
     position: relative;
   width: 120%;
   height: 650px; /* Para que cubra toda la altura de la ventana */
-  background-image: url('Datos/instrucciones_Mesa de trabajo 1.png');
+  background-image: url('./datos/instrucciones_Mesa de trabajo 1.png');
   background-size:contain; /* Asegura que la imagen cubra toda la sección */
   background-position: center; /* Centra la imagen */
   background-repeat: no-repeat; /* Evita que la imagen se repita */
