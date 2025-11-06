@@ -25113,32 +25113,33 @@ let indicadoresAnuales=[];//Variable global para guardar los indicadores.
 //Pasos. 
 //1. Consumir el archivo de temporalidad.csv para alimentar los indicadores generales
 
-PromesaLeerPosiblesIndicadores = new Promise((res,rej)=>{
-    fetch("./datos/temporalidad.csv")
-        .then(respuesta => {
-            console.log(respuesta)
-            if (!respuesta.ok) {
-                throw new Error(`HTTP error! status: ${respuesta.status}`);
-            }
-            return respuesta.text();
-        })
-        .then(datos => {
-            res(datos.split("\r\n").slice(1).map(line => 
-                line.split(",").map(item => item.trim().replace(/^"|"$/g, ""))
-            ))
-        })
-        .catch(error => {
-            console.error('Error fetching data:', error);
-            rej(error);
-        });
-})
+async function leerPosiblesIndicadores() {
+    try {
+        const respuesta = await fetch("./datos/temporalidad.csv");
+        if (!respuesta.ok) {
+            throw new Error(`HTTP error! status: ${respuesta.status}`);
+        }
+        const datos = await respuesta.text();
+        const lineas = datos.split("\r\n").filter(line => line.trim().length > 0);
+        const resultado = lineas.slice(1).map(line => 
+            line.split(",").map(item => item.trim().replace(/^"|"$/g, ""))
+        );
+        return resultado;
+    } catch (error) {
+        console.error('Error fetching data:', error);
+        throw error;
+    }
+}
 
-PromesaLeerPosiblesIndicadores.then(//Alimentamos el select de indicadores generales
-  datos=>{
-  posiblesIndicadores=datos
-  console.log(datos)
-  rellenarIndicadores(datos)
-})
+leerPosiblesIndicadores()
+    .then(datos => {
+        posiblesIndicadores = datos;
+        console.log('Datos cargados:', datos);
+        rellenarIndicadores(datos);
+    })
+    .catch(error => {
+        console.error('Error loading indicators:', error);
+    });
 //rellenarIndicadores(posiblesIndicadores)
 // PromesaLeerMensuales= new Promise ((res,rej)=>{
 //   fetch("Datos/Mensual.csv").then(respuesta=>{
