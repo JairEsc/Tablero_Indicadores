@@ -25139,7 +25139,7 @@ PromesaLeerPosiblesIndicadores.then(//Alimentamos el select de indicadores gener
   console.log(datos)
   rellenarIndicadores(datos)
 })
-rellenarIndicadores(posiblesIndicadores)
+//rellenarIndicadores(posiblesIndicadores)
 // PromesaLeerMensuales= new Promise ((res,rej)=>{
 //   fetch("Datos/Mensual.csv").then(respuesta=>{
 //     console.log(respuesta)
