@@ -25113,32 +25113,19 @@ let indicadoresAnuales=[];//Variable global para guardar los indicadores.
 //Pasos. 
 //1. Consumir el archivo de temporalidad.csv para alimentar los indicadores generales
 
-async function leerPosiblesIndicadores() {
-    try {
-        const respuesta = await fetch("./datos/temporalidad.csv");
-        if (!respuesta.ok) {
-            throw new Error(`HTTP error! status: ${respuesta.status}`);
-        }
-        const datos = await respuesta.text();
-        const lineas = datos.split("\r\n").filter(line => line.trim().length > 0);
-        const resultado = lineas.slice(1).map(line => 
-            line.split(",").map(item => item.trim().replace(/^"|"$/g, ""))
-        );
-        return resultado;
-    } catch (error) {
-        console.error('Error fetching data:', error);
-        throw error;
-    }
-}
-
-leerPosiblesIndicadores()
-    .then(datos => {
-        posiblesIndicadores = datos;
-        console.log('Datos cargados:', datos);
-        rellenarIndicadores(datos);
+fetch("./datos/temporalidad.csv")
+    .then(response => response.text())
+    .then(csvData => {
+        const results = Papa.parse(csvData, {
+            header: false,
+            skipEmptyLines: true
+        });
+        posiblesIndicadores = results.data.slice(1); // Skip header row
+        console.log(posiblesIndicadores);
+        rellenarIndicadores(posiblesIndicadores);
     })
     .catch(error => {
-        console.error('Error loading indicators:', error);
+        console.error("Error fetching CSV:", error);
     });
 //rellenarIndicadores(posiblesIndicadores)
 // PromesaLeerMensuales= new Promise ((res,rej)=>{
@@ -25203,7 +25190,6 @@ leerPosiblesIndicadores()
 //   indicadoresQuinquenales=datos
 //   console.log(datos)
 // })
-// //2. Supongamos que elige indicador sin especificar tema
 
 $("#tema_tablero_indicadores").change(function () {
 
