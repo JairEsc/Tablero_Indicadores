@@ -1,136 +1,103 @@
-﻿Tema,Indicador,temporalidad,En_razon,Sentido
-Económico,Ingreso corriente promedio trimestral por hogar,Bianual,No,Más es mejor
-Económico,Gasto corriente promedio trimestral por hogar,Bianual,No,Más es mejor
-Económico,Empleos formales generados,Mensual,No,Más es mejor
-Económico,Indicador Mensual de la Actividad Industrial por Entidad Federativa IMAIEF,Mensual,No,Más es mejor
-Económico,Trabajadores Asegurados del IMSS,Mensual,Si_100,Más es mejor
-Económico,Crecimiento Economico,Trimestral,No,Más es mejor
-Económico,Desigualdad Laboral,Trimestral,No,Menos es mejor
-Económico,Población Económicamente Activa PEA,Trimestral,Si_100,Más es mejor
-Económico,Población Ocupada,Trimestral,Si_100,Más es mejor
-Económico,Población Desocupada,Trimestral,Si_100,Menos es mejor
-Económico,Tasa de Participación,Trimestral,No,Más es mejor
-Económico,Tasa de Desocupación,Trimestral,No,Menos es mejor
-Económico,Tasa de Ocupación parcial y desocupación/,Trimestral,No,Menos es mejor
-Económico,Tasa de Presión general,Trimestral,No,Más es mejor
-Económico,Tasa de Trabajo asalariado,Trimestral,No,Más es mejor
-Económico,Tasa de Subocupación,Trimestral,No,Más es mejor
-Económico,Tasa de Condiciones críticas de ocupación,Trimestral,No,Menos es mejor
-Económico,Tasa de Informalidad laboral,Trimestral,No,Menos es mejor
-Económico,Tasa de Ocupación en el sector informal,Trimestral,No,Menos es mejor
-Económico,Exportaciones por Entidad Federativa,Trimestral,No,Más es mejor
-Económico,Indicador Trimestral de la Actividad Economica Estatal ITAEE,Trimestral,No,Más es mejor
-Económico,Informalidad Laboral,Trimestral,No,Menos es mejor
-Económico,Ingresos por Remesas,Trimestral,No,Más es mejor
-Económico,Inversion Extranjera Directa IED,Trimestral,No,Más es mejor
-Económico,Productividad Laboral,Trimestral,No,Más es mejor
-Gobierno,Confianza en el Gobierno Estatal,Bianual,No,Más es mejor
-Gobierno,Nivel de satisfacción general con los servicios públicos básicos y bajo demanda,Bianual,No,Más es mejor
-Gobierno,Tasa de incidencia de corrupción por cada cien mil habitantes,Bianual,No,Menos es mejor
-Gobierno,Tasa de prevalencia de la corrupción por cada 100 mil habitantes,Bianual,No,Menos es mejor
-Seguridad Pública,Incidencia delictiva,Mensual,Si_1000,Menos es mejor
-Seguridad Pública,Homicidios,Mensual,Si_1000,Menos es mejor
-Seguridad Pública,Lesiones,Mensual,Si_1000,Menos es mejor
-Seguridad Pública,Femicicidios,Mensual,Si_1000,Menos es mejor
-Seguridad Pública,Secuestro,Mensual,Si_1000,Menos es mejor
-Seguridad Pública,Violacion,Mensual,Si_1000,Menos es mejor
-Seguridad Pública,Robo a Casa Habitación,Mensual,Si_1000,Menos es mejor
-Seguridad Pública,Robo de Vehículos,Mensual,Si_1000,Menos es mejor
-Seguridad Pública,Robo a Negocio,Mensual,Si_1000,Menos es mejor
-Seguridad Pública,Extorsión,Mensual,Si_1000,Menos es mejor
-Seguridad Pública,Violencia familiar,Mensual,Si_1000,Menos es mejor
-Seguridad Pública,Narcomenudeo,Mensual,Si_1000,Menos es mejor
-Social,Porcentaje de la Población en situación de Pobreza,Bianual,No,Menos es mejor
-Social,Porcentaje de la Población en situación de Pobreza Moderada,Bianual,No,Menos es mejor
-Social,Porcentaje de la Poblaciónn en situación de Pobreza Extrema,Bianual,No,Menos es mejor
-Social,Porcentaje de la población vulnerable por ingresos,Bianual,No,Menos es mejor
-Social,Porcentaje de la Población con Rezago Educativo,Bianual,No,Menos es mejor
-Social,Porcentaje de la Población con Carencia por acceso a la seguridad social,Bianual,No,Menos es mejor
-Social,Porcentaje de la Población con Carencia por acceso a los servicios de salud,Bianual,No,Menos es mejor
-Social,Porcentaje de la Población con Carencia por calidad y espacios de la vivienda,Bianual,No,Menos es mejor
-Social,Porcentaje de la Población con Carencia por acceso a los servicios básicos en la vivienda,Bianual,No,Menos es mejor
-Social,Porcentaje de la Población con Carencia por acceso a la alimentación nutritiva y de calidad,Bianual,No,Menos es mejor
-Social,Porcentaje de la Población con Población con Ingreso Inferior a la Línea de pobreza extrema por ingresos,Bianual,No,Menos es mejor
-Social,Porcentaje de la Población con Población con Ingreso Inferior a la Línea de pobreza por ingresos,Bianual,No,Menos es mejor
-Social,Grado promedio de escolaridad (años),Quinquenal,No,Más es mejor
-Social,Tasa de ocupación infantil no permitida,Trianual,No,Menos es mejor
-Social,Tasa de quehaceres domésticos en condiciones no adecuadas,Trianual,No,Menos es mejor
-Económico,Aves. Valor de la Producción (miles de pesos),Anual,No,Más es mejor
-Económico,Aves. Volumen de la Producción (toneladas),Anual,No,Más es mejor
-Económico,Cera. Valor de la Producción (miles de pesos),Anual,No,Más es mejor
-Económico,Cera. Volumen de la Producción (toneladas),Anual,No,Más es mejor
-Económico,Deuda Pública (Porcentaje del PIB),Anual,No,Más es mejor
-Económico,Ganado Bovino. Valor de la Producción (miles de pesos),Anual,No,Más es mejor
-Económico,Ganado Bovino. Volumen de la Producción (toneladas),Anual,No,Más es mejor
-Económico,Ganado Caprino. Valor de la Producción (miles de pesos),Anual,No,Más es mejor
-Económico,Ganado Caprino. Volumen de la Producción (toneladas),Anual,No,Más es mejor
-Económico,Ganado Ovino.  Volumen de la Producción (toneladas),Anual,No,Más es mejor
-Económico,Ganado Ovino. Valor de la Producción (miles de pesos),Anual,No,Más es mejor
-Económico,Ganado Porcino. Valor de la Producción (miles de pesos),Anual,No,Más es mejor
-Económico,Ganado Porcino. Volumen de la Producción (toneladas),Anual,No,Más es mejor
-Económico,Guajolotes. Valor de la Producción (miles de pesos),Anual,No,Más es mejor
-Económico,Guajolotes. Volumen de la Producción (toneladas),Anual,No,Más es mejor
-Económico,Huevo para Plato. Valor de la Producción (miles de pesos),Anual,No,Más es mejor
-Económico,Huevo para plato. Volumen de la Producción (toneladas),Anual,No,Más es mejor
-Económico,Lana. Valor de la Producción (miles de pesos),Anual,No,Más es mejor
-Económico,Lana. Volumen de la Producción (toneladas),Anual,No,Más es mejor
-Económico,Leche de Bovino.  Volumen de la Producción (miles de litros),Anual,No,Más es mejor
-Económico,Leche de Bovino. Valor de la Producción miles de pesos),Anual,No,Más es mejor
-Económico,Leche de Caprino. Valor de la Producción (miles de pesos),Anual,No,Más es mejor
-Económico,Leche de Caprino. Volumen de la Producción (miles de litros),Anual,No,Más es mejor
-Económico,Longitud de la Red Carretera Federal (kilometros),Anual,No,Más es mejor
-Económico,Longitud de la Red de Alimentadoras estatales (kilometros,Anual,No,Más es mejor
-Económico,Longitud de la Red de Brechas Mejoradas (kilometros),Anual,No,Más es mejor
-Económico,Longitud de la Red de Caminos Rurales (kilometros),Anual,No,Más es mejor
-Económico,Miel. Valor de la Producción (miles de pesos),Anual,No,Más es mejor
-Económico,Miel. Volumen de la Producción (toneladas),Anual,No,Más es mejor
-Económico,Oferta de alojamiento en la entidad (cuartos),Anual,No,Más es mejor
-Económico,Patentes,Anual,No,Más es mejor
-Económico,Porcentaje de ocupación en la entidad ,Anual,No,Más es mejor
-Económico,Producción Pesquera. Valor de la Producción (Peso vivo pesos),Anual,No,Más es mejor
-Económico,Producto Interno Bruto (millones de pesos) / Porcentaje de ParticipaciÃ³n (VALORES CONSTANTES),Anual,No,Más es mejor
-Económico,Superficie cosechada (hectáreas),Anual,No,Más es mejor
-Económico,Superficie sembrada (hectáreas),Anual,No,Más es mejor
-Económico,Valor de la Producción agrícola (miles de pesos),Anual,No,Más es mejor
-Económico,Volumen de la Producción Pesquera (Peso vivo kilogramos),Anual,No,Más es mejor
-Económico,Volumen de la Producción agrícola (toneladas),Anual,No,Más es mejor
-Económico,Índice de Competitividad Estatal (lugar nacional),Anual,No,Menos es mejor
-Gobierno,"Barometro de Informacion Presupuestal Estatal BIPE (cumplimiento, puntaje obtenido)",Anual,No,Más es mejor
-Género,Brecha de ingresos por Género #Con Lupa de Género (Porcentaje),Anual,No,Menos es mejor
-Género,Cobertura de educación en la primera infancia #Con Lupa de Género (Porcentaje),Anual,No,Más es mejor
-Género,Delitos sexuales #Con Lupa de Género,Anual,Si_1000,Menos es mejor
-Género,Desigualdad en trabajo no remunerado (TNR) #Con Lupa de Género,Anual,No,Menos es mejor
-Género,Embarazo Adolescente #Con Lupa de Género (Porcentaje),Anual,No,Menos es mejor
-Género,Homicidios dolosos de mujeres y feminicidios #Con Lupa de Género,Anual,Si_1000,Menos es mejor
-Género,Igualdad laboral y no discriminación #Con Lupa de Género (Porcentaje),Anual,No,Más es mejor
-Género,Informalidad #Con Lupa de Género (Porcentaje),Anual,No,Menos es mejor
-Género,Jornada laboral larga #Con Lupa de Género (Porcentaje),Anual,No,Menos es mejor
-Género,Mujeres Preparadas #Con Lupa de Género (Porcentaje),Anual,No,Más es mejor
-Género,Mujeres que quieren trabajar y no pueden #Con Lupa de Género (Porcentaje),Anual,No,Menos es mejor
-Género,Oferta de cuidados de adultos mayores #Con Lupa de Género,Anual,No,Más es mejor
-Género,Percepción de inseguridad en transporte público #Con Lupa de Género (Porcentaje),Anual,No,Menos es mejor
-Género,Permisos de paternidad #Con Lupa de Género,Anual,Si_1000,Más es mejor
-Género,Pobreza laboral #Con Lupa de Género (Porcentaje),Anual,No,Menos es mejor
-Medio ambiente,Plantas Tratadoras de Aguas residuales,Anual,No,Más es mejor
-Medio ambiente,Volumen tratado en las PTARs  (Millones m3),Anual,No,Más es mejor
-Seguridad Pública,Cifra negra,Anual,No,Menos es mejor
-Seguridad Pública,Delitos denunciados (porcentaje),Anual,No,Más es mejor
-Seguridad Pública,Indice de Paz,Anual,No,Más es mejor
-Seguridad Pública,Mortalidad Defunciones registradas en Accidentes de Tránsito,Anual,Si_1000,Menos es mejor
-Seguridad Pública,Número de Accidentes de tránsito,Anual,No,Menos es mejor
-Seguridad Pública,Percepcion sobre Seguridad Publica Inseguro,Anual,No,Menos es mejor
-Seguridad Pública,Percepcion sobre Seguridad Publica Seguro,Anual,No,Menos es mejor
-Seguridad Pública,Percepción sobre tema de Inseguridad,Anual,No,Más es mejor
-Seguridad Pública,Tasa bruta de homicidios por cada 100 mil habitantes,Anual,No,Menos es mejor
-Seguridad Pública,Tasa de Incidencia Delictiva (100 mil hab),Anual,No,Menos es mejor
-Seguridad Pública,"Tasa de Prevalencia Delictiva (100 mil hab) personas, hogares o propiedades que han sido víctimas de un delito",Anual,No,Menos es mejor
-Social,Abandono escolar Educación Superior (%),Anual,No,Menos es mejor
-Social,Cobertura Educación Primaria (%),Anual,No,Más es mejor
-Social,Cobertura educacíón Presescolar (%),Anual,No,Más es mejor
-Social,Cobertura educacíón Secundaria (%),Anual,No,Más es mejor
-Social,Cobertura educacíónMedia Superior (%),Anual,No,Más es mejor
-Social,Eficiencia terminal Primaria (%),Anual,No,Más es mejor
-Social,Eficiencia terminal educación Secundaria (%),Anual,No,Más es mejor
-Social,Tasa bruta de homicidios por cada 100 mil habitantes,Anual,No,Menos es mejor
-Social,Tasa de Abandono Escolar Media Superior (%),Anual,No,Menos es mejor
-Social,Tasa de Abandono escolar Educación Primaria (%),Anual,No,Menos es mejor
+﻿"Tema","Indicador","temporalidad","En_razon","Sentido"
+"Económico","Ingreso corriente promedio trimestral por hogar","Bianual","No","Más es mejor"
+"Económico","Gasto corriente promedio trimestral por hogar","Bianual","No","Más es mejor"
+"Económico","Empleos formales generados","Mensual","No","Más es mejor"
+"Económico","Indicador Mensual de la Actividad Industrial por Entidad Federativa IMAIEF","Mensual","No","Más es mejor"
+"Económico","Trabajadores Asegurados del IMSS","Mensual","Si_100","Más es mejor"
+"Económico","Crecimiento Economico","Trimestral","No","Más es mejor"
+"Económico","Desigualdad Laboral","Trimestral","No","Menos es mejor"
+"Económico","Población Económicamente Activa PEA","Trimestral","Si_100","Más es mejor"
+"Económico","Población Ocupada","Trimestral","Si_100","Más es mejor"
+"Económico","Población Desocupada","Trimestral","Si_100","Menos es mejor"
+"Económico","Tasa de Participación","Trimestral","No","Más es mejor"
+"Económico","Tasa de Desocupación","Trimestral","No","Menos es mejor"
+"Económico","Tasa de Ocupación parcial y desocupación/","Trimestral","No","Menos es mejor"
+"Económico","Tasa de Presión general","Trimestral","No","Más es mejor"
+"Económico","Tasa de Trabajo asalariado","Trimestral","No","Más es mejor"
+"Económico","Tasa de Subocupación","Trimestral","No","Más es mejor"
+"Económico","Tasa de Condiciones críticas de ocupación","Trimestral","No","Menos es mejor"
+"Económico","Tasa de Informalidad laboral","Trimestral","No","Menos es mejor"
+"Económico","Tasa de Ocupación en el sector informal","Trimestral","No","Menos es mejor"
+"Económico","Exportaciones por Entidad Federativa","Trimestral","No","Más es mejor"
+"Económico","Indicador Trimestral de la Actividad Economica Estatal ITAEE","Trimestral","No","Más es mejor"
+"Económico","Informalidad Laboral","Trimestral","No","Menos es mejor"
+"Económico","Ingresos por Remesas","Trimestral","No","Más es mejor"
+"Económico","Inversion Extranjera Directa IED","Trimestral","No","Más es mejor"
+"Económico","Productividad Laboral","Trimestral","No","Más es mejor"
+"Gobierno","Confianza en el Gobierno Estatal","Bianual","No","Más es mejor"
+"Gobierno","Nivel de satisfacción general con los servicios públicos básicos y bajo demanda","Bianual","No","Más es mejor"
+"Gobierno","Tasa de incidencia de corrupción por cada cien mil habitantes","Bianual","No","Menos es mejor"
+"Gobierno","Tasa de prevalencia de la corrupción por cada 100 mil habitantes","Bianual","No","Menos es mejor"
+"Seguridad Pública","Incidencia delictiva","Mensual","Si_1000","Menos es mejor"
+"Seguridad Pública","Homicidios","Mensual","Si_1000","Menos es mejor"
+"Seguridad Pública","Lesiones","Mensual","Si_1000","Menos es mejor"
+"Seguridad Pública","Femicicidios","Mensual","Si_1000","Menos es mejor"
+"Seguridad Pública","Secuestro","Mensual","Si_1000","Menos es mejor"
+"Seguridad Pública","Violacion","Mensual","Si_1000","Menos es mejor"
+"Seguridad Pública","Robo a Casa Habitación","Mensual","Si_1000","Menos es mejor"
+"Seguridad Pública","Robo de Vehículos","Mensual","Si_1000","Menos es mejor"
+"Seguridad Pública","Robo a Negocio","Mensual","Si_1000","Menos es mejor"
+"Seguridad Pública","Extorsión","Mensual","Si_1000","Menos es mejor"
+"Seguridad Pública","Violencia familiar","Mensual","Si_1000","Menos es mejor"
+"Seguridad Pública","Narcomenudeo","Mensual","Si_1000","Menos es mejor"
+"Social","Porcentaje de la Población en situación de Pobreza","Bianual","No","Menos es mejor"
+"Social","Porcentaje de la Población en situación de Pobreza Moderada","Bianual","No","Menos es mejor"
+"Social","Porcentaje de la Poblaciónn en situación de Pobreza Extrema","Bianual","No","Menos es mejor"
+"Social","Porcentaje de la población vulnerable por ingresos","Bianual","No","Menos es mejor"
+"Social","Porcentaje de la Población con Rezago Educativo","Bianual","No","Menos es mejor"
+"Social","Porcentaje de la Población con Carencia por acceso a la seguridad social","Bianual","No","Menos es mejor"
+"Social","Porcentaje de la Población con Carencia por acceso a los servicios de salud","Bianual","No","Menos es mejor"
+"Social","Porcentaje de la Población con Carencia por calidad y espacios de la vivienda","Bianual","No","Menos es mejor"
+"Social","Porcentaje de la Población con Carencia por acceso a los servicios básicos en la vivienda","Bianual","No","Menos es mejor"
+"Social","Porcentaje de la Población con Carencia por acceso a la alimentación nutritiva y de calidad","Bianual","No","Menos es mejor"
+"Social","Porcentaje de la Población con Población con Ingreso Inferior a la Línea de pobreza extrema por ingresos","Bianual","No","Menos es mejor"
+"Social","Porcentaje de la Población con Población con Ingreso Inferior a la Línea de pobreza por ingresos","Bianual","No","Menos es mejor"
+"Social","Grado promedio de escolaridad (años)","Quinquenal","No","Más es mejor"
+"Social","Tasa de ocupación infantil no permitida","Trianual","No","Menos es mejor"
+"Social","Tasa de quehaceres domésticos en condiciones no adecuadas","Trianual","No","Menos es mejor"
+"Económico","Deuda Pública (Porcentaje del PIB)","Anual","No","Menos es mejor"
+"Económico","Longitud de la Red Carretera Federal (kilometros)","Anual","No","Más es mejor"
+"Económico","Longitud de la Red de Alimentadoras estatales (kilometros","Anual","No","Más es mejor"
+"Económico","Longitud de la Red de Brechas Mejoradas (kilometros)","Anual","No","Más es mejor"
+"Económico","Longitud de la Red de Caminos Rurales (kilometros)","Anual","No","Más es mejor"
+"Económico","Oferta de alojamiento en la entidad (cuartos)","Anual","No","Más es mejor"
+"Económico","Patentes","Anual","No","Más es mejor"
+"Económico","Porcentaje de ocupación en la entidad ","Anual","No","Más es mejor"
+"Económico","Producto Interno Bruto (millones de pesos) / Porcentaje de ParticipaciÃ³n (VALORES CONSTANTES)","Anual","No","Más es mejor"
+"Económico","Índice de Competitividad Estatal (lugar nacional)","Anual","No","Menos es mejor"
+"Gobierno","Barometro de Informacion Presupuestal Estatal BIPE (cumplimiento, puntaje obtenido)","Anual","No","Más es mejor"
+"Género","Brecha de ingresos por Género #Con Lupa de Género (Porcentaje)","Anual","No","Menos es mejor"
+"Género","Cobertura de educación en la primera infancia #Con Lupa de Género (Porcentaje)","Anual","No","Más es mejor"
+"Género","Delitos sexuales #Con Lupa de Género","Anual","Si_1000","Menos es mejor"
+"Género","Desigualdad en trabajo no remunerado (TNR) #Con Lupa de Género","Anual","No","Menos es mejor"
+"Género","Embarazo Adolescente #Con Lupa de Género (Porcentaje)","Anual","No","Menos es mejor"
+"Género","Homicidios dolosos de mujeres y feminicidios #Con Lupa de Género","Anual","Si_1000","Menos es mejor"
+"Género","Igualdad laboral y no discriminación #Con Lupa de Género (Porcentaje)","Anual","No","Más es mejor"
+"Género","Informalidad #Con Lupa de Género (Porcentaje)","Anual","No","Menos es mejor"
+"Género","Jornada laboral larga #Con Lupa de Género (Porcentaje)","Anual","No","Menos es mejor"
+"Género","Mujeres Preparadas #Con Lupa de Género (Porcentaje)","Anual","No","Más es mejor"
+"Género","Mujeres que quieren trabajar y no pueden #Con Lupa de Género (Porcentaje)","Anual","No","Menos es mejor"
+"Género","Oferta de cuidados de adultos mayores #Con Lupa de Género","Anual","No","Más es mejor"
+"Género","Percepción de inseguridad en transporte público #Con Lupa de Género (Porcentaje)","Anual","No","Menos es mejor"
+"Género","Permisos de paternidad #Con Lupa de Género","Anual","Si_1000","Más es mejor"
+"Género","Pobreza laboral #Con Lupa de Género (Porcentaje)","Anual","No","Menos es mejor"
+"Seguridad Pública","Cifra negra","Anual","No","Menos es mejor"
+"Seguridad Pública","Delitos denunciados (porcentaje)","Anual","No","Más es mejor"
+"Seguridad Pública","Mortalidad Defunciones registradas en Accidentes de Tránsito","Anual","Si_1000","Menos es mejor"
+"Seguridad Pública","Número de Accidentes de tránsito","Anual","No","Menos es mejor"
+"Seguridad Pública","Percepcion sobre Seguridad Publica Inseguro","Anual","No","Menos es mejor"
+"Seguridad Pública","Percepcion sobre Seguridad Publica Seguro","Anual","No","Menos es mejor"
+"Seguridad Pública","Percepción sobre tema de Inseguridad","Anual","No","Más es mejor"
+"Seguridad Pública","Tasa bruta de homicidios por cada 100 mil habitantes","Anual","No","Menos es mejor"
+"Seguridad Pública","Tasa de Incidencia Delictiva (100 mil hab)","Anual","No","Menos es mejor"
+"Seguridad Pública","Tasa de Prevalencia Delictiva (100 mil hab) personas, hogares o propiedades que han sido víctimas de un delito","Anual","No","Menos es mejor"
+"Social","Abandono escolar Educación Superior (%)","Anual","No","Menos es mejor"
+"Social","Cobertura Educación Primaria (%)","Anual","No","Más es mejor"
+"Social","Cobertura educacíón Presescolar (%)","Anual","No","Más es mejor"
+"Social","Cobertura educacíón Secundaria (%)","Anual","No","Más es mejor"
+"Social","Cobertura educacíónMedia Superior (%)","Anual","No","Más es mejor"
+"Social","Eficiencia terminal Primaria (%)","Anual","No","Más es mejor"
+"Social","Eficiencia terminal educación Secundaria (%)","Anual","No","Más es mejor"
+"Social","Tasa bruta de homicidios por cada 100 mil habitantes","Anual","No","Menos es mejor"
+"Social","Tasa de Abandono Escolar Media Superior (%)","Anual","No","Menos es mejor"
+"Social","Tasa de Abandono escolar Educación Primaria (%)","Anual","No","Menos es mejor"

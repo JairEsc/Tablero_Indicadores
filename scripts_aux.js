@@ -91,7 +91,9 @@ generarDatos_DadoIndicadorTema=function(tema="Todo",indicador){
   }
   //console.log(base)
   //base contiene la informacion de todos los indicadores.
+  console.log(base)
   base_filtrada=base.filter(line=>{return((line[0]+': '+line[2])==indicador || line[0]==='Tema')})
+  console.log(base)
   //base_filtrada solamente la del indicador.
   //console.log(base_filtrada)
   return(base_filtrada)
@@ -194,14 +196,14 @@ function updateChartAndMap() {
       'El orden en que se muestran los estados y los colores representan una interpretación relativa (a la población) del desempeño';
     const seNecesitaInvertir=revisarInterpretacionIndicador(datosIndicadorTema[0][2])
     //console.log(seNecesitaEscalar)
-    //console.log(datosEstados)
+    console.log(datosEstados)
     const combined_Estados = datosEstados.map((dato_est, index) => ({
       dato: OriginalEstados[index],
       value: dato_est == "NA" ? null : parseFloat(dato_est.replace(/,$/g, "")),
       //Aquí deberíamos preguntarnos si se hará la transofrmación. 
       transformed: dato_est == "NA" ? null : (seNecesitaEscalar=='No'? dato_est:(parseFloat(seNecesitaEscalar.split('_')[1]))*parseFloat(dato_est.replace(/,$/g, ""))/mexico.features[index].properties['2020_Total'])
     }));
-    //console.log(combined_Estados)
+    console.log(combined_Estados)
     
     const combined_Estados_ordenados = [...combined_Estados];
     combined_Estados_ordenados.sort((a, b) => b.transformed - a.transformed);
@@ -231,7 +233,8 @@ function updateChartAndMap() {
 
     mexico.features.forEach((feature) => {
       const index_en_original = OriginalEstados.indexOf(feature.properties.NOMGEO);
-      
+      console.log(feature.properties.NOMGEO)
+      console.log(index_en_original)
       feature.properties.Valor = datosEstados[index_en_original];
       feature.properties.Valor_Transf = combined_Estados[index_en_original].transformed;
 
