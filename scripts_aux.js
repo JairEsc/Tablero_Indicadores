@@ -47,11 +47,20 @@ revisarTemporalidadIndicador=function(indicador){
       return null; //Indicador no encontrado
     }
 }
+revisarDescripcionIndicador=function(indicador){
+    const filaIndicador = posiblesIndicadores.find(line => (line[0]+': '+line[1]) === indicador);
+    if(filaIndicador){
+      //console.log(filaIndicador)
+      return filaIndicador[5]; // descripcion
+    }else{
+      return null; //Indicador no encontrado
+    }
+}
 revisarEscalamientoIndicador=function(indicador){
     const filaIndicador = posiblesIndicadores.find(line => (line[1]) === indicador);
     if(filaIndicador){
       //console.log(filaIndicador)
-      return filaIndicador[3]; // temporalidad
+      return filaIndicador[3]; // en_razon
     }else{
       return null; //Indicador no encontrado
     }
@@ -91,9 +100,9 @@ generarDatos_DadoIndicadorTema=function(tema="Todo",indicador){
   }
   //console.log(base)
   //base contiene la informacion de todos los indicadores.
-  console.log(base)
+  //console.log(base)
   base_filtrada=base.filter(line=>{return((line[0]+': '+line[2])==indicador || line[0]==='Tema')})
-  console.log(base)
+  //console.log(base)
   //base_filtrada solamente la del indicador.
   //console.log(base_filtrada)
   return(base_filtrada)
@@ -120,9 +129,17 @@ function openChart(evt, tagName) {
   evt.currentTarget.className += " active";
 
   if (tagName === "nacional_chart") {
+    console.log($("#indicador_tablero_indicadoresSearch").val())
+    let temp_seNecesitaEscalar=revisarEscalamientoIndicador($("#indicador_tablero_indicadoresSearch").val().split(":")[1].slice(1))
+    //console.log(temp_seNecesitaEscalar)
     document.getElementById("anio_mes").style.display = "block";
+    if(temp_seNecesitaEscalar!='No'){
+      document.getElementById("aviso_escalamiento").innerHTML = `Datos escalados en razón de la población (por cada ${temp_seNecesitaEscalar.split("_")[1]} habitantes)`
+      document.getElementById("aviso_escalamiento").style.display = "block";
+    }
   } else {
     document.getElementById("anio_mes").style.display = "none";
+    document.getElementById("aviso_escalamiento").style.display = "none";
   }
 
   window.dispatchEvent(new Event("resize"));
@@ -196,14 +213,14 @@ function updateChartAndMap() {
       'El orden en que se muestran los estados y los colores representan una interpretación relativa (a la población) del desempeño';
     const seNecesitaInvertir=revisarInterpretacionIndicador(datosIndicadorTema[0][2])
     //console.log(seNecesitaEscalar)
-    console.log(datosEstados)
+    //console.log(datosEstados)
     const combined_Estados = datosEstados.map((dato_est, index) => ({
       dato: OriginalEstados[index],
       value: dato_est == "NA" ? null : parseFloat(dato_est.replace(/,$/g, "")),
       //Aquí deberíamos preguntarnos si se hará la transofrmación. 
       transformed: dato_est == "NA" ? null : (seNecesitaEscalar=='No'? dato_est:(parseFloat(seNecesitaEscalar.split('_')[1]))*parseFloat(dato_est.replace(/,$/g, ""))/mexico.features[index].properties['2020_Total'])
     }));
-    console.log(combined_Estados)
+    //console.log(combined_Estados)
     
     const combined_Estados_ordenados = [...combined_Estados];
     combined_Estados_ordenados.sort((a, b) => b.transformed - a.transformed);
@@ -233,8 +250,8 @@ function updateChartAndMap() {
 
     mexico.features.forEach((feature) => {
       const index_en_original = OriginalEstados.indexOf(feature.properties.NOMGEO);
-      console.log(feature.properties.NOMGEO)
-      console.log(index_en_original)
+      //console.log(feature.properties.NOMGEO)
+      //console.log(index_en_original)
       feature.properties.Valor = datosEstados[index_en_original];
       feature.properties.Valor_Transf = combined_Estados[index_en_original].transformed;
 
