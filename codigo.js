@@ -249,7 +249,7 @@ $("#indicador_tablero_indicadoresSearch").change(async function () {
 
   const xn = timeData.map(p => p.x);
   //console.log(xn)
-  const ctx = document.getElementById("historico").getContext("2d");
+  const ctx = document.getElementById("historico").getContext("2d");  
   const pendientePlugin = {
     id: "pendientePlugin",
     afterDatasetsDraw(chart) {
