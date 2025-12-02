@@ -47,7 +47,7 @@ unir_mensual = function(temp){
           stringr::str_squish() |> as.numeric()
       )
     ) |> 
-    dplyr::select(-x14) |> 
+    dplyr::select(-x15) |> ###X14 No me suena muy generalizado
     dplyr::mutate(entidad = entidad |>  gsub(pattern = "  ", replacement = " ") |> stringr::str_squish(),
                   entidad = dplyr::if_else(condition = entidad == "Veracruz de Ignacio de la llave", true = "Veracruz de Ignacio de la Llave", false = entidad)) |> 
     dplyr::rename(Tema = tema,
@@ -64,7 +64,7 @@ unir_mensual = function(temp){
 mensual = unir_mensual(temp)
 
 
-mensual |>  write.csv("Output/Mensual.csv", row.names = F, fileEncoding = "UTF-8")
+mensual |>  write.csv("../datos/mensual.csv", row.names = F, fileEncoding = "UTF-8")
 
 ##################
 ### Trimestral ###
@@ -128,7 +128,7 @@ trimestral = trimestral |>
   )
 
 
-trimestral |>  write.csv("Output/Trimestral.csv", row.names = F, fileEncoding = "UTF-8")
+trimestral |>  write.csv("../datos/trimestral.csv", row.names = F, fileEncoding = "UTF-8")
 
 
 #############
