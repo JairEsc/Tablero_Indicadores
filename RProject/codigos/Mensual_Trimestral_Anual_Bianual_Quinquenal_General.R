@@ -1,3 +1,136 @@
+###############
+### Mensual ###
+###############
+
+temp = "mensual"
+unir_mensual = function(temp){
+  list.files(paste0("Datos/",temp),full.names = T,pattern = ".xlsx$") |> 
+    lapply(\(z){
+      archivo_abierto=openxlsx::read.xlsx(z)
+      print("El archivo que se abrio fue:")
+      print(z)
+      print("Donde sus columnas son:")
+      print(names(archivo_abierto))
+      cat("\n")
+      if(!"indicador" %in% stringr::str_to_lower(colnames(archivo_abierto) |> gsub(pattern = "  ", replacement = " ") |> stringr::str_squish())){
+        archivo_abierto=archivo_abierto|> dplyr::mutate(
+          Indicador=gsub(paste0("Datos/",temp,"/"),"",gsub(".xlsx","",z) |> gsub(pattern = "  ", replacement = " ") |> stringr::str_squish())
+        )
+      }
+      return(archivo_abierto)}
+    )->lista_archivos
+  names(lista_archivos)=gsub(".xlsx","",list.files(paste0("Datos/",temp),full.names = F,pattern = ".xlsx$"))
+  cat("lista de archivos", "\n")
+  print(names(lista_archivos))
+  cat("\n")
+  lista_archivos = lista_archivos |> 
+    lapply(\(z) {
+      colnames(z) = stringr::str_to_lower(colnames(z)) |>  gsub(pattern = "  ", replacement = " ") |> stringr::str_squish()
+      print(names(z))
+      z = dplyr::mutate(z, dplyr::across(everything(), as.character)) |> 
+        dplyr::relocate(tema, entidad, indicador)
+      names(z)[4:(which(names(z) == "link.de.consulta")-1)] = paste0("2015_", seq_along(names(z)[4:(which(names(z) == "link.de.consulta")-1)]))
+      print(names(z))
+      cat("\n")
+      cat("\n")
+      return(z)
+    })
+  
+  
+  union= dplyr::bind_rows(lista_archivos)
+  union = union |> 
+    dplyr::mutate(
+      dplyr::across(
+        .cols = `2015_1`:`2015_9`,
+        .fns = ~ .x |>
+          gsub(pattern = ",", replacement = ".") |> gsub(pattern = "  ", replacement = " ") |>
+          stringr::str_squish() |> as.numeric()
+      )
+    ) |> 
+    dplyr::select(-x14) |> 
+    dplyr::mutate(entidad = entidad |>  gsub(pattern = "  ", replacement = " ") |> stringr::str_squish(),
+                  entidad = dplyr::if_else(condition = entidad == "Veracruz de Ignacio de la llave", true = "Veracruz de Ignacio de la Llave", false = entidad)) |> 
+    dplyr::rename(Tema = tema,
+                  Entidad = entidad,
+                  Indicador =indicador) |> 
+    dplyr::relocate(link.de.consulta, .after = Indicador)
+  
+  
+  print(union |>  head())
+  
+  return(union)
+}
+
+mensual = unir_mensual(temp)
+
+
+mensual |>  write.csv("Output/Mensual.csv", row.names = F, fileEncoding = "UTF-8")
+
+##################
+### Trimestral ###
+##################
+unir_trimestral=function(temp){
+  list.files(paste0("Datos/",temp),full.names = T,pattern = ".xlsx$") |> 
+    lapply(\(z){
+      archivo_abierto=openxlsx::read.xlsx(z)
+      if(!"indicador" %in% stringr::str_to_lower(colnames(archivo_abierto))){
+        archivo_abierto=archivo_abierto|> dplyr::mutate(
+          Indicador=gsub(paste0("Datos/",temp,"/"),"",gsub(".xlsx","",z))
+        )
+      }
+      return(archivo_abierto)}
+    )->lista_archivos
+  names(lista_archivos)=gsub(".xlsx","",list.files(paste0("Datos/",temp),full.names = F,pattern = ".xlsx$"))
+  lista_archivos=lista_archivos |> lapply(\(z){colnames(z)=stringr::str_to_lower(colnames(z))
+  return(z)})
+  
+  print(names(lista_archivos)) 
+  union=do.call(plyr::rbind.fill,lista_archivos)
+  union=union |> 
+    dplyr::rename(Tema=tema,Indicador=indicador,Entidad=entidad,link.de.consulta=liga.de.consulta) |> 
+    dplyr::relocate(c(Tema,Entidad,Indicador,link.de.consulta),.before = Tema) |> 
+    dplyr::mutate(Entidad = dplyr::case_when(
+      Entidad == "Veracruz" ~ "Veracruz de Ignacio de la Llave",
+      Entidad == "Veracruz de la Llave" ~ "Veracruz de Ignacio de la Llave",
+      Entidad == "Veracruz de Ignacipo de la Llave" ~ "Veracruz de Ignacio de la Llave",
+      Entidad == "Coahuila" ~ "Coahuila de Zaragoza",
+      Entidad == "Michoacán" ~ "Michoacán de Ocampo",
+      Entidad == "Yucatan" ~ "Yucatán",
+      Entidad == "Qurétaro" ~ "Querétaro",
+      TRUE ~ Entidad
+    ))
+  return(union)
+}
+
+temp = "trimestral"
+trimestral = unir_trimestral(temp)
+
+zzz=(trimestral |> colnames())[5:12] |> 
+  sapply(\(z){
+    zz=strsplit(z,"\\.")
+    
+    return(zz)
+  },simplify = T,USE.NAMES = F) |> 
+  lapply(\(t){
+    paste0(t[[2]],"_",t[[1]])
+  }) |> unlist()
+colnames(trimestral)[5:12]=zzz
+
+
+trimestral = trimestral |> 
+  dplyr::mutate(
+    dplyr::across(
+      .cols = `2024_1t`:`2025_4t`,
+      .fns = ~ .x |> gsub(pattern = "\\%", replacement = "") |>  gsub(pattern = "\\$", replacement = "") |> 
+        gsub(pattern = ",", replacement = ".") |> gsub(pattern = "  ", replacement = " ") |>
+        stringr::str_squish() |> as.numeric()
+    )
+  )
+
+
+trimestral |>  write.csv("Output/Trimestral.csv", row.names = F, fileEncoding = "UTF-8")
+
+
 #############
 ### Anual ###
 #############
@@ -327,6 +460,9 @@ trianual = trianual |>
                 `2022` = `2022` |>  gsub(pattern = ",", replacement = "") |> gsub(pattern = "  ", replacement = " ") |>  stringr::str_squish() |>  as.numeric())
 
 trianual|> write.csv("Output/trianual.csv",fileEncoding = "utf-8",row.names = F)
+
+
+
 
 
 
