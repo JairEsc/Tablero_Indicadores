@@ -161,6 +161,7 @@ $("#indicador_tablero_indicadoresSearch").change(async function () {
   //console.log(revisarTemporalidadIndicador($(this).val()))
   tiempo_del_indic_sel=revisarTemporalidadIndicador($(this).val())
   descripcion_del_indic_sel=revisarDescripcionIndicador($(this).val())
+  unidadMedida_del_indic_sel=revisarUnidadMedidaIndicador($(this).val())
   datosIndicadorTema=generarDatos_DadoIndicadorTema(tema='Todo',$(this).val())
   //DatosIndicadorTema tiene header + datos nacionales del indicador.
   //console.log(datosIndicadorTema)
@@ -178,6 +179,7 @@ $("#indicador_tablero_indicadoresSearch").change(async function () {
   //cuando cambia el valor del indicador:
   //Actualizar la descripción del indicador
   document.getElementById("descripcion_indicador").innerHTML = descripcion_del_indic_sel || '';
+  document.getElementById("descripcion_indicador").innerHTML += (unidadMedida_del_indic_sel && unidadMedida_del_indic_sel.trim() !== '') ? `<br><b>Unidad de Medida oficial:</b> ${unidadMedida_del_indic_sel}` : '';
   document.getElementById("fuente").innerHTML = "Fuente: " + (datosIndicadorTema[1][3]?.length > 50 ? 
     `<a href="${datosIndicadorTema[1][3]}" target="_blank">${datosIndicadorTema[1][3].substring(0,50)}...</a>` : 
     datosIndicadorTema[1][3] || '');

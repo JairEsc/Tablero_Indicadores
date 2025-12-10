@@ -56,6 +56,15 @@ revisarDescripcionIndicador=function(indicador){
       return null; //Indicador no encontrado
     }
 }
+revisarUnidadMedidaIndicador=function(indicador){
+    const filaIndicador = posiblesIndicadores.find(line => (line[0]+': '+line[1]) === indicador);
+    if(filaIndicador){
+      //console.log(filaIndicador)
+      return filaIndicador[7]; // unidad de medida
+    }else{
+      return null; //Indicador no encontrado
+    }
+}
 revisarEscalamientoIndicador=function(indicador){
     const filaIndicador = posiblesIndicadores.find(line => (line[1]) === indicador);
     if(filaIndicador){
