@@ -62,6 +62,9 @@ unir_mensual = function(temp){
 }
 
 mensual = unir_mensual(temp)
+mensual = mensual |> 
+  dplyr::mutate(Indicador == dplyr::if_else(condition = Indicador == "Femicicidios", true = "Feminicidios", false = Indicador))
+
 
 
 mensual |>  write.csv("../datos/mensual.csv", row.names = F, fileEncoding = "UTF-8")
