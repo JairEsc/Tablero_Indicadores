@@ -29,7 +29,7 @@ unir_mensual = function(temp){
       print(names(z))
       z = dplyr::mutate(z, dplyr::across(everything(), as.character)) |> 
         dplyr::relocate(tema, entidad, indicador)
-      names(z)[4:(which(names(z) == "link.de.consulta")-1)] = paste0("2015_", seq_along(names(z)[4:(which(names(z) == "link.de.consulta")-1)]))
+      names(z)[4:(which(names(z) == "link.de.consulta")-1)] = paste0("2025_", seq_along(names(z)[4:(which(names(z) == "link.de.consulta")-1)]))
       print(names(z))
       cat("\n")
       cat("\n")
@@ -41,7 +41,7 @@ unir_mensual = function(temp){
   union = union |> 
     dplyr::mutate(
       dplyr::across(
-        .cols = `2015_1`:`2015_9`,
+        .cols = `2025_1`:`2025_9`,
         .fns = ~ .x |>
           gsub(pattern = ",", replacement = ".") |> gsub(pattern = "  ", replacement = " ") |>
           stringr::str_squish() |> as.numeric()

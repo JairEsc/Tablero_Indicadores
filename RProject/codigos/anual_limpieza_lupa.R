@@ -253,15 +253,10 @@ lista_archivos[["Eficiencia Terminal Secundaria"]] = lista_archivos[["Eficiencia
 lista_archivos[["Genero"]] = lista_archivos[["Genero"]] |> 
   dplyr::mutate(
     dplyr::across(
-      .cols = `2022.0`:`2024.0`,
+      .cols = `2022`:`2025`,
       .fns = ~ .x |> gsub(pattern = ",", replacement = ".") |> gsub(pattern = "  ", replacement = " ") |>  gsub(pattern = " ", replacement = "") |>  stringr::str_squish() |>  as.numeric()
     )
-  ) |> 
-  dplyr::rename(
-    "2022" = `2022.0`,
-    "2023" = `2023.0`,
-    "2024" = `2024.0`
-  )
+  ) 
 
 
 
@@ -611,6 +606,7 @@ lista_archivos[["Turismo"]] = lista_archivos[["Turismo"]] |>
   )
   
 
+lista_archivos |>  lapply(function(x) class(x$`2025`))
 
 union= dplyr::bind_rows(lista_archivos)
 
@@ -641,7 +637,10 @@ union = union |>
 union$Entidad |>  unique()
 
 union = union |> 
-  dplyr::mutate(Tema = dplyr::if_else(condition = Tema == "Economico", true = "Económico", false = Tema))
+  dplyr::mutate(Tema = dplyr::if_else(condition = Tema == "Economico", true = "Económico", false = Tema),
+                Entidad = Entidad |> stringr::str_squish(),
+                Indicador = Indicador |>  stringr::str_squish()
+                )
 
 
 anual_mayor1 = union |> 
@@ -657,6 +656,7 @@ ind = anual_mayor1 |>  dplyr::count(Indicador, sort = T)
 ind |>  write.csv("Output/indicadores_falta_rellenar.csv", row.names = F, fileEncoding = "UTF-8")
 
 
-union |> write.csv("Output/anual.csv", row.names = F, fileEncoding = "UTF-8")
+union |> write.csv("../datos/anual.csv", row.names = F, fileEncoding = "UTF-8")
 
 
+datos = lista_archivos[["Genero"]]
