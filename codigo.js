@@ -19,6 +19,7 @@ const PromesaLeerPosiblesIndicadores=new Promise((res,rej)=>{
         })
         posiblesIndicadores = results.data.slice(1); 
         console.log(posiblesIndicadores);
+        console.log("Datos actualizados el 11/12/2025")
         rellenarIndicadores(posiblesIndicadores);
     }).catch(error => {
         console.error("Error fetching CSV:", error);
