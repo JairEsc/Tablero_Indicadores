@@ -63,7 +63,7 @@ unir_mensual = function(temp){
 
 mensual = unir_mensual(temp)
 mensual = mensual |> 
-  dplyr::mutate(Indicador == dplyr::if_else(condition = Indicador == "Femicicidios", true = "Feminicidios", false = Indicador))
+  dplyr::mutate(Indicador = dplyr::if_else(condition = Indicador == "Femicicidios", true = "Feminicidios", false = Indicador))
 
 
 
