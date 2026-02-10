@@ -26,11 +26,21 @@ unir_mensual = function(temp){
   lista_archivos = lista_archivos |> 
     lapply(\(z) {
       colnames(z) = stringr::str_to_lower(colnames(z)) |>  gsub(pattern = "  ", replacement = " ") |> stringr::str_squish()
-      print(names(z))
+      #print(names(z))
       z = dplyr::mutate(z, dplyr::across(everything(), as.character)) |> 
         dplyr::relocate(tema, entidad, indicador)
-      names(z)[4:(which(names(z) == "link.de.consulta")-1)] = paste0("2025_", seq_along(names(z)[4:(which(names(z) == "link.de.consulta")-1)]))
-      print(names(z))
+      ##names(z) contiene tema, entidad, indicador, meses... y link.
+      meses=names(z)[4:(which(names(z) == "link.de.consulta")-1)]
+      print(meses)##Puede tener longitud menor a 12, 12 o mayor a 12.
+      if(length(meses)<=12){##Se queda igual
+        names(z)[4:(which(names(z) == "link.de.consulta")-1)] = paste0("2025_", seq_along(names(z)[4:(which(names(z) == "link.de.consulta")-1)]))
+      }
+      else{
+        names(z)[4:(which(names(z) == "link.de.consulta")-1)]=
+          paste0(c(rep("2025_",12),rep("2026_",(length(meses)-12) )),c(1:12,1:(length(meses)-12)) )
+      }
+        
+      #print(names(z))
       cat("\n")
       cat("\n")
       return(z)
@@ -41,13 +51,13 @@ unir_mensual = function(temp){
   union = union |> 
     dplyr::mutate(
       dplyr::across(
-        .cols = `2025_1`:`2025_9`,
+        .cols = `2025_1`:`2025_12`,
         .fns = ~ .x |>
           gsub(pattern = ",", replacement = ".") |> gsub(pattern = "  ", replacement = " ") |>
           stringr::str_squish() |> as.numeric()
       )
     ) |> 
-    dplyr::select(-x17) |> ###X14 No me suena muy generalizado
+    dplyr::select(-x17) |> ###X17 No me suena muy generalizado
     dplyr::mutate(entidad = entidad |>  gsub(pattern = "  ", replacement = " ") |> stringr::str_squish(),
                   entidad = dplyr::if_else(condition = entidad == "Veracruz de Ignacio de la llave", true = "Veracruz de Ignacio de la Llave", false = entidad)) |> 
     dplyr::rename(Tema = tema,
