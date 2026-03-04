@@ -1,36 +1,36 @@
 "Tema","Entidad","Indicador","link.de.consulta","2025_1","2025_2","2025_3","2025_4","2025_5","2025_6","2025_7","2025_8","2025_9","2025_10","2025_11","2025_12","2026_1"
-"Económico","Aguascalientes","Empleos formales generados","https://mexicocomovamos.mx/datos/",2522,4571,5843,5451,6515,4555,5834,4548,6751,9583,8403,NA,NA
-"Económico","Baja California","Empleos formales generados","https://mexicocomovamos.mx/datos/",9436,14000,16531,12678,13283,7608,5880,11855,11328,13690,9739,NA,NA
-"Económico","Baja California Sur","Empleos formales generados","https://mexicocomovamos.mx/datos/",238,2084,2956,3561,7140,9882,9321,7159,8723,12104,13042,NA,NA
-"Económico","Campeche","Empleos formales generados","https://mexicocomovamos.mx/datos/",-4496,-5440,-837,-1930,-7349,-3123,4255,1117,7163,-9166,-7363,NA,NA
-"Económico","Coahuila de Zaragoza","Empleos formales generados","https://mexicocomovamos.mx/datos/",4454,3802,6764,4227,2318,-2121,-3813,-2385,-3493,-2510,-4952,NA,NA
-"Económico","Colima","Empleos formales generados","https://mexicocomovamos.mx/datos/",1251,2637,4416,3531,3395,2156,1594,2741,3983,3431,3920,NA,NA
-"Económico","Chiapas","Empleos formales generados","https://mexicocomovamos.mx/datos/",-1552,3303,-910,-1880,-928,-1270,-4419,-4637,-4471,401,-2728,NA,NA
-"Económico","Chihuahua","Empleos formales generados","https://mexicocomovamos.mx/datos/",5966,6776,4877,4791,3758,4491,3263,4626,6316,8232,7598,NA,NA
-"Económico","Ciudad de México","Empleos formales generados","https://mexicocomovamos.mx/datos/",-16965,-758,-12820,-8031,1726,-15274,78613,76310,69064,185118,217942,NA,NA
-"Económico","Durango","Empleos formales generados","https://mexicocomovamos.mx/datos/",993,2780,3558,5227,2240,2495,1589,1285,2593,5226,4802,NA,NA
-"Económico","Guanajuato","Empleos formales generados","https://mexicocomovamos.mx/datos/",5637,11860,14848,15311,12726,13710,13621,14141,16559,22055,20282,NA,NA
-"Económico","Guerrero","Empleos formales generados","https://mexicocomovamos.mx/datos/",-1886,3602,9345,-2576,-3232,1854,-3072,-3805,-2681,-297,1450,NA,NA
-"Económico","Hidalgo","Empleos formales generados","https://mexicocomovamos.mx/datos/",2949,2217,2106,3536,8464,1715,5966,4057,13891,14025,14506,NA,NA
-"Económico","Jalisco","Empleos formales generados","https://mexicocomovamos.mx/datos/",10459,25591,28754,24862,18726,16846,13287,21377,30722,37900,48058,NA,NA
-"Económico","México","Empleos formales generados","https://mexicocomovamos.mx/datos/",4354,13648,24875,30956,37022,42453,92336,94781,121528,149130,146129,NA,NA
-"Económico","Michoacán de Ocampo","Empleos formales generados","https://mexicocomovamos.mx/datos/",1137,-373,1633,3857,2819,-744,-220,-2628,5161,7560,4730,NA,NA
-"Económico","Morelos","Empleos formales generados","https://mexicocomovamos.mx/datos/",-741,269,588,-255,-764,-1188,-1729,-721,-315,684,914,NA,NA
-"Económico","Nayarit","Empleos formales generados","https://mexicocomovamos.mx/datos/",1752,4282,3905,482,-1367,-1257,-820,293,2913,4815,5483,NA,NA
-"Económico","Nuevo León","Empleos formales generados","https://mexicocomovamos.mx/datos/",14875,33040,35832,32834,26874,28202,31110,31462,45429,54522,62452,NA,NA
-"Económico","Oaxaca","Empleos formales generados","https://mexicocomovamos.mx/datos/",-2042,-1270,-984,-1655,-5480,-7442,-8958,-7701,-6926,-4768,-2137,NA,NA
-"Económico","Puebla","Empleos formales generados","https://mexicocomovamos.mx/datos/",-4346,-1898,4075,-646,-614,-287,-344,-3066,-3524,1282,11350,NA,NA
-"Económico","Querétaro","Empleos formales generados","https://mexicocomovamos.mx/datos/",3604,8657,11386,10138,7826,8928,5878,10628,11840,18418,17164,NA,NA
-"Económico","Quintana Roo","Empleos formales generados","https://mexicocomovamos.mx/datos/",9516,13662,14864,16272,14612,15236,16222,9710,12607,23826,17894,NA,NA
-"Económico","San Luis Potosí","Empleos formales generados","https://mexicocomovamos.mx/datos/",6639,10224,12506,8345,3257,2889,1815,2511,5973,7741,6902,NA,NA
-"Económico","Sinaloa","Empleos formales generados","https://mexicocomovamos.mx/datos/",8171,9644,1076,-4667,-21079,-36068,-36308,-26214,-10674,-16676,-8028,NA,NA
-"Económico","Sonora","Empleos formales generados","https://mexicocomovamos.mx/datos/",12649,15677,18137,5962,7136,3026,-7923,-6885,-370,5476,-1755,NA,NA
-"Económico","Tabasco","Empleos formales generados","https://mexicocomovamos.mx/datos/",-2101,-2109,-3197,-2590,-2492,-6699,-7943,-8576,-8497,-3498,-6735,NA,NA
-"Económico","Tamaulipas","Empleos formales generados","https://mexicocomovamos.mx/datos/",3012,6180,7686,6539,4691,5882,4242,3727,-931,781,1888,NA,NA
-"Económico","Tlaxcala","Empleos formales generados","https://mexicocomovamos.mx/datos/",-145,2001,2301,2081,1666,748,330,563,811,1671,4977,NA,NA
-"Económico","Veracruz de Ignacio de la Llave","Empleos formales generados","https://mexicocomovamos.mx/datos/",1803,4577,4221,3057,-7386,-8920,-16197,-11057,-7338,-1188,-683,NA,NA
-"Económico","Yucatán","Empleos formales generados","https://mexicocomovamos.mx/datos/",-2330,573,2705,1824,568,1617,-5882,-6118,-89,2919,4513,NA,NA
-"Económico","Zacatecas","Empleos formales generados","https://mexicocomovamos.mx/datos/",-1646,-1257,-309,-2003,-2406,-2613,-2740,-2560,-743,-1693,-368,NA,NA
+"Económico","Aguascalientes","Empleos formales generados","https://mexicocomovamos.mx/datos/",2522,4571,5843,5451,6515,4555,5834,4548,6751,9583,8403,1900,"1626"
+"Económico","Baja California","Empleos formales generados","https://mexicocomovamos.mx/datos/",9436,14000,16531,12678,13283,7608,5880,11855,11328,13690,9739,-13399,"4303"
+"Económico","Baja California Sur","Empleos formales generados","https://mexicocomovamos.mx/datos/",238,2084,2956,3561,7140,9882,9321,7159,8723,12104,13042,2470,"2509"
+"Económico","Campeche","Empleos formales generados","https://mexicocomovamos.mx/datos/",-4496,-5440,-837,-1930,-7349,-3123,4255,1117,7163,-9166,-7363,-11275,"1356"
+"Económico","Coahuila de Zaragoza","Empleos formales generados","https://mexicocomovamos.mx/datos/",4454,3802,6764,4227,2318,-2121,-3813,-2385,-3493,-2510,-4952,-22687,"11467"
+"Económico","Colima","Empleos formales generados","https://mexicocomovamos.mx/datos/",1251,2637,4416,3531,3395,2156,1594,2741,3983,3431,3920,2239,"1832"
+"Económico","Chiapas","Empleos formales generados","https://mexicocomovamos.mx/datos/",-1552,3303,-910,-1880,-928,-1270,-4419,-4637,-4471,401,-2728,-2854,"-2462"
+"Económico","Chihuahua","Empleos formales generados","https://mexicocomovamos.mx/datos/",5966,6776,4877,4791,3758,4491,3263,4626,6316,8232,7598,-10886,"3421"
+"Económico","Ciudad de México","Empleos formales generados","https://mexicocomovamos.mx/datos/",-16965,-758,-12820,-8031,1726,-15274,78613,76310,69064,185118,217942,196226,"-54763"
+"Económico","Durango","Empleos formales generados","https://mexicocomovamos.mx/datos/",993,2780,3558,5227,2240,2495,1589,1285,2593,5226,4802,703,"2590"
+"Económico","Guanajuato","Empleos formales generados","https://mexicocomovamos.mx/datos/",5637,11860,14848,15311,12726,13710,13621,14141,16559,22055,20282,754,"4735"
+"Económico","Guerrero","Empleos formales generados","https://mexicocomovamos.mx/datos/",-1886,3602,9345,-2576,-3232,1854,-3072,-3805,-2681,-297,1450,-795,"-3099"
+"Económico","Hidalgo","Empleos formales generados","https://mexicocomovamos.mx/datos/",2949,2217,2106,3536,8464,1715,5966,4057,13891,14025,14506,4873,"7314"
+"Económico","Jalisco","Empleos formales generados","https://mexicocomovamos.mx/datos/",10459,25591,28754,24862,18726,16846,13287,21377,30722,37900,48058,27794,"-3120"
+"Económico","México","Empleos formales generados","https://mexicocomovamos.mx/datos/",4354,13648,24875,30956,37022,42453,92336,94781,121528,149130,146129,129481,"-35565"
+"Económico","Michoacán de Ocampo","Empleos formales generados","https://mexicocomovamos.mx/datos/",1137,-373,1633,3857,2819,-744,-220,-2628,5161,7560,4730,2088,"3681"
+"Económico","Morelos","Empleos formales generados","https://mexicocomovamos.mx/datos/",-741,269,588,-255,-764,-1188,-1729,-721,-315,684,914,-1112,"1335"
+"Económico","Nayarit","Empleos formales generados","https://mexicocomovamos.mx/datos/",1752,4282,3905,482,-1367,-1257,-820,293,2913,4815,5483,-126,"3778"
+"Económico","Nuevo León","Empleos formales generados","https://mexicocomovamos.mx/datos/",14875,33040,35832,32834,26874,28202,31110,31462,45429,54522,62452,19389,"11718"
+"Económico","Oaxaca","Empleos formales generados","https://mexicocomovamos.mx/datos/",-2042,-1270,-984,-1655,-5480,-7442,-8958,-7701,-6926,-4768,-2137,-2984,"3506"
+"Económico","Puebla","Empleos formales generados","https://mexicocomovamos.mx/datos/",-4346,-1898,4075,-646,-614,-287,-344,-3066,-3524,1282,11350,-6209,"-3183"
+"Económico","Querétaro","Empleos formales generados","https://mexicocomovamos.mx/datos/",3604,8657,11386,10138,7826,8928,5878,10628,11840,18418,17164,4965,"5616"
+"Económico","Quintana Roo","Empleos formales generados","https://mexicocomovamos.mx/datos/",9516,13662,14864,16272,14612,15236,16222,9710,12607,23826,17894,4020,"4166"
+"Económico","San Luis Potosí","Empleos formales generados","https://mexicocomovamos.mx/datos/",6639,10224,12506,8345,3257,2889,1815,2511,5973,7741,6902,-527,"2829"
+"Económico","Sinaloa","Empleos formales generados","https://mexicocomovamos.mx/datos/",8171,9644,1076,-4667,-21079,-36068,-36308,-26214,-10674,-16676,-8028,-11452,"11493"
+"Económico","Sonora","Empleos formales generados","https://mexicocomovamos.mx/datos/",12649,15677,18137,5962,7136,3026,-7923,-6885,-370,5476,-1755,-15854,"11154"
+"Económico","Tabasco","Empleos formales generados","https://mexicocomovamos.mx/datos/",-2101,-2109,-3197,-2590,-2492,-6699,-7943,-8576,-8497,-3498,-6735,-7928,"1679"
+"Económico","Tamaulipas","Empleos formales generados","https://mexicocomovamos.mx/datos/",3012,6180,7686,6539,4691,5882,4242,3727,-931,781,1888,-9131,"1599"
+"Económico","Tlaxcala","Empleos formales generados","https://mexicocomovamos.mx/datos/",-145,2001,2301,2081,1666,748,330,563,811,1671,4977,9286,"-9389"
+"Económico","Veracruz de Ignacio de la Llave","Empleos formales generados","https://mexicocomovamos.mx/datos/",1803,4577,4221,3057,-7386,-8920,-16197,-11057,-7338,-1188,-683,-6747,"1371"
+"Económico","Yucatán","Empleos formales generados","https://mexicocomovamos.mx/datos/",-2330,573,2705,1824,568,1617,-5882,-6118,-89,2919,4513,-2414,"74"
+"Económico","Zacatecas","Empleos formales generados","https://mexicocomovamos.mx/datos/",-1646,-1257,-309,-2003,-2406,-2613,-2740,-2560,-743,-1693,-368,-1111,"-1675"
 "Seguridad Pública","Aguascalientes","Incidencia delictiva","www.gob.mx/sesnsp/documentos/historico-de-incidencia-delictiva-del-fuero-comun",3375,3316,3651,3165,3316,3162,3196,3287,3389,3416,3104,2914,NA
 "Seguridad Pública","Aguascalientes","Homicidios","www.gob.mx/sesnsp/documentos/historico-de-incidencia-delictiva-del-fuero-comun",22,18,19,15,22,20,17,18,24,15,11,19,NA
 "Seguridad Pública","Aguascalientes","Lesiones","www.gob.mx/sesnsp/documentos/historico-de-incidencia-delictiva-del-fuero-comun",310,378,419,371,420,366,337,348,381,405,379,343,NA

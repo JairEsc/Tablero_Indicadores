@@ -169,7 +169,7 @@ B.onChange = function (newValue) {
   chart_nac.data.datasets[0].backgroundColor[sortedEstados.indexOf(newValue)] =
     "rgb(75, 102, 192)";
   chart_nac.data.datasets[0].backgroundColor[sortedEstados.indexOf('Hidalgo')] =
-    "rgba(75, 102, 192,0.7)";
+    "rgba(75, 102, 192,1)";
     
   chart_nac.update();
 };
