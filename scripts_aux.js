@@ -164,12 +164,12 @@ B.onChange = function (newValue) {
   var sortedEstados = chart_nac.data.labels;
   
   chart_nac.data.datasets[0].backgroundColor = sortedEstados.map(() => 
-    "rgba(220, 220, 220, 0.2)" // or whatever default color you want
+    "rgba(75, 192, 192, 0.7)" // or whatever default color you want
   );
   chart_nac.data.datasets[0].backgroundColor[sortedEstados.indexOf(newValue)] =
-    "rgba(75, 192, 192, 1)";
+    "rgb(75, 102, 192)";
   chart_nac.data.datasets[0].backgroundColor[sortedEstados.indexOf('Hidalgo')] =
-    "rgba(75, 192, 192, 1)";
+    "rgba(75, 102, 192,0.7)";
     
   chart_nac.update();
 };
@@ -292,7 +292,7 @@ function updateChartAndMap() {
                 {
                     label: datosIndicadorTema[1][2].replace(/^"|"|\r|'$/g, ""),
                     data: datosEstados,
-                    backgroundColor:SortedEstados.map(()=>"rgba(75, 192, 192, 0.2)"),
+                    backgroundColor:SortedEstados.map(()=>"rgba(75, 192, 192, 0.7)"),
                     borderColor: "rgba(75, 192, 192, 1)",
                     borderWidth: 1,
                 },
@@ -328,7 +328,7 @@ function updateChartAndMap() {
         },
     });
     // Iluminar a Hidalgo
-    chart_nac.data.datasets[0].backgroundColor[SortedEstados.indexOf("Hidalgo")] = "rgba(75, 192, 192, 1)"; 
+    chart_nac.data.datasets[0].backgroundColor[SortedEstados.indexOf("Hidalgo")] = "rgba(75, 192, 192, 0.7)"; 
     
     updateJsonData();
     $("#indicador option[value='default']").remove();

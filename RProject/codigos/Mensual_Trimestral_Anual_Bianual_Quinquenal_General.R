@@ -127,7 +127,7 @@ zzz=(trimestral |> colnames())[5:12] |>
   lapply(\(t){
     paste0(t[[2]],"_",t[[1]])
   }) |> unlist()
-colnames(trimestral)[5:12]=zzz
+colnames(trimestral)[5:12]=zzz###Cuando cambie de año habrá que generalizar
 
 
 trimestral = trimestral |> 

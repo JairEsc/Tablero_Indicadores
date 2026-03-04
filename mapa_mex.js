@@ -103,7 +103,7 @@ function clickFeature(e) {
                 <p style="margin: 5px 0;">
                     <span style="color: #34495e;">Al ajustar este valor por su población, se obtiene un valor transformado de</span>
                     <strong style="color: #2c3e50;">
-                        ${parseFloat(props.Valor_Transf) >= 1 
+                        ${Math.abs(parseFloat(props.Valor_Transf) )>1
                             ? parseFloat(props.Valor_Transf).toLocaleString('es-MX', { minimumFractionDigits: 0, maximumFractionDigits: 2 })
                             : parseFloat(props.Valor_Transf).toLocaleString('es-MX', { minimumFractionDigits: 5, maximumFractionDigits: 5 })
                         }
@@ -123,7 +123,7 @@ function clickFeature(e) {
                     <p style="margin: 5px 0;">
                         <span style="color: #34495e;">El dato oficial de ${datosIndicadorTema[1][2].toLowerCase()} en ${props.NOMGEO} es</span>
                         <strong style="color: #2c3e50;">
-                            ${parseFloat(props.Valor) >= 1 
+                            ${Math.abs(parseFloat(props.Valor) )>1
                                 ? parseFloat(props.Valor).toLocaleString('es-MX', { minimumFractionDigits: 0, maximumFractionDigits: 2 })
                                 : parseFloat(props.Valor).toLocaleString('es-MX', { minimumFractionDigits: 5, maximumFractionDigits: 5 })
                             }
@@ -175,7 +175,7 @@ info.update = function (props) {
     this._div.innerHTML = props ? 
         `<h4>${props.NOMGEO}</h4>
          <div style="font-size: 12px; margin-top: 5px; display:inline-grid">
-            <p><strong>Dato:</strong> ${parseFloat(props.Valor) >= 1 
+            <p><strong>Dato:</strong> ${Math.abs(parseFloat(props.Valor) )> 1 
                             ? parseFloat(props.Valor).toLocaleString('es-MX', { minimumFractionDigits: 0, maximumFractionDigits: 2 })
                             : parseFloat(props.Valor).toLocaleString('es-MX', { minimumFractionDigits: 5, maximumFractionDigits: 5 }) || 'N/A'}</p><br>
             <p style='font-size: xx-small'>Clic en el estado para más información.</p>

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tablero de indicadores</title>
@@ -16,60 +17,19 @@
     crossorigin=""></script>
     <link rel="stylesheet" href="https://unpkg.com/leaflet-search@2.3.7/dist/leaflet-search.src.css" />
     <script src="https://unpkg.com/leaflet-search@2.3.7/dist/leaflet-search.src.js"></script>
-    <!-- <link rel="stylesheet" href="https://unpkg.com/@sjmc11/tourguidejs/dist/css/tour.min.css"> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
 </head>
 <body>
     <div class="container_tablero_indicadores">
-        <header style="height: auto;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 10px;
-            padding: 0px;
-        ">
-            
-            <div id="titulo_busqueda" style="
-                text-align: center; 
-                width: 100%;
-            ">
-                <p id='instruccion_buscar_por_indicador'style="
-                    font-weight: bold;
-                    margin: 0;
-                ">Busca un Indicador</p>
+        <header class="container_tablero_indicadores">
+            <div id="titulo_busqueda">
+                <p id='instruccion_buscar_por_indicador'>Busca un Indicador</p>
             </div>
 
-            <div id="contenedor_busqueda" style="
-                display: flex;
-                flex-direction: row; 
-                gap: 10px; 
-                width: 100%;
-                max-width: 600px;
-                align-items: flex-start;
-            ">
+            <div id="contenedor_busqueda" >
                 
-                <div id="contenedor_input_indicador" style="flex-grow: 1;">
-                    <input type="text" id="indicador_tablero_indicadoresSearch" list="indicador_tablero_indicadores" placeholder="Escribe o selecciona un indicador" style="
-                        width: 100%;
-                        padding: 8px;
-                        border: 1px solid #ccc;
-                        border-radius: 4px;
-                        box-sizing: border-box;
-                    "/>
-                    <datalist id="indicador_tablero_indicadores">
-                        <option value="Indicador 1">-Tema 1</option>
-                        <option value="Indicador 1">-Tema 1-Indicador 2</option>
-                        <option value="Indicador 1">-Tema 1-Indicador 2</option>
-                    </datalist>
-                </div>
-                
-                <select id="tema_tablero_indicadores" style="
-                    flex-grow: 1; 
-                    padding: 8px;
-                    border: 1px solid #ccc;
-                    border-radius: 4px;
-                    box-sizing: border-box;">
-                    <option value="Todo" selected >O Busca por Tema</option>
+                <select id="tema_tablero_indicadores">
+                    <option value="Todo" selected >Buscar entre todos los indicadores</option>
                     <option value="Medio ambiente">Medio ambiente</option>
                     <option value="Económico">Económico</option>
                     <option value="Gobierno">Gobierno</option>
@@ -77,22 +37,15 @@
                     <option value="Seguridad Pública">Seguridad Pública</option>
                     <option value="Género">Género</option>
                 </select>
+                <div id="contenedor_input_indicador" style="flex-grow: 1;">
+                    <input type="text" id="indicador_tablero_indicadoresSearch" list="indicador_tablero_indicadores" placeholder="Escribe o selecciona un indicador"/>
+                    <datalist id="indicador_tablero_indicadores">
+                        <option value="-Cargando...">-Cargando...</option>
+                        <option value="-Cargando...">--Cargando...</option>
+                        <option value="-Cargando...">--Cargando...</option>
+                    </datalist>
+                </div>
             </div>
-
-            <!-- <div style="
-                text-align: center;
-                width: 100%;
-                max-width: 600px; 
-            ">
-                <button id="ForTema" style="
-                    background: none;
-                    border: none;
-                    color: blue;
-                    cursor: pointer;
-                    text-decoration: underline;
-                    padding: 5px 0;
-                ">O busca por Tema</button>
-            </div> -->
         </header>
         
         <section class="indicator-description_tablero_indicadores">

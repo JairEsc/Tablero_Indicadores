@@ -1,17 +1,22 @@
+html *
+{
+   font-family: 'Montserrat', sans-serif !important;
+}
 body{
   height: 100vh;
   margin: 0;
   padding: 0;
+  font-family:'Montserrat', sans-serif !important;
 }
 
 .bienvenida_tab_tablero_indicadores {
     position: relative;
   width: 120%;
-  height: 650px; /* Para que cubra toda la altura de la ventana */
+  height: 650px; 
   background-image: url('./datos/instrucciones_Mesa de trabajo 1.png');
-  background-size:contain; /* Asegura que la imagen cubra toda la sección */
-  background-position: center; /* Centra la imagen */
-  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-size:contain; 
+  background-position: center; 
+  background-repeat: no-repeat;
   visibility: visible;
   }
   .container_tablero_indicadores {/*cajita con sombra*/
@@ -19,10 +24,17 @@ body{
     max-height: 100vh;
     margin: 0 auto;
     background-color: #fff;
-    padding: 5px;
+    padding: 0px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
-  
+  header.container_tablero_indicadores{
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 0px;
+  }
   .header_tablero_indicadores {
     height: 20vh;
     align-items: center;
@@ -30,7 +42,35 @@ body{
     background-color: #f4f4f4;
     border-bottom: 2px solid #ccc;
   }
-  
+  #titulo_busqueda{text-align: center; 
+                width: 100%;
+  }
+  #contenedor_busqueda{
+    display: flex;
+    flex-direction: row; 
+    gap: 10px; 
+    width: 100%;
+    max-width: 600px;
+    align-items: flex-start;
+  }
+  #indicador_tablero_indicadoresSearch{
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  #tema_tablero_indicadores{
+    flex-grow: 1; 
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  #instruccion_buscar_por_indicador{
+    font-weight: bold;
+      margin: 0;
+  }
   .header-top_tablero_indicadores {
     display: flex;
     justify-content: center;
@@ -85,7 +125,7 @@ body{
   }
   
   .indicator-description_tablero_indicadores {
-    background-color: #800000;
+    background-color: #621132;/**/
     color: #fff;
     padding-top: 2px;
     padding-left: 2px;
@@ -110,7 +150,7 @@ body{
     display: flex;
     justify-content: space-between;
     background-color: #f4f4f4;
-    padding: 10px;
+    padding: 0px;
     border-top: 2px solid #ccc;
   }
   

@@ -301,8 +301,8 @@ $("#indicador_tablero_indicadoresSearch").change(async function () {
           label: $(this).val(),
           data: timeData.map(d => d.y),
           borderColor: "rgba(75, 192, 192, 1)",
-          backgroundColor: "rgba(75, 192, 192, 0.2)", 
-          borderWidth: 1,
+          backgroundColor: "rgba(75, 192, 192, 0.7)", 
+          borderWidth: 3,
         },
         {
           label: "Tendencia (Regresión Lineal)",
