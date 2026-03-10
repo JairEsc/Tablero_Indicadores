@@ -28,7 +28,8 @@ unir_mensual = function(temp){
       colnames(z) = stringr::str_to_lower(colnames(z)) |>  gsub(pattern = "  ", replacement = " ") |> stringr::str_squish()
       #print(names(z))
       z = dplyr::mutate(z, dplyr::across(everything(), as.character)) |> 
-        dplyr::relocate(tema, entidad, indicador)
+        dplyr::relocate(tema, entidad, indicador) |> 
+        dplyr::select(tema:link.de.consulta)
       ##names(z) contiene tema, entidad, indicador, meses... y link.
       meses=names(z)[4:(which(names(z) == "link.de.consulta")-1)]
       print(meses)##Puede tener longitud menor a 12, 12 o mayor a 12.
@@ -57,7 +58,7 @@ unir_mensual = function(temp){
           stringr::str_squish() |> as.numeric()
       )
     ) |> 
-    dplyr::select(-x17) |> ###X17 No me suena muy generalizado
+    #dplyr::select(-x17) |> ###X17 No me suena muy generalizado
     dplyr::mutate(entidad = entidad |>  gsub(pattern = "  ", replacement = " ") |> stringr::str_squish(),
                   entidad = dplyr::if_else(condition = entidad == "Veracruz de Ignacio de la llave", true = "Veracruz de Ignacio de la Llave", false = entidad)) |> 
     dplyr::rename(Tema = tema,
@@ -72,10 +73,6 @@ unir_mensual = function(temp){
 }
 
 mensual = unir_mensual(temp)
-mensual = mensual |> 
-  dplyr::mutate(Indicador = dplyr::if_else(condition = Indicador == "Femicicidios", true = "Feminicidios", false = Indicador))
-
-
 
 mensual |>  write.csv("../datos/mensual.csv", row.names = F, fileEncoding = "UTF-8")
 
@@ -139,7 +136,8 @@ trimestral = trimestral |>
         stringr::str_squish() |> as.numeric()
     )
   )
-
+trimestral=trimestral |> 
+  dplyr::select(-x9,-x10)
 
 trimestral |>  write.csv("../datos/trimestral.csv", row.names = F, fileEncoding = "UTF-8")
 
