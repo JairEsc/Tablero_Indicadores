@@ -115,7 +115,7 @@
 "Seguridad Pública","Feminicidios","Mensual","Si_1000","Menos es mejor","Casos de feminicidios registrados a traves de Carpetas de Investigación","Secretariado Ejecutivo del Sistema Nacional de Seguridad Pública SESNSP","Delito"
 "Seguridad Pública","Homicidios","Mensual","Si_1000","Menos es mejor","Casos de homicidios (doloso y culposo) registrados a traves de Carpetas de Investigación","Secretariado Ejecutivo del Sistema Nacional de Seguridad Pública SESNSP","Delito"
 "Seguridad Pública","Incidencia delictiva","Mensual","Si_1000","Menos es mejor","Total de delitos registrados a traves de Carpetas de Investigación","Secretariado Ejecutivo del Sistema Nacional de Seguridad Pública SESNSP","Delito"
-"Seguridad Pública","Indice de Paz","Anual","No","Más es mejor","Panorama del nivel de paz en las entidades federativa de México","Institute Economics & Peace","Índice"
+"Seguridad Pública","Indice de Paz","Anual","No","Menos es mejor","Panorama del nivel de paz en las entidades federativa de México","Institute Economics & Peace","Índice"
 "Seguridad Pública","Lesiones","Mensual","Si_1000","Menos es mejor","Casos de lesiones registrados a traves de Carpetas de Investigación","Secretariado Ejecutivo del Sistema Nacional de Seguridad Pública SESNSP","Delito"
 "Seguridad Pública","Mortalidad Defunciones registradas en Accidentes de Tránsito","Anual","Si_1000","Menos es mejor","Número de muertes causadas por accidente de tránsito","INEGI","Número de muertos"
 "Seguridad Pública","Narcomenudeo","Mensual","Si_1000","Menos es mejor","Casos de homicidios registrados a traves de Carpetas de Investigación","Secretariado Ejecutivo del Sistema Nacional de Seguridad Pública SESNSP","Delito"

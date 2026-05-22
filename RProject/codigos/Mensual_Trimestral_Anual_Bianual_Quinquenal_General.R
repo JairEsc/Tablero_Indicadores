@@ -202,7 +202,7 @@ anual = anual |>
 
 anual = anual |> 
   dplyr::select(Tema:link.de.consulta, `2017.0`, `2018.0`, `2019.0`, `2020.0`, `2021.0`, `2022`, `2022.0`, `2023`, `2023.0`,
-                `2024`, `2024.0`, `2025`, `2025.0`, `2025_2ot*`)
+                `2024`, `2024.0`, `2025`, `2025.0`, `2025_2ot*`,`2026` )
 
 
 anual = anual |> 
@@ -239,11 +239,13 @@ anual = anual |>
                 `2022` = `2022` |>  gsub(pattern = ",", replacement = ".") |> gsub(pattern = "  ", replacement = " ") |>  stringr::str_squish() |>  as.numeric(),
                 `2023` = `2023` |>  gsub(pattern = ",", replacement = ".") |> gsub(pattern = "  ", replacement = " ") |>  stringr::str_squish() |>  as.numeric(),
                 `2024` = `2024` |>  gsub(pattern = ",", replacement = ".") |> gsub(pattern = "  ", replacement = " ") |>  stringr::str_squish() |>  as.numeric(),
-                `2025` = `2025` |>  gsub(pattern = ",", replacement = ".") |> gsub(pattern = "  ", replacement = " ") |>  stringr::str_squish() |>  as.numeric())
+                `2025` = `2025` |>  gsub(pattern = ",", replacement = ".") |> gsub(pattern = "  ", replacement = " ") |>  stringr::str_squish() |>  as.numeric(),
+                `2026` = `2026` |>  gsub(pattern = ",", replacement = ".") |> gsub(pattern = "  ", replacement = " ") |>  stringr::str_squish() |>  as.numeric()
+                )
 
 
 anual_mayor1 = anual |> 
-  dplyr::mutate(no_na = rowSums(!is.na(dplyr::across(.cols = c(`2017`:`2025`)))))
+  dplyr::mutate(no_na = rowSums(!is.na(dplyr::across(.cols = c(`2017`:`2026`)))))
 
 anual_mayor1 = anual_mayor1 |> 
   dplyr::filter(no_na > 1) |> 
@@ -256,7 +258,7 @@ ind = anual_mayor1 |>  dplyr::count(Indicador, sort = T)
 anual_mayor1 = anual_mayor1 |> 
   dplyr::filter(Indicador != "Capacidad instalada en las PTARs  (Litros por segundo)")
 
-anual_mayor1 |> write.csv("Output/anual.csv", row.names = F, fileEncoding = "UTF-8")
+anual_mayor1 |> write.csv("../datos/anual.csv", row.names = F, fileEncoding = "UTF-8")
 
 
 
@@ -307,7 +309,7 @@ bianual = bianual |>  dplyr::mutate(
 )
 
 bianual = bianual |> 
-  dplyr::select(Tema:link.de.consulta, `2016.0`, `2018.0`, `2020.0`, `2021.0`, `2022.0`, `2023.0`, `2024.0`, `2025.0`) |> 
+  dplyr::select(Tema:link.de.consulta, `2016.0`, `2018.0`, `2020.0`,`2021` , `2022.0`, `2023`, `2024.0`, `2025`) |> 
   dplyr::mutate(Entidad = Entidad |> gsub(pattern = "  ", replacement = " ") |> stringr::str_squish())
 
 names(bianual)[5:ncol(bianual)] = paste(as.integer(names(bianual)[5:ncol(bianual)]) |>  as.character()) 
@@ -323,7 +325,7 @@ bianual = bianual |>
                 `2024` = `2024` |>  gsub(pattern = ",", replacement = "") |> gsub(pattern = "  ", replacement = " ") |>  stringr::str_squish() |>  as.numeric(),
                 `2025` = `2025` |>  gsub(pattern = ",", replacement = "") |> gsub(pattern = "  ", replacement = " ") |>  stringr::str_squish() |>  as.numeric())
 
-bianual |> write.csv("Output/bianual.csv",fileEncoding = "utf-8",row.names = F)
+bianual |> write.csv("../datos/bianual.csv",fileEncoding = "utf-8",row.names = F)
 
 
 
