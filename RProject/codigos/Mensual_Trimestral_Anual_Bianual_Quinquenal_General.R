@@ -115,7 +115,7 @@ unir_trimestral=function(temp){
 temp = "trimestral"
 trimestral = unir_trimestral(temp)
 
-zzz=(trimestral |> colnames())[5:12] |> 
+zzz=(trimestral |> colnames())[5:13] |> ##El 13 es 1t.2026
   sapply(\(z){
     zz=strsplit(z,"\\.")
     
@@ -124,13 +124,13 @@ zzz=(trimestral |> colnames())[5:12] |>
   lapply(\(t){
     paste0(t[[2]],"_",t[[1]])
   }) |> unlist()
-colnames(trimestral)[5:12]=zzz###Cuando cambie de año habrá que generalizar
+colnames(trimestral)[5:13]=zzz###Cuando cambie de año habrá que generalizar
 
 
 trimestral = trimestral |> 
   dplyr::mutate(
     dplyr::across(
-      .cols = `2024_1t`:`2025_4t`,
+      .cols = `2024_1t`:`2026_1t`,
       .fns = ~ .x |> gsub(pattern = "\\%", replacement = "") |>  gsub(pattern = "\\$", replacement = "") |> 
         gsub(pattern = ",", replacement = ".") |> gsub(pattern = "  ", replacement = " ") |>
         stringr::str_squish() |> as.numeric()
@@ -257,6 +257,17 @@ ind = anual_mayor1 |>  dplyr::count(Indicador, sort = T)
 
 anual_mayor1 = anual_mayor1 |> 
   dplyr::filter(Indicador != "Capacidad instalada en las PTARs  (Litros por segundo)")
+anual_mayor1=anual_mayor1 |> 
+  dplyr::mutate(Entidad = dplyr::case_when(
+    Entidad == "Veracruz" ~ "Veracruz de Ignacio de la Llave",
+    Entidad == "Veracruz de la Llave" ~ "Veracruz de Ignacio de la Llave",
+    Entidad == "Veracruz de Ignacipo de la Llave" ~ "Veracruz de Ignacio de la Llave",
+    Entidad == "Coahuila" ~ "Coahuila de Zaragoza",
+    Entidad == "Michoacán" ~ "Michoacán de Ocampo",
+    Entidad == "Yucatan" ~ "Yucatán",
+    Entidad == "Qurétaro" ~ "Querétaro",
+    TRUE ~ Entidad
+  ))
 
 anual_mayor1 |> write.csv("../datos/anual.csv", row.names = F, fileEncoding = "UTF-8")
 
@@ -324,7 +335,18 @@ bianual = bianual |>
                 `2023` = `2023` |>  gsub(pattern = ",", replacement = "") |> gsub(pattern = "  ", replacement = " ") |>  stringr::str_squish() |>  as.numeric(),
                 `2024` = `2024` |>  gsub(pattern = ",", replacement = "") |> gsub(pattern = "  ", replacement = " ") |>  stringr::str_squish() |>  as.numeric(),
                 `2025` = `2025` |>  gsub(pattern = ",", replacement = "") |> gsub(pattern = "  ", replacement = " ") |>  stringr::str_squish() |>  as.numeric())
-
+bianual=bianual |> 
+  dplyr::mutate(Entidad = dplyr::case_when(
+    Entidad == "Veracruz" ~ "Veracruz de Ignacio de la Llave",
+    Entidad == "Veracruz de la Llave" ~ "Veracruz de Ignacio de la Llave",
+    Entidad == "Veracruz de Ignacipo de la Llave" ~ "Veracruz de Ignacio de la Llave",
+    Entidad == "Coahuila" ~ "Coahuila de Zaragoza",
+    Entidad == "Michoacán" ~ "Michoacán de Ocampo",
+    Entidad == "Yucatan" ~ "Yucatán",
+    Entidad == "Qurétaro" ~ "Querétaro",
+    Entidad == "México" ~ "Estado de México",
+    TRUE ~ Entidad
+  ))
 bianual |> write.csv("../datos/bianual.csv",fileEncoding = "utf-8",row.names = F)
 
 
