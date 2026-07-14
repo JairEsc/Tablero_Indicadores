@@ -18,6 +18,8 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet-search@2.3.7/dist/leaflet-search.src.css" />
     <script src="https://unpkg.com/leaflet-search@2.3.7/dist/leaflet-search.src.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+    <link rel="stylesheet" href="script_aux/intro.css" />
+
 </head>
 <body>
     <div class="container_tablero_indicadores">
@@ -66,11 +68,46 @@
                 </div>
                 <select id="anio_mes" style="margin-left: auto; display: none;"></select>
             </div>
-              
+              <script>
+                function handleCanvasClick(event){
+                    console.log("click")
+                    const tour = introJs();
+                        tour.setOptions({
+                        steps: [
+                        {
+                            element: document.querySelector('.tabcontent_hist_tablero_indicadores canvas#historico'),
+                            intro: 'Bienvenido al Tablero de Indicadores. Tenemos 158 indicadores repartidos en periodicidades mensual, trimestral, anual, bianual, trianual y quinquenal.',
+                            position: 'bottom',
+                            tooltipClass: 'custom-tooltip',
+                            highlightClass: 'custom-highlight'
+                        },
+                        {
+                            element: document.querySelector('#tema_tablero_indicadores'),
+                            intro: 'Tenemos indicadores de 7 temas: Medio ambiente, Económico, Gobierno, Social, Seguridad Pública, Género y una categoría de "Todo" para buscar entre todos los indicadores.',
+                            position: 'bottom'
+                        },
+                        {
+                            element: document.querySelector('#indicador_tablero_indicadoresSearch'),
+                            intro: 'También puedes buscar un indicador específico escribiendo su nombre o seleccionándolo de la lista desplegable.',
+                            position: 'bottom'
+                        }
+                        ],
+                        showBullets: true,
+                        showProgress: true,
+                        showStepNumbers: true,
+                        exitOnEsc: true,
+                        exitOnOverlayClick: true,
+                        nextLabel: 'Siguiente',
+                        prevLabel: 'Anterior',
+                        skipLabel: '×',
+                        doneLabel: 'Entendido'
+                    });
+                    tour.start();
+                }
+              </script>
             <div id="historico_chart" class="tabcontent_tablero_indicadores">
                 <div class="tabcontent_hist_tablero_indicadores bienvenida_tab_tablero_indicadores">
-                    <canvas class="chart_tablero_indicadores" id="historico">
-                    </canvas>
+                    <canvas class="chart_tablero_indicadores" id="historico" onclick="handleCanvasClick(event)"></canvas>
                 </div>
             </div>
               
@@ -91,7 +128,8 @@
             </div>
         </section>
     </div>
-    <script src="scripts_aux.js"></script>
+    <script src="script_aux/scripts_aux.js"></script>
     <script src="codigo.js"></script>
+    <script src="script_aux/intro.js"></script>
 </body>
 </html>
