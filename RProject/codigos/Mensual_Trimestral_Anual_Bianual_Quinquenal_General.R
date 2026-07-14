@@ -57,7 +57,7 @@ unir_mensual = function(temp){
           stringr::str_squish() |> as.numeric()
       )
     ) |> 
-    dplyr::select(-x17) |> ###X17 No me suena muy generalizado
+    dplyr::select(-x22) |> ###X17 No me suena muy generalizado
     dplyr::mutate(entidad = entidad |>  gsub(pattern = "  ", replacement = " ") |> stringr::str_squish(),
                   entidad = dplyr::if_else(condition = entidad == "Veracruz de Ignacio de la llave", true = "Veracruz de Ignacio de la Llave", false = entidad)) |> 
     dplyr::rename(Tema = tema,
@@ -118,7 +118,7 @@ unir_trimestral=function(temp){
 temp = "trimestral"
 trimestral = unir_trimestral(temp)
 
-zzz=(trimestral |> colnames())[5:12] |> 
+zzz=(trimestral |> colnames())[5:13] |> 
   sapply(\(z){
     zz=strsplit(z,"\\.")
     
@@ -127,13 +127,13 @@ zzz=(trimestral |> colnames())[5:12] |>
   lapply(\(t){
     paste0(t[[2]],"_",t[[1]])
   }) |> unlist()
-colnames(trimestral)[5:12]=zzz###Cuando cambie de año habrá que generalizar
+colnames(trimestral)[5:13]=zzz###Cuando cambie de año habrá que generalizar
 
 
 trimestral = trimestral |> 
   dplyr::mutate(
     dplyr::across(
-      .cols = `2024_1t`:`2025_4t`,
+      .cols = `2024_1t`:`2026_1t`,
       .fns = ~ .x |> gsub(pattern = "\\%", replacement = "") |>  gsub(pattern = "\\$", replacement = "") |> 
         gsub(pattern = ",", replacement = ".") |> gsub(pattern = "  ", replacement = " ") |>
         stringr::str_squish() |> as.numeric()
@@ -141,7 +141,8 @@ trimestral = trimestral |>
   )
 
 
-trimestral |>  write.csv("../datos/trimestral.csv", row.names = F, fileEncoding = "UTF-8")
+trimestral |> 
+  dplyr::select(-x9,-x10,-x11)|>  write.csv("../datos/trimestral.csv", row.names = F, fileEncoding = "UTF-8")
 
 
 #############
@@ -204,7 +205,7 @@ anual = anual |>
 
 anual = anual |> 
   dplyr::select(Tema:link.de.consulta, `2017.0`, `2018.0`, `2019.0`, `2020.0`, `2021.0`, `2022`, `2022.0`, `2023`, `2023.0`,
-                `2024`, `2024.0`, `2025`, `2025.0`, `2025_2ot*`)
+                `2024`, `2024.0`, `2025`, `2025.0`, `2025_2ot*`,`2026`)
 
 
 anual = anual |> 
@@ -226,7 +227,6 @@ anual = anual |>
   dplyr::mutate(`2025` = dplyr::if_else(condition = is.na(`2025`), true = `2025_2ot*`, false = `2025`)) |> 
   dplyr::select(-`2025_2ot*`)
 
-
 anual = anual |> 
   dplyr::rename("2017" = `2017.0`,
                 "2018" = `2018.0`,
@@ -241,14 +241,16 @@ anual = anual |>
                 `2022` = `2022` |>  gsub(pattern = ",", replacement = ".") |> gsub(pattern = "  ", replacement = " ") |>  stringr::str_squish() |>  as.numeric(),
                 `2023` = `2023` |>  gsub(pattern = ",", replacement = ".") |> gsub(pattern = "  ", replacement = " ") |>  stringr::str_squish() |>  as.numeric(),
                 `2024` = `2024` |>  gsub(pattern = ",", replacement = ".") |> gsub(pattern = "  ", replacement = " ") |>  stringr::str_squish() |>  as.numeric(),
-                `2025` = `2025` |>  gsub(pattern = ",", replacement = ".") |> gsub(pattern = "  ", replacement = " ") |>  stringr::str_squish() |>  as.numeric())
+                `2025` = `2025` |>  gsub(pattern = ",", replacement = ".") |> gsub(pattern = "  ", replacement = " ") |>  stringr::str_squish() |>  as.numeric(),
+                `2026` = `2026` |>  gsub(pattern = ",", replacement = ".") |> gsub(pattern = "  ", replacement = " ") |>  stringr::str_squish() |>  as.numeric()
+                )
 
 
 anual_mayor1 = anual |> 
-  dplyr::mutate(no_na = rowSums(!is.na(dplyr::across(.cols = c(`2017`:`2025`)))))
+  dplyr::mutate(no_na = rowSums(!is.na(dplyr::across(.cols = c(`2017`:`2026`)))))
 
 anual_mayor1 = anual_mayor1 |> 
-  dplyr::filter(no_na > 1) |> 
+  dplyr::filter(no_na > 0) |> 
   dplyr::select(-no_na)
 
 h = anual_mayor1 |>  dplyr::count(Entidad,sort = T)
@@ -258,7 +260,7 @@ ind = anual_mayor1 |>  dplyr::count(Indicador, sort = T)
 anual_mayor1 = anual_mayor1 |> 
   dplyr::filter(Indicador != "Capacidad instalada en las PTARs  (Litros por segundo)")
 
-anual_mayor1 |> write.csv("Output/anual.csv", row.names = F, fileEncoding = "UTF-8")
+anual_mayor1 |> write.csv("../datos/anual.csv", row.names = F, fileEncoding = "UTF-8")
 
 
 
