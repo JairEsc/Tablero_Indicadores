@@ -18,6 +18,7 @@ const PromesaLeerPosiblesIndicadores=new Promise((res,rej)=>{
             skipEmptyLines:true
         })
         posiblesIndicadores = results.data.slice(1); 
+        window.posiblesIndicadores = posiblesIndicadores;
         console.log(posiblesIndicadores);
         console.log("Datos actualizados el 22/05/2026")
         rellenarIndicadores(posiblesIndicadores);
@@ -172,6 +173,9 @@ $("#indicador_tablero_indicadoresSearch").change(async function () {
       "bienvenida_tab_tablero_indicadores"
     )[0].className = "tabcontent_hist_tablero_indicadores";
     bienvenida_tab = false;
+    if (window.actualizarEstadoTour) {
+      window.actualizarEstadoTour();
+    }
   }
   //Mostrar la seccion del tablero.
   document.getElementById("section_tablero_indicadores").style.visibility =

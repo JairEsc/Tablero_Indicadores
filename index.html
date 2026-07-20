@@ -69,13 +69,34 @@
                 <select id="anio_mes" style="margin-left: auto; display: none;"></select>
             </div>
               <script>
+                function actualizarEstadoTour() {
+                    const bienvenida = document.querySelector('.bienvenida_tab_tablero_indicadores');
+                    const elementoGuia = bienvenida || document.getElementById('historico');
+                    const disponible = !!bienvenida;
+
+                    if (!elementoGuia) {
+                        return;
+                    }
+
+                    elementoGuia.classList.toggle('tour-disabled', !disponible);
+                    elementoGuia.style.pointerEvents = disponible ? 'auto' : 'none';
+                    elementoGuia.style.cursor = disponible ? 'pointer' : 'not-allowed';
+                    elementoGuia.title = disponible ? 'Iniciar guía' : 'La guía ya no está disponible';
+                }
+
                 function handleCanvasClick(event){
-                    console.log("click")
+                    const bienvenida = document.querySelector('.bienvenida_tab_tablero_indicadores');
+
+                    if (!bienvenida) {
+                        actualizarEstadoTour();
+                        return;
+                    }
+
                     const tour = introJs();
                         tour.setOptions({
                         steps: [
                         {
-                            element: document.querySelector('.tabcontent_hist_tablero_indicadores canvas#historico'),
+                            element: document.querySelector('.bienvenida_tab_tablero_indicadores'),
                             intro: 'Bienvenido al Tablero de Indicadores. Tenemos 158 indicadores repartidos en periodicidades mensual, trimestral, anual, bianual, trianual y quinquenal.',
                             position: 'bottom',
                             tooltipClass: 'custom-tooltip',
@@ -104,10 +125,12 @@
                     });
                     tour.start();
                 }
+
+                actualizarEstadoTour();
               </script>
             <div id="historico_chart" class="tabcontent_tablero_indicadores">
-                <div class="tabcontent_hist_tablero_indicadores bienvenida_tab_tablero_indicadores">
-                    <canvas class="chart_tablero_indicadores" id="historico" onclick="handleCanvasClick(event)"></canvas>
+                <div class="tabcontent_hist_tablero_indicadores bienvenida_tab_tablero_indicadores" onclick="handleCanvasClick(event)">
+                    <canvas class="chart_tablero_indicadores" id="historico"></canvas>
                 </div>
             </div>
               
@@ -130,6 +153,7 @@
     </div>
     <script src="script_aux/scripts_aux.js"></script>
     <script src="codigo.js"></script>
+    <script src="script_aux/test.js"></script>
     <script src="script_aux/intro.js"></script>
 </body>
 </html>
