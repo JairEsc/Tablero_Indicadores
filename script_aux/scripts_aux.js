@@ -218,7 +218,7 @@ function updateChartAndMap() {
     //Combindados
     const seNecesitaEscalar=revisarEscalamientoIndicador(datosIndicadorTema[0][2])
     document.getElementsByClassName('tooltiptext_tablero_indicadores')[0].innerHTML=
-      seNecesitaEscalar=='No' ?'El orden en que se muestran los estados y los colores no representan un nivel de desempeño, solamente representan el ranking respecto a otros estados':
+      seNecesitaEscalar=='No' ?'El orden en que se muestran los estados, así como sus colores, corresponden al valor del indicador':
       'El orden en que se muestran los estados y los colores representan una interpretación relativa (a la población) del desempeño';
     const seNecesitaInvertir=revisarInterpretacionIndicador(datosIndicadorTema[0][2])
     //console.log(seNecesitaEscalar)
