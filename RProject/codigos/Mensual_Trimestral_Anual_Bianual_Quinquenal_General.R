@@ -1,6 +1,7 @@
 ###############
 ### Mensual ###
 ###############
+catalogo_indicadores="../datos/temporalidad.csv" |> read.csv()
 
 temp = "mensual"
 unir_mensual = function(temp){
@@ -58,7 +59,7 @@ unir_mensual = function(temp){
           stringr::str_squish() |> as.numeric()
       )
     ) |> 
-    dplyr::select(-x22) |> ###X17 No me suena muy generalizado
+    #dplyr::select(-x22) |> ###X17 No me suena muy generalizado
     dplyr::mutate(entidad = entidad |>  gsub(pattern = "  ", replacement = " ") |> stringr::str_squish(),
                   entidad = dplyr::if_else(condition = entidad == "Veracruz de Ignacio de la llave", true = "Veracruz de Ignacio de la Llave", false = entidad)) |> 
     dplyr::rename(Tema = tema,
@@ -73,7 +74,12 @@ unir_mensual = function(temp){
 }
 
 mensual = unir_mensual(temp)
-
+(mensual$Indicador |> unique())[7]
+mensual$Indicador[mensual$Indicador=='Violacion']='Violación'
+mensual$Indicador |> unique() |> 
+  lapply(\(ind){
+    ind%in%catalogo_indicadores$Indicador
+  }) |> unlist() |> all()
 mensual |>  write.csv("../datos/mensual.csv", row.names = F, fileEncoding = "UTF-8")
 
 ##################
@@ -115,7 +121,7 @@ unir_trimestral=function(temp){
 temp = "trimestral"
 trimestral = unir_trimestral(temp)
 
-zzz=(trimestral |> colnames())[5:13] |> 
+zzz=(trimestral |> colnames())[5:14] |> 
   sapply(\(z){
     zz=strsplit(z,"\\.")
     
@@ -124,23 +130,33 @@ zzz=(trimestral |> colnames())[5:13] |>
   lapply(\(t){
     paste0(t[[2]],"_",t[[1]])
   }) |> unlist()
-colnames(trimestral)[5:13]=zzz###Cuando cambie de año habrá que generalizar
+colnames(trimestral)[5:14]=zzz###Cuando cambie de año habrá que generalizar
 
 
 trimestral = trimestral |> 
   dplyr::mutate(
     dplyr::across(
-      .cols = `2024_1t`:`2026_1t`,
+      .cols = `2024_1t`:`2026_2t`,
       .fns = ~ .x |> gsub(pattern = "\\%", replacement = "") |>  gsub(pattern = "\\$", replacement = "") |> 
         gsub(pattern = ",", replacement = ".") |> gsub(pattern = "  ", replacement = " ") |>
         stringr::str_squish() |> as.numeric()
     )
   )
 trimestral=trimestral |> 
-  dplyr::select(-x9,-x10)
+  dplyr::select(-x11,-x12)
+unique(trimestral$Indicador)[(!(trimestral$Indicador |> unique() |> 
+                lapply(\(ind){
+                  ind%in%catalogo_indicadores$Indicador
+                }) |> unlist() ))|> which()]
+trimestral$Indicador[trimestral$Indicador=="Tasa de Ocupación parcial y desocupación/"]=
+  "Tasa de Ocupación parcial y desocupación"
+trimestral$Indicador[trimestral$Indicador=="Índice de la Tendencia Laboral de la Pobreza (ITLP)"]#Nuevo
+trimestral$Indicador[trimestral$Indicador=="Porcentaje de la población en pobreza laboral"]#Nuevo
+trimestral$Indicador[trimestral$Indicador=="Ingreso laboral per cápita  a pesos corrientes (nominal)"]#Nuevo
+trimestral$Indicador[trimestral$Indicador=="Ingreso laboral Per cápita (Deflactado con la canasta alimentaria, pesos)"]#Nuevo
 
-trimestral |> 
-  dplyr::select(-x9,-x10,-x11)|>  write.csv("../datos/trimestral.csv", row.names = F, fileEncoding = "UTF-8")
+
+trimestral|>  write.csv("../datos/trimestral.csv", row.names = F, fileEncoding = "UTF-8")
 
 
 #############
@@ -268,6 +284,30 @@ anual_mayor1=anual_mayor1 |>
     Entidad == "Qurétaro" ~ "Querétaro",
     TRUE ~ Entidad
   ))
+anual$Indicador=stringr::str_squish(anual$Indicador)
+unique(anual$Indicador)[(!(anual$Indicador |> unique() |> 
+                                  lapply(\(ind){
+                                    ind%in%catalogo_indicadores$Indicador
+                                  }) |> unlist() ))|> which()]
+anual$Indicador[anual$Indicador=="Ganado Ovino.  Volumen de la Producción (toneladas)"]=
+  "Ganado Ovino.Volumen de la Producción (toneladas)"
+anual$Indicador[anual$Indicador=="Leche de Bovino.  Volumen de la Producción (miles de litros)"  ]=
+  "Leche de Bovino. Volumen de la Producción (miles de litros)"  
+anual$Indicador[anual$Indicador=="Cobertura educacíónMedia Superior (%)"]=
+  "Cobertura educación Media Superior (%)"  
+anual$Indicador[anual$Indicador=="Inclución financiera"]# Nuevo
+anual$Indicador[anual$Indicador=="Capacidad instalada en las PTARs  (Litros por segundo)"]=
+  "Capacidad instalada en las PTARs (Litros por segundo)"
+anual$Indicador[anual$Indicador=="Percepcion sobre Seguridad Publica Inseguro" ]=
+  "Percepción sobre Seguridad Publica Inseguro" 
+anual$Indicador[anual$Indicador=="Percepcion sobre Seguridad Publica Seguro" ]=
+  "Percepción sobre Seguridad Publica Seguro"
+anual$Indicador[anual$Indicador=="Producto Interno Bruto (millones de pesos) / Porcentaje de ParticipaciÃ³n (VALORES CONSTANTES)" ]=
+  "Producto Interno Bruto (millones de pesos) / Porcentaje de Participación (VALORES CONSTANTES)"
+
+anual$Indicador[anual$Indicador=="Tasa de Prevalencia Delictiva (100 mil hab)" ]=
+  "Tasa de Prevalencia Delictiva (100 mil hab) personas, hogares o propiedades que han sido víctimas de un delito"
+
 
 anual_mayor1 |> write.csv("../datos/anual.csv", row.names = F, fileEncoding = "UTF-8")
 

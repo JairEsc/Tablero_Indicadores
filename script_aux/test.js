@@ -7,7 +7,7 @@ function esperar(ms = 1000) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
-async function runIndicadorSmokeTest({ maxTests = 20, mostrarCadaPaso = false } = {}) {
+async function runIndicadorSmokeTest({ maxTests = 200, mostrarCadaPaso = false } = {}) {
   const inputIndicador = document.getElementById("indicador_tablero_indicadoresSearch");
   const selectAnioMes = document.getElementById("anio_mes");
   const datalist = document.getElementById("indicador_tablero_indicadores");
