@@ -76,6 +76,34 @@ body{
     font-weight: bold;
       margin: 0;
   }
+  .boton-fichas {
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 15px 32px;
+    border-radius: 7px;
+    background-color: #641638;
+    color: #fff;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.35;
+    text-align: center;
+    text-decoration: none;
+  }
+  .boton-fichas:hover {
+    background-color: #4f102c;
+    color: #fff;
+  }
+  .boton-fichas:focus-visible {
+    outline: 3px solid #b49b55;
+    outline-offset: 3px;
+  }
+  @media (max-width: 600px) {
+    .boton-fichas {
+      max-width: calc(100vw - 32px);
+      padding: 13px 18px;
+      font-size: 17px;
+    }
+  }
   .header-top_tablero_indicadores {
     display: flex;
     justify-content: center;

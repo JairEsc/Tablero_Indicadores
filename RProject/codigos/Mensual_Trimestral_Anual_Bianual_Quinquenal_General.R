@@ -121,7 +121,7 @@ unir_trimestral=function(temp){
 temp = "trimestral"
 trimestral = unir_trimestral(temp)
 
-zzz=(trimestral |> colnames())[5:14] |> 
+zzz=(trimestral |> colnames())[5:15] |> 
   sapply(\(z){
     zz=strsplit(z,"\\.")
     
@@ -130,20 +130,21 @@ zzz=(trimestral |> colnames())[5:14] |>
   lapply(\(t){
     paste0(t[[2]],"_",t[[1]])
   }) |> unlist()
-colnames(trimestral)[5:14]=zzz###Cuando cambie de año habrá que generalizar
+colnames(trimestral)[5:15]=zzz###Cuando cambie de año habrá que generalizar
 
 
 trimestral = trimestral |> 
   dplyr::mutate(
     dplyr::across(
-      .cols = `2024_1t`:`2026_2t`,
+      .cols = `2024_1t`:`2026_3t`,
       .fns = ~ .x |> gsub(pattern = "\\%", replacement = "") |>  gsub(pattern = "\\$", replacement = "") |> 
         gsub(pattern = ",", replacement = ".") |> gsub(pattern = "  ", replacement = " ") |>
         stringr::str_squish() |> as.numeric()
     )
   )
 trimestral=trimestral |> 
-  dplyr::select(-x11,-x12)
+  dplyr::select(-x11,-x12) |> 
+  dplyr::filter(!is.na(Entidad))
 unique(trimestral$Indicador)[(!(trimestral$Indicador |> unique() |> 
                 lapply(\(ind){
                   ind%in%catalogo_indicadores$Indicador
