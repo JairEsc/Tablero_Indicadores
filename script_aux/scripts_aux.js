@@ -218,21 +218,36 @@ function updateChartAndMap() {
     //Combindados
     const seNecesitaEscalar=revisarEscalamientoIndicador(datosIndicadorTema[0][2])
     document.getElementsByClassName('tooltiptext_tablero_indicadores')[0].innerHTML=
-      seNecesitaEscalar=='No' ?'El orden en que se muestran los estados y los colores no representan un nivel de desempeño, solamente representan el ranking respecto a otros estados':
+      seNecesitaEscalar=='No' ?'El orden en que se muestran los estados, así como sus colores, corresponden al valor del indicador':
       'El orden en que se muestran los estados y los colores representan una interpretación relativa (a la población) del desempeño';
     const seNecesitaInvertir=revisarInterpretacionIndicador(datosIndicadorTema[0][2])
     //console.log(seNecesitaEscalar)
     //console.log(datosEstados)
-    const combined_Estados = datosEstados.map((dato_est, index) => ({
-      dato: OriginalEstados[index],
-      value: dato_est == "NA" ? null : parseFloat(dato_est.replace(/,$/g, "")),
-      //Aquí deberíamos preguntarnos si se hará la transofrmación. 
-      transformed: dato_est == "NA" ? null : (seNecesitaEscalar=='No'? dato_est:(parseFloat(seNecesitaEscalar.split('_')[1]))*parseFloat(dato_est.replace(/,$/g, ""))/mexico.features[index].properties['2020_Total'])
-    }));
-    //console.log(combined_Estados)
-    
+    const combined_Estados = datosEstados
+      .map((dato_est, index) => {
+        const estado = OriginalEstados[index];
+        const valorNumerico = dato_est == "NA" ? null : parseFloat(dato_est.replace(/,$/g, ""));
+        const poblacion = mexico.features[index]?.properties?.['2020_Total'];
+        const transformed = valorNumerico == null || valorNumerico === "NA" || !poblacion
+          ? null
+          : (seNecesitaEscalar == 'No'
+            ? valorNumerico
+            : (parseFloat(seNecesitaEscalar.split('_')[1]) * valorNumerico) / poblacion);
+
+        return {
+          dato: estado,
+          value: valorNumerico,
+          transformed,
+        };
+      })
+      .filter((item) => item && item.dato !== undefined);
+
     const combined_Estados_ordenados = [...combined_Estados];
-    combined_Estados_ordenados.sort((a, b) => b.transformed - a.transformed);
+    combined_Estados_ordenados.sort((a, b) => {
+      const aValor = a?.transformed ?? Number.NEGATIVE_INFINITY;
+      const bValor = b?.transformed ?? Number.NEGATIVE_INFINITY;
+      return bValor - aValor;
+    });
 
     SortedEstados = combined_Estados_ordenados.map((item) => item.dato.toString());
 
@@ -259,10 +274,11 @@ function updateChartAndMap() {
 
     mexico.features.forEach((feature) => {
       const index_en_original = OriginalEstados.indexOf(feature.properties.NOMGEO);
+      const estadoInfo = combined_Estados[index_en_original];
       //console.log(feature.properties.NOMGEO)
       //console.log(index_en_original)
       feature.properties.Valor = datosEstados[index_en_original];
-      feature.properties.Valor_Transf = combined_Estados[index_en_original].transformed;
+      feature.properties.Valor_Transf = estadoInfo?.transformed ?? null;
 
       const rank = valueToRank.get(feature.properties.NOMGEO);
       feature.properties.Ranking = 

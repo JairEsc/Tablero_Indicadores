@@ -1,6 +1,7 @@
 ###############
 ### Mensual ###
 ###############
+catalogo_indicadores="../datos/temporalidad.csv" |> read.csv()
 
 temp = "mensual"
 unir_mensual = function(temp){
@@ -58,7 +59,7 @@ unir_mensual = function(temp){
           stringr::str_squish() |> as.numeric()
       )
     ) |> 
-    #dplyr::select(-x17) |> ###X17 No me suena muy generalizado
+    #dplyr::select(-x22) |> ###X17 No me suena muy generalizado
     dplyr::mutate(entidad = entidad |>  gsub(pattern = "  ", replacement = " ") |> stringr::str_squish(),
                   entidad = dplyr::if_else(condition = entidad == "Veracruz de Ignacio de la llave", true = "Veracruz de Ignacio de la Llave", false = entidad)) |> 
     dplyr::rename(Tema = tema,
@@ -73,7 +74,12 @@ unir_mensual = function(temp){
 }
 
 mensual = unir_mensual(temp)
-
+(mensual$Indicador |> unique())[7]
+mensual$Indicador[mensual$Indicador=='Violacion']='Violación'
+mensual$Indicador |> unique() |> 
+  lapply(\(ind){
+    ind%in%catalogo_indicadores$Indicador
+  }) |> unlist() |> all()
 mensual |>  write.csv("../datos/mensual.csv", row.names = F, fileEncoding = "UTF-8")
 
 ##################
@@ -115,7 +121,7 @@ unir_trimestral=function(temp){
 temp = "trimestral"
 trimestral = unir_trimestral(temp)
 
-zzz=(trimestral |> colnames())[5:12] |> 
+zzz=(trimestral |> colnames())[5:14] |> 
   sapply(\(z){
     zz=strsplit(z,"\\.")
     
@@ -124,22 +130,33 @@ zzz=(trimestral |> colnames())[5:12] |>
   lapply(\(t){
     paste0(t[[2]],"_",t[[1]])
   }) |> unlist()
-colnames(trimestral)[5:12]=zzz###Cuando cambie de año habrá que generalizar
+colnames(trimestral)[5:14]=zzz###Cuando cambie de año habrá que generalizar
 
 
 trimestral = trimestral |> 
   dplyr::mutate(
     dplyr::across(
-      .cols = `2024_1t`:`2025_4t`,
+      .cols = `2024_1t`:`2026_2t`,
       .fns = ~ .x |> gsub(pattern = "\\%", replacement = "") |>  gsub(pattern = "\\$", replacement = "") |> 
         gsub(pattern = ",", replacement = ".") |> gsub(pattern = "  ", replacement = " ") |>
         stringr::str_squish() |> as.numeric()
     )
   )
 trimestral=trimestral |> 
-  dplyr::select(-x9,-x10)
+  dplyr::select(-x11,-x12)
+unique(trimestral$Indicador)[(!(trimestral$Indicador |> unique() |> 
+                lapply(\(ind){
+                  ind%in%catalogo_indicadores$Indicador
+                }) |> unlist() ))|> which()]
+trimestral$Indicador[trimestral$Indicador=="Tasa de Ocupación parcial y desocupación/"]=
+  "Tasa de Ocupación parcial y desocupación"
+trimestral$Indicador[trimestral$Indicador=="Índice de la Tendencia Laboral de la Pobreza (ITLP)"]#Nuevo
+trimestral$Indicador[trimestral$Indicador=="Porcentaje de la población en pobreza laboral"]#Nuevo
+trimestral$Indicador[trimestral$Indicador=="Ingreso laboral per cápita  a pesos corrientes (nominal)"]#Nuevo
+trimestral$Indicador[trimestral$Indicador=="Ingreso laboral Per cápita (Deflactado con la canasta alimentaria, pesos)"]#Nuevo
 
-trimestral |>  write.csv("../datos/trimestral.csv", row.names = F, fileEncoding = "UTF-8")
+
+trimestral|>  write.csv("../datos/trimestral.csv", row.names = F, fileEncoding = "UTF-8")
 
 
 #############
@@ -202,7 +219,7 @@ anual = anual |>
 
 anual = anual |> 
   dplyr::select(Tema:link.de.consulta, `2017.0`, `2018.0`, `2019.0`, `2020.0`, `2021.0`, `2022`, `2022.0`, `2023`, `2023.0`,
-                `2024`, `2024.0`, `2025`, `2025.0`, `2025_2ot*`)
+                `2024`, `2024.0`, `2025`, `2025.0`, `2025_2ot*`,`2026`)
 
 
 anual = anual |> 
@@ -224,7 +241,6 @@ anual = anual |>
   dplyr::mutate(`2025` = dplyr::if_else(condition = is.na(`2025`), true = `2025_2ot*`, false = `2025`)) |> 
   dplyr::select(-`2025_2ot*`)
 
-
 anual = anual |> 
   dplyr::rename("2017" = `2017.0`,
                 "2018" = `2018.0`,
@@ -239,14 +255,16 @@ anual = anual |>
                 `2022` = `2022` |>  gsub(pattern = ",", replacement = ".") |> gsub(pattern = "  ", replacement = " ") |>  stringr::str_squish() |>  as.numeric(),
                 `2023` = `2023` |>  gsub(pattern = ",", replacement = ".") |> gsub(pattern = "  ", replacement = " ") |>  stringr::str_squish() |>  as.numeric(),
                 `2024` = `2024` |>  gsub(pattern = ",", replacement = ".") |> gsub(pattern = "  ", replacement = " ") |>  stringr::str_squish() |>  as.numeric(),
-                `2025` = `2025` |>  gsub(pattern = ",", replacement = ".") |> gsub(pattern = "  ", replacement = " ") |>  stringr::str_squish() |>  as.numeric())
+                `2025` = `2025` |>  gsub(pattern = ",", replacement = ".") |> gsub(pattern = "  ", replacement = " ") |>  stringr::str_squish() |>  as.numeric(),
+                `2026` = `2026` |>  gsub(pattern = ",", replacement = ".") |> gsub(pattern = "  ", replacement = " ") |>  stringr::str_squish() |>  as.numeric()
+                )
 
 
 anual_mayor1 = anual |> 
-  dplyr::mutate(no_na = rowSums(!is.na(dplyr::across(.cols = c(`2017`:`2025`)))))
+  dplyr::mutate(no_na = rowSums(!is.na(dplyr::across(.cols = c(`2017`:`2026`)))))
 
 anual_mayor1 = anual_mayor1 |> 
-  dplyr::filter(no_na > 1) |> 
+  dplyr::filter(no_na > 0) |> 
   dplyr::select(-no_na)
 
 h = anual_mayor1 |>  dplyr::count(Entidad,sort = T)
@@ -255,8 +273,43 @@ ind = anual_mayor1 |>  dplyr::count(Indicador, sort = T)
 
 anual_mayor1 = anual_mayor1 |> 
   dplyr::filter(Indicador != "Capacidad instalada en las PTARs  (Litros por segundo)")
+anual_mayor1=anual_mayor1 |> 
+  dplyr::mutate(Entidad = dplyr::case_when(
+    Entidad == "Veracruz" ~ "Veracruz de Ignacio de la Llave",
+    Entidad == "Veracruz de la Llave" ~ "Veracruz de Ignacio de la Llave",
+    Entidad == "Veracruz de Ignacipo de la Llave" ~ "Veracruz de Ignacio de la Llave",
+    Entidad == "Coahuila" ~ "Coahuila de Zaragoza",
+    Entidad == "Michoacán" ~ "Michoacán de Ocampo",
+    Entidad == "Yucatan" ~ "Yucatán",
+    Entidad == "Qurétaro" ~ "Querétaro",
+    TRUE ~ Entidad
+  ))
+anual$Indicador=stringr::str_squish(anual$Indicador)
+unique(anual$Indicador)[(!(anual$Indicador |> unique() |> 
+                                  lapply(\(ind){
+                                    ind%in%catalogo_indicadores$Indicador
+                                  }) |> unlist() ))|> which()]
+anual$Indicador[anual$Indicador=="Ganado Ovino.  Volumen de la Producción (toneladas)"]=
+  "Ganado Ovino.Volumen de la Producción (toneladas)"
+anual$Indicador[anual$Indicador=="Leche de Bovino.  Volumen de la Producción (miles de litros)"  ]=
+  "Leche de Bovino. Volumen de la Producción (miles de litros)"  
+anual$Indicador[anual$Indicador=="Cobertura educacíónMedia Superior (%)"]=
+  "Cobertura educación Media Superior (%)"  
+anual$Indicador[anual$Indicador=="Inclución financiera"]# Nuevo
+anual$Indicador[anual$Indicador=="Capacidad instalada en las PTARs  (Litros por segundo)"]=
+  "Capacidad instalada en las PTARs (Litros por segundo)"
+anual$Indicador[anual$Indicador=="Percepcion sobre Seguridad Publica Inseguro" ]=
+  "Percepción sobre Seguridad Publica Inseguro" 
+anual$Indicador[anual$Indicador=="Percepcion sobre Seguridad Publica Seguro" ]=
+  "Percepción sobre Seguridad Publica Seguro"
+anual$Indicador[anual$Indicador=="Producto Interno Bruto (millones de pesos) / Porcentaje de ParticipaciÃ³n (VALORES CONSTANTES)" ]=
+  "Producto Interno Bruto (millones de pesos) / Porcentaje de Participación (VALORES CONSTANTES)"
 
-anual_mayor1 |> write.csv("Output/anual.csv", row.names = F, fileEncoding = "UTF-8")
+anual$Indicador[anual$Indicador=="Tasa de Prevalencia Delictiva (100 mil hab)" ]=
+  "Tasa de Prevalencia Delictiva (100 mil hab) personas, hogares o propiedades que han sido víctimas de un delito"
+
+
+anual_mayor1 |> write.csv("../datos/anual.csv", row.names = F, fileEncoding = "UTF-8")
 
 
 
@@ -307,7 +360,7 @@ bianual = bianual |>  dplyr::mutate(
 )
 
 bianual = bianual |> 
-  dplyr::select(Tema:link.de.consulta, `2016.0`, `2018.0`, `2020.0`, `2021.0`, `2022.0`, `2023.0`, `2024.0`, `2025.0`) |> 
+  dplyr::select(Tema:link.de.consulta, `2016.0`, `2018.0`, `2020.0`,`2021` , `2022.0`, `2023`, `2024.0`, `2025`) |> 
   dplyr::mutate(Entidad = Entidad |> gsub(pattern = "  ", replacement = " ") |> stringr::str_squish())
 
 names(bianual)[5:ncol(bianual)] = paste(as.integer(names(bianual)[5:ncol(bianual)]) |>  as.character()) 
@@ -322,8 +375,19 @@ bianual = bianual |>
                 `2023` = `2023` |>  gsub(pattern = ",", replacement = "") |> gsub(pattern = "  ", replacement = " ") |>  stringr::str_squish() |>  as.numeric(),
                 `2024` = `2024` |>  gsub(pattern = ",", replacement = "") |> gsub(pattern = "  ", replacement = " ") |>  stringr::str_squish() |>  as.numeric(),
                 `2025` = `2025` |>  gsub(pattern = ",", replacement = "") |> gsub(pattern = "  ", replacement = " ") |>  stringr::str_squish() |>  as.numeric())
-
-bianual |> write.csv("Output/bianual.csv",fileEncoding = "utf-8",row.names = F)
+bianual=bianual |> 
+  dplyr::mutate(Entidad = dplyr::case_when(
+    Entidad == "Veracruz" ~ "Veracruz de Ignacio de la Llave",
+    Entidad == "Veracruz de la Llave" ~ "Veracruz de Ignacio de la Llave",
+    Entidad == "Veracruz de Ignacipo de la Llave" ~ "Veracruz de Ignacio de la Llave",
+    Entidad == "Coahuila" ~ "Coahuila de Zaragoza",
+    Entidad == "Michoacán" ~ "Michoacán de Ocampo",
+    Entidad == "Yucatan" ~ "Yucatán",
+    Entidad == "Qurétaro" ~ "Querétaro",
+    Entidad == "México" ~ "Estado de México",
+    TRUE ~ Entidad
+  ))
+bianual |> write.csv("../datos/bianual.csv",fileEncoding = "utf-8",row.names = F)
 
 
 

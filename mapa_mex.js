@@ -137,8 +137,8 @@ function clickFeature(e) {
                         </strong> 
                         <span style="color: #34495e;">
                             en el ranking nacional ${(props.Sentido == 'Más es mejor'
-                                ? '(siendo 1 el mejor desempeño).'
-                                : '(siendo 1 el peor desempeño).') || 'N/A'}
+                                ? '(siendo 01 el mejor desempeño).'
+                                : '(siendo 01 el peor desempeño).') || 'N/A'}
                         </span>
                     </p>
                 </div>
