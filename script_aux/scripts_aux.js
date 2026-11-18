@@ -19,8 +19,15 @@ function linearRegression(y, x) {
   return lr;
 }
 rellenarIndicadores=function(datos,tema='Todo'){
-  const select = document.getElementById("indicador_tablero_indicadores");
-  $("#indicador_tablero_indicadores").empty();
+  const select = document.getElementById("indicador_tablero_indicadoresSearch");
+  $(select).empty();
+  //Opción inicial (no seleccionable) que pide elegir un indicador.
+  const opcionInicial = document.createElement("option");
+  opcionInicial.value = "";
+  opcionInicial.text = "Selecciona un indicador";
+  opcionInicial.disabled = true;
+  opcionInicial.selected = true;
+  select.appendChild(opcionInicial);
   var uniqueIndicators = new Set();
   datos.forEach((line, index) => {
     var indicadorValue = line[0]+': '+line[1];

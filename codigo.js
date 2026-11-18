@@ -151,10 +151,6 @@ $("#tema_tablero_indicadores").change(function () {
 
 
 
-$("#indicador_tablero_indicadoresSearch").focus(function() {
-        // reiniciamos el valor del input a vacío.
-        $(this).val(' ');
-});
 $("#indicador_tablero_indicadoresSearch").change(async function () {
   map.closePopup();
   const temaSeleccionado = $("#tema_tablero_indicadores").val();

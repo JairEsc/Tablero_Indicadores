@@ -40,12 +40,9 @@
                     <option value="Género">Género</option>
                 </select>
                 <div id="contenedor_input_indicador" style="flex-grow: 1;">
-                    <input type="text" id="indicador_tablero_indicadoresSearch" list="indicador_tablero_indicadores" placeholder="Escribe o selecciona un indicador"/>
-                    <datalist id="indicador_tablero_indicadores">
-                        <option value="-Cargando...">-Cargando...</option>
-                        <option value="-Cargando...">--Cargando...</option>
-                        <option value="-Cargando...">--Cargando...</option>
-                    </datalist>
+                    <select id="indicador_tablero_indicadoresSearch">
+                        <option value="" disabled selected>Cargando indicadores...</option>
+                    </select>
                 </div>
             </div>
         </header>
@@ -109,7 +106,7 @@
                         },
                         {
                             element: document.querySelector('#indicador_tablero_indicadoresSearch'),
-                            intro: 'También puedes buscar un indicador específico escribiendo su nombre o seleccionándolo de la lista desplegable.',
+                            intro: 'Después, selecciona el indicador que quieras consultar de la lista desplegable.',
                             position: 'bottom'
                         }
                         ],
