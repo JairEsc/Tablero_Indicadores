@@ -19,6 +19,31 @@
     <script src="https://unpkg.com/leaflet-search@2.3.7/dist/leaflet-search.src.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
 </head>
+<style>
+.boton-fichas {
+/* Colores solicitados */
+background-color: #621132;
+color: #ffffff;
+
+/* Comportamiento de botón y espaciado */
+display: inline-block;
+padding: 12px 24px;
+text-decoration: none; /* Quita el subrayado del enlace */
+font-family: Arial, sans-serif;
+font-weight: bold;
+font-size: 16px;
+
+/* Estética visual (opcional) */
+border-radius: 5px; /* Bordes ligeramente redondeados */
+transition: background-color 0.3s ease;
+cursor: pointer;
+}
+
+/* Efecto al pasar el mouse por encima (hover) */
+.boton-fichas:hover {
+background-color: #4a0c25; /* Un tono más oscuro del mismo color */
+}
+</style>
 <body>
     <div class="container_tablero_indicadores">
         <header class="container_tablero_indicadores">
@@ -46,6 +71,13 @@
                     </datalist>
                 </div>
             </div>
+            <div>
+                <a href="fichasindicadores.pdf" target="_blank" class="boton-fichas">
+                Descarga las Fichas Tecnicas de los Indicadores
+                </a>
+                <h2></h2>
+            </div>
+             
         </header>
         
         <section class="indicator-description_tablero_indicadores">
