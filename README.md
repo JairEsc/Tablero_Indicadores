@@ -25,5 +25,9 @@ Ejercicio de actualización.
  4.1.- A grandes rasgos, se define una función que itera sobre los archivos en la carpeta "trimestral", une por renglones las tablas homologando los nombres de las columnas y las renombra en el formato "Año_trimestre". Luego escribe un archivo .csv ahora en la ruta "../datos/". Estos son los que consume Javascript.
  5.- Checa index.html en live server y verifica que los indicadores modificados se muestren correctamente.
 
+### Generar fichas de indicadores en PDF
+
+El script lee `datos\temporalidad.csv` en UTF-8 y genera `RProject\Output\fichasindicadores.pdf`, con tres fichas por pagina
+
 
 
