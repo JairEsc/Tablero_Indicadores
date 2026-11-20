@@ -206,14 +206,13 @@ anual = unir_p_temp(temp)
 
 
 anual = anual |> 
-  dplyr::select(-x9, -x10, -x11) |> 
-  dplyr::filter(Tema != "Fuente: Instituto Mexicano de la Propiedad Industrial IMPI. En cifras general, 1993 al 2T 2025.") |> 
+  dplyr::select(!dplyr::matches("x[0-9]")) |> 
   dplyr::mutate(Entidad = dplyr::if_else(condition = is.na(Entidad), true = entidad, false = Entidad),
                 Tema = dplyr::if_else(condition = Tema == "Economico", true = "Económico", false = Tema)) |> 
   dplyr::select(-entidad)
+##
 
-
-anual = anual |> 
+anual = anual |> ##Esto es un coalesce
   dplyr::mutate(link.de.consulta = dplyr::if_else(condition = is.na(link.de.consulta), true = liga.de.consulta, false = link.de.consulta)) |> 
   dplyr::mutate(link.de.consulta = dplyr::if_else(condition = is.na(link.de.consulta), true = link, false = link.de.consulta)) |> 
   dplyr::select(-liga.de.consulta, -link)
@@ -242,6 +241,9 @@ anual = anual |>
   dplyr::mutate(`2025` = dplyr::if_else(condition = is.na(`2025`), true = `2025_2ot*`, false = `2025`)) |> 
   dplyr::select(-`2025_2ot*`)
 
+anual=anual |> 
+  tidyr::fill(Entidad,.direction = "down")
+
 anual = anual |> 
   dplyr::rename("2017" = `2017.0`,
                 "2018" = `2018.0`,
@@ -260,21 +262,10 @@ anual = anual |>
                 `2026` = `2026` |>  gsub(pattern = ",", replacement = ".") |> gsub(pattern = "  ", replacement = " ") |>  stringr::str_squish() |>  as.numeric()
                 )
 
+anual=anual |> 
+  dplyr::filter(!is.na(Indicador))
 
-anual_mayor1 = anual |> 
-  dplyr::mutate(no_na = rowSums(!is.na(dplyr::across(.cols = c(`2017`:`2026`)))))
-
-anual_mayor1 = anual_mayor1 |> 
-  dplyr::filter(no_na > 0) |> 
-  dplyr::select(-no_na)
-
-h = anual_mayor1 |>  dplyr::count(Entidad,sort = T)
-ind = anual_mayor1 |>  dplyr::count(Indicador, sort = T)
-
-
-anual_mayor1 = anual_mayor1 |> 
-  dplyr::filter(Indicador != "Capacidad instalada en las PTARs  (Litros por segundo)")
-anual_mayor1=anual_mayor1 |> 
+anual=anual |> 
   dplyr::mutate(Entidad = dplyr::case_when(
     Entidad == "Veracruz" ~ "Veracruz de Ignacio de la Llave",
     Entidad == "Veracruz de la Llave" ~ "Veracruz de Ignacio de la Llave",
@@ -283,46 +274,28 @@ anual_mayor1=anual_mayor1 |>
     Entidad == "Michoacán" ~ "Michoacán de Ocampo",
     Entidad == "Yucatan" ~ "Yucatán",
     Entidad == "Qurétaro" ~ "Querétaro",
+    Entidad == "Michoacán de Ocampo de Ocampo" ~ "Michoacán de Ocampo",
+    Entidad == "Veracruz de Llave" ~ "Veracruz de Ignacio de la Llave",
+    Entidad == "Coahuila de Zaragoza de Zaragoza" ~ "Coahuila de Zaragoza", 
+    Entidad == "Estado de México" ~ "México", 
     TRUE ~ Entidad
   ))
 anual$Indicador=stringr::str_squish(anual$Indicador)
-unique(anual$Indicador)[(!(anual$Indicador |> unique() |> 
-                                  lapply(\(ind){
-                                    ind%in%catalogo_indicadores$Indicador
-                                  }) |> unlist() ))|> which()]
-anual$Indicador[anual$Indicador=="Ganado Ovino.  Volumen de la Producción (toneladas)"]=
-  "Ganado Ovino.Volumen de la Producción (toneladas)"
-anual$Indicador[anual$Indicador=="Leche de Bovino.  Volumen de la Producción (miles de litros)"  ]=
-  "Leche de Bovino. Volumen de la Producción (miles de litros)"  
-anual$Indicador[anual$Indicador=="Cobertura educacíónMedia Superior (%)"]=
-  "Cobertura educación Media Superior (%)"  
-anual$Indicador[anual$Indicador=="Inclución financiera"]# Nuevo
-anual$Indicador[anual$Indicador=="Capacidad instalada en las PTARs  (Litros por segundo)"]=
-  "Capacidad instalada en las PTARs (Litros por segundo)"
+anual$Indicador |> table() |> sort() |> unique()
+anual$Entidad |> table() |> sort() |> unique()
+anual$Indicador[anual$Indicador=="Producto Interno Bruto (millones de pesos) / Porcentaje de ParticipaciÃ³n (VALORES CONSTANTES)" ]=
+  "Producto Interno Bruto (millones de pesos) / Porcentaje de Participación (VALORES CONSTANTES)"
 anual$Indicador[anual$Indicador=="Percepcion sobre Seguridad Publica Inseguro" ]=
   "Percepción sobre Seguridad Publica Inseguro" 
 anual$Indicador[anual$Indicador=="Percepcion sobre Seguridad Publica Seguro" ]=
   "Percepción sobre Seguridad Publica Seguro"
-anual$Indicador[anual$Indicador=="Producto Interno Bruto (millones de pesos) / Porcentaje de ParticipaciÃ³n (VALORES CONSTANTES)" ]=
-  "Producto Interno Bruto (millones de pesos) / Porcentaje de Participación (VALORES CONSTANTES)"
-
-anual$Indicador[anual$Indicador=="Tasa de Prevalencia Delictiva (100 mil hab)" ]=
-  "Tasa de Prevalencia Delictiva (100 mil hab) personas, hogares o propiedades que han sido víctimas de un delito"
-
-
-anual_mayor1 |> write.csv("../datos/anual.csv", row.names = F, fileEncoding = "UTF-8")
+unique(anual$Indicador)[(!(anual$Indicador |> unique() |> 
+                                  lapply(\(ind){
+                                    ind%in%catalogo_indicadores$Indicador[catalogo_indicadores$Temporalidad=='Anual']
+                                  }) |> unlist() ))|> which()]
 
 
-
-
-
-
-
-
-
-
-
-
+anual |> write.csv("../datos/anual.csv", row.names = F, fileEncoding = "UTF-8")
 
 
 ###############
@@ -538,7 +511,7 @@ trianual = trianual |>
 trianual|> write.csv("Output/trianual.csv",fileEncoding = "utf-8",row.names = F)
 
 
-
+"volumen de la prod pesquera"
 
 
 
