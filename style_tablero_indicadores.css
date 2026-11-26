@@ -50,28 +50,218 @@ body{
   #titulo_busqueda{text-align: center; 
                 width: 100%;
   }
+  /* ===== Buscador, temas y listado de indicadores ===== */
+  header.container_tablero_indicadores{
+    max-height: none; /* el buscador con tarjetas y listado puede medir más que la pantalla */
+  }
   #contenedor_busqueda{
     display: flex;
-    flex-direction: row; 
-    gap: 10px; 
+    flex-direction: column;
+    gap: 14px;
     width: 100%;
-    max-width: 600px;
-    align-items: flex-start;
-  }
-  #indicador_tablero_indicadoresSearch{
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    max-width: 1000px;
+    padding: 0 16px 18px;
     box-sizing: border-box;
   }
-  #tema_tablero_indicadores{
-    flex-grow: 1; 
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
+  .buscador_tablero_indicadores{
+    position: relative;
   }
+  .buscador_tablero_indicadores svg{
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+    color: #8a8287;
+    pointer-events: none;
+  }
+  #buscador_indicadores{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 14px 12px 42px;
+    border: 1px solid #d9d3d6;
+    border-radius: 10px;
+    font-size: 15px;
+    color: #2b2528;
+    background-color: #fff;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  }
+  #buscador_indicadores:focus{
+    outline: none;
+    border-color: #621132;
+    box-shadow: 0 0 0 3px rgba(98, 17, 50, 0.12);
+  }
+
+  #temas_tablero_indicadores{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+  }
+  .tema-card{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 16px 18px;
+    background-color: #fff;
+    border: 1px solid #e3dfe1;
+    border-radius: 12px;
+    cursor: pointer;
+    user-select: none;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+  }
+  .tema-card:hover{
+    border-color: #c9bec3;
+  }
+  /* Tema marcado: borde sutil en lugar de casilla */
+  .tema-card--activa,
+  .tema-card--activa:hover{
+    border-color: #621132;
+    background-color: #fdf8fa;
+    box-shadow: 0 0 0 3px rgba(98, 17, 50, 0.10);
+  }
+  /* La casilla existe (para teclado y lectores de pantalla) pero no se ve */
+  .tema-card input{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: 0;
+    opacity: 0;
+    pointer-events: none;
+  }
+  .tema-card:has(input:focus-visible){
+    outline: 2px solid #621132;
+    outline-offset: 2px;
+  }
+  .tema-card__icono{
+    width: 26px;
+    height: 26px;
+    margin-bottom: 6px;
+    color: #8a8287;
+    transition: color 0.15s ease;
+  }
+  .tema-card--activa .tema-card__icono{
+    color: #621132;
+  }
+  .tema-card__titulo{
+    font-size: 15px;
+    font-weight: bold;
+    color: #1f1a1d;
+  }
+  .tema-card__desc{
+    font-size: 13px;
+    line-height: 1.4;
+    color: #6b6468;
+  }
+  .tema-card__conteo{
+    position: absolute;
+    top: 16px;
+    right: 18px;
+    font-size: 12px;
+    color: #8a8287;
+  }
+
+  #resumen_indicadores{
+    margin: 0;
+    font-size: 13px;
+    color: #6b6468;
+  }
+  .lista-indicadores{
+    max-height: 320px;
+    overflow-y: auto;
+    background-color: #fff;
+    border: 1px solid #e3dfe1;
+    border-radius: 12px;
+  }
+  .grupo-indicadores__titulo{
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 8px 16px;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #621132;
+    background-color: #f8f5f6;
+    border-bottom: 1px solid #eee8eb;
+  }
+  .grupo-indicadores__titulo span{
+    color: #8a8287;
+    font-weight: normal;
+  }
+  .grupo-indicadores ul{
+    list-style: none;
+    margin: 0;
+    padding: 4px 0;
+  }
+  .indicador-item{
+    display: block;
+    width: 100%;
+    padding: 8px 16px;
+    text-align: left;
+    font-size: 14px;
+    color: #2b2528;
+    background: none;
+    border: 0;
+    border-left: 3px solid transparent;
+    cursor: pointer;
+  }
+  .indicador-item:hover{
+    background-color: #f8f3f5;
+  }
+  .indicador-item:focus-visible{
+    outline: 2px solid #621132;
+    outline-offset: -2px;
+  }
+  .indicador-item--activo,
+  .indicador-item--activo:hover{
+    color: #621132;
+    font-weight: bold;
+    background-color: #f6ecf0;
+    border-left-color: #621132;
+  }
+  .lista-indicadores__vacio{
+    margin: 0;
+    padding: 16px;
+    font-size: 14px;
+    color: #6b6468;
+  }
+  @media (max-width: 860px){
+    #temas_tablero_indicadores{
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  /* En celular: tarjetas compactas en 2 columnas y sin descripción */
+  @media (max-width: 520px){
+    #temas_tablero_indicadores{
+      gap: 8px;
+    }
+    .tema-card{
+      padding: 12px 14px;
+    }
+    .tema-card__icono{
+      width: 22px;
+      height: 22px;
+      margin-bottom: 4px;
+    }
+    .tema-card__titulo{
+      font-size: 14px;
+    }
+    .tema-card__desc{
+      display: none;
+    }
+    .tema-card__conteo{
+      top: 12px;
+      right: 14px;
+      font-size: 11px;
+    }
+  }
+  /* ===== fin buscador ===== */
+
   #instruccion_buscar_por_indicador{
     font-weight: bold;
       margin: 0;
@@ -81,9 +271,6 @@ body{
     justify-content: center;
     margin-bottom: 5px;
     padding-top:64px;
-  }
-  #indicador_tablero_indicadoresSearch{
-    max-width: 70vw;
   }
   @media (max-width:720px){
     .header-top_tablero_indicadores{

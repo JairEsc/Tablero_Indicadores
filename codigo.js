@@ -7,6 +7,7 @@ let indicadoresBianuales=[];//Variable global para guardar los indicadores.
 let indicadoresTrianuales=[];//Variable global para guardar los indicadores.
 let indicadoresQuinquenales=[];//Variable global para guardar los indicadores.
 let indicadoresAnuales=[];//Variable global para guardar los indicadores.
+let indicadorSeleccionado=null;//Indicador mostrado en el tablero, con formato "Tema: Indicador".
 
 
 //Pasos. 
@@ -21,7 +22,8 @@ const PromesaLeerPosiblesIndicadores=new Promise((res,rej)=>{
         window.posiblesIndicadores = posiblesIndicadores;
         console.log(posiblesIndicadores);
         console.log("Datos actualizados el 22/05/2026")
-        rellenarIndicadores(posiblesIndicadores);
+        actualizarConteoTemas();
+        rellenarIndicadores();
     }).catch(error => {
         console.error("Error fetching CSV:", error);
     });
@@ -126,41 +128,33 @@ PromesaLeerAnuales.then(datos => {
     //console.log(datos);
 });
 
-$("#tema_tablero_indicadores").change(function () {
-
-  document.getElementById('indicador_tablero_indicadoresSearch').value=''
-  //De manera dinámica, cada vez que se cambia el valor de "tema", hace lo siguiente:
-  //$("#option option[value='default']").remove();
-  //Elegimos el tema:
-  //console.log($(this).val())
-  posiblesIndicadores_filtrados=posiblesIndicadores.filter(
-    line=>{
-      return (line[0]===$(this).val() || $(this).val()=='Todo')
-    }
-  )
-  document.getElementById("tema_tablero_indicadores").hidden = false;
-  document.getElementById("tema_tablero_indicadores").options[0].text = "Buscar entre todos los indicadores";
-  //document.getElementById("ForTema").style.display = "none";
-  document.getElementById("instruccion_buscar_por_indicador").style.display = "none";
-  //document.querySelector('.search_title').textContent = 'Busca un Tema y luego un Indicador';
-
-  rellenarIndicadores(posiblesIndicadores_filtrados,tema=$(this).val())
-
+//Filtros del listado: al marcar/desmarcar un tema o escribir en el buscador se vuelve a armar la lista.
+$("#temas_tablero_indicadores input[type='checkbox']").change(function () {
+  //El tema marcado se resalta con un borde en su tarjeta (no se muestra la casilla).
+  $(this).closest(".tema-card").toggleClass("tema-card--activa", this.checked);
+  rellenarIndicadores();
+});
+$("#buscador_indicadores").on("input", function () {
+  rellenarIndicadores();
+});
+//Al dar clic en un indicador del listado se carga en el tablero.
+$("#lista_indicadores").on("click", ".indicador-item", function () {
+  seleccionarIndicador(this.dataset.valor);
 });
 
-
-
-
-$("#indicador_tablero_indicadoresSearch").change(async function () {
+function seleccionarIndicador(indicador) {
+  indicadorSeleccionado = indicador;
+  //Resaltar en el listado el indicador elegido.
+  $("#lista_indicadores .indicador-item").each(function () {
+    const activo = this.dataset.valor === indicador;
+    $(this).toggleClass("indicador-item--activo", activo).attr("aria-current", activo ? "true" : null);
+  });
   map.closePopup();
-  const temaSeleccionado = $("#tema_tablero_indicadores").val();
-  const indicadorSeleccionado = $(this).val();
-  //console.log($(this).val())
-  //console.log(revisarTemporalidadIndicador($(this).val()))
-  tiempo_del_indic_sel=revisarTemporalidadIndicador($(this).val())
-  descripcion_del_indic_sel=revisarDescripcionIndicador($(this).val())
-  unidadMedida_del_indic_sel=revisarUnidadMedidaIndicador($(this).val())
-  datosIndicadorTema=generarDatos_DadoIndicadorTema(tema='Todo',$(this).val())
+  //console.log(revisarTemporalidadIndicador(indicador))
+  tiempo_del_indic_sel=revisarTemporalidadIndicador(indicador)
+  descripcion_del_indic_sel=revisarDescripcionIndicador(indicador)
+  unidadMedida_del_indic_sel=revisarUnidadMedidaIndicador(indicador)
+  datosIndicadorTema=generarDatos_DadoIndicadorTema(tema='Todo',indicador)
   //DatosIndicadorTema tiene header + datos nacionales del indicador.
   //console.log(datosIndicadorTema)
   //Ocultar imagen de bienvenida.
@@ -189,7 +183,7 @@ $("#indicador_tablero_indicadoresSearch").change(async function () {
   ).style.visibility = "visible";
   document.getElementById(
     "descripcion_indicador_title_tablero_indicadores"
-  ).innerHTML='<p style="all:unset">'+$(this).val()+'</p>';//Agregamos el nombre del indicador a la descripción.
+  ).innerHTML='<p style="all:unset">'+indicador+'</p>';//Agregamos el nombre del indicador a la descripción.
   ///////////////////////
   /// Cambios de Lalo ///
   ///////////////////////
@@ -298,7 +292,7 @@ $("#indicador_tablero_indicadoresSearch").change(async function () {
       labels: timeData.map(d => d.label),
       datasets: [
         {
-          label: $(this).val(),
+          label: indicador,
           data: timeData.map(d => d.y),
           borderColor: "rgba(75, 192, 192, 1)",
           backgroundColor: "rgba(75, 192, 192, 0.7)", 
@@ -337,5 +331,5 @@ $("#indicador_tablero_indicadoresSearch").change(async function () {
     chart.resetZoom();
   });
 
-});
+}
 

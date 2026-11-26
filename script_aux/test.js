@@ -8,19 +8,11 @@ function esperar(ms = 1000) {
 }
 
 async function runIndicadorSmokeTest({ maxTests = 200, mostrarCadaPaso = false } = {}) {
-  const selectIndicador = document.getElementById("indicador_tablero_indicadoresSearch");
   const selectAnioMes = document.getElementById("anio_mes");
-  const selectTema = document.getElementById("tema_tablero_indicadores");
 
-  if (!selectIndicador || !selectAnioMes) {
+  if (!selectAnioMes || typeof window.seleccionarIndicador !== "function") {
     console.error("No se encontraron los elementos del tablero. Abre la vista del tablero primero.");
     return;
-  }
-
-  // El selector solo contiene los indicadores del tema elegido; con "Todo" se pueden recorrer todos.
-  if (selectTema && selectTema.value !== "Todo") {
-    selectTema.value = "Todo";
-    $(selectTema).trigger("change");
   }
 
   let indicadores = [];
@@ -28,13 +20,6 @@ async function runIndicadorSmokeTest({ maxTests = 200, mostrarCadaPaso = false }
     indicadores = (window.posiblesIndicadores || [])
       .filter((line) => Array.isArray(line) && line[0] && line[1])
       .map((line) => `${line[0]}: ${line[1]}`);
-
-    if (indicadores.length === 0) {
-      const opciones = Array.from(selectIndicador.options)
-        .map((opt) => opt.value)
-        .filter((valor) => valor && !valor.includes("Cargando"));
-      indicadores = opciones;
-    }
 
     if (indicadores.length > 0) {
       break;
@@ -70,8 +55,7 @@ async function runIndicadorSmokeTest({ maxTests = 200, mostrarCadaPaso = false }
     window.addEventListener("unhandledrejection", manejarError);
 
     try {
-      selectIndicador.value = texto;
-      $(selectIndicador).trigger("change");
+      window.seleccionarIndicador(texto);
       await esperar(1000);
 
       if (selectAnioMes.options.length > 0) {

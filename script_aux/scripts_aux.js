@@ -18,32 +18,92 @@ function linearRegression(y, x) {
   lr["intercept"] = (sum_y - lr.slope * sum_x) / n;
   return lr;
 }
-rellenarIndicadores=function(datos,tema='Todo'){
-  const select = document.getElementById("indicador_tablero_indicadoresSearch");
-  $(select).empty();
-  //Opción inicial (no seleccionable) que pide elegir un indicador.
-  const opcionInicial = document.createElement("option");
-  opcionInicial.value = "";
-  opcionInicial.text = "Selecciona un indicador";
-  opcionInicial.disabled = true;
-  opcionInicial.selected = true;
-  select.appendChild(opcionInicial);
-  var uniqueIndicators = new Set();
-  datos.forEach((line, index) => {
-    var indicadorValue = line[0]+': '+line[1];
-    //Se va a seleccionar
-    if (!uniqueIndicators.has(indicadorValue)) {
-      const option = document.createElement("option");
-      option.value = indicadorValue;
-      if(tema=='Todo'){
-        option.text  = indicadorValue;}
-      else{
-        option.text  = line[1];
-      }
-      select.appendChild(option);
-      uniqueIndicators.add(indicadorValue);
-    }
+//Quita acentos y pasa a minúsculas para que la búsqueda encuentre "educacion" en "Educación".
+normalizarTexto=function(texto){
+  return (texto || "").normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase().trim();
+}
+//Escribe en cada tarjeta de tema cuántos indicadores tiene.
+actualizarConteoTemas=function(){
+  document.querySelectorAll("#temas_tablero_indicadores .tema-card").forEach(card => {
+    const tema = card.querySelector("input").value;
+    const total = new Set(posiblesIndicadores.filter(line => line[0] === tema).map(line => line[1])).size;
+    card.querySelector(".tema-card__conteo").textContent = total + (total === 1 ? " indicador" : " indicadores");
   });
+}
+//Arma el listado de indicadores según los temas marcados y el texto del buscador.
+rellenarIndicadores=function(){
+  const lista = document.getElementById("lista_indicadores");
+  const resumen = document.getElementById("resumen_indicadores");
+  if (!posiblesIndicadores.length) {
+    return; //Todavía no carga temporalidad.csv; se queda el mensaje "Cargando indicadores...".
+  }
+  const checks = Array.from(document.querySelectorAll("#temas_tablero_indicadores input[type='checkbox']"));
+  const temasMarcados = checks.filter(check => check.checked).map(check => check.value);
+  //Sin temas marcados se muestran todos.
+  const temasVisibles = temasMarcados.length ? temasMarcados : checks.map(check => check.value);
+  const textoBuscado = document.getElementById("buscador_indicadores").value.trim();
+  const busqueda = normalizarTexto(textoBuscado);
+
+  lista.innerHTML = "";
+  let total = 0;
+  temasVisibles.forEach(tema => {
+    const vistos = new Set();
+    const indicadores = posiblesIndicadores.filter(line => {
+      if (line[0] !== tema || vistos.has(line[1]) || !normalizarTexto(line[1]).includes(busqueda)) {
+        return false;
+      }
+      vistos.add(line[1]);
+      return true;
+    });
+    if (!indicadores.length) {
+      return;
+    }
+    total += indicadores.length;
+
+    const grupo = document.createElement("section");
+    grupo.className = "grupo-indicadores";
+    const titulo = document.createElement("h3");
+    titulo.className = "grupo-indicadores__titulo";
+    titulo.textContent = tema;
+    const conteo = document.createElement("span");
+    conteo.textContent = indicadores.length;
+    titulo.appendChild(conteo);
+    grupo.appendChild(titulo);
+
+    const ul = document.createElement("ul");
+    indicadores.forEach(line => {
+      const valor = line[0] + ": " + line[1]; //Mismo formato que usan revisarTemporalidadIndicador, etc.
+      const li = document.createElement("li");
+      const boton = document.createElement("button");
+      boton.type = "button";
+      boton.className = "indicador-item";
+      boton.dataset.valor = valor;
+      boton.textContent = line[1];
+      if (valor === indicadorSeleccionado) {
+        boton.classList.add("indicador-item--activo");
+        boton.setAttribute("aria-current", "true");
+      }
+      li.appendChild(boton);
+      ul.appendChild(li);
+    });
+    grupo.appendChild(ul);
+    lista.appendChild(grupo);
+  });
+
+  if (total === 0) {
+    const vacio = document.createElement("p");
+    vacio.className = "lista-indicadores__vacio";
+    vacio.textContent = "No hay indicadores que coincidan con «" + textoBuscado + "».";
+    lista.appendChild(vacio);
+  }
+  let textoResumen = total + (total === 1 ? " indicador" : " indicadores");
+  if (temasMarcados.length) {
+    textoResumen += " en " + temasMarcados.join(", ");
+  }
+  if (busqueda) {
+    textoResumen += (total === 1 ? " que coincide con «" : " que coinciden con «") + textoBuscado + "»";
+  }
+  resumen.textContent = textoResumen;
 }
 revisarTemporalidadIndicador=function(indicador){
     const filaIndicador = posiblesIndicadores.find(line => (line[0]+': '+line[1]) === indicador);
@@ -145,8 +205,8 @@ function openChart(evt, tagName) {
   evt.currentTarget.className += " active";
 
   if (tagName === "nacional_chart") {
-    console.log($("#indicador_tablero_indicadoresSearch").val())
-    let temp_seNecesitaEscalar=revisarEscalamientoIndicador($("#indicador_tablero_indicadoresSearch").val().split(":")[1].slice(1))
+    console.log(indicadorSeleccionado)
+    let temp_seNecesitaEscalar=revisarEscalamientoIndicador(indicadorSeleccionado.split(":")[1].slice(1))
     //console.log(temp_seNecesitaEscalar)
     document.getElementById("anio_mes").style.display = "block";
     if(temp_seNecesitaEscalar!='No'){

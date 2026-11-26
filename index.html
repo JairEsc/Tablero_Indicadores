@@ -28,21 +28,77 @@
                 <p id='instruccion_buscar_por_indicador'>Busca un Indicador</p>
             </div>
 
-            <div id="contenedor_busqueda" >
-                
-                <select id="tema_tablero_indicadores">
-                    <option value="Todo" selected >Buscar entre todos los temas</option>
-                    <option value="Medio ambiente">Medio ambiente</option>
-                    <option value="Económico">Económico</option>
-                    <option value="Gobierno">Gobierno</option>
-                    <option value="Social">Social</option>
-                    <option value="Seguridad Pública">Seguridad Pública</option>
-                    <option value="Género">Género</option>
-                </select>
-                <div id="contenedor_input_indicador" style="flex-grow: 1;">
-                    <select id="indicador_tablero_indicadoresSearch">
-                        <option value="" disabled selected>Cargando indicadores...</option>
-                    </select>
+            <div id="contenedor_busqueda">
+                <!-- Cuadro de búsqueda por nombre de indicador -->
+                <div class="buscador_tablero_indicadores">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/>
+                    </svg>
+                    <input type="search" id="buscador_indicadores" placeholder="Buscar indicador por nombre" autocomplete="off" aria-label="Buscar indicador por nombre"/>
+                </div>
+
+                <!-- Temas: se pueden marcar varios; sin ninguno marcado se muestran todos -->
+                <div id="temas_tablero_indicadores" role="group" aria-label="Filtrar indicadores por tema">
+                    <label class="tema-card">
+                        <input type="checkbox" value="Medio ambiente"/>
+                        <svg class="tema-card__icono" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/>
+                        </svg>
+                        <span class="tema-card__titulo">Medio ambiente</span>
+                        <span class="tema-card__desc">Áreas naturales protegidas y tratamiento de aguas residuales.</span>
+                        <span class="tema-card__conteo"></span>
+                    </label>
+                    <label class="tema-card">
+                        <input type="checkbox" value="Económico"/>
+                        <svg class="tema-card__icono" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/>
+                        </svg>
+                        <span class="tema-card__titulo">Económico</span>
+                        <span class="tema-card__desc">Producción, empleo, turismo, finanzas públicas y crecimiento.</span>
+                        <span class="tema-card__conteo"></span>
+                    </label>
+                    <label class="tema-card">
+                        <input type="checkbox" value="Gobierno"/>
+                        <svg class="tema-card__icono" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <line x1="3" x2="21" y1="22" y2="22"/><line x1="6" x2="6" y1="18" y2="11"/><line x1="10" x2="10" y1="18" y2="11"/><line x1="14" x2="14" y1="18" y2="11"/><line x1="18" x2="18" y1="18" y2="11"/><polygon points="12 2 20 7 4 7"/>
+                        </svg>
+                        <span class="tema-card__titulo">Gobierno</span>
+                        <span class="tema-card__desc">Confianza ciudadana, transparencia presupuestal y corrupción.</span>
+                        <span class="tema-card__conteo"></span>
+                    </label>
+                    <label class="tema-card">
+                        <input type="checkbox" value="Social"/>
+                        <svg class="tema-card__icono" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                        </svg>
+                        <span class="tema-card__titulo">Social</span>
+                        <span class="tema-card__desc">Educación, salud, carencias sociales y bienestar de la población.</span>
+                        <span class="tema-card__conteo"></span>
+                    </label>
+                    <label class="tema-card">
+                        <input type="checkbox" value="Seguridad Pública"/>
+                        <svg class="tema-card__icono" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/>
+                        </svg>
+                        <span class="tema-card__titulo">Seguridad Pública</span>
+                        <span class="tema-card__desc">Incidencia delictiva, percepción de seguridad y accidentes de tránsito.</span>
+                        <span class="tema-card__conteo"></span>
+                    </label>
+                    <label class="tema-card">
+                        <input type="checkbox" value="Género"/>
+                        <svg class="tema-card__icono" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <circle cx="8.5" cy="9.5" r="4.5"/><path d="M8.5 14v7"/><path d="M5.5 18h6"/><circle cx="15.5" cy="9.5" r="4.5"/><path d="M18.7 6.3 22 3"/><polyline points="18 3 22 3 22 7"/>
+                        </svg>
+                        <span class="tema-card__titulo">Género</span>
+                        <span class="tema-card__desc">Brechas entre mujeres y hombres en ingresos, trabajo, educación y violencia.</span>
+                        <span class="tema-card__conteo"></span>
+                    </label>
+                </div>
+
+                <!-- Listado de indicadores según los temas marcados y la búsqueda -->
+                <p id="resumen_indicadores" aria-live="polite"></p>
+                <div id="lista_indicadores" class="lista-indicadores">
+                    <p class="lista-indicadores__vacio">Cargando indicadores...</p>
                 </div>
             </div>
         </header>
@@ -100,14 +156,19 @@
                             highlightClass: 'custom-highlight'
                         },
                         {
-                            element: document.querySelector('#tema_tablero_indicadores'),
-                            intro: 'Tenemos indicadores de 7 temas: Medio ambiente, Económico, Gobierno, Social, Seguridad Pública, Género y una categoría de "Todo" para buscar entre todos los indicadores.',
+                            element: document.querySelector('#temas_tablero_indicadores'),
+                            intro: 'Tenemos indicadores de 6 temas: Medio ambiente, Económico, Gobierno, Social, Seguridad Pública y Género. Marca uno o varios para ver solo sus indicadores; si no marcas ninguno, verás todos.',
                             position: 'bottom'
                         },
                         {
-                            element: document.querySelector('#indicador_tablero_indicadoresSearch'),
-                            intro: 'Después, selecciona el indicador que quieras consultar de la lista desplegable.',
+                            element: document.querySelector('#buscador_indicadores'),
+                            intro: 'También puedes escribir parte del nombre de un indicador para encontrarlo más rápido.',
                             position: 'bottom'
+                        },
+                        {
+                            element: document.querySelector('#lista_indicadores'),
+                            intro: 'Da clic en un indicador de la lista para ver su histórico en Hidalgo y su contexto nacional.',
+                            position: 'top'
                         }
                         ],
                         showBullets: true,
